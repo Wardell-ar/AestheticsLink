@@ -1,0 +1,78 @@
+## 2024-07-10 11:54:04,732 [1] INFO  (null) Now listening on: http://localhost:5287 
+## 2024-07-10 11:54:04,767 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-10 11:54:04,769 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-10 11:54:04,771 [1] INFO  (null) Content root path: D:\database\test\test\WebApplication1\ 
+## 2024-07-10 11:54:40,123 [25] INFO  (null) 这是一个Get请求！ 
+## 2024-07-10 17:35:35,492 [1] INFO  (null) Now listening on: http://localhost:5287 
+## 2024-07-10 17:35:35,523 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-10 17:35:35,525 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-10 17:35:35,527 [1] INFO  (null) Content root path: D:\database\test\test\WebApplication1\ 
+## 2024-07-10 17:43:16,971 [1] INFO  (null) Now listening on: http://localhost:5287 
+## 2024-07-10 17:43:17,002 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-10 17:43:17,005 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-10 17:43:17,007 [1] INFO  (null) Content root path: D:\database\test\test\WebApplication1\ 
+## 2024-07-10 17:44:17,905 [1] INFO  (null) Now listening on: http://localhost:5287 
+## 2024-07-10 17:44:17,933 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-10 17:44:17,935 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-10 17:44:17,937 [1] INFO  (null) Content root path: D:\database\test\test\WebApplication1\ 
+## 2024-07-10 17:44:22,061 [8] INFO  (null) 这是一个Get请求！ 
+## 2024-07-10 17:51:15,189 [1] INFO  (null) Now listening on: http://localhost:5287 
+## 2024-07-10 17:51:15,218 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-10 17:51:15,220 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-10 17:51:15,222 [1] INFO  (null) Content root path: D:\database\test\test\WebApplication1\ 
+## 2024-07-10 17:52:52,473 [1] INFO  (null) Now listening on: http://localhost:5287 
+## 2024-07-10 17:52:52,500 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-10 17:52:52,503 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-10 17:52:52,504 [1] INFO  (null) Content root path: D:\database\test\test\WebApplication1\ 
+## 2024-07-10 17:54:06,227 [1] INFO  (null) Now listening on: http://localhost:5287 
+## 2024-07-10 17:54:06,256 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-10 17:54:06,259 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-10 17:54:06,260 [1] INFO  (null) Content root path: D:\database\test\test\WebApplication1\ 
+## 2024-07-10 17:56:51,960 [1] INFO  (null) Now listening on: http://localhost:5287 
+## 2024-07-10 17:56:51,990 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-10 17:56:51,992 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-10 17:56:51,994 [1] INFO  (null) Content root path: D:\database\test\test\WebApplication1\ 
+## 2024-07-10 19:15:37,406 [1] INFO  (null) Now listening on: http://localhost:5287 
+## 2024-07-10 19:15:37,455 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-10 19:15:37,458 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-10 19:15:37,463 [1] INFO  (null) Content root path: D:\database\test\test\WebApplication1\ 
+## 2024-07-10 19:20:30,257 [1] INFO  (null) Now listening on: http://localhost:5287 
+## 2024-07-10 19:20:30,290 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-10 19:20:30,293 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-10 19:20:30,323 [1] INFO  (null) Content root path: D:\database\test\test\WebApplication1\ 
+## 2024-07-10 19:24:33,601 [1] INFO  (null) Now listening on: http://localhost:5287 
+## 2024-07-10 19:24:33,636 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-10 19:24:33,639 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-10 19:24:33,642 [1] INFO  (null) Content root path: D:\database\test\test\WebApplication1\ 
+## 2024-07-10 19:29:35,648 [1] INFO  (null) Now listening on: http://localhost:5287 
+## 2024-07-10 19:29:35,690 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-10 19:29:35,693 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-10 19:29:35,696 [1] INFO  (null) Content root path: D:\database\test\test\WebApplication1\ 
+## 2024-07-10 19:40:12,543 [1] INFO  (null) Now listening on: http://localhost:5287 
+## 2024-07-10 19:40:12,575 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-10 19:40:12,578 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-10 19:40:12,579 [1] INFO  (null) Content root path: D:\database\test\test\WebApplication1\ 
+## 2024-07-10 19:41:45,513 [1] INFO  (null) Now listening on: http://localhost:5287 
+## 2024-07-10 19:41:45,548 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-10 19:41:45,551 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-10 19:41:45,553 [1] INFO  (null) Content root path: D:\database\test\test\WebApplication1\ 
+## 2024-07-10 19:56:01,123 [1] INFO  (null) Now listening on: http://localhost:5287 
+## 2024-07-10 19:56:01,167 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-10 19:56:01,170 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-10 19:56:01,172 [1] INFO  (null) Content root path: D:\database\test\test\WebApplication1\ 
+## 2024-07-10 19:59:28,284 [1] INFO  (null) Now listening on: http://localhost:5287 
+## 2024-07-10 19:59:28,319 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-10 19:59:28,322 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-10 19:59:28,324 [1] INFO  (null) Content root path: D:\database\test\test\WebApplication1\ 
+## 2024-07-10 20:04:12,083 [1] INFO  (null) Now listening on: http://localhost:5287 
+## 2024-07-10 20:04:12,114 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-10 20:04:12,118 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-10 20:04:12,121 [1] INFO  (null) Content root path: D:\database\test\test\WebApplication1\ 
+## 2024-07-10 20:05:11,502 [1] INFO  (null) Now listening on: http://localhost:5287 
+## 2024-07-10 20:05:11,538 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-10 20:05:11,544 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-10 20:05:11,545 [1] INFO  (null) Content root path: D:\database\test\test\WebApplication1\ 
+## 2024-07-10 20:09:07,093 [1] INFO  (null) Now listening on: http://localhost:5287 
+## 2024-07-10 20:09:07,127 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-10 20:09:07,130 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-10 20:09:07,132 [1] INFO  (null) Content root path: D:\database\test\test\WebApplication1\ 
