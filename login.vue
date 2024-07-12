@@ -40,31 +40,41 @@ export default{
             };
             let str = JSON.stringify(obj);  // 发送的序列化数据
             const xhr = new XMLHttpRequest();
-            xhr.open('POST','http://100.78.214.7:5287/Login/CheckLogin/checklogin',true);
+            xhr.open('POST','http://100.79.204.71:5290/api/Login/CheckLogin',true);
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.send(str);
-            xhr.onreadystatechange = function(){
-                if(xhr.readyState === 4){  //服务器已完成发送
-                    if(xhr.status >= 200 && xhr.status < 300){ // 服务器发送成功
-
-                        if(xhr.response === "0"){  // 管理员登录成功
-                            alert("管理员登录成功！");
-                        }
-                        else if(xhr.response === "1"){  // 客户登录成功
-                            alert("客户登录成功！");
-                        }
-                        else if(xhr.response === "2"){  // 员工登录成功
-                            alert("员工登录成功！");
-                        }
-                        else{  // 登录失败
-                            alert("登录失败！");
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4) { // 服务器已完成发送
+                    if (xhr.status >= 200 && xhr.status < 300) { // 服务器发送成功
+                        const response = JSON.parse(xhr.responseText);
+                         if (response.token) { // 如果有token返回
+                            localStorage.setItem('token', response.token); // 存储token
+                            this.handleLoginSuccess(response.role);
+                        } 
+                        else {
+                            alert("登录验证失败");
                         }
                     }
                 }
             };
+        },
+        handleLoginSuccess(role) {
+            if (role === 0) {
+                alert("管理员登录成功！");
+                // 跳转到管理员页面
+            } else if (role === 1) {
+                alert("客户登录成功！");
+                // 跳转到客户页面
+            } else if (role === 2) {
+                alert("员工登录成功！");
+                // 跳转到员工页面
+            }
+            else{
+                alert("登录失败")
+            }
         }
     }
-}
+};
 
 </script>
 
