@@ -144,6 +144,7 @@
 import { ref } from 'vue'
 const birthday = ref('')
 export default {
+  name:'Person',
   data() {
     return {
       nickname:'hh',

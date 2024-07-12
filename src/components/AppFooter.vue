@@ -39,7 +39,7 @@
     color: #fff;
     font-size: 14px;
     width: 100%;
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
     z-index: 1000;

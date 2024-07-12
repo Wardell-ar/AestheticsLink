@@ -7,14 +7,14 @@
         <nav class="nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <!-- <router-link to="/"> -->
+              <router-link to="/">
                 <div style="display: flex; align-items: center; cursor: pointer">
                   <span>首页</span>
                 </div>
-              <!-- </router-link> -->
+              </router-link>
             </li>
             <li class="nav-item has-dropdown">
-              <!-- <router-link to="/classify"> -->
+              <router-link to="/ourService">
                 <div style="display: flex; align-items: center; cursor: pointer">
                   <span>服务</span>
                   <ul class="submenu">
@@ -22,17 +22,17 @@
                     <li><a href="#">预约</a></li>
                   </ul>
                 </div>
-              <!-- </router-link> -->
+              </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/cloud">
+              <router-link to="/customerCases">
                 <div style="display: flex; align-items: center; cursor: pointer">
                   <span>客户案例</span>
                 </div>
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/read">
+              <router-link to="/contractUs">
                 <div style="display: flex; align-items: center; cursor: pointer">
                   <span>联系我们</span>
                 </div>
@@ -45,7 +45,7 @@
         <nav class="nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <router-link to="/">
+              <router-link to="/login">
                 <div style="display: flex; align-items: center; cursor: pointer">
                   <span>个人中心</span>
                 </div>
@@ -84,21 +84,25 @@
               </router-link>
             </li>
             <li class="nav-item has-dropdown">
-              <router-link to="/classify">
+              <router-link to="/ourService">
                 <div style="display: flex; align-items: center; cursor: pointer">
                   <span>服务</span>
+                  <ul class="submenu">
+                    <li><a href="#">了解项目</a></li>
+                    <li><a href="#">预约</a></li>
+                  </ul>
                 </div>
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/cloud">
+              <router-link to="/customerCases">
                 <div style="display: flex; align-items: center; cursor: pointer">
                   <span>客户案例</span>
                 </div>
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/read">
+              <router-link to="/contractUs">
                 <div style="display: flex; align-items: center; cursor: pointer">
                   <span>联系我们</span>
                 </div>
