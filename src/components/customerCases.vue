@@ -115,6 +115,9 @@ export default {
   background-color: #e8f0fa;
   padding: 20px;
   border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap; /* 确保项目在容器宽度不足时换行 */
+  gap: 20px; /* 为项目之间添加间距 */
 }
 
 .section-video-header {
@@ -122,8 +125,9 @@ export default {
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-left: 600px;
-  margin-right: 600px;
+  max-width: 600px; /* 设置最大宽度 */
+  margin-left: auto; /* 自动左边距 */
+  margin-right: auto; /* 自动右边距 */
   background: linear-gradient(to bottom, #8db8eb, #c6defa);
   padding: 10px;
   border-radius: 5px;
@@ -136,6 +140,7 @@ export default {
   margin-bottom: 40px;
   padding: 20px;
   border-radius: 10px;
+  
 }
 
 .video {
@@ -169,6 +174,9 @@ export default {
   margin: 20px;
   border-radius: 10px;
   background-color: #e8f0fa;
+  display: flex;
+  flex-wrap: wrap; /* 确保项目在容器宽度不足时换行 */
+  gap: 20px; /* 为项目之间添加间距 */
 }
 
 .section-case-header {
@@ -176,8 +184,9 @@ export default {
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 40px;
-  margin-left: 600px;
-  margin-right: 600px;
+  max-width: 600px; /* 设置最大宽度 */
+  margin-left: auto; /* 自动左边距 */
+  margin-right: auto; /* 自动右边距 */
   background: linear-gradient(to bottom, #8db8eb, #c6defa);
   padding: 10px;
   border-radius: 5px;
