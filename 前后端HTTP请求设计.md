@@ -8,6 +8,7 @@ let obj = {
     psw: this.PSW
 };
 let str = JSON.stringify(obj);
+// 目的IP路径：http://IPV4:端口号/路径
 ```
 
 后端向前端发送数据：
@@ -18,6 +19,8 @@ let str = JSON.stringify(obj);
 "2"    // 表示员工登录成功
 "3"    // 表示没有用户信息，登录失败
 ```
+
+
 
 
 
@@ -36,6 +39,7 @@ let obj = {
     psw: this.PSW1
 };
 let str = JSON.stringify(obj);
+// 目的IP路径：http://IPV4:端口号/路径
 ```
 
 后端向前端发送数据：
