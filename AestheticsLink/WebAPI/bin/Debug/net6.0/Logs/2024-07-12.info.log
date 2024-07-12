@@ -1,0 +1,50 @@
+## 2024-07-12 10:54:13,500 [1] INFO  (null) Now listening on: http://localhost:5290 
+## 2024-07-12 10:54:13,535 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 10:54:13,538 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 10:54:13,541 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 10:54:22,572 [19] INFO  (null) Received login request: CUS_ID=1 
+## 2024-07-12 10:57:11,812 [1] INFO  (null) Now listening on: http://localhost:5290 
+## 2024-07-12 10:57:11,846 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 10:57:11,853 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 10:57:11,855 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 10:57:15,554 [18] INFO  (null) Received login request: CUS_ID=string 
+## 2024-07-12 10:59:02,279 [1] INFO  (null) Now listening on: http://localhost:5290 
+## 2024-07-12 10:59:02,311 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 10:59:02,313 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 10:59:02,315 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 10:59:05,697 [20] INFO  (null) Received login request: CUS_ID=string 
+## 2024-07-12 11:00:03,832 [1] INFO  (null) Now listening on: http://localhost:5290 
+## 2024-07-12 11:00:03,864 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 11:00:03,866 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 11:00:03,868 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 11:00:08,261 [16] INFO  (null) Received login request: CUS_ID=string 
+## 2024-07-12 11:04:08,784 [1] INFO  (null) Now listening on: http://localhost:5290 
+## 2024-07-12 11:04:08,817 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 11:04:08,824 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 11:04:08,828 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 11:04:13,054 [20] INFO  (null) Received login request: CUS_ID=string 
+## 2024-07-12 11:04:30,480 [1] INFO  (null) Now listening on: http://localhost:5290 
+## 2024-07-12 11:04:30,512 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 11:04:30,514 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 11:04:30,516 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 11:05:15,495 [19] INFO  (null) Received login request: CUS_ID=string 
+## 2024-07-12 11:05:41,748 [26] INFO  (null) Received login request: CUS_ID=1 
+## 2024-07-12 11:05:43,667 [28] INFO  (null) Received login request: CUS_ID=1 
+## 2024-07-12 11:05:44,255 [27] INFO  (null) Received login request: CUS_ID=1 
+## 2024-07-12 11:24:38,972 [1] INFO  (null) Now listening on: http://localhost:5290 
+## 2024-07-12 11:24:39,002 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 11:24:39,003 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 11:24:39,005 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 11:24:43,881 [18] INFO  (null) Received login request: CUS_ID=string 
+## 2024-07-12 11:24:55,102 [17] INFO  (null) Received login request: CUS_ID=1 
+## 2024-07-12 11:55:57,712 [1] INFO  (null) Now listening on: http://localhost:5290 
+## 2024-07-12 11:55:57,748 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 11:55:57,750 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 11:55:57,752 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 11:57:35,280 [1] INFO  (null) Now listening on: http://localhost:5290 
+## 2024-07-12 11:57:35,310 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 11:57:35,312 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 11:57:35,314 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 11:57:41,597 [13] INFO  (null) Received login request: UID=string 
+## 2024-07-12 11:57:55,175 [13] INFO  (null) Received login request: UID=admin 
+## 2024-07-12 11:58:01,636 [14] INFO  (null) Received login request: UID=admin 

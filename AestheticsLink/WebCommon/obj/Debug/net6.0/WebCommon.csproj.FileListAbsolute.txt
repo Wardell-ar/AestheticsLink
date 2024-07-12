@@ -1,0 +1,12 @@
+D:\database\AestheticsLink\AestheticsLink\WebCommon\bin\Debug\net6.0\WebCommon.deps.json
+D:\database\AestheticsLink\AestheticsLink\WebCommon\bin\Debug\net6.0\WebCommon.dll
+D:\database\AestheticsLink\AestheticsLink\WebCommon\bin\Debug\net6.0\WebCommon.pdb
+D:\database\AestheticsLink\AestheticsLink\WebCommon\obj\Debug\net6.0\WebCommon.csproj.AssemblyReference.cache
+D:\database\AestheticsLink\AestheticsLink\WebCommon\obj\Debug\net6.0\WebCommon.GeneratedMSBuildEditorConfig.editorconfig
+D:\database\AestheticsLink\AestheticsLink\WebCommon\obj\Debug\net6.0\WebCommon.AssemblyInfoInputs.cache
+D:\database\AestheticsLink\AestheticsLink\WebCommon\obj\Debug\net6.0\WebCommon.AssemblyInfo.cs
+D:\database\AestheticsLink\AestheticsLink\WebCommon\obj\Debug\net6.0\WebCommon.csproj.CoreCompileInputs.cache
+D:\database\AestheticsLink\AestheticsLink\WebCommon\obj\Debug\net6.0\WebCommon.dll
+D:\database\AestheticsLink\AestheticsLink\WebCommon\obj\Debug\net6.0\refint\WebCommon.dll
+D:\database\AestheticsLink\AestheticsLink\WebCommon\obj\Debug\net6.0\WebCommon.pdb
+D:\database\AestheticsLink\AestheticsLink\WebCommon\obj\Debug\net6.0\ref\WebCommon.dll

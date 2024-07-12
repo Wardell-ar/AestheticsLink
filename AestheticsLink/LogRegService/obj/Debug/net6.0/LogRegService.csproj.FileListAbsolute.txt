@@ -1,0 +1,17 @@
+D:\database\AestheticsLink\AestheticsLink\LogRegService\bin\Debug\net6.0\LogRegService.deps.json
+D:\database\AestheticsLink\AestheticsLink\LogRegService\bin\Debug\net6.0\LogRegService.dll
+D:\database\AestheticsLink\AestheticsLink\LogRegService\bin\Debug\net6.0\LogRegService.pdb
+D:\database\AestheticsLink\AestheticsLink\LogRegService\bin\Debug\net6.0\WebCommon.dll
+D:\database\AestheticsLink\AestheticsLink\LogRegService\bin\Debug\net6.0\WebModel.dll
+D:\database\AestheticsLink\AestheticsLink\LogRegService\bin\Debug\net6.0\WebCommon.pdb
+D:\database\AestheticsLink\AestheticsLink\LogRegService\bin\Debug\net6.0\WebModel.pdb
+D:\database\AestheticsLink\AestheticsLink\LogRegService\obj\Debug\net6.0\LogRegService.csproj.AssemblyReference.cache
+D:\database\AestheticsLink\AestheticsLink\LogRegService\obj\Debug\net6.0\LogRegService.GeneratedMSBuildEditorConfig.editorconfig
+D:\database\AestheticsLink\AestheticsLink\LogRegService\obj\Debug\net6.0\LogRegService.AssemblyInfoInputs.cache
+D:\database\AestheticsLink\AestheticsLink\LogRegService\obj\Debug\net6.0\LogRegService.AssemblyInfo.cs
+D:\database\AestheticsLink\AestheticsLink\LogRegService\obj\Debug\net6.0\LogRegService.csproj.CoreCompileInputs.cache
+D:\database\AestheticsLink\AestheticsLink\LogRegService\obj\Debug\net6.0\LogRegService.csproj.CopyComplete
+D:\database\AestheticsLink\AestheticsLink\LogRegService\obj\Debug\net6.0\LogRegService.dll
+D:\database\AestheticsLink\AestheticsLink\LogRegService\obj\Debug\net6.0\refint\LogRegService.dll
+D:\database\AestheticsLink\AestheticsLink\LogRegService\obj\Debug\net6.0\LogRegService.pdb
+D:\database\AestheticsLink\AestheticsLink\LogRegService\obj\Debug\net6.0\ref\LogRegService.dll
