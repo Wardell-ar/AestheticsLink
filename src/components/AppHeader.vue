@@ -1,7 +1,7 @@
 <template>
     <header class="header">
       <div class="logo">
-        <img src="../../public/favicon.ico" />
+        <img src="../../public/logo.png" />
       </div>
       <div class="menu">
         <nav class="nav">
@@ -44,6 +44,14 @@
       <div class="personal">
         <nav class="nav">
           <ul class="nav-list">
+            <li class="nav-item">
+              <router-link to="/">
+                <div style="display: flex; align-items: center; cursor: pointer">
+                  <el-icon><ShoppingCart /></el-icon>
+                  <span>购物车</span>
+                </div>
+              </router-link>
+            </li>
             <li class="nav-item">
               <router-link to="/login">
                 <div style="display: flex; align-items: center; cursor: pointer">
@@ -71,7 +79,7 @@
     </header>
     <header class="header-bottom" :class="{ 'visible': isVisible }">
       <div class="logo">
-        <img src="../../public/favicon.ico" />
+        <img src="../../public/logo.png" />
       </div>
       <div class="menu">
         <nav class="nav">
@@ -114,6 +122,14 @@
       <div class="personal">
         <nav class="nav">
           <ul class="nav-list">
+            <li class="nav-item">
+              <router-link to="/">
+                <div style="display: flex; align-items: center; cursor: pointer">
+                  <el-icon><ShoppingCart /></el-icon>
+                  <span>购物车</span>
+                </div>
+              </router-link>
+            </li>
             <li class="nav-item">
               <router-link to="/">
                 <div style="display: flex; align-items: center; cursor: pointer">
@@ -295,7 +311,8 @@
   }
   
   .logo img {
-    height: 40px; /* 可根据需要调整logo的高度 */
+    margin-left:15px;
+    height: 80px; /* 可根据需要调整logo的高度 */
   }
   
   .menu {

@@ -8,10 +8,10 @@
           <div class='info'>
             <div class="user">
               <div class="user-name">
-                <span>{{ nickname }}</span>
+                <span>{{ form.nickname }}</span>
               </div>
               <div class="user-id">
-                <span>{{ user_id }}</span>
+                <span>{{ form.id }}</span>
               </div>
               <div class="user-level">
                 <span>lv.{{ user_level }}</span>
@@ -26,40 +26,32 @@
           <el-aside width="200px" class="aside">
             <h5 class="mb-2">个人中心</h5>
             <el-menu
-              default-active="2"
+              default-active="1"
               class="el-menu-vertical-demo"
-              @open="handleOpen"
-              @close="handleClose"
+              @select="selectMenu"
             >
-            <el-sub-menu index="1">
-              <template #title>
-                <el-icon><location /></el-icon>
-                <span>Navigator One</span>
-              </template>
-              <el-menu-item-group title="Group One">
-                <el-menu-item index="1-1">item one</el-menu-item>
-                <el-menu-item index="1-2">item two</el-menu-item>
-              </el-menu-item-group>
-              <el-menu-item-group title="Group Two">
-                <el-menu-item index="1-3">item three</el-menu-item>
-              </el-menu-item-group>
-              <el-sub-menu index="1-4">
-                <template #title>item four</template>
-                <el-menu-item index="1-4-1">item one</el-menu-item>
-              </el-sub-menu>
-            </el-sub-menu>
+            <el-menu-item index="1">
+              <el-icon><User /></el-icon>
+                <span>个人信息</span>
+            </el-menu-item>
             <el-menu-item index="2">
-              <el-icon><icon-menu /></el-icon>
-              <span>Navigator Two</span>
+              <el-icon><Wallet /></el-icon>
+              <span>我的权益</span>
             </el-menu-item>
-            <el-menu-item index="3" disabled>
-              <el-icon><document /></el-icon>
-              <span>Navigator Three</span>
-            </el-menu-item>
-            <el-menu-item index="4">
-              <el-icon><setting /></el-icon>
-              <span>Navigator Four</span>
-            </el-menu-item>
+            <el-sub-menu index="3">
+              <template #title>
+                <el-icon><ShoppingCartFull /></el-icon>
+                <span>我的项目</span>
+              </template>
+              <el-menu-item index="4-1">
+                <el-icon><List /></el-icon>
+                <span>未完成</span>
+              </el-menu-item>
+              <el-menu-item index="4-2">
+                <el-icon><SuccessFilled /></el-icon>
+                <span>已完成</span>
+              </el-menu-item>
+            </el-sub-menu>
           </el-menu>
               </el-aside>
               <el-main class="main">
@@ -74,14 +66,27 @@
                         <el-form-item label="头像" prop="avatar">
                           <img style="width:150px;height:110px" :src="form.avatar"></img>
                         </el-form-item>
-                        <el-form-item label="账号密码" prop="password">
-                          <el-input v-model="form.password"></el-input>
+                        <el-form-item label="账号密码" prop="password" >
+                          <el-input v-model="form.password" type="password" show-password></el-input>
                         </el-form-item>
                         <el-form-item label="昵称" prop="nickname">
                           <el-input v-model="form.nickname"></el-input>
                         </el-form-item>
                         <el-form-item label="年龄" prop="age">
                           <el-input v-model="form.age"></el-input>
+                        </el-form-item>
+                          <el-form-item label="生日" prop="birth">
+                              <el-date-picker
+                                v-model="form.birthday"
+                                type="date"
+                                placeholder="选择你的生日"
+                                :size="size"
+                              />
+                          </el-form-item>
+                        </div>
+                      <div class="right">
+                        <el-form-item label="真实姓名" prop="name">
+                          <el-input v-model="form.name"></el-input>
                         </el-form-item>
                         <el-form-item label="性别" prop="sex">
                           <el-switch
@@ -95,34 +100,18 @@
                           >
                           </el-switch>
                           </el-form-item>
-                          <el-form-item label="生日" prop="birth">
-                              <el-date-picker
-                                v-model="birthday"
-                                type="date"
-                                placeholder="选择你的生日"
-                                :size="size"
-                              />
-                          </el-form-item>
-                        </div>
-                      <div class="right">
                         <el-form-item label="用户编号" prop="id">
                           <el-input v-model="form.id" disabled></el-input>
                         </el-form-item>
                         <el-form-item label="账号" prop="account">
                           <el-input v-model="form.account" disabled></el-input>
                         </el-form-item>
-                        <el-form-item label="地区" prop="area">
+                        <el-form-item label="住址" prop="area">
                           <el-input v-model="form.area"></el-input>
-                        </el-form-item>
-                        <el-form-item label="兴趣爱好" prop="hobby">
-                          <el-input v-model="form.hobby"></el-input>
                         </el-form-item>
                         <el-form-item label="职业" prop="work">
                           <el-input v-model="form.work"></el-input>
                         </el-form-item>
-                          <el-form-item label="个性签名" prop="design">
-                        <el-input v-model="form.design"></el-input>
-                          </el-form-item>
                         <el-form-item label="手机号码" prop="mobilePhoneNumber">
                           <el-input v-model="form.mobilePhoneNumber"></el-input>
                         </el-form-item>
@@ -134,6 +123,79 @@
                       <el-button type="primary" @click="submit">提 交</el-button>
                     </span>
                 </el-dialog>
+                <el-card v-if="selectIndex === '1'" class="infoCard">
+                  <el-descriptions class="margin-top" title="个人信息" :column="2" border>
+                    <el-descriptions-item label-align="center",align="center">
+                      <template #label>
+                        <el-icon><Avatar /></el-icon>
+                        头像
+                      </template>
+                      <img class="img" :src="form.avatar" alt="" />
+                    </el-descriptions-item>
+                    <el-descriptions-item label-align="center",align="center">
+                      <template #label>
+                        <el-icon><User /></el-icon>                        
+                        用户编号
+                      </template>
+                      {{ form.id }}
+                    </el-descriptions-item>
+                    <el-descriptions-item label-align="center",align="center">
+                      <template #label>
+                        <el-icon><UserFilled /></el-icon>
+                        账号
+                      </template>
+                      {{ form.account }}
+                    </el-descriptions-item>
+                    <el-descriptions-item label-align="center",align="center">
+                      <template #label>
+                        昵称
+                      </template>
+                      {{ form.nickname }}
+                    </el-descriptions-item>
+                    <el-descriptions-item label-align="center",align="center">
+                      <template #label>
+                        年龄
+                      </template>
+                      {{ form.age }}
+                    </el-descriptions-item>
+                    <el-descriptions-item label-align="center",align="center">
+                      <template #label>
+                        <el-icon><Female /></el-icon>
+                        <el-icon><Male /></el-icon>
+                        性别
+                      </template>
+                      <el-tag size="small">{{ form.sex === 1 ? '男' : '女' }}</el-tag>
+                    </el-descriptions-item>
+                    <el-descriptions-item label-align="center",align="center">
+                      <template #label>
+                        <el-icon><PhoneFilled /></el-icon>
+                        手机号码
+                      </template>
+                      {{ form.mobilePhoneNumber }}
+                    </el-descriptions-item>
+                    <el-descriptions-item label-align="center",align="center">
+                      <template #label>
+                        <el-icon><Place /></el-icon>
+                        住址
+                      </template>
+                      {{ form.area }}
+                    </el-descriptions-item>
+                    <el-descriptions-item label-align="center",align="center">
+                      <template #label>
+                        <el-icon><InfoFilled /></el-icon>
+                        注册日期
+                      </template>
+                      {{ createDate | formatDate }}
+                    </el-descriptions-item>
+                    <el-descriptions-item label-align="center",align="center">
+                      <template #label>
+                        <el-icon><Calendar /></el-icon>
+                        生日
+                      </template>
+                      {{ form.birthday }}
+                    </el-descriptions-item>
+                  </el-descriptions>
+                </el-card>
               </el-main>
         </el-container>
       </el-container>
@@ -142,29 +204,25 @@
 
 <script>
 import { ref } from 'vue'
-const birthday = ref('')
 export default {
   name:'Person',
   data() {
     return {
-      nickname:'hh',
-      user_id:'1111',
+      selectIndex:"1",
       user_level:5,
       create_dialog:false,
       form: {
         avatar: "",
-        password: "",
-        nickname: "",
-        age: Number,
-        email: "",
-        mobilePhoneNumber: "",
-        sex: Number,
-        id: Number,
-        account: "",
-        area: "",
-        hobby: "",
-        work: "",
-        design: "",
+        password: "111",
+        nickname: "hh",
+        name:'111',
+        age: 12,
+        mobilePhoneNumber: "11111111111",
+        sex: 1,
+        id: '1111',
+        account: "111111111111",
+        area: "1111111111",
+        birthday:ref('')
       },
       rules: {
         nickname: [
@@ -177,14 +235,10 @@ export default {
     }
   },
   methods:{
-    edit(){
-      this.dialogVisible=true;
-      console.log(this.dialogVisible);
-    },
-    handleClose() {
-      this.dialogVisible = false;
-      // this.$emit("flesh");
-    },
+    selectMenu(index){
+      this.selectIndex=index;
+      console.log(this.selectIndex);
+    }
   }
 }
 </script>
@@ -256,9 +310,6 @@ h5{
   -webkit-background-clip: text;
   -webkit-background-size: 200% 100%;
   -webkit-animation: masked-animation 4s linear infinite;
-}
-.el-menu-item {
-  margin-top: 22px;
 }
 .main{
   width: 70%;

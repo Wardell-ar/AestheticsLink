@@ -4,7 +4,7 @@
   <div class="main-content">
       <router-view />
   </div>  
-  <!-- <AppFooter></AppFooter> -->
+  <AppFooter></AppFooter>
 </template>
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
