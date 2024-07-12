@@ -12,7 +12,10 @@
                 <p>密码</p>
                 <input type="password" id="password" name="password" v-model="PSW" required>
             </div>
-            <button type="submit" @click="loginHandle">登录</button>
+            <button @click="loginHandle">登录</button>
+            <br>
+            <br>
+            <button @click="logupHandle">注册</button>
             <p class="terms">
                 点击“登录”即表示您同意<a href="#">条款</a>。有关我们如何处理您的个人数据的更多信息，请参阅我们的<a href="#">隐私政策</a>。
             </p>
@@ -34,6 +37,10 @@ export default{
 
     methods:{
         loginHandle(){
+            if(this.UID === "" || this.PSW === ""){
+                alert("手机号与密码不能为空！");
+                return;
+            }
             let obj = {
                 uid: this.UID,
                 psw: this.PSW
@@ -62,6 +69,10 @@ export default{
                     }
                 }
             };
+        },
+        logupHandle(){
+            // 跳转界面到注册界面
+            // ......
         }
     }
 }
@@ -90,7 +101,7 @@ export default{
     }
     .image-container {
         flex: 1;
-        background: url("C:\Users\Water.liu\Desktop\test\vue-project\src\assets\logo.svg") no-repeat center center;
+        background: url("../assets/logo.svg") no-repeat center center;
         background-size: cover;
     }
     .form-container {
