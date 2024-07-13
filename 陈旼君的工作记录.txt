@@ -1,5 +1,5 @@
-7.12 做了个组件
-7.13 
+7.11 做了个组件
+7.12
 Advertise.vue  上面的那个广告界面
 Advantages.vue 	下面的那个我们的优势
 CommonButton.vue   	按钮
@@ -14,3 +14,6 @@ lazyLoadElement.js  页面动画
 animation.scss  页面动画
 
 路径我好像搞得有点复杂。。我。。。。反正就改一下吧。。
+
+7.13
+添加了Coupons.vue，myBenefits.vue，Orders.vue
