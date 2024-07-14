@@ -49,6 +49,8 @@
 
 
 <script>
+import { logupReq } from '@/HTTP/http';
+import { useRouter } from 'vue-router';
 export default{
     data(){
         return {
@@ -62,7 +64,9 @@ export default{
             PSW2: "",
 
             msg: "",
-            msgcolor:""
+            msgcolor:"",
+
+            router: useRouter()
         }
     },
 
@@ -70,35 +74,7 @@ export default{
         logupHandle(){
             if(this.NAME!=""&&this.SEX!=""&&this.YEAR!=""&&this.MONTH!=""&&this.DAY!=""&&this.UID!=""&&this.PSW1!=""&&this.PSW2!=""){
                 if(this.PSW1 === this.PSW2){
-                    let obj = {
-                        name: this.NAME,
-                        sex: this.SEX,
-                        year: this.YEAR,
-                        month: this.MONTH,
-                        day: this.DAY,
-                        uid: this.UID,
-                        psw: this.PSW1
-                    };
-                    let str = JSON.stringify(obj);
-                    const xhr = new XMLHttpRequest();  // 创建实例
-                    xhr.open('POST','http://100.78.214.7:5287/Login/CheckLogin/checklogin',true);  // 请求行（请求类型、目的IP）
-                    xhr.setRequestHeader('Content-Type', 'application/json');  // 请求头（传输内容...）
-                    xhr.send(str);  // 请求体（发送的内容，只有POST请求可以发送内容）
-                    // 对服务器响应的处理
-                    xhr.onreadystatechange = function(){
-                        if(xhr.readyState === 4){
-                            if(xhr.status >= 200 && xhr.status < 300){
-                                if(xhr.response === "0"){  // 注册失败
-                                    alert("注册失败！");
-                                }
-                                else if(xhr.response === "1"){
-                                    alert("注册成功，请重新登录！");
-                                    // 跳转到登录界面
-                                    // ......
-                                }
-                            }
-                        }
-                    }
+                    logupReq(this.NAME,this.SEX,this.YEAR,this.MONTH,this.DAY,this.UID,this.PSW1,this.jumpToLogin);
                 }
                 else{
                     alert("密码不一致！");
@@ -107,6 +83,9 @@ export default{
             else{
                 alert("输入内容不能为空！");
             }
+        },
+        jumpToLogin(){
+            this.router.push("/");
         }
     },
 
