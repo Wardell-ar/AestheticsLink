@@ -8,13 +8,13 @@
           <div class='info'>
             <div class="user">
               <div class="user-name">
-                <span>{{ form.nickname }}</span>
+                <span>{{ customer.nickname }}</span>
               </div>
               <div class="user-id">
-                <span>{{ form.id }}</span>
+                <span>{{ customer.id }}</span>
               </div>
               <div class="user-level">
-                <span>lv.{{ user_level }}</span>
+                <span>lv.{{ customer.level }}</span>
               </div>
             </div>
             <el-button class='button' true @click="create_dialog=true" type="primary">
@@ -60,24 +60,24 @@
                   title="修改个人信息"
                   v-model="create_dialog"
                   width="800px">
-                  <el-form :model="form" :rules="rules" ref="form" label-width="150px">
+                  <el-form :model="customer" :rules="rules" ref="customer" label-width="150px">
                     <div class="updateinfo">
                       <div class="left">
                         <el-form-item label="头像" prop="avatar">
-                          <img style="width:150px;height:110px" :src="form.avatar"></img>
+                          <img style="width:150px;height:110px" :src="customer.avatar"></img>
                         </el-form-item>
                         <el-form-item label="账号密码" prop="password" >
-                          <el-input v-model="form.password" type="password" show-password></el-input>
+                          <el-input v-model="customer.password" type="password" show-password></el-input>
                         </el-form-item>
                         <el-form-item label="昵称" prop="nickname">
-                          <el-input v-model="form.nickname"></el-input>
+                          <el-input v-model="customer.nickname"></el-input>
                         </el-form-item>
                         <el-form-item label="年龄" prop="age">
-                          <el-input v-model="form.age"></el-input>
+                          <el-input v-model="customer.age"></el-input>
                         </el-form-item>
                           <el-form-item label="生日" prop="birth">
                               <el-date-picker
-                                v-model="form.birthday"
+                                v-model="customer.birthday"
                                 type="date"
                                 placeholder="选择你的生日"
                                 :size="size"
@@ -86,11 +86,11 @@
                         </div>
                       <div class="right">
                         <el-form-item label="真实姓名" prop="name">
-                          <el-input v-model="form.name"></el-input>
+                          <el-input v-model="customer.name"></el-input>
                         </el-form-item>
                         <el-form-item label="性别" prop="sex">
                           <el-switch
-                            v-model="form.sex"
+                            v-model="customer.sex"
                             active-color="#13ce66"
                             inactive-color="#ff4949"
                             active-text="男"
@@ -101,19 +101,19 @@
                           </el-switch>
                           </el-form-item>
                         <el-form-item label="用户编号" prop="id">
-                          <el-input v-model="form.id" disabled></el-input>
+                          <el-input v-model="customer.id" disabled></el-input>
                         </el-form-item>
                         <el-form-item label="账号" prop="account">
-                          <el-input v-model="form.account" disabled></el-input>
+                          <el-input v-model="customer.account" disabled></el-input>
                         </el-form-item>
                         <el-form-item label="住址" prop="area">
-                          <el-input v-model="form.area"></el-input>
+                          <el-input v-model="customer.area"></el-input>
                         </el-form-item>
                         <el-form-item label="职业" prop="work">
-                          <el-input v-model="form.work"></el-input>
+                          <el-input v-model="customer.work"></el-input>
                         </el-form-item>
                         <el-form-item label="手机号码" prop="mobilePhoneNumber">
-                          <el-input v-model="form.mobilePhoneNumber"></el-input>
+                          <el-input v-model="customer.mobilePhoneNumber"></el-input>
                         </el-form-item>
                       </div>
                     </div>
@@ -130,33 +130,33 @@
                         <el-icon><Avatar /></el-icon>
                         头像
                       </template>
-                      <img class="img" :src="form.avatar" alt="" />
+                      <img class="img" :src="customer.avatar" alt="" />
                     </el-descriptions-item>
                     <el-descriptions-item label-align="center",align="center">
                       <template #label>
                         <el-icon><User /></el-icon>                        
                         用户编号
                       </template>
-                      {{ form.id }}
+                      {{ customer.id }}
                     </el-descriptions-item>
                     <el-descriptions-item label-align="center",align="center">
                       <template #label>
                         <el-icon><UserFilled /></el-icon>
                         账号
                       </template>
-                      {{ form.account }}
+                      {{ customer.account }}
                     </el-descriptions-item>
                     <el-descriptions-item label-align="center",align="center">
                       <template #label>
                         昵称
                       </template>
-                      {{ form.nickname }}
+                      {{ customer.nickname }}
                     </el-descriptions-item>
                     <el-descriptions-item label-align="center",align="center">
                       <template #label>
                         年龄
                       </template>
-                      {{ form.age }}
+                      {{ customer.age }}
                     </el-descriptions-item>
                     <el-descriptions-item label-align="center",align="center">
                       <template #label>
@@ -164,21 +164,21 @@
                         <el-icon><Male /></el-icon>
                         性别
                       </template>
-                      <el-tag size="small">{{ form.sex === 1 ? '男' : '女' }}</el-tag>
+                      <el-tag size="small">{{ customer.sex === 1 ? '男' : '女' }}</el-tag>
                     </el-descriptions-item>
                     <el-descriptions-item label-align="center",align="center">
                       <template #label>
                         <el-icon><PhoneFilled /></el-icon>
                         手机号码
                       </template>
-                      {{ form.mobilePhoneNumber }}
+                      {{ customer.mobilePhoneNumber }}
                     </el-descriptions-item>
                     <el-descriptions-item label-align="center",align="center">
                       <template #label>
                         <el-icon><Place /></el-icon>
                         住址
                       </template>
-                      {{ form.area }}
+                      {{ customer.area }}
                     </el-descriptions-item>
                     <el-descriptions-item label-align="center",align="center">
                       <template #label>
@@ -192,7 +192,7 @@
                         <el-icon><Calendar /></el-icon>
                         生日
                       </template>
-                      {{ form.birthday }}
+                      {{ customer.birthday }}
                     </el-descriptions-item>
                   </el-descriptions>
                 </el-card>
@@ -209,9 +209,9 @@ export default {
   data() {
     return {
       selectIndex:"1",
-      user_level:5,
       create_dialog:false,
-      form: {
+      customer: {//客户信息
+        level:5,
         avatar: "",
         password: "111",
         nickname: "hh",
