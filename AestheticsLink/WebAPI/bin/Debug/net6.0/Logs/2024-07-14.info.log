@@ -1,0 +1,5 @@
+## 2024-07-14 15:48:44,655 [1] INFO  (null) Now listening on: http://100.80.37.188:5290 
+## 2024-07-14 15:48:44,692 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-14 15:48:44,724 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-14 15:48:44,727 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-14 15:48:56,627 [28] INFO  (null) Received login request: UID=1 

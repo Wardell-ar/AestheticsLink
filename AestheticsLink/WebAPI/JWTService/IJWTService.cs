@@ -8,5 +8,6 @@ namespace WebAPI.JWTService
         string GenerateToken(CUSTOMER customer);
         string GenerateToken(SERVER server);
         string GenerateToken(LoginDto admin);
+        public bool ValidateToken(string token);
     }
 }

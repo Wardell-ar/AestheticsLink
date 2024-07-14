@@ -17,7 +17,7 @@ namespace LogRegService
             {
                 // 查询数据库，验证用户名和密码
                 var server = await DbContext.db.Queryable<SERVER>()
-                                        .Where(c => c.SER_ID == login.UID && c.PASSWORD == login.PSW)
+                                        .Where(c => c.PHONE_NUM == login.UID && c.PASSWORD == login.PSW)
                                         .FirstAsync();
 
                 return server;

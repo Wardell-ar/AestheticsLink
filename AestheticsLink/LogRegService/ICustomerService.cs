@@ -9,6 +9,6 @@ namespace LogRegService
         Task<CUSTOMER> CheckLogin(LoginDto login);
 
         //注册服务
-        CustomerDto AddCustomer(RegisterDto input);
+        CustomerDto AddCustomer(RegisterDto register);
     }
 }

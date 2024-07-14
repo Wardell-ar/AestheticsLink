@@ -3,8 +3,10 @@ using LogRegService.Dto;
 using LogRegService;
 using WebAPI.JWTService;
 using WebModel.Entity;
+using NetTaste;
+using Microsoft.AspNetCore.Authorization;
 
-namespace API.Controllers
+namespace WebAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
@@ -30,24 +32,21 @@ namespace API.Controllers
 
             if(login != null) 
             {
-                if(login.UID == "admin"&&login.PSW=="8888")
+                if(login.UID == "admin" && login.PSW == "8888")
                 {
                     var token = _jwtService.GenerateToken(login);
 
                     var response = new LoginResponse
                     {
-                        AccountType = 0,//登录账号类型，0为管理员
-                        Token = token
+                        role = 0,//登录账号类型，0为管理员
+                        token = token
                     };
                     // Return token as response
                     return Ok(response);
                 }
-
             }
-
             // Check login credentials asynchronously
             var customer = await _customerService.CheckLogin(login);
-
 
             if (customer != null)
             {
@@ -56,8 +55,8 @@ namespace API.Controllers
 
                 var response = new LoginResponse
                 {
-                    AccountType = 1,//登录账号类型，1为客户
-                    Token = token
+                    role = 1,//登录账号类型，1为客户
+                    token = token
                 };
                 // Return token as response
                 return Ok(response);
@@ -65,29 +64,44 @@ namespace API.Controllers
             else
             {
                 var server = await _serverService.CheckLogin(login);
-                if (server != null) 
+                if (server != null)
                 {
                     // Generate JWT token
                     var token = _jwtService.GenerateToken(server);
 
                     var response = new LoginResponse
                     {
-                        AccountType = 2,//登录账号类型，2为员工
-                        Token = token
+                        role = 2,//登录账号类型，2为员工
+                        token = token
                     };
                     // Return token as response
                     return Ok(response);
-
                 }
                 else
-                    return Unauthorized(new { message = "Invalid credentials" });
+                {
+                    var response = new LoginResponse
+                    {
+                        role = -1,//登录账号类型，2为员工
+                        token = null
+                    };
+                    return Ok(response);
+                }
             }
         }
-
+        [Authorize]
+        [HttpGet]
+        public bool Get()
+        {
+            //if (_jwtService.ValidateToken(token) == true)
+            //    return true;
+            //else
+            //    return false;
+            return true;
+        }
     }
     public class LoginResponse
     {
-        public int AccountType { get; set; }
-        public string Token { get; set; }
+        public int role { get; set; }
+        public string token { get; set; }
     }
 }

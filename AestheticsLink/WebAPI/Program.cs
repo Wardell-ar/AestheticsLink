@@ -4,7 +4,6 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using WebAPI.JWTService;
 using LogRegService;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,9 +46,14 @@ builder.Services.AddTransient<IJWTService, JWTService>();
             ValidateIssuerSigningKey = true,
             ValidAudience = tokenOptions.Audience,
             ValidIssuer = tokenOptions.Issuer,
+           // IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenOptions.Secret))
+
         };
     });
 }
+
+// 添加授权服务
+//builder.Services.AddAuthorization();
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.
@@ -58,6 +62,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+//app.UseAuthentication();
 
 app.UseAuthorization();
 

@@ -48,3 +48,221 @@
 ## 2024-07-12 11:57:41,597 [13] INFO  (null) Received login request: UID=string 
 ## 2024-07-12 11:57:55,175 [13] INFO  (null) Received login request: UID=admin 
 ## 2024-07-12 11:58:01,636 [14] INFO  (null) Received login request: UID=admin 
+## 2024-07-12 12:05:47,169 [1] INFO  (null) Now listening on: http://localhost:5290 
+## 2024-07-12 12:05:47,203 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 12:05:47,206 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 12:05:47,208 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 12:08:05,402 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 12:08:05,414 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 12:08:05,414 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 12:08:05,414 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 12:08:24,392 [25] INFO  (null) Received login request: UID=string 
+## 2024-07-12 12:09:17,212 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 12:09:17,247 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 12:09:17,252 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 12:09:17,254 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 12:10:10,222 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 12:10:10,251 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 12:10:10,252 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 12:10:10,254 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 12:12:08,891 [38] INFO  (null) Received login request: UID=1 
+## 2024-07-12 12:12:31,438 [45] INFO  (null) Received login request: UID=11 
+## 2024-07-12 12:14:05,617 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 12:14:05,645 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 12:14:05,646 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 12:14:05,652 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 12:14:14,714 [3] INFO  (null) Received login request: UID=11 
+## 2024-07-12 12:14:25,748 [3] INFO  (null) Received login request: UID=1 
+## 2024-07-12 12:14:32,337 [19] INFO  (null) Received login request: UID=1 
+## 2024-07-12 12:14:54,367 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 12:14:54,400 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 12:14:54,402 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 12:14:54,404 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 12:15:03,101 [13] INFO  (null) Received login request: UID=11 
+## 2024-07-12 12:15:19,738 [21] INFO  (null) Received login request: UID=1 
+## 2024-07-12 14:18:52,513 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 14:18:52,543 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 14:18:52,546 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 14:18:52,548 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 14:19:03,088 [17] INFO  (null) Received login request: UID=1 
+## 2024-07-12 14:19:04,381 [3] INFO  (null) Received login request: UID=1 
+## 2024-07-12 14:21:07,007 [41] INFO  (null) Received login request: UID=1 
+## 2024-07-12 14:21:39,222 [47] INFO  (null) Received login request: UID=1 
+## 2024-07-12 14:22:40,777 [52] INFO  (null) Received login request: UID=1 
+## 2024-07-12 14:24:48,868 [68] INFO  (null) Received login request: UID=1 
+## 2024-07-12 15:13:32,482 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 15:13:32,511 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 15:13:32,513 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 15:13:32,515 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 15:14:11,627 [20] INFO  (null) Received register request: UID=15882009823 
+## 2024-07-12 15:20:31,020 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 15:20:31,060 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 15:20:31,062 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 15:20:31,064 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 15:21:00,846 [21] INFO  (null) Received register request: UID=15882009823 
+## 2024-07-12 15:21:19,433 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 15:21:19,466 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 15:21:19,467 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 15:21:19,470 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 15:21:31,324 [19] INFO  (null) Received register request: UID=string 
+## 2024-07-12 15:40:13,716 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 15:40:13,757 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 15:40:13,782 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 15:40:13,786 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 15:40:30,426 [15] INFO  (null) Received register request: UID=112 
+## 2024-07-12 15:43:06,081 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 15:43:06,115 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 15:43:06,117 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 15:43:06,120 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 15:43:24,974 [17] INFO  (null) Received register request: UID=123 
+## 2024-07-12 15:48:17,129 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 15:48:17,160 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 15:48:17,162 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 15:48:17,164 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 15:48:42,643 [11] INFO  (null) Received register request: UID=15882009823 
+## 2024-07-12 15:48:59,438 [11] INFO  (null) Received login request: UID=1 
+## 2024-07-12 15:49:53,578 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 15:49:53,607 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 15:49:53,610 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 15:49:53,612 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 15:50:16,900 [18] INFO  (null) Received register request: UID=15882009823 
+## 2024-07-12 15:54:08,803 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 15:54:08,830 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 15:54:08,863 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 15:54:08,865 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 15:54:24,657 [20] INFO  (null) Received register request: UID=22 
+## 2024-07-12 15:58:00,996 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 15:58:01,031 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 15:58:01,033 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 15:58:01,035 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 15:58:25,354 [22] INFO  (null) Received register request: UID=15882009823 
+## 2024-07-12 15:58:53,637 [28] INFO  (null) Received register request: UID=15882009823 
+## 2024-07-12 15:59:00,248 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 15:59:00,280 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 15:59:00,282 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 15:59:00,284 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 15:59:25,877 [23] INFO  (null) Received register request: UID=15882009823 
+## 2024-07-12 16:03:16,999 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 16:03:17,040 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 16:03:17,043 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 16:03:17,045 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 16:09:23,049 [35] INFO  (null) Received login request: UID=1 
+## 2024-07-12 16:09:57,635 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 16:09:57,667 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 16:09:57,672 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 16:09:57,680 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 16:11:47,312 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 16:11:47,348 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 16:11:47,351 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 16:11:47,353 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 16:12:29,845 [18] INFO  (null) Received register request: UID=123 
+## 2024-07-12 16:13:23,622 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 16:13:23,653 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 16:13:23,656 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 16:13:23,658 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 16:14:34,447 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 16:14:34,484 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 16:14:34,488 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 16:14:34,491 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 16:16:19,827 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 16:16:19,864 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 16:16:19,869 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 16:16:19,872 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 16:17:35,894 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 16:17:35,920 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 16:17:35,922 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 16:17:35,924 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 16:20:58,156 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 16:20:58,212 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 16:20:58,214 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 16:20:58,217 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 16:22:52,145 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 16:22:52,216 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 16:22:52,222 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 16:22:52,224 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 16:25:46,901 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 16:25:46,983 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 16:25:46,988 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 16:25:46,990 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 16:26:03,460 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 16:26:03,474 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 16:26:03,475 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 16:26:03,475 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 16:26:13,404 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 16:26:13,436 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 16:26:13,438 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 16:26:13,442 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 16:26:16,856 [11] INFO  (null) Received login request: UID=string 
+## 2024-07-12 16:41:16,427 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 16:41:16,457 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 16:41:16,458 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 16:41:16,460 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 16:41:23,879 [18] INFO  (null) Received login request: UID=1 
+## 2024-07-12 16:42:43,759 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 16:42:43,789 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 16:42:43,792 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 16:42:43,793 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 16:42:55,064 [15] INFO  (null) Received login request: UID=string 
+## 2024-07-12 16:43:03,041 [18] INFO  (null) Received login request: UID=1 
+## 2024-07-12 16:47:33,707 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 16:47:33,733 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 16:47:33,735 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 16:47:33,738 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 16:47:39,461 [13] INFO  (null) Received login request: UID=1 
+## 2024-07-12 16:51:00,759 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 16:51:00,787 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 16:51:00,789 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 16:51:00,790 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 16:53:22,752 [32] INFO  (null) Received login request: UID=1 
+## 2024-07-12 16:54:10,626 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 16:54:10,651 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 16:54:10,653 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 16:54:10,654 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 16:54:18,152 [3] INFO  (null) Received login request: UID=1 
+## 2024-07-12 16:55:09,448 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 16:55:09,475 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 16:55:09,476 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 16:55:09,477 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 16:55:17,406 [8] INFO  (null) Received login request: UID=1 
+## 2024-07-12 17:00:02,823 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 17:00:02,850 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 17:00:02,852 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 17:00:02,853 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 17:00:10,323 [8] INFO  (null) Received login request: UID=1 
+## 2024-07-12 17:06:13,762 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 17:06:13,794 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 17:06:13,796 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 17:06:13,802 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 17:06:20,093 [19] INFO  (null) Received login request: UID=1 
+## 2024-07-12 17:08:55,511 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 17:08:55,538 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 17:08:55,540 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 17:08:55,542 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 17:09:22,546 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 17:09:22,577 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 17:09:22,578 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 17:09:22,580 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 17:11:35,830 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 17:11:35,858 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 17:11:35,860 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 17:11:35,862 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 17:12:22,681 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 17:12:22,707 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 17:12:22,709 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 17:12:22,710 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 17:19:54,971 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 17:19:54,999 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 17:19:55,000 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 17:19:55,002 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 17:21:17,319 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 17:21:17,351 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 17:21:17,354 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 17:21:17,356 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 17:22:55,959 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 17:22:55,986 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 17:22:55,987 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 17:22:55,988 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
+## 2024-07-12 17:25:08,886 [1] INFO  (null) Now listening on: http://100.79.204.71:5290 
+## 2024-07-12 17:25:08,918 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-07-12 17:25:08,920 [1] INFO  (null) Hosting environment: Development 
+## 2024-07-12 17:25:08,922 [1] INFO  (null) Content root path: D:\database\AestheticsLink\AestheticsLink\WebAPI\ 
