@@ -1,0 +1,103 @@
+// advertise.scss
+@import '../animation/animation.scss';
+
+.area {
+  background: url('/img/advertise/advertise-bkgd.jpg') no-repeat center center;
+  text-align: center;   //文字对齐方式
+  position: relative; //相对定位
+  height:800px; //暂时先这么写
+}
+
+.wrap {
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;   //内容左对齐
+  padding-left: 20%;  //左对齐的位置
+  height:800px; //暂时先这么写
+}
+
+.icon1,.icon2,.icon3{
+  position:absolute;
+  width:50px;
+  height:50px;
+  animation:rotate 10s linear infinite; //旋转动画
+  transform-origin: center; // 设置旋转中心为元素中心
+}
+
+.icon1 {
+  left:20px;
+  top: 20px;
+}
+
+.icon2{
+  right:60px;
+  top:60px;
+}
+
+.icon3{
+  left:60px;
+  bottom:60px;
+}
+
+.title-box {
+  padding:100px 0px 0px 0px;
+  margin-bottom: 20px;
+}
+
+.welcome {
+  font-size: 20px;
+  color: #0056b1; 
+  border-bottom: 1px dashed #000; // 设置虚线下划线
+  animation: flyInBottom 1s ease-out 0.3s; // 添加从底部飞入的动画
+  animation-fill-mode: both; // 保持动画结束状态
+}
+
+.title {  
+  font-size: 56px;
+  color: #555; 
+  margin-bottom: 10px;
+  animation: flyInBottom 1s ease-out 0.5s; // 添加从底部飞入的动画
+  animation-fill-mode: both; // 保持动画结束状态 
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #555;
+  animation: flyInBottom 1s ease-out 0.7s; // 添加从底部飞入的动画
+  animation-fill-mode: both; // 保持动画结束状态
+}
+  
+.button-box {
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.btn-1{
+  animation: flyInBottom 1s ease-out 1s; // 添加从底部飞入的动画
+  animation-fill-mode: both; // 保持动画结束状态
+}
+
+.btn-2{
+  animation: flyInBottom 1s ease-out 1.2s; // 添加从底部飞入的动画
+  animation-fill-mode: both; // 保持动画结束状态
+}
+
+.advertise {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.advertise.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.advertise.fade-in .welcome,
+.advertise.fade-in .title,
+.advertise.fade-in .subtitle {
+  opacity: 1;
+  transform: translateY(0);
+}
