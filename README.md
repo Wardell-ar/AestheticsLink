@@ -1,2 +1,7 @@
-# AestheticsLink--容颜医疗管理系统
-同济大学本科2022级数据库项目
+管理员页面
+
+components为组件
+
+views为视图
+
+router为自己配置的路由
