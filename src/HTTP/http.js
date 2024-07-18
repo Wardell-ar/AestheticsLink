@@ -1,6 +1,5 @@
-
 // 登录请求
-export function loginReq(UID, PSW,check) {
+export function loginReq(UID, PSW, callback) {
     // 发送UID、PSW，接收role、token
     // 返回role，存储token
     let obj = {
@@ -9,129 +8,124 @@ export function loginReq(UID, PSW,check) {
     };
     let str = JSON.stringify(obj);
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://100.78.214.7:5283/api/Login/CheckLogin', true);
+    xhr.open('POST', 'http://192.168.43.146:5283/Login/CheckLogin/CheckLogin', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(str);
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) { // 服务器已完成发送
             if (xhr.status >= 200 && xhr.status < 300) { // 服务器发送成功
                 const response = JSON.parse(xhr.response);
-                if (response.token) { // 如果有token返回
-                    localStorage.setItem('token', response.token); // 存储token
-                    check(response.role);
-                }
-                else {
-                    alert("登录验证失败");
-                    check("3");
-                }
+                callback(response);  // 内含有一个role和一个id变量
             }
             else {
                 alert("网络异常");
-                check("3");
             }
         }
     };
 }
 
 // 注册请求
-export function logupReq(NAME, SEX, YEAR, MONTH, DAY, UID, PSW,jumpToLogin) {
+export function logupReq(NAME, SEX, YEAR, MONTH, DAY, UID, PSW, callback) {
     // 发送参数列表
     // 接收注册标志并返回
     let obj = {
-        UID:UID,
-        GENDER:SEX,
-        NAME:NAME,
-        PASSWORD:PSW,
-        YEAR:YEAR,
-        MONTH:MONTH,
-        DAY:DAY
+        name: NAME,
+        gender: SEX,
+        year: YEAR,
+        month: MONTH,
+        day: DAY,
+        uid: UID,
+        psw: PSW
     }
     let str = JSON.stringify(obj);
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://100.78.214.7:5283/api/Register/Register', true);
+    xhr.open('POST', 'http://192.168.43.146:5283/Register/Register/Register', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(str);
     xhr.onreadystatechange = () => {
-        if(xhr.readyState === 4){
-            if(xhr.status >= 200 && xhr.status < 300){
-                if(xhr.response === "1"){
+        if (xhr.readyState === 4) {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                if (xhr.response === "1") {
                     alert("注册成功");
                     alert("请进行登录");
                     // 跳转的回调函数
-                    jumpToLogin();
+                    callback();
                 }
-                else{
+                else {
                     alert("信息录入失败");
                     alert("请重新注册");
                 }
             }
-            else{
-                alert("网络错误");
+            else {
+                alert("网络异常");
             }
         }
     };
 }
 
 // 员工界面信息获取
-export function getEmployeeInfoReq(setData){
+export function getEmployeeInfoReq(id, callback) {
+    let obj = {
+        id:id
+    };
+    const str = JSON.stringify(obj);
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://100.78.214.7:5290/api/Login/CheckLogin', true);
+    xhr.open('POST', 'http://192.168.43.146:5283/ServerInfo/ServerInfo/ServerInfo', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(token);
+    xhr.send(str);
     xhr.onreadystatechange = () => {
-        if(xhr.readyState === 4){
-            if(xhr.status >= 200 && xhr.status < 300){
-                setData(xhr.response);
+        if (xhr.readyState === 4) {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                const response = JSON.parse(xhr.response);
+                callback(response);
             }
-            else{
-                alert("员工信息加载失败");
+            else {
+                alert("网络异常");
             }
         }
     };
 }
 
 // 获取当前员工签到状态
-export function getAttendReq(check){
+export function getAttendReq(id, callback) {
+    let obj = {
+        id:id
+    };
+    let str = JSON.stringify(obj);
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://100.78.214.7:5290/api/Login/CheckLogin', true);
+    xhr.open('POST', 'http://192.168.43.146:5283/Signin/SigninState/SigninState', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(token);
+    xhr.send(str);
     xhr.onreadystatechange = () => {
-        if(xhr.readyState === 4){
-            if(xhr.status >= 200 && xhr.status < 300){
-                const response = JSON.parse(xhr.response);
-                check(response);
+        if (xhr.readyState === 4) {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                callback(xhr.response);
             }
-            else{
-                alert("网络异常，请稍后重试");
+            else {
+                alert("网络异常");
             }
         }
     };
 }
 
 // 更新员工签到信息(后端写死更新为1)
-export function updateAttendReq(check){
+export function updateAttendReq(id, callback) {
+    let obj = {
+        id:id
+    };
+    let str = JSON.stringify(obj);
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://100.78.214.7:5290/api/Login/CheckLogin', true);
+    xhr.open('POST', 'http://192.168.43.146:5283/Signin/Signin/Signin', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(token);
+    xhr.send(str);
     xhr.onreadystatechange = () => {
-        if(xhr.readyState === 4){
-            if(xhr.status >= 200 && xhr.status < 300){
-                check(xhr.response);
+        if (xhr.readyState === 4) {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                callback(xhr.response);
             }
-            else{
-                alert("网络异常，请稍后重试");
+            else {
+                alert("网络异常");
             }
         }
     };
 }
-
-
-
-
-
-
-
-
-

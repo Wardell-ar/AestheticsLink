@@ -29,6 +29,7 @@
 <script>
 import {loginReq} from "../HTTP/http"
 import { useRouter } from "vue-router";
+import { get_id,get_role,set_id,set_role } from "../identification"
 export default {
     data() {
         return {
@@ -39,29 +40,40 @@ export default {
     },
 
     methods: {
+        // 点击登录按键
         loginHandle() {
             if (this.UID === "" || this.PSW === "") {
                 alert("手机号与密码不能为空！");
                 return;
             }
-            loginReq(this.UID,this.PSW,this.handleLoginSuccess);
+            loginReq(this.UID,this.PSW,this.callback);
         },
+
+        // 点击注册按键
         logupHandle() {
             // 跳转界面到注册界面
             this.router.push("/logup");
         },
-        handleLoginSuccess(role) {
-            if (role === "0") {
+
+        // 回调函数处理HTTP响应的数据
+        callback(response) {
+            set_id(response.id);
+            set_role(response.role);
+            if (get_role() === "0") {
                 alert("管理员登录成功！");
                 // 跳转到管理员页面
-            } else if (role === "1") {
+
+            } else if (get_role() === "1") {
                 alert("客户登录成功！");
                 // 跳转到客户页面
-            } else if (role === "2") {
+
+            } else if (get_role() === "2") {
                 alert("员工登录成功！");
                 // 跳转到员工页面
+
             }
             else{
+                alert("登录失败");
                 this.UID = "";
                 this.PSW = "";
             }

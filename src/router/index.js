@@ -3,8 +3,8 @@
 import {createRouter,createWebHistory} from "vue-router"
 
 // 引入需要配置路由的组件
-import Login from "../components/login.vue"
-import Logup from "../components/logup.vue"
+import Login from "../pages/login.vue"
+import Logup from "../pages/logup.vue"
 
 // 创建路由器
 const router = createRouter({

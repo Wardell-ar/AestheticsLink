@@ -74,7 +74,7 @@ export default{
         logupHandle(){
             if(this.NAME!=""&&this.SEX!=""&&this.YEAR!=""&&this.MONTH!=""&&this.DAY!=""&&this.UID!=""&&this.PSW1!=""&&this.PSW2!=""){
                 if(this.PSW1 === this.PSW2){
-                    logupReq(this.NAME,this.SEX,this.YEAR,this.MONTH,this.DAY,this.UID,this.PSW1,this.jumpToLogin);
+                    logupReq(this.NAME,this.SEX,this.YEAR,this.MONTH,this.DAY,this.UID,this.PSW1,this.callback);
                 }
                 else{
                     alert("密码不一致！");
@@ -84,7 +84,9 @@ export default{
                 alert("输入内容不能为空！");
             }
         },
-        jumpToLogin(){
+
+        // 注册信息录入成功后，回调函数，进行页面跳转
+        callback(){
             this.router.push("/");
         }
     },
