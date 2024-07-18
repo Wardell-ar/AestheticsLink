@@ -90,12 +90,12 @@ export default {
       create_dialog: false,
       // 写给前后端交接人员：以下三种数据均需从数据库中查询获得，时机是页面初始加载时。
       employee: {
-        id: "111",
-        name: "111",
-        gender: "111",
+        id: "",
+        name: "",
+        gender: "",
         age: 0,
-        title: "111",
-        hospital: "111",
+        title: "",
+        hospital: "",
         attendanceStatus: "",
       },
       orderData: []
