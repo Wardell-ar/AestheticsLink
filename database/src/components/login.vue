@@ -71,6 +71,7 @@ export default{
             } else if (role === 2) {
                 alert("员工登录成功！");
                 // 跳转到员工页面
+                router.push({ name: "Worker" });
             }
             else{
                 alert("登录失败")
