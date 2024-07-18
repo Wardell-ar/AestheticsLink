@@ -6,9 +6,6 @@
           <img src="/images/company-logo.png" alt="Company Logo" class="company-logo">
         </div>
         <h2 class="main-title">员工个人中心</h2>
-        <div class="employee-img">
-          <img :src="employee.avatar" alt="Employee Avatar">
-        </div>
         <div class="header-info">
           <div class="employee-info">
             <div class="employee-name">
@@ -51,7 +48,7 @@
         <el-main class="main">
           <div v-if="activeIndex === '1'">
             <h3>员工信息</h3>
-            <el-table :data="employeeData">
+            <el-table :data="[employee]">
               <el-table-column prop="id" label="员工ID"></el-table-column>
               <el-table-column prop="name" label="姓名"></el-table-column>
               <el-table-column prop="gender" label="性别"></el-table-column>
@@ -83,6 +80,8 @@
 <script>
 import { ref } from 'vue';
 import { Edit } from '@element-plus/icons-vue';
+import { getEmployeeInfoReq,getAttendReq,updateAttendReq } from "../HTTP/http"  // 请入HTTP请求函数
+import {get_id} from "../identification"
 
 export default {
   data() {
@@ -91,40 +90,73 @@ export default {
       create_dialog: false,
       // 写给前后端交接人员：以下三种数据均需从数据库中查询获得，时机是页面初始加载时。
       employee: {
-        avatar: "/images/doctor-1.png",
-        id: "12345",
-        name: "张三",
-        gender: "男",
-        age: 30,
-        title: "医生",
-        hospital: "某某医院",
-        attendanceStatus: '0',
+        id: "111",
+        name: "111",
+        gender: "111",
+        age: 0,
+        title: "111",
+        hospital: "111",
+        attendanceStatus: "",
       },
-      employeeData: [
-        { id: "12345", name: "张三", gender: "男", age: 30, title: "医生", hospital: "某某医院" }
-      ],
-      orderData: [
-        { order_id: "001", order_name: "订单一", order_date: "2024-07-10" },
-        { order_id: "002", order_name: "订单二", order_date: "2024-07-11" }
-      ]
+      orderData: []
     };
   },
+
+  // 在挂载前就发送请求获取数据
+  beforeMount(){
+    getEmployeeInfoReq(get_id(),this.setData);
+  },
+
   methods: {
     handleMenuSelect(index) {
       this.activeIndex = index;
     },
-    // 写给前后端交接人员：这个函数每次触发都需要向数据库获取一个员工的考勤属性！！！
+
+    // 点击签到
     handleAttendance() {
-      //这里获取员工的考勤值，送给this.employee.attendanceStatus
-      //因为需要每次考勤之前实时刷新与数据库进行同步
-      if (this.employee.attendanceStatus === '0') {
-        this.employee.attendanceStatus = '1';
-        this.$message.success('考勤成功！');
-        // 写给前后端交接人员：这里this.employee.attendanceStatus的数据发生了变化(从0->1)需要考勤数据发送回数据库！！
-        //......
+      getAttendReq(get_id(),this.check);
+    },
+
+    // 获取员工信息后，填入到本地数据
+    setData(res){
+      // 开始填写数据
+      this.employee.id=res.id;
+      this.employee.name=res.name;
+      this.employee.gender=res.gender;
+      this.employee.age=res.age;
+      this.employee.title=res.title;
+      this.employee.hospital=res.hospital;
+      this.employee.attendanceStatus=res.attendanceStatus;
+
+      for(const order of res.orderData){
+        let obj = {
+          order_id:order.order_id,
+          order_name:order.order_name,
+          order_date:order.order_year + "-" + order.order_month + "-" + order.order_day
+        }
+        this.orderData.push(obj);
+      }
+    },
+
+
+    check(s){
+      this.employee.attendanceStatus = s;
+      if (s === "0") {
+        this.employee.attendanceStatus = "1";
+        // 向数据库更新签到状态
+        updateAttendReq(get_id(),this.IsRegistered);
       }
       else{
         this.$message.error('您今日已经考勤');
+      }
+    },
+
+    IsRegistered(r){
+      if(r === "1"){
+        this.$message.success('考勤成功！');
+      }
+      else{
+        this.$message.success('考勤信息录入失败，请稍后重试');
       }
     }
   },
@@ -160,25 +192,6 @@ export default {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
-}
-
-.employee-img {
-  flex: 0 0 auto;
-  width: 80px;
-  height: 80px;
-  background-color: #c2d7f5;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-right: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.employee-img img {
-  width: auto;
-  height: 100%;
-  object-fit: contain;
 }
 
 .header-info {
