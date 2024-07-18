@@ -84,6 +84,7 @@
 import { ref } from 'vue';
 import { Edit } from '@element-plus/icons-vue';
 import { getEmployeeInfoReq,getAttendReq,updateAttendReq } from "../HTTP/http"  // 请入HTTP请求函数
+import {get_id} from "../identification"
 
 export default {
   data() {
@@ -92,27 +93,21 @@ export default {
       create_dialog: false,
       // 写给前后端交接人员：以下三种数据均需从数据库中查询获得，时机是页面初始加载时。
       employee: {
-        id: "12345",
-        name: "张三",
-        gender: "男",
-        age: 30,
-        title: "医生",
-        hospital: "某某医院",
-        attendanceStatus: '0',
+        id: "",
+        name: "",
+        gender: "",
+        age: 0,
+        title: "",
+        hospital: "",
+        attendanceStatus: "",
       },
-      employeeData: [
-        { id: "12345", name: "张三", gender: "男", age: 30, title: "医生", hospital: "某某医院" }
-      ],
-      orderData: [
-        { order_id: "001", order_name: "订单一", order_date: "2024-07-10" },
-        { order_id: "002", order_name: "订单二", order_date: "2024-07-11" }
-      ]
+      orderData: []
     };
   },
 
   // 在挂载前就发送请求获取数据
   beforeMount(){
-    getEmployeeInfoReq(this.setData);
+    getEmployeeInfoReq(get_id(),this.setData);
   },
 
   methods: {
@@ -120,14 +115,13 @@ export default {
       this.activeIndex = index;
     },
 
+    // 点击签到
     handleAttendance() {
-      // 获取当前签到状态
-      getAttendReq(this.check);
-      // 更新逻辑在check函数中，这里必须写成回调函数形式，解决HTTP请求的异步问题
+      getAttendReq(get_id(),this.check);
     },
 
-    setData(jsonData){
-      const res = JSON.parse(jsonData);
+    // 获取员工信息后，填入到本地数据
+    setData(res){
       // 开始填写数据
       this.employee.id=res.id;
       this.employee.name=res.name;
@@ -146,18 +140,20 @@ export default {
         this.orderData.push(obj);
       }
     },
+
+
     check(s){
       this.employee.attendanceStatus = s;
-      if (this.employee.attendanceStatus === 0) {
-        this.employee.attendanceStatus = 1;
+      if (s === "0") {
+        this.employee.attendanceStatus = "1";
         // 向数据库更新签到状态
-        updateAttendReq(this.IsRegistered);
-        // 判定成功的逻辑在IsRegistered函数中，这里必须写成回调函数形式，解决HTTP请求的异步问题
+        updateAttendReq(get_id(),this.IsRegistered);
       }
       else{
         this.$message.error('您今日已经考勤');
       }
     },
+
     IsRegistered(r){
       if(r === "1"){
         this.$message.success('考勤成功！');
