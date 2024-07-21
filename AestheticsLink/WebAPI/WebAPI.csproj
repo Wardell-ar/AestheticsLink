@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LogRegService\LogRegService.csproj" />
+    <ProjectReference Include="..\QueryAllUsersService\QueryAllUsersService.csproj" />
     <ProjectReference Include="..\RechargeService\RechargeService.csproj" />
     <ProjectReference Include="..\ServerInformation\ServerInformation.csproj" />
     <ProjectReference Include="..\ServerSigninService\ServerSigninService.csproj" />

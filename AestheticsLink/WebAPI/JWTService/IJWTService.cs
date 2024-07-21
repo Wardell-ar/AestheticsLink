@@ -1,4 +1,4 @@
-﻿using LogRegService.Dto;
+﻿/*using LogRegService.Dto;
 using ServerInformation.Dto;
 using WebModel.Entity;
 
@@ -13,3 +13,4 @@ namespace WebAPI.JWTService
         public bool ValidateToken(string token);
     }
 }
+*/

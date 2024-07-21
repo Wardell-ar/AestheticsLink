@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using LogRegService.Dto;
 using LogRegService;
-using WebAPI.JWTService;
+//using WebAPI.JWTService;
 using WebModel.Entity;
 using NetTaste;
 using Microsoft.AspNetCore.Authorization;
@@ -15,13 +15,13 @@ namespace WebAPI.Controllers
     {
         private readonly ICustomerService _customerService;
         private readonly IServerService _serverService;
-        private IJWTService _jwtService;
+        //private IJWTService _jwtService;
         private readonly ILogger<LoginController> _logger;
-        public LoginController(ICustomerService customerService, IServerService serverService, IJWTService jwtService, ILogger<LoginController> logger)
+        public LoginController(ICustomerService customerService, IServerService serverService, ILogger<LoginController> logger)
         {
             _customerService = customerService;
             _serverService = serverService;
-            _jwtService = jwtService;
+            //_jwtService = jwtService;
             _logger = logger;
         }
 
@@ -35,7 +35,7 @@ namespace WebAPI.Controllers
             {
                 if (login.uid == "admin" && login.psw == "8888")
                 {
-                    var token = _jwtService.GenerateToken(login);
+                    //var token = _jwtService.GenerateToken(login);
 
                     var response = new LoginResponse
                     {
@@ -52,7 +52,7 @@ namespace WebAPI.Controllers
             if (customer != null)
             {
                 // Generate JWT token
-                var token = _jwtService.GenerateToken(customer);
+                //var token = _jwtService.GenerateToken(customer);
 
                 var response = new LoginResponse
                 {
@@ -68,7 +68,7 @@ namespace WebAPI.Controllers
                 if (server != null)
                 {
                     // Generate JWT token
-                    var token = _jwtService.GenerateToken(server);
+                    //var token = _jwtService.GenerateToken(server);
 
                     var response = new LoginResponse
                     {

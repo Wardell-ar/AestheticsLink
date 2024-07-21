@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpdateAt0amService", "Updat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogRegService", "LogRegService\LogRegService.csproj", "{F2F27BEE-45C2-4B10-8801-8835C8DBEA98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerInformation", "ServerInformation\ServerInformation.csproj", "{6C6CB40D-9469-48E9-AFDD-DAF9591307C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerInformation", "ServerInformation\ServerInformation.csproj", "{6C6CB40D-9469-48E9-AFDD-DAF9591307C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryAllUsersService", "QueryAllUsersService\QueryAllUsersService.csproj", "{83F6F154-A550-41C0-8F98-205DDF4F883C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{6C6CB40D-9469-48E9-AFDD-DAF9591307C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C6CB40D-9469-48E9-AFDD-DAF9591307C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C6CB40D-9469-48E9-AFDD-DAF9591307C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83F6F154-A550-41C0-8F98-205DDF4F883C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83F6F154-A550-41C0-8F98-205DDF4F883C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83F6F154-A550-41C0-8F98-205DDF4F883C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83F6F154-A550-41C0-8F98-205DDF4F883C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

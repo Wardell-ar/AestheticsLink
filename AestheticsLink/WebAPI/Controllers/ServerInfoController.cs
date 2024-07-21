@@ -9,7 +9,7 @@ using ServerInformation;
 using ServerInformation.Dto;
 using ServerSigninService.Signin.Dto;
 using System.Dynamic;
-using WebAPI.JWTService;
+//using WebAPI.JWTService;
 using WebCommon.Database;
 using WebModel.Entity;
 using static Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser;
@@ -20,14 +20,14 @@ namespace WebAPI.Controllers
     [Route("[controller]/[Action]")]
     public class ServerInfoController : ControllerBase
     {
-        private IJWTService _jwtService;
+        //private IJWTService _jwtService;
         private readonly ILogger<LoginController> _logger;
         private readonly IServerInfoService _serverInfoService;
 
-        public ServerInfoController(IServerInfoService serverInfoService, IJWTService jwtService, ILogger<LoginController> logger)
+        public ServerInfoController(IServerInfoService serverInfoService, ILogger<LoginController> logger)
         {
             _serverInfoService = serverInfoService;
-            _jwtService = jwtService;
+            //_jwtService = jwtService;
             _logger = logger;
         }
 

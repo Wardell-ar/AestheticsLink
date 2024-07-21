@@ -1,0 +1,15 @@
+D:\C#_Project\AestheticsLink\RechargeService\bin\Release\net6.0\RechargeService.deps.json
+D:\C#_Project\AestheticsLink\RechargeService\bin\Release\net6.0\RechargeService.dll
+D:\C#_Project\AestheticsLink\RechargeService\bin\Release\net6.0\RechargeService.pdb
+D:\C#_Project\AestheticsLink\RechargeService\bin\Release\net6.0\WebCommon.dll
+D:\C#_Project\AestheticsLink\RechargeService\bin\Release\net6.0\WebCommon.pdb
+D:\C#_Project\AestheticsLink\RechargeService\obj\Release\net6.0\RechargeService.csproj.AssemblyReference.cache
+D:\C#_Project\AestheticsLink\RechargeService\obj\Release\net6.0\RechargeService.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#_Project\AestheticsLink\RechargeService\obj\Release\net6.0\RechargeService.AssemblyInfoInputs.cache
+D:\C#_Project\AestheticsLink\RechargeService\obj\Release\net6.0\RechargeService.AssemblyInfo.cs
+D:\C#_Project\AestheticsLink\RechargeService\obj\Release\net6.0\RechargeService.csproj.CoreCompileInputs.cache
+D:\C#_Project\AestheticsLink\RechargeService\obj\Release\net6.0\Recharge.1732A09A.Up2Date
+D:\C#_Project\AestheticsLink\RechargeService\obj\Release\net6.0\RechargeService.dll
+D:\C#_Project\AestheticsLink\RechargeService\obj\Release\net6.0\refint\RechargeService.dll
+D:\C#_Project\AestheticsLink\RechargeService\obj\Release\net6.0\RechargeService.pdb
+D:\C#_Project\AestheticsLink\RechargeService\obj\Release\net6.0\ref\RechargeService.dll

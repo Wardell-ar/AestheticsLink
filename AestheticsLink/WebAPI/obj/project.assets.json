@@ -3154,6 +3154,21 @@
           "bin/placeholder/LogRegService.dll": {}
         }
       },
+      "QueryAllUsersService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.32",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/QueryAllUsersService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QueryAllUsersService.dll": {}
+        }
+      },
       "RechargeService/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3171,6 +3186,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.32",
           "WebCommon": "1.0.0",
           "WebModel": "1.0.0"
         },
@@ -10234,6 +10250,11 @@
       "path": "../LogRegService/LogRegService.csproj",
       "msbuildProject": "../LogRegService/LogRegService.csproj"
     },
+    "QueryAllUsersService/1.0.0": {
+      "type": "project",
+      "path": "../QueryAllUsersService/QueryAllUsersService.csproj",
+      "msbuildProject": "../QueryAllUsersService/QueryAllUsersService.csproj"
+    },
     "RechargeService/1.0.0": {
       "type": "project",
       "path": "../RechargeService/RechargeService.csproj",
@@ -10271,6 +10292,7 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.32",
       "Microsoft.Extensions.Logging.Log4Net.AspNetCore >= 8.0.0",
       "Microsoft.IdentityModel.Protocols.OpenIdConnect >= 7.6.3",
+      "QueryAllUsersService >= 1.0.0",
       "RechargeService >= 1.0.0",
       "ServerInformation >= 1.0.0",
       "ServerSigninService >= 1.0.0",
@@ -10308,6 +10330,9 @@
           "projectReferences": {
             "D:\\C#_Project\\AestheticsLink\\LogRegService\\LogRegService.csproj": {
               "projectPath": "D:\\C#_Project\\AestheticsLink\\LogRegService\\LogRegService.csproj"
+            },
+            "D:\\C#_Project\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj": {
+              "projectPath": "D:\\C#_Project\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj"
             },
             "D:\\C#_Project\\AestheticsLink\\RechargeService\\RechargeService.csproj": {
               "projectPath": "D:\\C#_Project\\AestheticsLink\\RechargeService\\RechargeService.csproj"

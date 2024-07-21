@@ -9,8 +9,9 @@ using Quartz.Impl;
 using Quartz.Spi;
 using UpdateAt0amService.UpdateAt0am;
 using LogRegService;
-using WebAPI.JWTService;
+//using WebAPI.JWTService;
 using ServerInformation;
+using QueryAllUsersService.QueryAllCustomers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +32,9 @@ builder.Services.AddTransient<ISigninService, SigninService>();
 builder.Services.AddSingleton<UpdateSigninService>();//0am更新服务
 //注册员工信息请求服务
 builder.Services.AddScoped<IServerInfoService, ServerInfoService>();
+//注册查询所有客户服务
+builder.Services.AddScoped<IQueryAllCustomersService, QueryAllCustomersService>();
+
 
 //添加跨域策略
 builder.Services.AddCors(options =>
@@ -42,7 +46,7 @@ builder.Services.AddCors(options =>
 });
 
 
-
+/*
 //注册JWT服务
 builder.Services.Configure<JWTTokenOptions>(builder.Configuration.GetSection("JWTTokenOptions"));
 builder.Services.AddTransient<IJWTService, JWTService>();
@@ -66,7 +70,7 @@ builder.Services.AddTransient<IJWTService, JWTService>();
 
         };
     });
-}
+}*/
 
 // 添加Quartz.NET服务
 builder.Services.AddSingleton<IJobFactory, SingletonJobFactory>();
@@ -100,16 +104,18 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// 配置请求管道
-//app.UseRouting();
+app.UseHttpsRedirection();
 
-app.UseAuthorization(); // 授权中间件
+app.UseStaticFiles();
+
+// 配置请求管道
+app.UseRouting();
 
 //使用跨域策略
 app.UseCors("AllowAll");
 
-//app.UseAuthentication(); // 授权验证中间件
-
+app.UseAuthentication(); // 授权验证中间件
+app.UseAuthorization(); // 授权中间件
 
 app.MapControllers();
 

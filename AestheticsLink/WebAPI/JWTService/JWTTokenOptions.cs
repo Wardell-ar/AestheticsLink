@@ -1,4 +1,4 @@
-﻿namespace WebAPI.JWTService
+﻿/*namespace WebAPI.JWTService
 {
     public class JWTTokenOptions
     {
@@ -8,3 +8,4 @@
         public double ExpirationMinutes { get; set; }
     }
 }
+*/
