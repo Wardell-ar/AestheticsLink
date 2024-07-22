@@ -60,16 +60,16 @@
               </router-link>
             </li>
             <li class="nav-item">
-              <!-- <router-link to="/classify"> -->
+              <router-link to="/login">
                 <div style="display: flex; align-items: center; cursor: pointer">
-                  <span>分享至QQ</span>
+                  <span>登录</span>
                 </div>
-              <!-- </router-link> -->
+              </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/cloud">
+              <router-link to="/login">
                 <div style="display: flex; align-items: center; cursor: pointer">
-                  <span>分享至微信</span>
+                  <span>注册</span>
                 </div>
               </router-link>
             </li>
@@ -138,16 +138,16 @@
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/classify">
+              <router-link to="/login">
                 <div style="display: flex; align-items: center; cursor: pointer">
-                  <span>分享至QQ</span>
+                  <span>登录</span>
                 </div>
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/cloud">
+              <router-link to="/login">
                 <div style="display: flex; align-items: center; cursor: pointer">
-                  <span>分享至微信</span>
+                  <span>注册</span>
                 </div>
               </router-link>
             </li>
@@ -344,6 +344,7 @@
   .nav-item div {
     display: flex;
     align-items: center;
+    text-decoration: none;
   }
   
   .nav-item span {
@@ -369,5 +370,12 @@
     align-items: center;
     margin-right: 20px; /* 根据需要调整内边距 */
   }
+a {
+  text-decoration: none;
+}
+ 
+.router-link-active {
+  text-decoration: none;
+}
   </style>
   

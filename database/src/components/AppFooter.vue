@@ -8,10 +8,28 @@
           <div class="footer-section">
             <h4 class="section-title">快速导航</h4>
             <ul>
-              <li><a href="#">首页</a></li>
-              <li><a href="#">联系我们</a></li>
-              <li><a href="#">服务</a></li>
-              <li><a href="#">客户案例</a></li>
+              <li>
+                <router-link to="/">
+                <span>首页</span>
+                </router-link>
+              </li>
+              <li>
+                <router-link to="/contractUs">
+                <span>联系我们</span>
+              </router-link>
+
+              </li>
+              <li>
+                <router-link to="/ourService">
+                <span>服务</span>
+              </router-link>
+              </li>
+              <li>
+                <router-link to="/customerCases">
+                <span>客户案例</span>
+              </router-link>
+
+              </li>
             </ul>
           </div>
           <div class="footer-section">
@@ -123,5 +141,12 @@
     opacity: 1;
     transform: translateX(0); /* 移动 - 符号到初始位置 */
   }
+  a {
+  text-decoration: none;
+}
+ 
+.router-link-active {
+  text-decoration: none;
+}
   </style>
   
