@@ -1,72 +1,60 @@
 <template>
-    <div class="dropdown" @click="toggleDropdown">
-      <button class="dropbtn">{{ selected }}</button>
-      <div v-if="isOpen" class="dropdown-content">
-        <a v-for="(option, index) in options" :key="index" @click="selectOption(option)">{{ option }}</a>
-      </div>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        isOpen: false,
-        selected: '性别',
-        options: ['男', '女']
-      };
-    },
-    methods: {
-      toggleDropdown() {
-        this.isOpen = !this.isOpen;
-      },
-      selectOption(option) {
-        this.selected = option;
-        this.isOpen = false;
+  <div>
+    <!-- 下拉菜单 -->
+    <select v-model="selectedOption" @change="handleChange">
+      <option disabled value="">性别</option>
+      <option v-for="option in options" :key="option.value" :value="option.value">
+        {{ option.text }}
+      </option>
+    </select>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    clearData: {
+      type: Boolean,
+      default: false,
+    }
+  },
+  data() {
+    return {
+      // 初始选中的选项
+      selectedOption: '',
+      // 选项列表
+      options: [
+        { text: '男', value: '男' },
+        { text: '女', value: '女' },
+      ]
+    };
+  },
+  watch: {
+    clearData(newValue) {
+      if (newValue) {
+        this.Clear();
+        this.$emit('reset-clear-data');
       }
     }
-  };
-  </script>
-  
-  <style scoped>
-  .dropdown {
-    position: relative;
-    display: inline-block;
+  },
+  methods: {
+    handleChange() {
+      this.$emit('updateGender', this.selectedOption);
+    },
+    Clear() {
+      // 清空子组件的数据
+      this.selectedOption = '';
+    }
   }
-  
-  .dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .show {display: block;}
-  </style>
-  
+}
+
+</script>
+
+<style scoped>
+select {
+  width: 200px;
+  height: 100%;
+  border-radius: 10px;
+  font-size: medium
+}
+</style>
