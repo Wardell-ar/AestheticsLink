@@ -131,7 +131,7 @@
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/">
+              <router-link to="/login">
                 <div style="display: flex; align-items: center; cursor: pointer">
                   <span>个人中心</span>
                 </div>

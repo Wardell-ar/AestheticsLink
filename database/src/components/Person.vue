@@ -30,28 +30,22 @@
               class="el-menu-vertical-demo"
               @select="selectMenu"
             >
-            <el-menu-item index="1">
+            <el-menu-item index="1" >
               <el-icon><User /></el-icon>
                 <span>个人信息</span>
             </el-menu-item>
-            <el-menu-item index="2">
+            <el-menu-item index="2" >
+              <router-link to="/Person/myBenefits">
               <el-icon><Wallet /></el-icon>
               <span>我的权益</span>
+            </router-link>
             </el-menu-item>
-            <el-sub-menu index="3">
-              <template #title>
-                <el-icon><ShoppingCartFull /></el-icon>
-                <span>我的项目</span>
-              </template>
-              <el-menu-item index="4-1">
-                <el-icon><List /></el-icon>
-                <span>未完成</span>
-              </el-menu-item>
-              <el-menu-item index="4-2">
-                <el-icon><SuccessFilled /></el-icon>
-                <span>已完成</span>
-              </el-menu-item>
-            </el-sub-menu>
+            <el-menu-item index="3" >
+              <router-link to="/Person/orders">
+              <el-icon><ShoppingCartFull /></el-icon>
+              <span>我的订单</span>
+            </router-link>
+            </el-menu-item>
           </el-menu>
               </el-aside>
               <el-main class="main">
@@ -123,7 +117,7 @@
                       <el-button type="primary" @click="submit">提 交</el-button>
                     </span>
                 </el-dialog>
-                <el-card v-if="selectIndex === '1'" class="infoCard">
+                <el-card v-if="selectIndex==='1'" class="infoCard">
                   <el-descriptions class="margin-top" title="个人信息" :column="2" border>
                     <el-descriptions-item label-align="center",align="center">
                       <template #label>
@@ -185,7 +179,7 @@
                         <el-icon><InfoFilled /></el-icon>
                         注册日期
                       </template>
-                      {{ createDate | formatDate }}
+                      <!-- {{ createDate | formatDate }} -->
                     </el-descriptions-item>
                     <el-descriptions-item label-align="center",align="center">
                       <template #label>
@@ -196,6 +190,7 @@
                     </el-descriptions-item>
                   </el-descriptions>
                 </el-card>
+                <router-view v-else ></router-view>
               </el-main>
         </el-container>
       </el-container>
@@ -238,7 +233,7 @@ export default {
     selectMenu(index){
       this.selectIndex=index;
       console.log(this.selectIndex);
-    }
+    },
   }
 }
 </script>
@@ -327,5 +322,13 @@ h5{
 }
 .right {
   overflow: hidden;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ 
+.router-link-active {
+  text-decoration: none;
 }
 </style>

@@ -36,12 +36,36 @@ const router = createRouter({
       path: "/Person",
       name: "Person",
       component: () => import("../components/Person.vue"),
+      children:[
+        {
+          path: "myBenefits",
+          name: "myBenefits",
+          component: () => import("../components/myBenefits.vue"),
+        },
+        {
+          path: "orders",
+          name: "orders",
+          component: () => import("../components/Orders.vue"),
+        },
+      ]
     },
     {
       path: "/Worker",
       name: "Worker",
       component: () => import("../components/workerCenter.vue"),
     },
+    // {
+    //   path: "/orders",
+    //   name: "orders",
+    //   component: () => import("../components/Orders.vue"),
+    // },    
+    // {
+    //   path: "/myBenefits",
+    //   name: "myBenefits",
+    //   component: () => import("../components/myBenefits.vue"),
+    //   info:"myBenefits",
+    // },
+    
   ],
 });
 
