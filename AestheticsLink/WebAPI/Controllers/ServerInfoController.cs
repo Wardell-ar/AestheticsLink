@@ -9,7 +9,6 @@ using ServerInformation;
 using ServerInformation.Dto;
 using ServerSigninService.Signin.Dto;
 using System.Dynamic;
-//using WebAPI.JWTService;
 using WebCommon.Database;
 using WebModel.Entity;
 using static Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser;
@@ -20,14 +19,12 @@ namespace WebAPI.Controllers
     [Route("[controller]/[Action]")]
     public class ServerInfoController : ControllerBase
     {
-        //private IJWTService _jwtService;
         private readonly ILogger<LoginController> _logger;
         private readonly IServerInfoService _serverInfoService;
 
         public ServerInfoController(IServerInfoService serverInfoService, ILogger<LoginController> logger)
         {
             _serverInfoService = serverInfoService;
-            //_jwtService = jwtService;
             _logger = logger;
         }
 
@@ -85,7 +82,7 @@ namespace WebAPI.Controllers
                 }
                 var firstItem = serverinfo.First();
 
-                var serverInfo = new ServerInfoResponse
+                var serverInfo = new ServerInfoDto
                 {
                     id = firstItem.ID,
                     name = firstItem.NAME,
@@ -111,30 +108,5 @@ namespace WebAPI.Controllers
                 return Ok("0");
             }
         }
-
-
     }
-
-    public class OrderData
-    {
-        public string order_id { get; set; }
-        public string order_name { get; set; }
-        public string order_year { get; set; }
-        public string order_month { get; set; }
-        public string order_day { get; set; }
-    }
-
-    public class ServerInfoResponse 
-    {
-        public string id { get; set; }
-        public string name { get; set; }
-        public string gender { get; set; }
-        public int age { get; set; }
-        public string title { get; set; }
-        public string hospital { get; set; }
-        public string attendanceStatus { get; set; }
-        public List<OrderData> orderData { get; set; }
-    }
-
-    
 }

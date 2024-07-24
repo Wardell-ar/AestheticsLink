@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="log4net" Version="2.0.17" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.32" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="8.0.0" />
     <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="7.6.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
@@ -20,8 +21,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LogRegService\LogRegService.csproj" />
+    <ProjectReference Include="..\QuartzJobLibrary\QuartzJobLibrary.csproj" />
     <ProjectReference Include="..\QueryAllUsersService\QueryAllUsersService.csproj" />
-    <ProjectReference Include="..\RechargeService\RechargeService.csproj" />
     <ProjectReference Include="..\ServerInformation\ServerInformation.csproj" />
     <ProjectReference Include="..\ServerSigninService\ServerSigninService.csproj" />
     <ProjectReference Include="..\UpdateAt0amService\UpdateAt0amService.csproj" />

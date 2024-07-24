@@ -28,9 +28,10 @@ namespace WebAPI.Controllers
             SigninDto signinDto = new SigninDto();
             signinDto.id = signin.id;
             var server = _signinService.CheckSignin(signinDto).Result;
-            //_logger.LogInformation("Received login request: SER_ID={SER_ID}", signin.SER_ID);
             if (server != null)
             {
+                _logger.LogInformation("Received login request: SER_ID={SER_ID}", signin.id);
+
                 if (DbContext.db.Queryable<SERVER>().Any(s => s.SER_ID == signin.id && s.IS_WORK_TODAY == 1))
                 {
                     return "1";//已签到

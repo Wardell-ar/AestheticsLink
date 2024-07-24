@@ -17,4 +17,9 @@ namespace QueryAllUsersService.QueryAllCustomers.Dto
         public string viplevel { get; set; }
         public int balance { get; set; }
     }
+
+    public class DeleteCustomersDto
+    {
+        public string cus_id { get; set; }
+    }
 }

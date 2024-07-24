@@ -72,6 +72,75 @@
         }
       }
     },
+    "D:\\C#_Project\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\C#_Project\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj",
+        "projectName": "QuartzJobLibrary",
+        "projectPath": "D:\\C#_Project\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj",
+        "packagesPath": "C:\\Users\\Xyy\\.nuget\\packages\\",
+        "outputPath": "D:\\C#_Project\\AestheticsLink\\QuartzJobLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Xyy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\C#_Project\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj": {
+                "projectPath": "D:\\C#_Project\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Quartz": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\C#_Project\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -120,65 +189,6 @@
               "version": "[6.0.32, )"
             }
           },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\C#_Project\\AestheticsLink\\RechargeService\\RechargeService.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\C#_Project\\AestheticsLink\\RechargeService\\RechargeService.csproj",
-        "projectName": "RechargeService",
-        "projectPath": "D:\\C#_Project\\AestheticsLink\\RechargeService\\RechargeService.csproj",
-        "packagesPath": "C:\\Users\\Xyy\\.nuget\\packages\\",
-        "outputPath": "D:\\C#_Project\\AestheticsLink\\RechargeService\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Xyy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {
-              "D:\\C#_Project\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
-                "projectPath": "D:\\C#_Project\\AestheticsLink\\WebCommon\\WebCommon.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
           "imports": [
             "net461",
             "net462",
@@ -430,11 +440,11 @@
               "D:\\C#_Project\\AestheticsLink\\LogRegService\\LogRegService.csproj": {
                 "projectPath": "D:\\C#_Project\\AestheticsLink\\LogRegService\\LogRegService.csproj"
               },
+              "D:\\C#_Project\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj": {
+                "projectPath": "D:\\C#_Project\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj"
+              },
               "D:\\C#_Project\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj": {
                 "projectPath": "D:\\C#_Project\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj"
-              },
-              "D:\\C#_Project\\AestheticsLink\\RechargeService\\RechargeService.csproj": {
-                "projectPath": "D:\\C#_Project\\AestheticsLink\\RechargeService\\RechargeService.csproj"
               },
               "D:\\C#_Project\\AestheticsLink\\ServerInformation\\ServerInformation.csproj": {
                 "projectPath": "D:\\C#_Project\\AestheticsLink\\ServerInformation\\ServerInformation.csproj"
@@ -461,6 +471,10 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.32, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "Microsoft.Extensions.Logging.Log4Net.AspNetCore": {
               "target": "Package",

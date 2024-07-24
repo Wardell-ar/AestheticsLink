@@ -693,11 +693,10 @@
           }
         }
       },
-      "Microsoft.Extensions.DependencyInjection/6.0.1": {
+      "Microsoft.Extensions.DependencyInjection/8.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
         },
         "compile": {
           "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {
@@ -710,7 +709,7 @@
           }
         },
         "build": {
-          "buildTransitive/netcoreapp3.1/_._": {}
+          "buildTransitive/net6.0/_._": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
@@ -3154,6 +3153,21 @@
           "bin/placeholder/LogRegService.dll": {}
         }
       },
+      "QuartzJobLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Quartz": "3.11.0",
+          "UpdateAt0amService": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/QuartzJobLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QuartzJobLibrary.dll": {}
+        }
+      },
       "QueryAllUsersService/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3167,19 +3181,6 @@
         },
         "runtime": {
           "bin/placeholder/QueryAllUsersService.dll": {}
-        }
-      },
-      "RechargeService/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "WebCommon": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/RechargeService.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/RechargeService.dll": {}
         }
       },
       "ServerInformation/1.0.0": {
@@ -4846,27 +4847,34 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection/6.0.1": {
-      "sha512": "vWXPg3HJQIpZkENn1KWq8SfbqVujVD7S7vIAyFXXqK5xkf1Vho+vG0bLBCHxU36lD1cLLtmGpfYf0B3MYFi9tQ==",
+    "Microsoft.Extensions.DependencyInjection/8.0.0": {
+      "sha512": "V8S3bsm50ig6JSyrbcJJ8bW2b9QLGouz+G1miK3UTaOWmMtFwNNNzUf4AleyDWUmTrWMLNnFSLEQtxmxgNQnNQ==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection/6.0.1",
+      "path": "microsoft.extensions.dependencyinjection/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
+        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
         "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.targets",
-        "buildTransitive/netcoreapp3.1/_._",
-        "lib/net461/Microsoft.Extensions.DependencyInjection.dll",
-        "lib/net461/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.xml",
         "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll",
         "lib/net6.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.xml",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
-        "microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -10250,15 +10258,15 @@
       "path": "../LogRegService/LogRegService.csproj",
       "msbuildProject": "../LogRegService/LogRegService.csproj"
     },
+    "QuartzJobLibrary/1.0.0": {
+      "type": "project",
+      "path": "../QuartzJobLibrary/QuartzJobLibrary.csproj",
+      "msbuildProject": "../QuartzJobLibrary/QuartzJobLibrary.csproj"
+    },
     "QueryAllUsersService/1.0.0": {
       "type": "project",
       "path": "../QueryAllUsersService/QueryAllUsersService.csproj",
       "msbuildProject": "../QueryAllUsersService/QueryAllUsersService.csproj"
-    },
-    "RechargeService/1.0.0": {
-      "type": "project",
-      "path": "../RechargeService/RechargeService.csproj",
-      "msbuildProject": "../RechargeService/RechargeService.csproj"
     },
     "ServerInformation/1.0.0": {
       "type": "project",
@@ -10290,10 +10298,11 @@
     "net6.0": [
       "LogRegService >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.32",
+      "Microsoft.Extensions.DependencyInjection >= 8.0.0",
       "Microsoft.Extensions.Logging.Log4Net.AspNetCore >= 8.0.0",
       "Microsoft.IdentityModel.Protocols.OpenIdConnect >= 7.6.3",
+      "QuartzJobLibrary >= 1.0.0",
       "QueryAllUsersService >= 1.0.0",
-      "RechargeService >= 1.0.0",
       "ServerInformation >= 1.0.0",
       "ServerSigninService >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.6.2",
@@ -10331,11 +10340,11 @@
             "D:\\C#_Project\\AestheticsLink\\LogRegService\\LogRegService.csproj": {
               "projectPath": "D:\\C#_Project\\AestheticsLink\\LogRegService\\LogRegService.csproj"
             },
+            "D:\\C#_Project\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj": {
+              "projectPath": "D:\\C#_Project\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj"
+            },
             "D:\\C#_Project\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj": {
               "projectPath": "D:\\C#_Project\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj"
-            },
-            "D:\\C#_Project\\AestheticsLink\\RechargeService\\RechargeService.csproj": {
-              "projectPath": "D:\\C#_Project\\AestheticsLink\\RechargeService\\RechargeService.csproj"
             },
             "D:\\C#_Project\\AestheticsLink\\ServerInformation\\ServerInformation.csproj": {
               "projectPath": "D:\\C#_Project\\AestheticsLink\\ServerInformation\\ServerInformation.csproj"
@@ -10362,6 +10371,10 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[6.0.32, )"
+          },
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[8.0.0, )"
           },
           "Microsoft.Extensions.Logging.Log4Net.AspNetCore": {
             "target": "Package",

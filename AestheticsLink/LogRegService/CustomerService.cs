@@ -83,7 +83,7 @@ namespace LogRegService
             //customer.EX = 0;
             customer.PASSWORD = register.psw;
             customer.BALANCE = 0;
-            customer.VIPLEVEL = "Gold";
+            customer.VIPLEVEL = "Copper";
 
             return customer;
 
@@ -102,7 +102,7 @@ namespace LogRegService
         }
         private string GetMaxCustomerId()
         {
-            string sql = "SELECT MAX(CUS_ID) FROM CUSTOMER"; // 替换YourTableName为实际的表名
+            string sql = "SELECT MAX(CUS_ID) FROM CUSTOMER";
 
             // 执行 SQL 查询
             var result = DbContext.db.Ado.GetString(sql);

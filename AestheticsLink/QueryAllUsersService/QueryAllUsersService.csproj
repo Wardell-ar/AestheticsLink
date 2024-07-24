@@ -12,11 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="QueryAllServers\" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.32" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.32" />
+    <Folder Include="QueryAllServers\Dto\" />
   </ItemGroup>
 
 </Project>

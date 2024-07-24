@@ -550,10 +550,8 @@ D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\runtimes\win\lib\net6.0\Sys
 D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll
 D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\RechargeService.dll
 D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\WebCommon.dll
 D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\WebModel.dll
-D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\RechargeService.pdb
 D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\WebCommon.pdb
 D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\WebModel.pdb
 D:\C#_Project\AestheticsLink\WebAPI\obj\Debug\net6.0\staticwebassets\msbuild.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props
@@ -1178,3 +1176,5 @@ D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\appsettings.Develop
 D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\appsettings.json
 D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\WebAPI.deps.json
 D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\WebAPI.runtimeconfig.json
+D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\QuartzJobLibrary.dll
+D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\QuartzJobLibrary.pdb

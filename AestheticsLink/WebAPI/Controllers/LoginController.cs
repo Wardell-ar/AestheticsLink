@@ -15,13 +15,12 @@ namespace WebAPI.Controllers
     {
         private readonly ICustomerService _customerService;
         private readonly IServerService _serverService;
-        //private IJWTService _jwtService;
         private readonly ILogger<LoginController> _logger;
+
         public LoginController(ICustomerService customerService, IServerService serverService, ILogger<LoginController> logger)
         {
             _customerService = customerService;
             _serverService = serverService;
-            //_jwtService = jwtService;
             _logger = logger;
         }
 
@@ -35,14 +34,13 @@ namespace WebAPI.Controllers
             {
                 if (login.uid == "admin" && login.psw == "8888")
                 {
-                    //var token = _jwtService.GenerateToken(login);
 
                     var response = new LoginResponse
                     {
                         id = "admin",
                         role = "0"//登录账号类型，0为管理员
                     };
-                    // Return token as response
+                    
                     return Ok(response);
                 }
             }
@@ -51,9 +49,6 @@ namespace WebAPI.Controllers
 
             if (customer != null)
             {
-                // Generate JWT token
-                //var token = _jwtService.GenerateToken(customer);
-
                 var response = new LoginResponse
                 {
                     id = customer.CUS_ID,
@@ -67,15 +62,13 @@ namespace WebAPI.Controllers
                 var server = await _serverService.CheckLogin(login);
                 if (server != null)
                 {
-                    // Generate JWT token
-                    //var token = _jwtService.GenerateToken(server);
 
                     var response = new LoginResponse
                     {
                         id = server.SER_ID,
                         role = "2"//登录账号类型，2为员工
                     };
-                    // Return token as response
+
                     return Ok(response);
                 }
                 else
@@ -93,10 +86,6 @@ namespace WebAPI.Controllers
         [HttpGet]
         public bool Get()
         {
-            //if (_jwtService.ValidateToken(token) == true)
-            //    return true;
-            //else
-            //    return false;
             return true;
         }
     }

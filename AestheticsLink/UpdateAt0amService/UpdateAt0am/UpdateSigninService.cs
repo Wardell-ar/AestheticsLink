@@ -19,7 +19,6 @@ namespace UpdateAt0amService.UpdateAt0am
 
         public async Task UpdateSignin()
         {
-
             var today = (int)DateTime.Now.DayOfWeek; // 获取当前计算机对应的星期(0=星期日;1=星期一;...)
             await Task.Run(() =>
             {
