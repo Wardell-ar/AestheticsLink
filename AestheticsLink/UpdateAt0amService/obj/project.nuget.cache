@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Trvr/Wi3wHSxD3qSGfCkqnh2tKEoCuriWWQc5EQm3d332InHzhS03An4xidxdDDVP3TTOFRHYiNdDqBy73SP9w==",
+  "dgSpecHash": "YbJ1i8ikreYDpaFA5BNN3GZoYF899oZ67lqLjqxl4eofcPWdvVZyuPlTB1pCGHfHVMQR225FgxSv711upmTpQg==",
   "success": true,
   "projectFilePath": "D:\\C#_Project\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj",
   "expectedPackageFiles": [
@@ -166,7 +166,10 @@
     "C:\\Users\\Xyy\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512"
+    "C:\\Users\\Xyy\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512"
   ],
   "logs": []
 }

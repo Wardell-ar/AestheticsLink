@@ -20,13 +20,25 @@ namespace QuartzJobLibrary
             services.AddSingleton<UpdateSigninService>();
             services.AddSingleton(new JobSchedule(
                 jobType: typeof(UpdateSigninService),
-                cronExpression: "0 0 0 * * ?")); // 每天凌晨12点
+                cronExpression: "0 0/1 * * * ?")); // 每天凌晨12点
 
             //注册每月绩效更新服务
             services.AddSingleton<MonthlyPerformanceService>();
             services.AddSingleton(new JobSchedule(
                 jobType: typeof(MonthlyPerformanceService),
-                cronExpression: "0 0 0 1 * ?")); // 每月的1号凌晨12点
+                cronExpression: "0 0 1 1 * ?")); // 每月的1号凌晨1点
+
+            // 注册每月工资更新服务
+            services.AddSingleton<MonthlyTakeHomePayService>();
+            services.AddSingleton(new JobSchedule(
+                jobType: typeof(MonthlyTakeHomePayService),
+                cronExpression: "0 0 12 1 * ?")); // 每月的1号中午12点
+
+            // 注册每月优惠券更新服务
+            services.AddSingleton<MonthlyCouponService>();
+            services.AddSingleton(new JobSchedule(
+                jobType: typeof(MonthlyCouponService),
+                cronExpression: "0 5 0 1 * ?")); // 每月的1号凌晨12点5分
         }
 
         public static async Task UseQuartzServices(this IServiceProvider serviceProvider)

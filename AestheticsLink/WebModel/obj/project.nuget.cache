@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jCScWmxFly5+t3iu5B8s5JBV0btrkv745g/YRAMMl5t6JU+60F8Z+eBhw5ixwvNSLHne5agn274lw5HmFRGfZg==",
+  "dgSpecHash": "b5iVbICfmFJwxYmR2PrcZ8UZHNZWoPxi8M69yvbYMGflOm0GiTQ81lH1WMg1LpD4YcX6XlGfFoZQPMrIHcfnJQ==",
   "success": true,
   "projectFilePath": "D:\\C#_Project\\AestheticsLink\\WebModel\\WebModel.csproj",
   "expectedPackageFiles": [
@@ -163,7 +163,10 @@
     "C:\\Users\\Xyy\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512"
+    "C:\\Users\\Xyy\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512"
   ],
   "logs": []
 }

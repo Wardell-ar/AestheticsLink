@@ -48,7 +48,6 @@ namespace LogRegService
                     BIRTHDAY = customer.BIRTHDAY,
                     GENDER = customer.GENDER,
                     NAME = customer.NAME,
-                    //EX = customer.EX,
                     PASSWORD = customer.PASSWORD,
                     BALANCE = customer.BALANCE,
                     VIPLEVEL = customer.VIPLEVEL,
@@ -80,7 +79,6 @@ namespace LogRegService
             customer.BIRTHDAY = GetDateTime(register.year, register.month, register.day);
             customer.GENDER = register.gender;
             customer.NAME = register.name;
-            //customer.EX = 0;
             customer.PASSWORD = register.psw;
             customer.BALANCE = 0;
             customer.VIPLEVEL = "Copper";

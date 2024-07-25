@@ -25,7 +25,7 @@ namespace UpdateAt0amService.UpdateAt0am
                 if ((today + 6) % 7 == 0)
                 {
                     DbContext.db.Updateable<SERVER>()
-                        .SetColumns(it => new SERVER { SALARY = it.SALARY - 50 })
+                        .SetColumns(it => new SERVER { TAKEHOMEPAY = it.TAKEHOMEPAY - 50 })
                         .Where(it => it.IS_WORK_TODAY == 0)
                         .Where(it => SqlFunc.Subqueryable<WORK_TIME>().Where(w => w.WORK_TIME_ID == it.WORK_TIME_ID && w.DAY7 == 1).Any())
                         .ExecuteCommand();
@@ -33,7 +33,7 @@ namespace UpdateAt0amService.UpdateAt0am
                 else if ((today + 6) % 7 == 1)
                 {
                     DbContext.db.Updateable<SERVER>()
-                        .SetColumns(it => new SERVER { SALARY = it.SALARY - 50 })
+                        .SetColumns(it => new SERVER { TAKEHOMEPAY = it.TAKEHOMEPAY - 50 })
                         .Where(it => it.IS_WORK_TODAY == 0)
                         .Where(it => SqlFunc.Subqueryable<WORK_TIME>().Where(w => w.WORK_TIME_ID == it.WORK_TIME_ID && w.DAY1 == 1).Any())
                         .ExecuteCommand();
@@ -41,7 +41,7 @@ namespace UpdateAt0amService.UpdateAt0am
                 else if ((today + 6) % 7 == 2)
                 {
                     DbContext.db.Updateable<SERVER>()
-                        .SetColumns(it => new SERVER { SALARY = it.SALARY - 50 })
+                        .SetColumns(it => new SERVER { TAKEHOMEPAY = it.TAKEHOMEPAY - 50 })
                         .Where(it => it.IS_WORK_TODAY == 0)
                         .Where(it => SqlFunc.Subqueryable<WORK_TIME>().Where(w => w.WORK_TIME_ID == it.WORK_TIME_ID && w.DAY2 == 1).Any())
                         .ExecuteCommand();
@@ -49,7 +49,7 @@ namespace UpdateAt0amService.UpdateAt0am
                 else if ((today + 6) % 7 == 3)
                 {
                     DbContext.db.Updateable<SERVER>()
-                        .SetColumns(it => new SERVER { SALARY = it.SALARY - 50 })
+                        .SetColumns(it => new SERVER { TAKEHOMEPAY = it.TAKEHOMEPAY - 50 })
                         .Where(it => it.IS_WORK_TODAY == 0)
                         .Where(it => SqlFunc.Subqueryable<WORK_TIME>().Where(w => w.WORK_TIME_ID == it.WORK_TIME_ID && w.DAY3 == 1).Any())
                         .ExecuteCommand();
@@ -57,7 +57,7 @@ namespace UpdateAt0amService.UpdateAt0am
                 else if ((today + 6) % 7 == 4)
                 {
                     DbContext.db.Updateable<SERVER>()
-                        .SetColumns(it => new SERVER { SALARY = it.SALARY - 50 })
+                        .SetColumns(it => new SERVER { TAKEHOMEPAY = it.TAKEHOMEPAY - 50 })
                         .Where(it => it.IS_WORK_TODAY == 0)
                         .Where(it => SqlFunc.Subqueryable<WORK_TIME>().Where(w => w.WORK_TIME_ID == it.WORK_TIME_ID && w.DAY4 == 1).Any())
                         .ExecuteCommand();
@@ -65,7 +65,7 @@ namespace UpdateAt0amService.UpdateAt0am
                 else if ((today + 6) % 7 == 5)
                 {
                     DbContext.db.Updateable<SERVER>()
-                        .SetColumns(it => new SERVER { SALARY = it.SALARY - 50 })
+                        .SetColumns(it => new SERVER { TAKEHOMEPAY = it.TAKEHOMEPAY - 50 })
                         .Where(it => it.IS_WORK_TODAY == 0)
                         .Where(it => SqlFunc.Subqueryable<WORK_TIME>().Where(w => w.WORK_TIME_ID == it.WORK_TIME_ID && w.DAY5 == 1).Any())
                         .ExecuteCommand();
@@ -73,7 +73,7 @@ namespace UpdateAt0amService.UpdateAt0am
                 else if ((today + 6) % 7 == 6)
                 {
                     DbContext.db.Updateable<SERVER>()
-                        .SetColumns(it => new SERVER { SALARY = it.SALARY - 50 })
+                        .SetColumns(it => new SERVER { TAKEHOMEPAY = it.TAKEHOMEPAY - 50 })
                         .Where(it => it.IS_WORK_TODAY == 0)
                         .Where(it => SqlFunc.Subqueryable<WORK_TIME>().Where(w => w.WORK_TIME_ID == it.WORK_TIME_ID && w.DAY6 == 1).Any())
                         .ExecuteCommand();

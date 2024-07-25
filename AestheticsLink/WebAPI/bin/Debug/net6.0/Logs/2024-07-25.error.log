@@ -1,0 +1,148 @@
+2024-07-25 11:36:49,359 [37] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-25 11:58:02,138 [31] ERROR [Quartz.Core.JobRunShell] (null) - Job DEFAULT.UpdateAt0amService.UpdateAt0am.MonthlyPerformanceService threw an unhandled Exception: 
+System.InvalidOperationException: ORA-50001: Connection must be open for this operation
+   at Oracle.ManagedDataAccess.Client.OracleCommand.<>c.<ExecuteDbDataReaderAsync>b__213_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at UpdateAt0amService.UpdateAt0am.MonthlyPerformanceService.MonthlyPerformance() in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyPerformanceService.cs:line 28
+   at UpdateAt0amService.UpdateAt0am.MonthlyPerformanceService.Execute(IJobExecutionContext context) in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyPerformanceService.cs:line 17
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+2024-07-25 11:58:02,182 [31] ERROR [Quartz.Core.ErrorLogger] (null) - Job DEFAULT.UpdateAt0amService.UpdateAt0am.MonthlyPerformanceService threw an exception.
+Quartz.SchedulerException: Job threw an unhandled exception.
+ ---> System.InvalidOperationException: ORA-50001: Connection must be open for this operation
+   at Oracle.ManagedDataAccess.Client.OracleCommand.<>c.<ExecuteDbDataReaderAsync>b__213_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at UpdateAt0amService.UpdateAt0am.MonthlyPerformanceService.MonthlyPerformance() in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyPerformanceService.cs:line 28
+   at UpdateAt0amService.UpdateAt0am.MonthlyPerformanceService.Execute(IJobExecutionContext context) in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyPerformanceService.cs:line 17
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+   --- End of inner exception stack trace --- [See nested exception: System.InvalidOperationException: ORA-50001: Connection must be open for this operation
+   at Oracle.ManagedDataAccess.Client.OracleCommand.<>c.<ExecuteDbDataReaderAsync>b__213_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at UpdateAt0amService.UpdateAt0am.MonthlyPerformanceService.MonthlyPerformance() in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyPerformanceService.cs:line 28
+   at UpdateAt0amService.UpdateAt0am.MonthlyPerformanceService.Execute(IJobExecutionContext context) in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyPerformanceService.cs:line 17
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)]
+2024-07-25 12:07:00,279 [31] ERROR [Quartz.Core.JobRunShell] (null) - Job DEFAULT.UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService threw an unhandled Exception: 
+SqlSugar.SqlSugarException: 中文提示 : 更新需要条件 Where
+English Message : Update requires conditions
+   at SqlSugar.Check.ExceptionEasy(String enMessage, String cnMessage)
+   at SqlSugar.UpdateableProvider`1.CheckWhere()
+   at SqlSugar.UpdateableProvider`1._ExecuteCommand()
+   at SqlSugar.UpdateableProvider`1.ExecuteCommandAsync()
+   at SqlSugar.OracleUpdateable`1.ExecuteCommandAsync()
+   at UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService.MonthlyTakeHomePay() in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyTakeHomePayService.cs:line 23
+   at UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService.Execute(IJobExecutionContext context) in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyTakeHomePayService.cs:line 17
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+2024-07-25 12:07:00,372 [31] ERROR [Quartz.Core.ErrorLogger] (null) - Job DEFAULT.UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService threw an exception.
+Quartz.SchedulerException: Job threw an unhandled exception.
+ ---> SqlSugar.SqlSugarException: 中文提示 : 更新需要条件 Where
+English Message : Update requires conditions
+   at SqlSugar.Check.ExceptionEasy(String enMessage, String cnMessage)
+   at SqlSugar.UpdateableProvider`1.CheckWhere()
+   at SqlSugar.UpdateableProvider`1._ExecuteCommand()
+   at SqlSugar.UpdateableProvider`1.ExecuteCommandAsync()
+   at SqlSugar.OracleUpdateable`1.ExecuteCommandAsync()
+   at UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService.MonthlyTakeHomePay() in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyTakeHomePayService.cs:line 23
+   at UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService.Execute(IJobExecutionContext context) in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyTakeHomePayService.cs:line 17
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+   --- End of inner exception stack trace --- [See nested exception: SqlSugar.SqlSugarException: 中文提示 : 更新需要条件 Where
+English Message : Update requires conditions
+   at SqlSugar.Check.ExceptionEasy(String enMessage, String cnMessage)
+   at SqlSugar.UpdateableProvider`1.CheckWhere()
+   at SqlSugar.UpdateableProvider`1._ExecuteCommand()
+   at SqlSugar.UpdateableProvider`1.ExecuteCommandAsync()
+   at SqlSugar.OracleUpdateable`1.ExecuteCommandAsync()
+   at UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService.MonthlyTakeHomePay() in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyTakeHomePayService.cs:line 23
+   at UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService.Execute(IJobExecutionContext context) in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyTakeHomePayService.cs:line 17
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)]
+2024-07-25 12:08:00,100 [34] ERROR [Quartz.Core.JobRunShell] (null) - Job DEFAULT.UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService threw an unhandled Exception: 
+SqlSugar.SqlSugarException: 中文提示 : 更新需要条件 Where
+English Message : Update requires conditions
+   at SqlSugar.Check.ExceptionEasy(String enMessage, String cnMessage)
+   at SqlSugar.UpdateableProvider`1.CheckWhere()
+   at SqlSugar.UpdateableProvider`1._ExecuteCommand()
+   at SqlSugar.UpdateableProvider`1.ExecuteCommandAsync()
+   at SqlSugar.OracleUpdateable`1.ExecuteCommandAsync()
+   at UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService.MonthlyTakeHomePay() in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyTakeHomePayService.cs:line 23
+   at UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService.Execute(IJobExecutionContext context) in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyTakeHomePayService.cs:line 17
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+2024-07-25 12:08:00,109 [34] ERROR [Quartz.Core.ErrorLogger] (null) - Job DEFAULT.UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService threw an exception.
+Quartz.SchedulerException: Job threw an unhandled exception.
+ ---> SqlSugar.SqlSugarException: 中文提示 : 更新需要条件 Where
+English Message : Update requires conditions
+   at SqlSugar.Check.ExceptionEasy(String enMessage, String cnMessage)
+   at SqlSugar.UpdateableProvider`1.CheckWhere()
+   at SqlSugar.UpdateableProvider`1._ExecuteCommand()
+   at SqlSugar.UpdateableProvider`1.ExecuteCommandAsync()
+   at SqlSugar.OracleUpdateable`1.ExecuteCommandAsync()
+   at UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService.MonthlyTakeHomePay() in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyTakeHomePayService.cs:line 23
+   at UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService.Execute(IJobExecutionContext context) in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyTakeHomePayService.cs:line 17
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+   --- End of inner exception stack trace --- [See nested exception: SqlSugar.SqlSugarException: 中文提示 : 更新需要条件 Where
+English Message : Update requires conditions
+   at SqlSugar.Check.ExceptionEasy(String enMessage, String cnMessage)
+   at SqlSugar.UpdateableProvider`1.CheckWhere()
+   at SqlSugar.UpdateableProvider`1._ExecuteCommand()
+   at SqlSugar.UpdateableProvider`1.ExecuteCommandAsync()
+   at SqlSugar.OracleUpdateable`1.ExecuteCommandAsync()
+   at UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService.MonthlyTakeHomePay() in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyTakeHomePayService.cs:line 23
+   at UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService.Execute(IJobExecutionContext context) in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyTakeHomePayService.cs:line 17
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)]
+2024-07-25 12:09:03,703 [37] ERROR [Quartz.Core.JobRunShell] (null) - Job DEFAULT.UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService threw an unhandled Exception: 
+SqlSugar.SqlSugarException: 中文提示 : 更新需要条件 Where
+English Message : Update requires conditions
+   at SqlSugar.Check.ExceptionEasy(String enMessage, String cnMessage)
+   at SqlSugar.UpdateableProvider`1.CheckWhere()
+   at SqlSugar.UpdateableProvider`1._ExecuteCommand()
+   at SqlSugar.UpdateableProvider`1.ExecuteCommandAsync()
+   at SqlSugar.OracleUpdateable`1.ExecuteCommandAsync()
+   at UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService.MonthlyTakeHomePay() in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyTakeHomePayService.cs:line 23
+   at UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService.Execute(IJobExecutionContext context) in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyTakeHomePayService.cs:line 17
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+2024-07-25 12:09:03,709 [37] ERROR [Quartz.Core.ErrorLogger] (null) - Job DEFAULT.UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService threw an exception.
+Quartz.SchedulerException: Job threw an unhandled exception.
+ ---> SqlSugar.SqlSugarException: 中文提示 : 更新需要条件 Where
+English Message : Update requires conditions
+   at SqlSugar.Check.ExceptionEasy(String enMessage, String cnMessage)
+   at SqlSugar.UpdateableProvider`1.CheckWhere()
+   at SqlSugar.UpdateableProvider`1._ExecuteCommand()
+   at SqlSugar.UpdateableProvider`1.ExecuteCommandAsync()
+   at SqlSugar.OracleUpdateable`1.ExecuteCommandAsync()
+   at UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService.MonthlyTakeHomePay() in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyTakeHomePayService.cs:line 23
+   at UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService.Execute(IJobExecutionContext context) in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyTakeHomePayService.cs:line 17
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+   --- End of inner exception stack trace --- [See nested exception: SqlSugar.SqlSugarException: 中文提示 : 更新需要条件 Where
+English Message : Update requires conditions
+   at SqlSugar.Check.ExceptionEasy(String enMessage, String cnMessage)
+   at SqlSugar.UpdateableProvider`1.CheckWhere()
+   at SqlSugar.UpdateableProvider`1._ExecuteCommand()
+   at SqlSugar.UpdateableProvider`1.ExecuteCommandAsync()
+   at SqlSugar.OracleUpdateable`1.ExecuteCommandAsync()
+   at UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService.MonthlyTakeHomePay() in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyTakeHomePayService.cs:line 23
+   at UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService.Execute(IJobExecutionContext context) in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyTakeHomePayService.cs:line 17
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)]

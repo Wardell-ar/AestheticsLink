@@ -17,7 +17,8 @@ namespace WebModel.Entity
         public string PASSWORD { get; set; }
         public string POSITION { get; set; }
         public string PHONE_NUM { get; set;}
-        public decimal SALARY { get; set; }
+        public decimal BASICSALARY { get; set; }
+        public decimal TAKEHOMEPAY { get; set; }
         public string HOS_ID { get; set;}
         public string DEP_ID { get; set; }
         public string WORK_TIME_ID { get; set; }

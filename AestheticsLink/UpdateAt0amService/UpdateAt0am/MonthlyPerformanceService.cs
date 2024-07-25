@@ -44,7 +44,7 @@ namespace UpdateAt0amService.UpdateAt0am
             foreach (var performer in topPerformers)
             {
                 await DbContext.db.Updateable<SERVER>()
-                    .SetColumns(s => new SERVER { SALARY = s.SALARY + 1000 })
+                    .SetColumns(s => new SERVER { TAKEHOMEPAY = s.TAKEHOMEPAY + 1000 })
                     .Where(s => s.SER_ID == performer.SER_ID)
                     .ExecuteCommandAsync();
             }

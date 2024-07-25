@@ -551,7 +551,6 @@ D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\runtimes\win\lib\net6.0\S
 D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\LogRegService.dll
 D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\QueryAllUsersService.dll
-D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\RechargeService.dll
 D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\ServerInformation.dll
 D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\ServerSigninService.dll
 D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\UpdateAt0amService.dll
@@ -559,7 +558,6 @@ D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\WebCommon.dll
 D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\WebModel.dll
 D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\LogRegService.pdb
 D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\QueryAllUsersService.pdb
-D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\RechargeService.pdb
 D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\ServerInformation.pdb
 D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\ServerSigninService.pdb
 D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\UpdateAt0amService.pdb
@@ -586,3 +584,5 @@ D:\C#_Project\AestheticsLink\WebAPI\obj\Release\net6.0\refint\WebAPI.dll
 D:\C#_Project\AestheticsLink\WebAPI\obj\Release\net6.0\WebAPI.pdb
 D:\C#_Project\AestheticsLink\WebAPI\obj\Release\net6.0\WebAPI.genruntimeconfig.cache
 D:\C#_Project\AestheticsLink\WebAPI\obj\Release\net6.0\ref\WebAPI.dll
+D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\QuartzJobLibrary.dll
+D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\QuartzJobLibrary.pdb
