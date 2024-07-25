@@ -19,3 +19,7 @@ div.display-table是显示表格处(我用的是element plus，使用前需要�
 我感觉筛选栏和表格(customer_infoTable.vue)的制作总体上相差不大，大家可以在我写好的代码基础上进行修改就可以了
 
 如果有父子组件之间数据的传递可以参考我的Dropdown_gender(子组件)和adminPage.vue(父组件)的写法
+
+----
+
+调整过后整个右边页面一开始都是空白，只有点击左侧侧边栏才会对应显示

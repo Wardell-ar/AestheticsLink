@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router"
 import adminPage from "../components/adminPage.vue"
-import customer_infoTable from "../views/customer_infoTable.vue"
+import customer_infoPage from "../views/customer_infoPage.vue"
 //创建路由器
 const router = createRouter({
     history: createWebHistory(),
@@ -10,8 +10,8 @@ const router = createRouter({
             component: adminPage,
             children: [
                 {
-                    path: "customer_infoTable",
-                    component: customer_infoTable,
+                    path: "customer_infoPage",
+                    component: customer_infoPage,
                 }]
         }
     ]
