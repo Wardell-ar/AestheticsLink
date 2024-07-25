@@ -1,6 +1,7 @@
 ﻿using LogRegService;
 using LogRegService.Dto;
 using Microsoft.AspNetCore.Mvc;
+using WebCommon.Database;
 using WebModel.Entity;
 
 namespace WebAPI.Controllers
@@ -19,17 +20,25 @@ namespace WebAPI.Controllers
         [HttpPost("Register")]
         public async Task<string> Register([FromBody] RegisterDto register)
         {
+<<<<<<< Updated upstream
             _logger.LogInformation("Received register request: UID={UID}", register.UID);
+=======
+            _logger.LogInformation("Received register request: UID={UID}", register.uid);
+            //事物开始
+            DbContext.db.Ado.BeginTran();
+>>>>>>> Stashed changes
             //检查电话号码有无被注册过
             var customer =  _customerService.AddCustomer(register);
             if (customer == null) 
             {
                 //注册失败，电话号码已经被注册
+                DbContext.db.Ado.RollbackTran();
                 return "0";
             }
             else
             {
                 //注册成功
+                DbContext.db.Ado.CommitTran();
                 return "1";
             }
         }

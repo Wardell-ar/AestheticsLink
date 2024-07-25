@@ -80,7 +80,7 @@ namespace LogRegService
             customer.EX = 0;
             customer.PASSWORD = register.PASSWORD;
             customer.BALANCE = 0;
-            customer.VIPLEVEL = "Gold";
+            customer.VIPLEVEL = "copper";
 
             return customer;
 

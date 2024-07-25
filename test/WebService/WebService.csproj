@@ -7,12 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< Updated upstream:test/WebService/WebService.csproj
     <PackageReference Include="AutoMapper" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\WebModel\WebModel.csproj" />
     <ProjectReference Include="..\WenCommon\WenCommon.csproj" />
+=======
+    <ProjectReference Include="..\WebCommon\WebCommon.csproj" />
+    <ProjectReference Include="..\WebModel\WebModel.csproj" />
+>>>>>>> Stashed changes:AestheticsLink/RechargeService/RechargeService.csproj
   </ItemGroup>
 
 </Project>

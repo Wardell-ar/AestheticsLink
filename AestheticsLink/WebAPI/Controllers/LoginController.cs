@@ -5,6 +5,11 @@ using WebAPI.JWTService;
 using WebModel.Entity;
 using NetTaste;
 using Microsoft.AspNetCore.Authorization;
+<<<<<<< Updated upstream
+=======
+using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.Bibliography;
+>>>>>>> Stashed changes
 
 namespace WebAPI.Controllers
 {
@@ -55,8 +60,15 @@ namespace WebAPI.Controllers
 
                 var response = new LoginResponse
                 {
+<<<<<<< Updated upstream
                     role = 1,//登录账号类型，1为客户
                     token = token
+=======
+                    id = customer.CUS_ID,
+                    role = "1",//登录账号类型，1为客户
+                    month = 7,
+                    day = 5
+>>>>>>> Stashed changes
                 };
                 // Return token as response
                 return Ok(response);
@@ -71,8 +83,16 @@ namespace WebAPI.Controllers
 
                     var response = new LoginResponse
                     {
+<<<<<<< Updated upstream
                         role = 2,//登录账号类型，2为员工
                         token = token
+=======
+                        id = server.SER_ID,
+                        role = "2",//登录账号类型，2为员工
+                        month = server.JOINED_DATE.Month,
+                        day = server.JOINED_DATE.Day
+
+>>>>>>> Stashed changes
                     };
                     // Return token as response
                     return Ok(response);
@@ -81,27 +101,46 @@ namespace WebAPI.Controllers
                 {
                     var response = new LoginResponse
                     {
+<<<<<<< Updated upstream
                         role = -1,//登录账号类型，2为员工
                         token = null
+=======
+                        id = "-1",
+                        role = "3",//登录账号类型，2为员工
+                        month = 0,
+                        day = 0
+>>>>>>> Stashed changes
                     };
                     return Ok(response);
                 }
             }
         }
-        [Authorize]
-        [HttpGet]
-        public bool Get()
+        //    [Authorize]
+        //    [HttpGet]
+        //    public bool Get()
+        //    {
+        //        //if (_jwtService.ValidateToken(token) == true)
+        //        //    return true;
+        //        //else
+        //        //    return false;
+        //        return true;
+        //    }
+        //}
+        public class LoginResponse
         {
-            //if (_jwtService.ValidateToken(token) == true)
-            //    return true;
-            //else
-            //    return false;
-            return true;
+            public string role { get; set; }
+            public string id { get; set; }
+            public int month { get; set; }
+            public int day { get; set; }
+
         }
     }
+<<<<<<< Updated upstream
     public class LoginResponse
     {
         public int role { get; set; }
         public string token { get; set; }
     }
+=======
+>>>>>>> Stashed changes
 }

@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< Updated upstream:test/WenCommon/obj/WenCommon.csproj.nuget.dgspec.json
     "D:\\database\\test\\test\\WenCommon\\WenCommon.csproj": {}
   },
   "projects": {
@@ -15,6 +16,84 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\彭之芯\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "D:\\database\\AestheticsLink\\AestheticsLink\\RechargeService\\RechargeService.csproj": {}
+  },
+  "projects": {
+    "D:\\database\\AestheticsLink\\AestheticsLink\\RechargeService\\RechargeService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\database\\AestheticsLink\\AestheticsLink\\RechargeService\\RechargeService.csproj",
+        "projectName": "RechargeService",
+        "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\RechargeService\\RechargeService.csproj",
+        "packagesPath": "C:\\Users\\彭之芯\\.nuget\\packages\\",
+        "outputPath": "D:\\database\\AestheticsLink\\AestheticsLink\\RechargeService\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\彭之芯\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\database\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
+                "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj"
+              },
+              "D:\\database\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj": {
+                "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\database\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\database\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj",
+        "projectName": "WebCommon",
+        "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj",
+        "packagesPath": "C:\\Users\\彭之芯\\.nuget\\packages\\",
+        "outputPath": "D:\\database\\AestheticsLink\\AestheticsLink\\WebCommon\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\彭之芯\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes:AestheticsLink/RechargeService/obj/RechargeService.csproj.nuget.dgspec.json
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -73,6 +152,7 @@
         }
       }
     },
+<<<<<<< Updated upstream:test/WenCommon/obj/WenCommon.csproj.nuget.dgspec.json
     "D:\\database\\test\\test\\WenCommon\\WenCommon.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -81,6 +161,16 @@
         "projectPath": "D:\\database\\test\\test\\WenCommon\\WenCommon.csproj",
         "packagesPath": "C:\\Users\\彭之芯\\.nuget\\packages\\",
         "outputPath": "D:\\database\\test\\test\\WenCommon\\obj\\",
+=======
+    "D:\\database\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\database\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj",
+        "projectName": "WebModel",
+        "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj",
+        "packagesPath": "C:\\Users\\彭之芯\\.nuget\\packages\\",
+        "outputPath": "D:\\database\\AestheticsLink\\AestheticsLink\\WebModel\\obj\\",
+>>>>>>> Stashed changes:AestheticsLink/RechargeService/obj/RechargeService.csproj.nuget.dgspec.json
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\彭之芯\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -96,11 +186,15 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
+<<<<<<< Updated upstream:test/WenCommon/obj/WenCommon.csproj.nuget.dgspec.json
             "projectReferences": {
               "D:\\database\\test\\test\\WebModel\\WebModel.csproj": {
                 "projectPath": "D:\\database\\test\\test\\WebModel\\WebModel.csproj"
               }
             }
+=======
+            "projectReferences": {}
+>>>>>>> Stashed changes:AestheticsLink/RechargeService/obj/RechargeService.csproj.nuget.dgspec.json
           }
         },
         "warningProperties": {
@@ -113,6 +207,7 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+<<<<<<< Updated upstream:test/WenCommon/obj/WenCommon.csproj.nuget.dgspec.json
             "Microsoft.Extensions.Caching.Abstractions": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -124,6 +219,19 @@
             "SqlSugarCore": {
               "target": "Package",
               "version": "[5.1.4.160, )"
+=======
+            "Oracle.ManagedDataAccess.Core": {
+              "target": "Package",
+              "version": "[23.4.0, )"
+            },
+            "Rezero.Api": {
+              "target": "Package",
+              "version": "[1.7.9, )"
+            },
+            "SqlSugarCore": {
+              "target": "Package",
+              "version": "[5.1.4.162, )"
+>>>>>>> Stashed changes:AestheticsLink/RechargeService/obj/RechargeService.csproj.nuget.dgspec.json
             }
           },
           "imports": [

@@ -1,0 +1,15 @@
+D:\database\AestheticsLink\AestheticsLink\FinancialService\bin\Debug\net6.0\FinancialService.deps.json
+D:\database\AestheticsLink\AestheticsLink\FinancialService\bin\Debug\net6.0\FinancialService.dll
+D:\database\AestheticsLink\AestheticsLink\FinancialService\bin\Debug\net6.0\FinancialService.pdb
+D:\database\AestheticsLink\AestheticsLink\FinancialService\bin\Debug\net6.0\WebCommon.dll
+D:\database\AestheticsLink\AestheticsLink\FinancialService\bin\Debug\net6.0\WebCommon.pdb
+D:\database\AestheticsLink\AestheticsLink\FinancialService\obj\Debug\net6.0\FinancialService.csproj.AssemblyReference.cache
+D:\database\AestheticsLink\AestheticsLink\FinancialService\obj\Debug\net6.0\FinancialService.GeneratedMSBuildEditorConfig.editorconfig
+D:\database\AestheticsLink\AestheticsLink\FinancialService\obj\Debug\net6.0\FinancialService.AssemblyInfoInputs.cache
+D:\database\AestheticsLink\AestheticsLink\FinancialService\obj\Debug\net6.0\FinancialService.AssemblyInfo.cs
+D:\database\AestheticsLink\AestheticsLink\FinancialService\obj\Debug\net6.0\FinancialService.csproj.CoreCompileInputs.cache
+D:\database\AestheticsLink\AestheticsLink\FinancialService\obj\Debug\net6.0\FinancialService.csproj.CopyComplete
+D:\database\AestheticsLink\AestheticsLink\FinancialService\obj\Debug\net6.0\FinancialService.dll
+D:\database\AestheticsLink\AestheticsLink\FinancialService\obj\Debug\net6.0\refint\FinancialService.dll
+D:\database\AestheticsLink\AestheticsLink\FinancialService\obj\Debug\net6.0\FinancialService.pdb
+D:\database\AestheticsLink\AestheticsLink\FinancialService\obj\Debug\net6.0\ref\FinancialService.dll
