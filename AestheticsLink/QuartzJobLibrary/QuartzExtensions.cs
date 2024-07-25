@@ -20,7 +20,7 @@ namespace QuartzJobLibrary
             services.AddSingleton<UpdateSigninService>();
             services.AddSingleton(new JobSchedule(
                 jobType: typeof(UpdateSigninService),
-                cronExpression: "0 0/1 * * * ?")); // 每天凌晨12点
+                cronExpression: "0 0 0 * * ?")); // 每天凌晨12点
 
             //注册每月绩效更新服务
             services.AddSingleton<MonthlyPerformanceService>();

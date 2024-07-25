@@ -85,3 +85,254 @@
 2024-07-25 13:38:00,034 [9] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
 2024-07-25 13:38:00,080 [31] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
 2024-07-25 13:38:00,331 [30] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 19:00:45,962 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 19:00:46,081 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 19:01:00,022 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:01:00,050 [18] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 19:01:01,792 [17] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 19:01:28,631 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:01:51,773 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 19:02:00,000 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:02:00,001 [27] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 19:02:00,066 [30] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 19:02:25,445 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:02:52,681 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 19:03:58,039 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 19:03:58,201 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 19:04:00,044 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:04:00,074 [8] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 19:04:01,558 [5] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 19:04:29,724 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:05:55,943 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 19:05:56,097 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 19:06:00,033 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:06:00,072 [16] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 19:06:01,785 [12] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 19:06:25,608 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:06:51,157 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 19:07:00,014 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:07:00,038 [33] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 19:07:00,132 [34] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 19:07:25,925 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:07:55,716 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 19:08:00,004 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:08:00,015 [36] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 19:08:00,164 [37] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 19:08:24,352 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:08:53,276 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 19:09:00,015 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:09:00,016 [40] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 19:09:00,100 [43] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 19:09:26,811 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:09:52,287 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 19:10:00,009 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:10:00,009 [45] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 19:10:00,088 [40] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 19:10:23,041 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:10:47,251 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 19:11:00,004 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:11:00,006 [40] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 19:11:00,104 [48] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 19:11:27,921 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:11:52,822 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 19:12:00,006 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:12:00,009 [40] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 19:12:00,110 [50] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 19:12:26,522 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:25:11,937 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 19:25:12,084 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:25:37,328 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 19:26:00,027 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:26:00,070 [36] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 19:26:00,479 [33] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 19:26:26,665 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:26:53,005 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 19:27:00,013 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:27:00,015 [32] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 19:27:00,112 [38] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 19:27:23,728 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:27:50,888 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 19:28:00,010 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:28:00,012 [32] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 19:28:00,102 [40] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 19:28:26,222 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:28:52,443 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 19:29:00,011 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:29:00,011 [32] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 19:29:00,073 [44] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 19:29:28,286 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:29:53,635 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 19:30:00,006 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:30:00,009 [32] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 19:30:00,100 [45] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 19:30:25,697 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:30:52,450 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 19:30:52,610 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 19:31:00,042 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:31:00,136 [5] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 19:31:01,996 [22] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 19:31:28,652 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:31:55,910 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 19:32:00,012 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:32:00,031 [25] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 19:32:00,140 [26] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 19:32:27,959 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:32:56,741 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 19:33:00,003 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:33:00,004 [27] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 19:33:00,080 [29] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 19:33:24,229 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 19:33:53,015 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 20:55:11,451 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 20:55:11,613 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 20:55:40,580 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 20:56:00,022 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 20:56:00,081 [29] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 20:56:00,324 [30] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 20:56:25,606 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 20:56:44,413 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 20:56:44,554 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 20:57:00,030 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 20:57:00,096 [5] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 20:57:02,226 [11] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 20:57:29,571 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 20:57:57,550 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 20:58:00,003 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 20:58:00,014 [25] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 20:58:00,087 [26] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 20:58:14,101 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 20:58:14,250 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 20:58:39,616 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 20:59:00,038 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 20:59:00,100 [29] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 20:59:02,269 [30] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 20:59:26,944 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 20:59:53,678 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 21:00:00,008 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:00:00,028 [33] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 21:00:00,119 [34] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 21:00:26,806 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:00:55,487 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 21:01:00,002 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:01:00,002 [44] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 21:01:00,071 [37] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 21:01:18,201 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 21:01:18,339 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:01:45,760 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 21:02:00,026 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:02:00,077 [7] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 21:02:00,367 [33] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 21:02:05,955 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 21:02:06,104 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:02:29,893 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:02:51,592 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 21:02:51,732 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 1 triggers
+2024-07-25 21:03:00,048 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:03:00,093 [23] DEBUG [Quartz.Core.JobRunShell] (null) - Calling Execute on job DEFAULT.UpdateAt0amService.UpdateAt0am.UpdateSigninService
+2024-07-25 21:03:02,029 [21] DEBUG [Quartz.Core.JobRunShell] (null) - Trigger instruction : NoInstruction
+2024-07-25 21:03:27,607 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:12:24,091 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 21:12:24,285 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:12:50,212 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:13:18,793 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:13:42,002 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:14:15,831 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 21:14:15,979 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:14:42,914 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:15:06,921 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:15:34,040 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 21:15:34,186 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:16:01,166 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:16:29,405 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:16:55,236 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:17:23,787 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:17:52,740 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:18:20,466 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:18:49,566 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:19:14,373 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:19:39,793 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 21:19:39,935 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:20:08,065 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:20:33,219 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:21:02,306 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:21:30,955 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:21:55,041 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:22:19,828 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:22:48,036 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:23:12,200 [5] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:23:21,211 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 21:23:21,342 [9] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:23:49,942 [9] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:24:19,657 [9] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:24:48,997 [9] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:25:13,367 [9] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:25:41,014 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 21:25:41,146 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:26:09,362 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:26:38,706 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:27:04,605 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:27:32,591 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:27:59,608 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:28:25,826 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:28:50,503 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:29:20,087 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:29:42,971 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 21:29:43,119 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:32:42,939 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 21:32:43,016 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:33:12,117 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:33:36,008 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:37:06,769 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 21:37:06,854 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:37:31,064 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:38:00,571 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:42:35,883 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-07-25 21:42:35,962 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:43:03,268 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:43:31,486 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:43:57,703 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:44:24,198 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:44:53,377 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:45:21,628 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:45:47,281 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:46:16,558 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:46:40,437 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:47:04,013 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:47:33,022 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:47:58,342 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:48:24,596 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:48:48,359 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:49:11,683 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:49:38,040 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:50:07,822 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:50:30,872 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:50:55,123 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:51:18,991 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:51:45,345 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:52:11,967 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:52:39,506 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:53:07,031 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:53:30,643 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:54:00,247 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:54:23,341 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:54:52,692 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:55:22,649 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:55:47,860 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:56:14,115 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:56:42,867 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:57:06,591 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:57:32,202 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:57:58,961 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:58:28,162 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:58:58,160 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:59:25,435 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 21:59:52,466 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 22:00:16,858 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 22:00:45,699 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 22:01:14,068 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 22:01:41,751 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 22:02:06,897 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 22:02:31,948 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 22:03:00,605 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 22:03:28,809 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-07-25 22:03:56,549 [8] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers

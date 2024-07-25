@@ -13,6 +13,7 @@ namespace QueryAllUsersService.QueryAllCustomers
         Task<List<QueryCustomersDto>> GetCustomersByCriteria(Dictionary<string, object> criteria);
 
         int CalculateAge(DateTime birthday);
+
         int GetIntFromJsonElement(object obj);
     }
 }
