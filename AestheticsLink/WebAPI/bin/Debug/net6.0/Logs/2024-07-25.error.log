@@ -146,3 +146,4 @@ English Message : Update requires conditions
    at UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService.MonthlyTakeHomePay() in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyTakeHomePayService.cs:line 23
    at UpdateAt0amService.UpdateAt0am.MonthlyTakeHomePayService.Execute(IJobExecutionContext context) in D:\C#_Project\AestheticsLink\UpdateAt0amService\UpdateAt0am\MonthlyTakeHomePayService.cs:line 17
    at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)]
+2024-07-25 13:37:53,922 [27] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.

@@ -10,10 +10,11 @@
         "dependencies": {
           "LogRegService": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.32",
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "Microsoft.Extensions.Logging.Log4Net.AspNetCore": "8.0.0",
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "7.6.3",
+          "QuartzJobLibrary": "1.0.0",
           "QueryAllUsersService": "1.0.0",
-          "RechargeService": "1.0.0",
           "ServerInformation": "1.0.0",
           "ServerSigninService": "1.0.0",
           "Swashbuckle.AspNetCore": "6.6.2",
@@ -454,7 +455,7 @@
           "Microsoft.EntityFrameworkCore.Abstractions": "6.0.32",
           "Microsoft.EntityFrameworkCore.Analyzers": "6.0.32",
           "Microsoft.Extensions.Caching.Memory": "8.0.0",
-          "Microsoft.Extensions.DependencyInjection": "6.0.1",
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "Microsoft.Extensions.Logging": "6.0.0",
           "System.Collections.Immutable": "8.0.0",
           "System.Diagnostics.DiagnosticSource": "6.0.1"
@@ -518,15 +519,14 @@
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
         }
       },
-      "Microsoft.Extensions.DependencyInjection/6.0.1": {
+      "Microsoft.Extensions.DependencyInjection/8.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
         },
         "runtime": {
           "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.1022.47605"
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
           }
         }
       },
@@ -545,7 +545,7 @@
       },
       "Microsoft.Extensions.Logging/6.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection": "6.0.1",
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
           "Microsoft.Extensions.Options": "8.0.0",
@@ -1965,6 +1965,16 @@
           "LogRegService.dll": {}
         }
       },
+      "QuartzJobLibrary/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Quartz": "3.11.0",
+          "UpdateAt0amService": "1.0.0"
+        },
+        "runtime": {
+          "QuartzJobLibrary.dll": {}
+        }
+      },
       "QueryAllUsersService/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.32",
@@ -1973,14 +1983,6 @@
         },
         "runtime": {
           "QueryAllUsersService.dll": {}
-        }
-      },
-      "RechargeService/1.0.0": {
-        "dependencies": {
-          "WebCommon": "1.0.0"
-        },
-        "runtime": {
-          "RechargeService.dll": {}
         }
       },
       "ServerInformation/1.0.0": {
@@ -2244,12 +2246,12 @@
       "path": "microsoft.extensions.configuration.binder/6.0.0",
       "hashPath": "microsoft.extensions.configuration.binder.6.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.DependencyInjection/6.0.1": {
+    "Microsoft.Extensions.DependencyInjection/8.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-vWXPg3HJQIpZkENn1KWq8SfbqVujVD7S7vIAyFXXqK5xkf1Vho+vG0bLBCHxU36lD1cLLtmGpfYf0B3MYFi9tQ==",
-      "path": "microsoft.extensions.dependencyinjection/6.0.1",
-      "hashPath": "microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512"
+      "sha512": "sha512-V8S3bsm50ig6JSyrbcJJ8bW2b9QLGouz+G1miK3UTaOWmMtFwNNNzUf4AleyDWUmTrWMLNnFSLEQtxmxgNQnNQ==",
+      "path": "microsoft.extensions.dependencyinjection/8.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
       "type": "package",
@@ -3208,12 +3210,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "QueryAllUsersService/1.0.0": {
+    "QuartzJobLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "RechargeService/1.0.0": {
+    "QueryAllUsersService/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
