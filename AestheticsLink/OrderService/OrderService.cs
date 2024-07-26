@@ -107,7 +107,7 @@ namespace OrderService
             bill.CUS_ID = order.CUS_ID;
             bill.COU_ID = null;
             bill.FOUND_DATE = foundDate;
-            bill.PAID_AMOUNT = 0;
+            bill.PAID_AMOUNT = order.PAID_AMOUNT;
             bill.HOS_ID = null;
             bill.COMPLE_STATE = "0";// 0为还未完全创建好，部分值仍待填写
 
@@ -116,7 +116,7 @@ namespace OrderService
         }
         private string GetMaxBillId()
         {
-            string sql = "SELECT MAX(BILL_ID) FROM BILL"; // 替换YourTableName为实际的表名
+            string sql = "SELECT MAX(TO_NUMBER(BILL_ID)) FROM BILL"; // 替换YourTableName为实际的表名
 
             // 执行 SQL 查询
             var result = DbContext.db.Ado.GetString(sql);
@@ -127,13 +127,14 @@ namespace OrderService
         bool IOrderService.CheckInfo(RestChoiceDto rest)
         {
             //只有STATE为0才可以修改
-            var state = DbContext.db.Ado.SqlQuery<RestChoiceDto>("SELECT BILL_ID FROM BILL WHERE COMPLE_STATE = 0");
-            if (state.Count == 0)
+            var state = DbContext.db.Ado.SqlQuerySingle<RestChoiceDto>("SELECT BILL_ID FROM BILL WHERE COMPLE_STATE = 0 AND BILL_ID = :billID",
+                new { billID = rest.BILL_ID });
+            if (state == null)
             {
                 return false;
             }
             //检查CUS_ID和BILL_ID是否存在且对应
-            var result = DbContext.db.Ado.SqlQuery<RestChoiceDto>(
+            var result = DbContext.db.Ado.SqlQuerySingle<RestChoiceDto>(
                 "SELECT CUSTOMER.CUS_ID, BILL.BILL_ID " +
                 "FROM CUSTOMER " +
                 "JOIN BILL ON CUSTOMER.CUS_ID = BILL.CUS_ID " +
@@ -143,7 +144,7 @@ namespace OrderService
                     cusId = rest.CUS_ID,
                     billID = rest.BILL_ID,
                 });
-            if (result.Count == 0)
+            if (result == null)
             {
                 return false;
             }
@@ -151,27 +152,29 @@ namespace OrderService
             if (!DbContext.db.Queryable<HOSPITAL>().Any(c => c.HOS_ID.Equals(rest.HOS_ID)))
                 return false;
             //检查优惠券是否正确
-            var check = DbContext.db.Ado.SqlQuery<RestChoiceDto>(
-                "SELECT CUS_ID " +
-                "FROM CUS_COU " +
-                "WHERE CUS_ID = :cusId AND COU_ID = :couID",
-                new
-                {
-                    cusId = rest.CUS_ID,
-                    couID = rest.COU_ID,
-                });
-            if (check.Count == 0)
+            if (rest.COU_ID != "")
             {
-                return false;
+                var check = DbContext.db.Ado.SqlQuery<RestChoiceDto>(
+                    "SELECT CUS_ID " +
+                    "FROM CUS_COU " +
+                    "WHERE CUS_ID = :cusId AND COU_ID = :couID",
+                    new
+                    {
+                        cusId = rest.CUS_ID,
+                        couID = rest.COU_ID,
+                    });
+                if (check.Count == 0)
+                {
+                    return false;
+                }
             }
             //填写BILL的COU_ID和HOS_ID
             DbContext.db.Ado.ExecuteCommand(
-                "UPDATE BILL SET HOS_ID =:hosID, COU_ID =:couID, PAID_AMOUNT =:paidAmount WHERE BILL_ID =:billID",
+                "UPDATE BILL SET HOS_ID =:hosID, COU_ID =:couID WHERE BILL_ID =:billID",
                 new
                 {
                     hosID = rest.HOS_ID,
                     couID = rest.COU_ID,
-                    paidAmount = rest.PAID_AMOUNT,
                     billID = rest.BILL_ID,
                 });
             //修改订单状态

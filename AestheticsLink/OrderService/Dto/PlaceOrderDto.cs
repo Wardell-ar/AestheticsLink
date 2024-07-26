@@ -10,7 +10,6 @@ namespace OrderService.Dto
     {
         public string CUS_ID { get; set; }
         public List<ProjectDto> PROJECT { get; set; }
-
         public int PAID_AMOUNT { get; set; }
 
     }
