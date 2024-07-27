@@ -21,14 +21,13 @@ export default {
   data() {
     return {
       // 初始选中的选项
-      selectedOption: '',
+      selectedOption: "",
       // 选项列表
       options: [
-        { text: '1', value: '1' },
-        { text: '2', value: '2' },
-        { text: '3', value: '3' },
-        { text: '4', value: '4' },
-        { text: '5', value: '5' }
+        { text: "黄金", value: "Gold" },
+        { text: "白银", value: "Silver" },
+        { text: "青铜", value: "Copper" },
+
       ]
     };
   },
@@ -46,7 +45,7 @@ export default {
     },
     Clear() {
       // 清空子组件的数据
-      this.selectedOption = '';
+      this.selectedOption = "";
     }
   }
 };

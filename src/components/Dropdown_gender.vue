@@ -21,11 +21,11 @@ export default {
   data() {
     return {
       // 初始选中的选项
-      selectedOption: '',
+      selectedOption: "",
       // 选项列表
       options: [
-        { text: '男', value: '男' },
-        { text: '女', value: '女' },
+        { text: "男", value: "男" },
+        { text: "女", value: "女" },
       ]
     };
   },
@@ -43,7 +43,7 @@ export default {
     },
     Clear() {
       // 清空子组件的数据
-      this.selectedOption = '';
+      this.selectedOption = "";
     }
   }
 }

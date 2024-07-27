@@ -131,23 +131,74 @@ export function updateAttendReq(id, callback) {
 }
 
 // 查询会员信息
-export function searchCustomerInfo(dataToSend, displayTable) {
+export async function searchCustomerInfo(dataToSend, displayTable) {
     let str = JSON.stringify(dataToSend);
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://121.199.32.139:8081/QueryAllUsers/QueryCustomers/QueryCustomers', true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(str);
-    xhr.onreadystatechange = () => {
-        if (xhr.readyState === 4) {
-            if (xhr.status >= 200 && xhr.status < 300) {
-                const response = JSON.parse(xhr.response);
-                displayTable(response);
+    try {
+        const response = await fetch('http://121.199.32.139:8081/QueryAllUsers/QueryCustomers/QueryCustomers', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: str
+        });
+        if (response.ok) {
+            const data = await response.json();
+            console.log("回复为：");
+            console.log(data);
+            if (data === 0)
+                alert("未找到匹配条件的顾客")
+            else {
+                console.log("回复为：");
+                console.log(data);
+                displayTable(data);
+            }
+        } else {
+            alert("网络异常");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("网络异常");
+    }
+}
+
+//删除会员信息
+export async function deleteCustomerInfo(selectedCus_Ids, Search) {
+    const dataToSend = {
+        cus_ids: selectedCus_Ids
+    };
+
+    let str = JSON.stringify(dataToSend); // 将对象转换为 JSON 字符串
+
+    console.log("删除的会员信息为：");
+    console.log(dataToSend);
+
+    try {
+        const response = await fetch('http://121.199.32.139:8081/QueryAllUsers/DeleteCustomers/DeleteCustomers', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: str
+        });
+        if (response.ok) {
+            const data = await response.json();
+            console.log("回复为：");
+            console.log(data);
+            if (data === 1) {
+                Search();
+                alert("删除成功");
             }
             else {
-                alert("网络异常");
+                alert("删除失败");
             }
+        } else {
+            alert("网络异常");
         }
-    };
+    } catch (error) {
+        console.error("Error:", error);
+        alert("网络异常");
+    }
 }
+
 
 

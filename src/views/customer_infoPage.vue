@@ -11,10 +11,16 @@
     <Dropdown_gender @updateGender="getGender" :clearData="clearData" @reset-clear-data="Reset" />
     <Dropdown_level @updateLevel="getLevel" :clearData="clearData" @reset-clear-data="Reset" />
     <div class="clear">
-      <button class="clearbtn" @click="Clear">清空</button>
+      <button class="clearbtn" @click="Clear">
+        <img src="@/assets/pics/clear.png" alt="清空">
+        <p>清空</p>
+      </button>
     </div>
     <div class="search">
-      <button class="searchbtn" @click="Search">查询</button>
+      <button class="searchbtn" @click="Search">
+        <img src="@/assets/pics/search.png" alt="查询">
+        <p>查询</p>
+      </button>
     </div>
   </div>
   <div class="customerTable">
@@ -26,27 +32,34 @@
         </template>
       </el-table-column>
       <el-table-column prop="name" label="姓名" width="200"></el-table-column>
-      <el-table-column prop="customerID" label="顾客ID" width="220"></el-table-column>
+      <el-table-column prop="cus_id" label="顾客ID" width="220"></el-table-column>
       <el-table-column prop="gender" label="性别" width="150"></el-table-column>
-      <el-table-column prop="phone" label="联系电话" width="270"></el-table-column>
+      <el-table-column prop="phone_num" label="联系电话" width="270"></el-table-column>
       <el-table-column prop="age" label="年龄" width="150"></el-table-column>
-      <el-table-column prop="membershipLevel" label="会员等级" width="200"></el-table-column>
-      <el-table-column prop="accountBalance" label="账户余额" width="250"></el-table-column>
+      <el-table-column prop="viplevel" label="会员等级" width="200"></el-table-column>
+      <el-table-column prop="balance" label="账户余额" width="250"></el-table-column>
     </el-table>
     <p>{{ selectedRowIds }}</p>
+    <p>{{ selectedCus_Ids }}</p>
   </div>
-
+  <div>
+    <button class="delbtn" @click="Delete">
+      <img src="@/assets/pics/delete.png" alt="删除" style="margin-bottom: 2px">
+      <p>删除</p>
+    </button>
+  </div>
 </template>
 
 <script>
 import Dropdown_gender from '@/components/Dropdown_gender.vue'
 import Dropdown_level from '@/components/Dropdown_level.vue'
-import { searchCustomerInfo } from '@/assets/http.js'
+import { searchCustomerInfo, deleteCustomerInfo } from '@/assets/http.js'
+import { onMounted, getCurrentInstance } from 'vue';
 
 export default {
-  props: ['tableData'],
   data() {
     return {
+      // 筛选条件
       agemin: "",
       agemax: "",
       name: "",
@@ -54,15 +67,12 @@ export default {
       gender: "",
       viplevel: "",
       clearData: false,
-      // 选中的行 ID 集合
+      // 选中的行ID集合
       selectedRowIds: [],
-      tableData: [
-        { id: 1, selected: false, name: '张三', customerID: '225354', gender: '男', phone: '1307909', age: 21, membershipLevel: 4, accountBalance: 3000 },
-        { id: 2, selected: false, name: '李四', customerID: '27392', gender: '女', phone: '4131313', age: 88, membershipLevel: 5, accountBalance: 50000 },
-        { id: 1, selected: false, name: '张三', customerID: '225354', gender: '男', phone: '1307909', age: 21, membershipLevel: 4, accountBalance: 3000 },
-        { id: 2, selected: false, name: '李四', customerID: '27392', gender: '女', phone: '4131313', age: 88, membershipLevel: 5, accountBalance: 50000 },
-        { id: 3, selected: false, name: '', customerID: '', gender: '', phone: '', age: '', membershipLevel: '', accountBalance: '' },
-      ]
+      // 选中的顾客ID集合
+      selectedCus_Ids: [],
+      // 表单数据
+      tableData: []
     };
   },
   components: {
@@ -70,12 +80,14 @@ export default {
     Dropdown_level
   },
   methods: {
-    getGender(data) {
-      this.gender = data;
+    getGender(selectedOption) {
+      this.gender = selectedOption;
     },
-    getLevel(data) {
-      this.viplevel = data;
+    getLevel(selectedOption) {
+      this.viplevel = selectedOption;
     },
+
+    // 清空筛选条件方法实现
     Clear() {
       this.agemin = "",
       this.agemax = "",
@@ -88,32 +100,72 @@ export default {
     Reset() {
       this.clearData = false;
     },
+
+    // 查询方法实现
     Search() {
       const dataToSend = {
-        // ...(this.agemin && { agemin: this.agemin }),
-        // ...(this.agemax && { agemax: this.agemax }),
-        // ...(this.name && { name: this.name }),
-        // ...(this.phone_num && { phone_num: this.phone_num }),
-        // ...(this.gender && { gender: this.gender }),
-        // ...(this.viplevel && { viplevel: this.viplevel }),
-        agemin: 20
+        ...(this.agemin && { agemin: parseInt(this.agemin) }),
+        ...(this.agemax && { agemax: parseInt(this.agemax) }),
+        ...(this.name && { name: this.name }),
+        ...(this.phone_num && { phone_num: this.phone_num }),
+        ...(this.gender && { gender: this.gender }),
+        ...(this.viplevel && { viplevel: this.viplevel }),
       }
+      this.selectedRowIds = [],
+      this.selectedCus_Ids = [],
       searchCustomerInfo(dataToSend, this.displayTable);
     },
     displayTable(response) {
-      console.log(response);
+      const processedData = response.map(item => {
+        if (item.viplevel === "Gold") {
+          return {
+            ...item,
+            viplevel: "黄金"
+          };
+        }
+        if (item.viplevel === "Silver") {
+          return {
+            ...item,
+            viplevel: "白银"
+          };
+        }
+        if (item.viplevel === "Copper") {
+          return {
+            ...item,
+            viplevel: "青铜"
+          };
+        }
+        return item;
+      });
+      this.tableData = processedData; // 将处理后的数据存储在 tableData 中
+      this.deselectAll();
     },
 
+    // 删除方法实现
+    Delete(){
+      console.log(this.selectedCus_Ids);
+      deleteCustomerInfo(this.selectedCus_Ids, this.Search);
+    },
 
+    // 选中栏恢复未选择的状态方法实现
+    deselectAll() {
+      this.tableData.forEach(row => {
+        row.selected = false;
+      });
+    },
 
-    
     handleSelectionChange(row) {
       if (row.selected) {
         this.selectedRowIds.push(row.id);
+        this.selectedCus_Ids.push(row.cus_id);
       } else {
-        const index = this.selectedRowIds.indexOf(row.id);
-        if (index > -1) {
-          this.selectedRowIds.splice(index, 1);
+        const rowindex = this.selectedRowIds.indexOf(row.id);
+        const cusindex = this.selectedCus_Ids.indexOf(row.cus_id);
+        if (rowindex > -1) {
+          this.selectedRowIds.splice(rowindex, 1);
+        }
+        if (cusindex > -1) {
+          this.selectedCus_Ids.splice(cusindex, 1);
         }
       }
     },
@@ -127,7 +179,13 @@ export default {
       else {
         return "";
       }
-    }
+    },
+  },
+  setup() {
+    const instance = getCurrentInstance();
+    onMounted(() => {
+      instance.proxy.Search();
+    });
   }
 }
 
@@ -172,7 +230,9 @@ export default {
   /* 将按钮推到最右边 */
 }
 
+/* 清空按钮 */
 .clearbtn {
+  display: flex;
   background-color: rgb(54, 63, 198);
   height: 100%;
   color: white;
@@ -180,6 +240,12 @@ export default {
   font-size: 16px;
   border: 1px solid grey;
   cursor: pointer;
+  align-items: center;
+}
+
+.clearbtn img {
+  width: 30px;
+  height: 30px;
 }
 
 .clearbtn:active {
@@ -187,7 +253,9 @@ export default {
   transform: scale(0.98);
 }
 
+/* 查询按钮 */
 .searchbtn {
+  display: flex;
   background-color: rgb(54, 63, 198);
   height: 100%;
   color: white;
@@ -195,6 +263,12 @@ export default {
   font-size: 16px;
   border: 1px solid grey;
   cursor: pointer;
+  align-items: center;
+}
+
+.searchbtn img {
+  width: 30px;
+  height: 30px;
 }
 
 .searchbtn:active {
@@ -202,7 +276,28 @@ export default {
   transform: scale(0.98);
 }
 
+/* 删除按钮 */
+.delbtn {
+  display: flex;
+  background-color: rgb(54, 63, 198);
+  height: 100%;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: 1px solid grey;
+  cursor: pointer;
+  align-items: center;
+}
 
+.delbtn img {
+  width: 30px;
+  height: 30px;
+}
+
+.delbtn:active {
+  background-color: black;
+  transform: scale(0.98);
+}
 
 
 
