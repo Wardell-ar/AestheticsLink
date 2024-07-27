@@ -25,7 +25,7 @@
   </div>
   <div class="customerTable">
     <el-table :data="tableData" style="width: 100%" :row-class-name="tableRowClassName" empty-text="暂无数据">
-      <el-table-column prop="id" label="编号" width="180"></el-table-column>
+      <el-table-column prop="index" label="编号" width="180"></el-table-column>
       <el-table-column prop="selected" label="选择" width="150">
         <template #default="scope">
           <el-checkbox v-model="scope.row.selected" @change="() => handleSelectionChange(scope.row)"></el-checkbox>
@@ -40,7 +40,6 @@
       <el-table-column prop="balance" label="账户余额" width="250"></el-table-column>
     </el-table>
     <p>{{ selectedRowIds }}</p>
-    <p>{{ selectedCus_Ids }}</p>
   </div>
   <div>
     <button class="delbtn" @click="Delete">
@@ -90,12 +89,12 @@ export default {
     // 清空筛选条件方法实现
     Clear() {
       this.agemin = "",
-      this.agemax = "",
-      this.name = "",
-      this.phone_num = "",
-      this.gender = "",
-      this.viplevel = "",
-      this.clearData = true;
+        this.agemax = "",
+        this.name = "",
+        this.phone_num = "",
+        this.gender = "",
+        this.viplevel = "",
+        this.clearData = true;
     },
     Reset() {
       this.clearData = false;
@@ -112,37 +111,30 @@ export default {
         ...(this.viplevel && { viplevel: this.viplevel }),
       }
       this.selectedRowIds = [],
-      this.selectedCus_Ids = [],
-      searchCustomerInfo(dataToSend, this.displayTable);
+        this.selectedCus_Ids = [],
+        searchCustomerInfo(dataToSend, this.displayTable);
     },
     displayTable(response) {
       const processedData = response.map(item => {
-        if (item.viplevel === "Gold") {
-          return {
-            ...item,
-            viplevel: "黄金"
-          };
+        let viplevel = item.viplevel;
+        if (viplevel === "Gold") {
+          viplevel = "黄金";
+        } else if (viplevel === "Silver") {
+          viplevel = "白银";
+        } else if (viplevel === "Copper") {
+          viplevel = "青铜";
         }
-        if (item.viplevel === "Silver") {
-          return {
-            ...item,
-            viplevel: "白银"
-          };
-        }
-        if (item.viplevel === "Copper") {
-          return {
-            ...item,
-            viplevel: "青铜"
-          };
-        }
-        return item;
+        return {
+          ...item,
+          viplevel
+        };
       });
       this.tableData = processedData; // 将处理后的数据存储在 tableData 中
       this.deselectAll();
     },
 
     // 删除方法实现
-    Delete(){
+    Delete() {
       console.log(this.selectedCus_Ids);
       deleteCustomerInfo(this.selectedCus_Ids, this.Search);
     },
@@ -156,10 +148,10 @@ export default {
 
     handleSelectionChange(row) {
       if (row.selected) {
-        this.selectedRowIds.push(row.id);
+        this.selectedRowIds.push(row.index);
         this.selectedCus_Ids.push(row.cus_id);
       } else {
-        const rowindex = this.selectedRowIds.indexOf(row.id);
+        const rowindex = this.selectedRowIds.indexOf(row.index);
         const cusindex = this.selectedCus_Ids.indexOf(row.cus_id);
         if (rowindex > -1) {
           this.selectedRowIds.splice(rowindex, 1);
@@ -170,6 +162,7 @@ export default {
       }
     },
     tableRowClassName({ row, rowIndex }) {
+      row.index = rowIndex + 1;
       if (row.selected) {
         return "highlight-row";
       }
@@ -299,12 +292,7 @@ export default {
   transform: scale(0.98);
 }
 
-
-
-
-
-
-
+/* 表格样式 */
 .customerTable {
   display: flex;
   table-layout: fixed;
