@@ -1,0 +1,56 @@
+.coupons {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+  
+.header {
+    margin-bottom: 20px;
+  
+    .el-tabs__item {
+        font-size: 16px;
+    }
+  
+    .el-tabs__item.is-active {
+        font-weight: bold;
+        color: #007bff;
+    }
+  
+    .el-tabs__nav {
+        border-bottom: 2px solid #007bff;
+    }
+}
+  
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+  
+.card {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    border:#007bff 2px solid;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+    .value {
+        font-size: 24px;
+        font-weight: bold;
+    }
+  
+    .conditions {
+        margin: 10px 0;
+        font-size: 14px;
+    }
+  
+    .use-button {
+        margin-top: 5px;
+        margin-bottom:15px;
+        background-color: #fff;
+        color: #007bff;
+        border: none;
+    }
+}
