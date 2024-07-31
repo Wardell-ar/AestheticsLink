@@ -1,4 +1,5 @@
-﻿using Quartz;
+﻿using Microsoft.Extensions.Logging;
+using Quartz;
 using SqlSugar;
 using System;
 using System.Collections.Generic;
@@ -12,9 +13,18 @@ namespace UpdateAt0amService.UpdateAt0am
 {
     public class UpdateSigninService : IJob
     {
+        private readonly ILogger<UpdateSigninService> _logger;
+
+        public UpdateSigninService(ILogger<UpdateSigninService> logger)
+        {
+            _logger = logger;
+        }
+
         public async Task Execute(IJobExecutionContext context)
         {
+            _logger.LogInformation("UpdateSigninService job started.");
             await UpdateSignin();
+            _logger.LogInformation("UpdateSigninService job finished.");
         }
 
         public async Task UpdateSignin()

@@ -13,6 +13,7 @@
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "Microsoft.Extensions.Logging.Log4Net.AspNetCore": "8.0.0",
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "7.6.3",
+          "ORScheduleService": "1.0.0",
           "QuartzJobLibrary": "1.0.0",
           "QueryAllUsersService": "1.0.0",
           "ServerInformation": "1.0.0",
@@ -1965,6 +1966,16 @@
           "LogRegService.dll": {}
         }
       },
+      "ORScheduleService/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.32",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "runtime": {
+          "ORScheduleService.dll": {}
+        }
+      },
       "QuartzJobLibrary/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
@@ -3206,6 +3217,11 @@
       "hashPath": "xlparser.1.5.2.nupkg.sha512"
     },
     "LogRegService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ORScheduleService/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

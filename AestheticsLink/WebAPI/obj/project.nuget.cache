@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6t1zcbay0HwFNnB3hT/LHpkPmJlFZaUAl7oyzT6k78mNok403OtRxtxDx89r/gT+Wbjs7Y5yIYGn1aoKj19Sbg==",
+  "dgSpecHash": "43iinby/6V9/bAp0d5RKgALXWsZCheeSnQT9mB9qmJ2pQEK/B++pxaiZhpOh1/m/psXZsL8iW2REkbQzkF/0Ow==",
   "success": true,
   "projectFilePath": "D:\\C#_Project\\AestheticsLink\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
@@ -169,11 +169,7 @@
     "C:\\Users\\Xyy\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.28\\microsoft.netcore.app.host.win-x64.6.0.28.nupkg.sha512"
+    "C:\\Users\\Xyy\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512"
   ],
   "logs": []
 }

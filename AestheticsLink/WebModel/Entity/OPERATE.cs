@@ -9,7 +9,6 @@ namespace WebModel.Entity
     public class OPERATE
     {
         public string PROJ_ID { get; set; }
-        public string ROOM_ID { get; set; }
         public string SER_ID { get; set; }
         public string BILL_ID { get; set; }
         public DateTime FOUND_DATE { get; set; }

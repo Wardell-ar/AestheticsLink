@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "k3XZwyHvSpuCelC5Llj54tWEWeLH+jlLD5jVICYUWX4dH+1YSEUlz3Qy21t6hfoUZ4xv053U7H7Rh+sm3sfNcg==",
+  "dgSpecHash": "Tev76DD9m5wDuXePxf+dtkx5hPK0Bhpgbc/Qe6mpI6bjeEZncxg7FCHTcm4m4haSZAdbFdb26ekBCmpXpHm/2Q==",
   "success": true,
   "projectFilePath": "D:\\C#_Project\\AestheticsLink\\LogRegService\\LogRegService.csproj",
   "expectedPackageFiles": [
@@ -170,10 +170,7 @@
     "C:\\Users\\Xyy\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512"
+    "C:\\Users\\Xyy\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512"
   ],
   "logs": []
 }

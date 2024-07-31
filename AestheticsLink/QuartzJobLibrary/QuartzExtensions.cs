@@ -16,13 +16,13 @@ namespace QuartzJobLibrary
             services.AddSingleton<IJobFactory, SingletonJobFactory>();
             services.AddSingleton<ISchedulerFactory, StdSchedulerFactory>();
 
-            //注册每日签到更新服务
+            // 注册每日签到更新服务
             services.AddSingleton<UpdateSigninService>();
             services.AddSingleton(new JobSchedule(
                 jobType: typeof(UpdateSigninService),
                 cronExpression: "0 0 0 * * ?")); // 每天凌晨12点
 
-            //注册每月绩效更新服务
+            // 注册每月绩效更新服务
             services.AddSingleton<MonthlyPerformanceService>();
             services.AddSingleton(new JobSchedule(
                 jobType: typeof(MonthlyPerformanceService),

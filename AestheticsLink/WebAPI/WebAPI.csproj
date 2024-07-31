@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LogRegService\LogRegService.csproj" />
+    <ProjectReference Include="..\ORScheduleService\ORScheduleService.csproj" />
     <ProjectReference Include="..\QuartzJobLibrary\QuartzJobLibrary.csproj" />
     <ProjectReference Include="..\QueryAllUsersService\QueryAllUsersService.csproj" />
     <ProjectReference Include="..\ServerInformation\ServerInformation.csproj" />

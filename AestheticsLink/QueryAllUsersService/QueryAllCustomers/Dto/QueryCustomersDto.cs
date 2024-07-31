@@ -20,6 +20,6 @@ namespace QueryAllUsersService.QueryAllCustomers.Dto
 
     public class DeleteCustomersDto
     {
-        public string cus_id { get; set; }
+        public List<string> cus_ids { get; set; }
     }
 }

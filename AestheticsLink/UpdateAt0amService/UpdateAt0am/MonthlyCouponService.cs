@@ -7,14 +7,24 @@ using System.Text;
 using System.Threading.Tasks;
 using WebModel.Entity;
 using WebCommon.Database;
+using Microsoft.Extensions.Logging;
 
 namespace UpdateAt0amService.UpdateAt0am
 {
     public class MonthlyCouponService : IJob
     {
+        private readonly ILogger<MonthlyCouponService> _logger;
+
+        public MonthlyCouponService(ILogger<MonthlyCouponService> logger)
+        {
+            _logger = logger;
+        }
+
         public async Task Execute(IJobExecutionContext context)
         {
+            _logger.LogInformation("MonthlyCouponService job started.");
             await MonthlyCouponUpdate();
+            _logger.LogInformation("MonthlyCouponService job finished.");
         }
 
         public async Task MonthlyCouponUpdate()
@@ -27,7 +37,7 @@ namespace UpdateAt0amService.UpdateAt0am
             var customers = await DbContext.db.Queryable<CUSTOMER>().ToListAsync();
 
             var copperCoupons = await DbContext.db.Queryable<COUPON>().Where(c => c.PRICE == 25).ToListAsync();
-            var sliverCoupons = await DbContext.db.Queryable<COUPON>().Where(c => c.PRICE == 50).ToListAsync();
+            var silverCoupons = await DbContext.db.Queryable<COUPON>().Where(c => c.PRICE == 50).ToListAsync();
             var goldCoupons = await DbContext.db.Queryable<COUPON>().Where(c => c.PRICE == 100).ToListAsync();
 
             foreach (var customer in customers)
@@ -35,7 +45,7 @@ namespace UpdateAt0amService.UpdateAt0am
                 var couponsToAssign = customer.VIPLEVEL switch
                 {
                     "Copper" => copperCoupons,
-                    "Sliver" => sliverCoupons,
+                    "Silver" => silverCoupons,
                     "Gold" => goldCoupons,
                     _ => null
                 };

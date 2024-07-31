@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JtswcKw63Sychi9mqrashbuozMGCFAgzX7+v2uyR1w+kPfFF2+iRoIv4KJufF+DNkQUQvYj8kk394gyBUVpj0w==",
+  "dgSpecHash": "pcL2Qi4WQ4k2Lln0NWcCGssfq5Ln6LG2UhvLMHyfd6q0pRVgQ6O2Oi/+X8HN0Iz2fCG+O4CHw4l9oeRIPUoNNw==",
   "success": true,
   "projectFilePath": "D:\\C#_Project\\AestheticsLink\\WebCommon\\WebCommon.csproj",
   "expectedPackageFiles": [
@@ -67,10 +67,7 @@
     "C:\\Users\\Xyy\\.nuget\\packages\\system.text.encoding.codepages\\5.0.0\\system.text.encoding.codepages.5.0.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.text.regularexpressions\\4.3.1\\system.text.regularexpressions.4.3.1.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512"
+    "C:\\Users\\Xyy\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

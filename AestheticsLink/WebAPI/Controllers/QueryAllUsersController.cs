@@ -25,7 +25,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("QueryCustomers")]
-        public async Task<ActionResult<List<QueryCustomersDto>>> QueryCustomers([FromBody] Dictionary<string, object> criteria)
+        public async Task<IActionResult> QueryCustomers([FromBody] Dictionary<string, object> criteria)
         {
             _logger.LogInformation("Received QueryCustomers request!");
             try
@@ -40,7 +40,7 @@ namespace WebAPI.Controllers
                 else
                 {
                     DbContext.db.Ado.RollbackTran();
-                    return NotFound("未找到匹配条件的顾客");
+                    return Ok("0");
                 }
             }
             catch (Exception ex) {
@@ -51,12 +51,12 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("DeleteCustomers")]
-        public async Task<IActionResult> DeleteCustomers([FromBody] List<string> deleteCustomersDto)
+        public async Task<IActionResult> DeleteCustomers([FromBody] DeleteCustomersDto deleteCustomersDto)
         {
             _logger.LogInformation("Received DeleteCustomers request!");
 
             // 提取cus_id列表
-            var cusIds = deleteCustomersDto;
+            var cusIds = deleteCustomersDto.cus_ids;
 
 
             // 删除数据库中的对应顾客信息
@@ -69,28 +69,35 @@ namespace WebAPI.Controllers
                                                        .Where(c => cusIds.Contains(c.CUS_ID))
                                                        .Select(c => c.CUS_ID)
                                                        .ToListAsync();
+
                 if (existingCusIds.Count == cusIds.Count)
                 {
+                    // 尝试删除 CUS_COU 表中相关记录（即使没有找到匹配的记录，也不会中断）
+                    await DbContext.db.Deleteable<CUS_COU>()
+                                      .Where(c => cusIds.Contains(c.CUS_ID))
+                                      .ExecuteCommandAsync();
+
                     var result = await DbContext.db.Deleteable<CUSTOMER>()
-                                          .In(cusIds)
-                                          .ExecuteCommandAsync();
+                                                  .In(cusIds)
+                                                  .ExecuteCommandAsync();
                     if (result > 0)
                     {
+                        //事务提交
                         DbContext.db.Ado.CommitTran();
-                        return Ok("删除成功");
+                        return Ok("1");
                     }
                     else
                     {
-                        //事物回滚
+                        // 事务回滚
                         DbContext.db.Ado.RollbackTran();
-                        return NotFound("删除顾客信息时出错");
+                        return Ok("0");
                     }
                 }
                 else
                 {
                     //事物回滚
                     DbContext.db.Ado.RollbackTran();
-                    return NotFound("未找到要删除的顾客");
+                    return Ok("0");
                 }
             }
             catch (Exception ex)

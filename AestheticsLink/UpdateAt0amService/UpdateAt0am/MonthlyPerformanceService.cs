@@ -7,14 +7,24 @@ using System.Text;
 using System.Threading.Tasks;
 using WebModel.Entity;
 using WebCommon.Database;
+using Microsoft.Extensions.Logging;
 
 namespace UpdateAt0amService.UpdateAt0am
 {
     public class MonthlyPerformanceService : IJob
     {
+        private readonly ILogger<MonthlyPerformanceService> _logger;
+
+        public MonthlyPerformanceService(ILogger<MonthlyPerformanceService> logger)
+        {
+            _logger = logger;
+        }
+
         public async Task Execute(IJobExecutionContext context)
         {
+            _logger.LogInformation("MonthlyPerformanceService job started.");
             await MonthlyPerformance();
+            _logger.LogInformation("MonthlyPerformanceService job finished.");
         }
 
         public async Task MonthlyPerformance()

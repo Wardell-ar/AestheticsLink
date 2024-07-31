@@ -3153,6 +3153,21 @@
           "bin/placeholder/LogRegService.dll": {}
         }
       },
+      "ORScheduleService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.32",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ORScheduleService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ORScheduleService.dll": {}
+        }
+      },
       "QuartzJobLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -10258,6 +10273,11 @@
       "path": "../LogRegService/LogRegService.csproj",
       "msbuildProject": "../LogRegService/LogRegService.csproj"
     },
+    "ORScheduleService/1.0.0": {
+      "type": "project",
+      "path": "../ORScheduleService/ORScheduleService.csproj",
+      "msbuildProject": "../ORScheduleService/ORScheduleService.csproj"
+    },
     "QuartzJobLibrary/1.0.0": {
       "type": "project",
       "path": "../QuartzJobLibrary/QuartzJobLibrary.csproj",
@@ -10301,6 +10321,7 @@
       "Microsoft.Extensions.DependencyInjection >= 8.0.0",
       "Microsoft.Extensions.Logging.Log4Net.AspNetCore >= 8.0.0",
       "Microsoft.IdentityModel.Protocols.OpenIdConnect >= 7.6.3",
+      "ORScheduleService >= 1.0.0",
       "QuartzJobLibrary >= 1.0.0",
       "QueryAllUsersService >= 1.0.0",
       "ServerInformation >= 1.0.0",
@@ -10340,6 +10361,9 @@
             "D:\\C#_Project\\AestheticsLink\\LogRegService\\LogRegService.csproj": {
               "projectPath": "D:\\C#_Project\\AestheticsLink\\LogRegService\\LogRegService.csproj"
             },
+            "D:\\C#_Project\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj": {
+              "projectPath": "D:\\C#_Project\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj"
+            },
             "D:\\C#_Project\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj": {
               "projectPath": "D:\\C#_Project\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj"
             },
@@ -10362,11 +10386,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -10409,24 +10428,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.28, 6.0.28]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.28, 6.0.28]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.28, 6.0.28]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.28, 6.0.28]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -10435,7 +10436,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
