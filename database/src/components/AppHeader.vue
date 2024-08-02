@@ -1,40 +1,45 @@
 <template>
     <header class="header">
-      <div class="logo">
+      <div class="title">
+        <div class="companyName">
+        容颜医疗
+        </div>
+        <div class="logo">
         <img src="../../public/logo.png" />
+        </div>
       </div>
       <div class="menu">
         <nav class="nav">
           <ul class="nav-list">
-            <li class="nav-item">
+            <li class="nav-item has-dropdown">
               <router-link to="/">
                 <div style="display: flex; align-items: center; cursor: pointer">
-                  <span>首页</span>
+                  <span class="gradient-text">首页</span>
                 </div>
               </router-link>
             </li>
             <li class="nav-item has-dropdown">
               <router-link to="/ourService">
                 <div style="display: flex; align-items: center; cursor: pointer">
-                  <span>服务</span>
-                  <ul class="submenu">
+                  <span class="gradient-text">服务</span>
+                  <!-- <ul class="submenu">
                     <li><a href="#">了解项目</a></li>
                     <li><a href="#">预约</a></li>
-                  </ul>
+                  </ul> -->
                 </div>
               </router-link>
             </li>
-            <li class="nav-item">
+            <li class="nav-item has-dropdown">
               <router-link to="/customerCases">
                 <div style="display: flex; align-items: center; cursor: pointer">
-                  <span>客户案例</span>
+                  <span class="gradient-text">客户案例</span>
                 </div>
               </router-link>
             </li>
-            <li class="nav-item">
+            <li class="nav-item has-dropdown">
               <router-link to="/contractUs">
                 <div style="display: flex; align-items: center; cursor: pointer">
-                  <span>联系我们</span>
+                  <span class="gradient-text">联系我们</span>
                 </div>
               </router-link>
             </li>
@@ -45,30 +50,30 @@
         <nav class="nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <router-link to="/">
-                <div style="display: flex; align-items: center; cursor: pointer">
-                  <el-icon><ShoppingCart /></el-icon>
+              <router-link to="/Person">
+                <div style="display: flex; align-items: center; cursor: pointer" class="signup">
+                  <el-icon class="icon"><ShoppingCart /></el-icon>
                   <span>购物车</span>
                 </div>
               </router-link>
             </li>
             <li class="nav-item">
               <router-link to="/login">
-                <div style="display: flex; align-items: center; cursor: pointer">
+                <div style="display: flex; align-items: center; cursor: pointer" class="signup">
                   <span>个人中心</span>
                 </div>
               </router-link>
             </li>
             <li class="nav-item">
               <router-link to="/login">
-                <div style="display: flex; align-items: center; cursor: pointer">
-                  <span>登录</span>
+                <div style="display: flex; align-items: center; cursor: pointer" class="signup" >
+                  <span >登录</span>
                 </div>
               </router-link>
             </li>
             <li class="nav-item">
               <router-link to="/login">
-                <div style="display: flex; align-items: center; cursor: pointer">
+                <div style="display: flex; align-items: center; cursor: pointer" class="signup">
                   <span>注册</span>
                 </div>
               </router-link>
@@ -78,41 +83,46 @@
       </div>
     </header>
     <header class="header-bottom" :class="{ 'visible': isVisible }">
-      <div class="logo">
+      <div class="title">
+        <div class="companyName">
+        容颜医疗
+        </div>
+        <div class="logo">
         <img src="../../public/logo.png" />
+        </div>
       </div>
       <div class="menu">
         <nav class="nav">
           <ul class="nav-list">
-            <li class="nav-item">
+            <li class="nav-item has-dropdown">
               <router-link to="/">
                 <div style="display: flex; align-items: center; cursor: pointer">
-                  <span>首页</span>
+                  <span class="gradient-text">首页</span>
                 </div>
               </router-link>
             </li>
             <li class="nav-item has-dropdown">
               <router-link to="/ourService">
                 <div style="display: flex; align-items: center; cursor: pointer">
-                  <span>服务</span>
-                  <ul class="submenu">
+                  <span class="gradient-text">服务</span>
+                  <!-- <ul class="submenu">
                     <li><a href="#">了解项目</a></li>
                     <li><a href="#">预约</a></li>
-                  </ul>
+                  </ul> -->
                 </div>
               </router-link>
             </li>
-            <li class="nav-item">
+            <li class="nav-item has-dropdown">
               <router-link to="/customerCases">
                 <div style="display: flex; align-items: center; cursor: pointer">
-                  <span>客户案例</span>
+                  <span class="gradient-text">客户案例</span>
                 </div>
               </router-link>
             </li>
-            <li class="nav-item">
+            <li class="nav-item has-dropdown">
               <router-link to="/contractUs">
                 <div style="display: flex; align-items: center; cursor: pointer">
-                  <span>联系我们</span>
+                  <span class="gradient-text">联系我们</span>
                 </div>
               </router-link>
             </li>
@@ -123,30 +133,30 @@
         <nav class="nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <router-link to="/">
-                <div style="display: flex; align-items: center; cursor: pointer">
-                  <el-icon><ShoppingCart /></el-icon>
+              <router-link to="/Person">
+                <div style="display: flex; align-items: center; cursor: pointer" class="signup">
+                  <el-icon class="icon"><ShoppingCart /></el-icon>
                   <span>购物车</span>
                 </div>
               </router-link>
             </li>
             <li class="nav-item">
               <router-link to="/login">
-                <div style="display: flex; align-items: center; cursor: pointer">
+                <div style="display: flex; align-items: center; cursor: pointer" class="signup">
                   <span>个人中心</span>
                 </div>
               </router-link>
             </li>
             <li class="nav-item">
               <router-link to="/login">
-                <div style="display: flex; align-items: center; cursor: pointer">
-                  <span>登录</span>
+                <div style="display: flex; align-items: center; cursor: pointer" class="signup" >
+                  <span >登录</span>
                 </div>
               </router-link>
             </li>
             <li class="nav-item">
               <router-link to="/login">
-                <div style="display: flex; align-items: center; cursor: pointer">
+                <div style="display: flex; align-items: center; cursor: pointer" class="signup">
                   <span>注册</span>
                 </div>
               </router-link>
@@ -165,7 +175,7 @@
       const isVisible = ref(false);
   
       const handleScroll = () => {
-        isVisible.value = window.scrollY > 300;
+        isVisible.value = window.scrollY > 100;
       };
   
       onMounted(() => {
@@ -269,26 +279,26 @@
   transform: scaleY(1);
 }
 .header {
-    height: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: absolute;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    top: 0;
-    left:0;
-    background-color: #fff; /* 可根据需要更改背景颜色 */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影以区分顶部栏 */
-    z-index: 1000; /* 确保在最上层 */
-    font-size: 22px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left:0;
+  background-color: #fff; /* 可根据需要更改背景颜色 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影以区分顶部栏 */
+  z-index: 1000; /* 确保在最上层 */
+  font-size: 22px;
   }
   .header-bottom{
     height: 120px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     position: fixed;
     width: 100%;
     padding: 0;
@@ -305,38 +315,35 @@
   .header-bottom.visible {
     opacity: 1; /* 显示 */
   }
-  
-  .logo {
-    padding-left: 10px; /* 根据需要调整内边距 */
-  }
-  
-  .logo img {
-    margin-left:15px;
-    height: 80px; /* 可根据需要调整logo的高度 */
-  }
-  
-  .menu {
-    flex-grow: 1;
+  .title{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    margin:auto 15px;
+  }
+  .logo img {
+    height: 80px;
+  }
+  .menu {
+    flex-grow: 2;
+  }
+  .nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
   }
-  
-  .nav {
-    display: flex;
-  }
-  
   .nav-list {
+    width:100%;
     display: flex;
     padding: 0;
     margin: 0;
+    justify-content: space-evenly;
     list-style: none;
   }
-  
-  .nav-item {
-    margin-right: 40px; /* 根据需要调整间距 */
+  /* .nav-item {
     position: relative;
-  }
+  } */
   .nav-item:last-child {
     margin-right: 0;
   }
@@ -347,20 +354,19 @@
     text-decoration: none;
   }
   
-  .nav-item span {
+  .gradient-text{
   cursor: pointer;
   transition: color 0.3s ease;
   position: relative;
   display: inline-block;
-  background: linear-gradient(to right, #007BFF 50%, black 50%);
+  background: linear-gradient(to right, #074ddb 50%, var(--black--light) 50%);
   background-size: 200% 100%;
   background-position: 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: background-position 0.5s ease;
 }
-
-.nav-item span:hover {
+.gradient-text:hover {
   background-position: 0;
 }
   
@@ -368,14 +374,87 @@
   .personal {
     display: flex;
     align-items: center;
-    margin-right: 20px; /* 根据需要调整内边距 */
+    margin-left:auto;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
 a {
-  text-decoration: none;
+  text-decoration: none!important;
 }
  
-.router-link-active {
-  text-decoration: none;
+.menu{
+  height:60px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F2F5F9;
+  border-radius: 10px;
+  flex-direction: row;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  padding-left: 10;
+  margin-bottom: 0;
+  list-style: none;
+  box-sizing: border-box;
+  unicode-bidi: isolate;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  /* font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5; */
+  color: #787878;
+  /* background-color: #fff; */
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.signup{
+  background: rgb(107, 170, 232) !important;
+  border: 2px solid rgb(107, 170, 232);
+  font-weight: 400;
+  transition: 0.5s;
+  flex-shrink: 0 !important;
+  border-radius: 50rem !important;
+  padding-top: .5rem !important;
+  padding-bottom: .5rem !important;
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+  margin-left: .5rem !important;
+}
+.icon,.signup>span{
+ color:#fff;
+}
+.signup:hover>span,.signup:hover>.icon{
+  color:var(--blue--light) !important;
+}
+.signup:hover{
+  background: white!important;
+  border-color: var(--blue--light);
+  border:2px solid;
+  color:var(--blue--light) !important;
+}
+.companyName{
+  width: 100%;
+  height: 30px;
+  margin-top: 5px;
+  font-size: 22px;
+  border-bottom: 1px solid #f0f0f0;
+  background-image: -webkit-linear-gradient(
+    left,
+    #88bce6 60%,
+    #62aaf2 40%,
+    #79bbff 80%,
+    rgb(19, 95, 201),
+    rgba(8, 187, 218, 0.705) 80%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-background-size: 200% 100%;
+  -webkit-animation: masked-animation 4s linear infinite;
 }
   </style>
   

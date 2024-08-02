@@ -1,47 +1,80 @@
 <template>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-section logo-section">
-            <img src="../../public/logo.png" alt="Logo" class="logo" />
-          </div>
-          <div class="footer-section">
-            <h4 class="section-title">快速导航</h4>
-            <ul>
-              <li>
-                <router-link to="/">
-                <span>首页</span>
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/contractUs">
-                <span>联系我们</span>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="logo-section">
+          <img src="../../public/logo.png" alt="Logo" class="logo" />
+        </div>
+        <div class="footer-section nav">
+          <h4 class="section-title">快速导航</h4>
+          <ul>
+            <li>
+              <router-link to="/">
+              <i class="fas fa-angle-right icon"></i>
+              <span>首页</span>
               </router-link>
+            </li>
+            <li>
+              <router-link to="/contractUs">
+              <i class="fas fa-angle-right icon"></i>
+              <span>联系我们</span>
+            </router-link>
 
-              </li>
-              <li>
-                <router-link to="/ourService">
-                <span>服务</span>
-              </router-link>
-              </li>
-              <li>
-                <router-link to="/customerCases">
-                <span>客户案例</span>
-              </router-link>
-
-              </li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h4 class="section-title">联系方式</h4>
-            <ul>
-              <li><a href="#">电话: 123-456-789</a></li>
-              <li><a href="#">Email: info@example.com</a></li>
-            </ul>
-          </div>
+            </li>
+            <li>
+              <router-link to="/ourService">
+                <i class="fas fa-angle-right icon"></i>
+              <span>服务</span>
+            </router-link>
+            </li>
+            <li>
+              <router-link to="/customerCases">
+                <i class="fas fa-angle-right icon"></i>
+              <span>客户案例</span>
+            </router-link>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section info">
+          <h4 class="section-title">联系方式</h4>
+          <ul>
+            <li>              
+              <i class="fas fa-map-marker-alt icon"></i>
+              <a href="#">地址: 上海市同济大学</a>
+            </li>
+            <li>
+              <i class="fas fa-phone-alt icon"></i>
+              <a href="#">电话: 123-456-789</a>
+            </li>
+            <li>              
+              <i class="fas fa-envelope icon"></i>
+              <a href="#">Email: info@example.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section info">
+          <h4 class="section-title">营业时间</h4>
+          <ul>
+            <li>
+              <a hrf="#">Monday - Friday:</a>              
+              <i class="fas fa-clock icon" :style="{marginLeft:'0.5rem'}"></i>
+              <a href="#">08:00 AM - 18:00 PM</a>
+            </li>
+            <li>
+              <a hrf="#">Satur - Sunday:</a>              
+              <i class="fas fa-clock icon" :style="{marginLeft:'0.5rem'}"></i>
+              <a href="#">08:00 AM - 18:00 PM</a>
+            </li>
+            <li>
+              <a hrf="#">Holiday:</a>              
+              <i class="fas fa-clock icon" :style="{marginLeft:'0.5rem'}"></i>
+              <a href="#">08:00 AM - 18:00 PM</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
   </template>
   
   <script>
@@ -55,43 +88,51 @@
     background-color: #000;
     padding: 20px 0;
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     width: 100%;
     position: relative;
     bottom: 0;
     left: 0;
     z-index: 1000;
-    height:220px;
+    height:300px;
   }
   .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 80%;
+    height: 100%;
   }
-  
   .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 100%;
+    height: 100%;
   }
   
   .footer-section {
-    margin: 0 20px;
+    margin: 0px 20px;
+    padding-top: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   
-  .logo-section {
-    flex-shrink: 0;
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
   
   .logo {
-    height: 40px;
+    height: 80px;
+    color:var(--blue--light);
   }
   
   .section-title {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
   }
   
   ul {
@@ -101,52 +142,60 @@
   
   ul li {
     margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
   }
   
-  .footer a {
+  .nav a {
     color: #fff;
-    text-decoration: none;
     position: relative;
-    transition: color 0.3s ease, transform 0.3s ease;
-    padding-left: 16px;
+    text-decoration: none;
+    transition: color 0.5s ease, transform 0.5s ease;
+    /* padding-left: 16px; */
     margin-left: 0px;
     font-weight: 400;
+    line-height: 35px;
   }
-  .footer a::after{
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    height: 2px;
-    width: 10px;
-  }
-  .footer a::before {
-    content: "-";
-    position: absolute;
-    left: 0;
-    opacity: 0;
-    transform: translateX(-10px); /* 初始状态的 - 符号位置 */
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  .footer a:not(:last-child) {
+  .nav a:not(:last-child) {
     margin-bottom: 10px;
 }
-  .footer a:hover {
-    color: #007bff; /* 根据需要调整悬停时的颜色 */
+  .nav a:hover {
+    color: var(--blue--light); /* 根据需要调整悬停时的颜色 */
+    letter-spacing: 1px;
     transform: translateX(10px);
-    margin-left: 5;
   }
-  .footer a:hover::before {
+  .nav a:hover .icon{
     opacity: 1;
-    transform: translateX(0); /* 移动 - 符号到初始位置 */
+    color:var(--blue--light);
+    left:0px;
+    margin-right: 0.5rem;
   }
   a {
-  text-decoration: none;
-}
- 
-.router-link-active {
-  text-decoration: none;
-}
+    text-decoration: none;
+  }
+  .router-link-active {
+    text-decoration: none;
+  }
+  .nav .icon {
+    opacity: 0;
+    margin-right:0;
+    position: relative;
+    left:-15px;
+    transition: opacity 0.5s ease, left 0.5s ease;
+  }
+  .info .icon{
+    color:var(--blue--light);
+    left:0px;
+    margin-right: 0.5rem;
+  }
+  .info a{
+    text-decoration: none;
+    color:#fff;
+    margin-left: 0px;
+    font-weight: 400;
+    line-height: 35px;
+  }
   </style>
   

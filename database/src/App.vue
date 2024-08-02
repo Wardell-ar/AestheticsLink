@@ -1,23 +1,27 @@
 <template>
-  <!-- <Person ></Person> -->
-  <AppHeader></AppHeader>
+  <!-- <AppHeader></AppHeader>
   <div class="main-content">
       <router-view />
+      <BackToTop></BackToTop>
   </div>  
-  <AppFooter></AppFooter>
+  <AppFooter></AppFooter>  -->
+  <!-- <OperatingRooms></OperatingRooms> -->
+  <BranchManage></BranchManage>
 </template>
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
+import BackToTop from './components/BackToTop.vue'
 import Person from './components/Person.vue'
-
+import OperatingRooms from './views/OperatingRooms.vue'
+import BranchManage from './components/BranchManage.vue'
 </script>
 <style scoped>
 .main-content {
   flex: 1;
   overflow-y: auto;
-  margin-top: 160px;
+  margin-top:120px;
 }
 #app {
   display: flex;

@@ -1,226 +1,148 @@
 <template>
-    <div class="common-layout">
+  <div class="common-layout">
+    <el-container>
+      <el-header class="header">
+        <div class="person-img">
+          <img src="../../public/logo.png" alt="Logo" />
+        </div>
+        <div class='info'>
+          <div class="user-container">
+            <div class="user smooth-type">{{ customer.name }}</div>
+            <label class="user-label">用户名</label>
+          </div>
+          <div class="user-container">
+            <div class="user smooth-type">{{ customer.id }}</div>
+            <label class="user-label">账号</label>
+          </div>
+        </div>
+        <div class="user-level">
+          <span>会员等级：lv.{{ customer.level }}</span>
+        </div>
+        <el-button class='button' :disabled="isEditing" @click="isEditing = true" type="primary" size="large">
+          <i class="fas fa-pen-to-square icon1"></i>编辑
+        </el-button>
+        <el-button class='button' :disabled="!isEditing" @click="handleSave" type="primary" size="large">
+          <i class="fas fa-circle-check icon1"></i>保存
+        </el-button>
+        <el-button class='button' :disabled="!isEditing" @click="handleCancel" type="primary" size="large">
+          <i class="fas fa-trash-can icon1"></i>取消
+        </el-button>
+      </el-header>
       <el-container>
-        <el-header class="header">
-          <div class="person-img">
-            <img>
-          </div>
-          <div class='info'>
-            <div class="user">
-              <div class="user-name">
-                <span>{{ customer.nickname }}</span>
-              </div>
-              <div class="user-id">
-                <span>{{ customer.id }}</span>
-              </div>
-              <div class="user-level">
-                <span>lv.{{ customer.level }}</span>
-              </div>
-            </div>
-            <el-button class='button' true @click="create_dialog=true" type="primary">
-              <el-icon><Edit /></el-icon>编辑
-            </el-button>
-          </div>
-        </el-header>
-        <el-container>
-          <el-aside width="200px" class="aside">
-            <h5 class="mb-2">个人中心</h5>
-            <el-menu
-              default-active="1"
-              class="el-menu-vertical-demo"
-              @select="selectMenu"
-            >
-            <el-menu-item index="1" >
-              <el-icon><User /></el-icon>
-                <span>个人信息</span>
+        <el-aside class="aside">
+          <div class="personcenter">个人中心</div>
+          <el-menu default-active="1" class="el-menu-vertical-demo" @select="selectMenu">
+            <el-menu-item index="1">
+              <el-icon>
+                <User />
+              </el-icon>
+              <span>个人信息</span>
             </el-menu-item>
-            <el-menu-item index="2" >
-              <router-link to="/Person/myBenefits">
-              <el-icon><Wallet /></el-icon>
-              <span>我的权益</span>
+            <router-link to="/Person/myBenefits">
+              <el-menu-item index="2">
+                <el-icon>
+                  <Wallet />
+                </el-icon>
+                <span>我的权益</span>
+              </el-menu-item>
             </router-link>
-            </el-menu-item>
-            <el-menu-item index="3" >
-              <router-link to="/Person/orders">
-              <el-icon><ShoppingCartFull /></el-icon>
-              <span>我的订单</span>
+            <router-link to="/Person/orders">
+              <el-menu-item index="3">
+                <el-icon>
+                  <ShoppingCartFull />
+                </el-icon>
+                <span>我的订单</span>
+              </el-menu-item>
             </router-link>
-            </el-menu-item>
           </el-menu>
-              </el-aside>
-              <el-main class="main">
-                <el-dialog
-                  style="z-index: 1000;"
-                  title="修改个人信息"
-                  v-model="create_dialog"
-                  width="800px">
-                  <el-form :model="customer" :rules="rules" ref="customer" label-width="150px">
-                    <div class="updateinfo">
-                      <div class="left">
-                        <el-form-item label="头像" prop="avatar">
-                          <img style="width:150px;height:110px" :src="customer.avatar"></img>
-                        </el-form-item>
-                        <el-form-item label="账号密码" prop="password" >
-                          <el-input v-model="customer.password" type="password" show-password></el-input>
-                        </el-form-item>
-                        <el-form-item label="昵称" prop="nickname">
-                          <el-input v-model="customer.nickname"></el-input>
-                        </el-form-item>
-                        <el-form-item label="年龄" prop="age">
-                          <el-input v-model="customer.age"></el-input>
-                        </el-form-item>
-                          <el-form-item label="生日" prop="birth">
-                              <el-date-picker
-                                v-model="customer.birthday"
-                                type="date"
-                                placeholder="选择你的生日"
-                                :size="size"
-                              />
-                          </el-form-item>
-                        </div>
-                      <div class="right">
-                        <el-form-item label="真实姓名" prop="name">
-                          <el-input v-model="customer.name"></el-input>
-                        </el-form-item>
-                        <el-form-item label="性别" prop="sex">
-                          <el-switch
-                            v-model="customer.sex"
-                            active-color="#13ce66"
-                            inactive-color="#ff4949"
-                            active-text="男"
-                            inactive-text="女"
-                            :active-value= "1"
-                            :inactive-value= "0"
-                          >
-                          </el-switch>
-                          </el-form-item>
-                        <el-form-item label="用户编号" prop="id">
-                          <el-input v-model="customer.id" disabled></el-input>
-                        </el-form-item>
-                        <el-form-item label="账号" prop="account">
-                          <el-input v-model="customer.account" disabled></el-input>
-                        </el-form-item>
-                        <el-form-item label="住址" prop="area">
-                          <el-input v-model="customer.area"></el-input>
-                        </el-form-item>
-                        <el-form-item label="职业" prop="work">
-                          <el-input v-model="customer.work"></el-input>
-                        </el-form-item>
-                        <el-form-item label="手机号码" prop="mobilePhoneNumber">
-                          <el-input v-model="customer.mobilePhoneNumber"></el-input>
-                        </el-form-item>
-                      </div>
-                    </div>
-                  </el-form>
-                    <span slot="footer" class="dialog-footer">
-                      <el-button @click="create_dialog=false">取 消</el-button>
-                      <el-button type="primary" @click="submit">提 交</el-button>
-                    </span>
-                </el-dialog>
-                <el-card v-if="selectIndex==='1'" class="infoCard">
-                  <el-descriptions class="margin-top" title="个人信息" :column="2" border>
-                    <el-descriptions-item label-align="center",align="center">
-                      <template #label>
-                        <el-icon><Avatar /></el-icon>
-                        头像
-                      </template>
-                      <img class="img" :src="customer.avatar" alt="" />
-                    </el-descriptions-item>
-                    <el-descriptions-item label-align="center",align="center">
-                      <template #label>
-                        <el-icon><User /></el-icon>                        
-                        用户编号
-                      </template>
-                      {{ customer.id }}
-                    </el-descriptions-item>
-                    <el-descriptions-item label-align="center",align="center">
-                      <template #label>
-                        <el-icon><UserFilled /></el-icon>
-                        账号
-                      </template>
-                      {{ customer.account }}
-                    </el-descriptions-item>
-                    <el-descriptions-item label-align="center",align="center">
-                      <template #label>
-                        昵称
-                      </template>
-                      {{ customer.nickname }}
-                    </el-descriptions-item>
-                    <el-descriptions-item label-align="center",align="center">
-                      <template #label>
-                        年龄
-                      </template>
-                      {{ customer.age }}
-                    </el-descriptions-item>
-                    <el-descriptions-item label-align="center",align="center">
-                      <template #label>
-                        <el-icon><Female /></el-icon>
-                        <el-icon><Male /></el-icon>
-                        性别
-                      </template>
-                      <el-tag size="small">{{ customer.sex === 1 ? '男' : '女' }}</el-tag>
-                    </el-descriptions-item>
-                    <el-descriptions-item label-align="center",align="center">
-                      <template #label>
-                        <el-icon><PhoneFilled /></el-icon>
-                        手机号码
-                      </template>
-                      {{ customer.mobilePhoneNumber }}
-                    </el-descriptions-item>
-                    <el-descriptions-item label-align="center",align="center">
-                      <template #label>
-                        <el-icon><Place /></el-icon>
-                        住址
-                      </template>
-                      {{ customer.area }}
-                    </el-descriptions-item>
-                    <el-descriptions-item label-align="center",align="center">
-                      <template #label>
-                        <el-icon><InfoFilled /></el-icon>
-                        注册日期
-                      </template>
-                      <!-- {{ createDate | formatDate }} -->
-                    </el-descriptions-item>
-                    <el-descriptions-item label-align="center",align="center">
-                      <template #label>
-                        <el-icon><Calendar /></el-icon>
-                        生日
-                      </template>
-                      {{ customer.birthday }}
-                    </el-descriptions-item>
-                  </el-descriptions>
-                </el-card>
-                <router-view v-else ></router-view>
-              </el-main>
-        </el-container>
+        </el-aside>
+        <el-main class="main">
+          <div class="container">
+          <div v-if="selectIndex==='1'">
+            <label class="title">个人信息</label>
+            <el-form :model="customer" :rules="rules" ref="customer" class="form ">
+              <el-form-item label="姓名" prop="name" class="name">
+                <div class="input-container">
+                  <input type="text" v-model="customer.name" :class="{'input': true, 'active': isEditing}" :disabled="!isEditing">
+                  <label class="label">name</label>
+                  <span class="top-line"></span>
+                  <span class="under-line"></span>
+                  <i v-if="isEditing" class="fa fa-edit icon"></i>
+                </div>
+              </el-form-item>
+              <el-form-item label="账号" prop="id" class="id">
+                <div class="input-container">
+                  <input type="text" v-model="customer.id" class="input" :disabled="true">
+                  <label class="label">id</label>
+                  <span class="top-line"></span>
+                  <span class="under-line"></span>
+                </div>
+              </el-form-item>
+              <el-form-item label="手机号"  prop="phone" class="phone">
+                <div class="input-container">
+                  <input type="text" v-model="customer.phone" :class="{'input': true, 'active': isEditing}" :disabled="!isEditing">
+                  <label class="label">phone</label>
+                  <span class="top-line"></span>
+                  <span class="under-line"></span>
+                  <i v-if="isEditing" class="fa fa-edit icon"></i>
+                </div>
+              </el-form-item>
+              <el-form-item label="密码"  prop="password" class="password">
+                <div class="input-container">
+                  <input v-model="customer.password" type="password" required :class="{'input': true, 'active': isEditing}" :disabled="!isEditing">
+                  <label class="label">password</label>
+                  <span class="top-line"></span>
+                  <span class="under-line"></span>
+                  <i v-if="isEditing" class="fa fa-edit icon"></i>
+                </div>
+              </el-form-item>
+              <el-form-item label="出生日期"  prop="birth" class="birth">
+                <div class="input-container">
+                  <input v-model="customer.birthday" type="date" required :class="{'input': true, 'active': isEditing}" :disabled="!isEditing">
+                  <label class="label">birthday</label>
+                  <span class="top-line"></span>
+                  <span class="under-line"></span>
+                  <i v-if="isEditing" class="fa fa-edit icon"></i>
+                </div>
+              </el-form-item>
+              <el-form-item label="性别"  prop="sex" class="sex">
+                <el-switch v-model="customer.sex" active-color="#13ce66" inactive-color="#ff4949" active-text="男"
+                  inactive-text="女" :active-value="1" :inactive-value="0">
+                </el-switch>
+              </el-form-item>
+            </el-form>
+          </div>
+          <router-view v-else></router-view>
+        </div>
+        </el-main>
       </el-container>
-    </div>
+    </el-container>
+  </div>
 </template>
 
-<script>
-import { ref } from 'vue'
+<script scoped>
+import { ref } from 'vue';
+import { ElMessage } from 'element-plus';
+
 export default {
-  name:'Person',
+  name: 'Person',
   data() {
     return {
-      selectIndex:"1",
-      create_dialog:false,
+      selectIndex: "1",
+      isEditing: false,
       customer: {//客户信息
-        level:5,
-        avatar: "",
+        level: '5',
         password: "111",
-        nickname: "hh",
-        name:'111',
+        name: '111',
         age: 12,
-        mobilePhoneNumber: "11111111111",
+        phone: "11111111111",
         sex: 1,
-        id: '1111',
-        account: "111111111111",
-        area: "1111111111",
-        birthday:ref('')
+        id: '1234',
+        birthday: ref('2024-08-09'),//格式
       },
+      originalCustomer:{},
       rules: {
-        nickname: [
+        name: [
           { required: true, message: "昵称不能为空", trigger: "blur" },
         ],
         password: [
@@ -229,26 +151,68 @@ export default {
       },
     }
   },
-  methods:{
-    selectMenu(index){
-      this.selectIndex=index;
+  mounted() {
+    this.originalCustomer = { ...this.customer };
+    console.log(this.customer.id);
+      ElMessage({
+        message: '欢迎来到用户个人中心！',
+        type: 'success',
+      });
+  },
+  methods: {
+    selectMenu(index) {
+      this.selectIndex = index;
       console.log(this.selectIndex);
+    },
+    handleSave() {
+      this.$refs.customer.validate((valid) => {
+        if (valid) {
+          // 保存成功后记录原始数据
+          this.originalCustomer = { ...this.customer };
+          this.isEditing = false;
+          console.log("保存成功");
+        } else {
+          console.log("验证失败");
+          return false;
+        }
+      });
+    },
+    handleCancel() {
+      this.customer = { ...this.originalCustomer };
+      this.isEditing = false;
     },
   }
 }
 </script>
 
 <style scoped>
-.person-img{
+.common-layout {
+  width: 100%;
+
+}
+
+.person-img {
   width: 150px;
-  height: 120px;
-  background-color: #8c939d;
+  height: 150px;
+  /* background-color: #8c939d; */
   margin-right: 24px;
-  margin-left: 20px;
+  margin-left: 60px;
   overflow: hidden;
+  position: relative;
   border-radius: 20px;
 }
-.header{
+
+.person-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.header {
   width: 100%;
   height: 220px;
   padding-top: 20px;
@@ -257,78 +221,464 @@ export default {
   display: flex;
   border-radius: 5px;
   align-items: center;
-}
-.info{
-  height: 120px;
-  width: 880px;
-  display: flex;
-}
-.user{
-  width: 60%;
-  height: 100%;
-  line-height: 30px;
-}
-.user-name {
-  font-weight: bold;
-}
-.user-level {
-  margin-bottom: -5px;
-  font-size: 15px;
-  color: #00c3ff;
+  /* background: repeating-linear-gradient(45deg, #0050fc,#0050fc 20px, #0684fade 20px,#0684fade 40px); */
+  --color: #E1E1E1;
+  background-color: #F3F3F3;
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+  background-size: 55px 55px;
 }
 
-.aside{
+.info {
+  height: auto;
+  width: auto;
+  margin: auto 40px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.user-level {
+  margin-bottom: -5px;
+  font-size: 18px;
+  color: #00c3ff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  border-color: transparent;
+  width: 200px;
+  height: 50px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 500;
+  font-family: inherit;
+  box-shadow: 23px 23px 46px #bebebe,
+    -23px -23px 46px #ffffff;
+  color: white;
+  margin-right: 50px;
+}
+
+.aside {
   height: auto;
   border-radius: 5px;
-  margin-right: 3%;
   text-align: center;
-  width:30%;
-  background-color:#d1edc4;
+  width: 20%;
+  background-color: #c6e2ff;
   align-content: center;
+  display: flex;
+  flex-direction: column;
 }
-h5{
+.icon1{
+  margin-right: 0.5rem;
+}
+.personcenter {
   width: 100%;
-  height: 30px;
-  margin-top: 5px;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 100px;
   font-size: 22px;
   border-bottom: 1px solid #f0f0f0;
-  background-image: -webkit-linear-gradient(
-    left,
-    rgb(42, 134, 141),
-    #e9e625dc 20%,
-    #3498db 40%,
-    #e74c3c 60%,
-    #09ff009a 80%,
-    rgba(82, 196, 204, 0.281) 100%
-  );
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-background-size: 200% 100%;
-  -webkit-animation: masked-animation 4s linear infinite;
+  color:black;
 }
-.main{
-  width: 70%;
+
+.main {
+  width: 75%;
   height: 500px;
   border-radius: 5px;
   background-color: white;
+  /* height: 100%; */
+  --color1: hwb(210 42% 9%);
+  --color2: #d9ecff;
+  background-color: var(--color1);
+  background-image: linear-gradient(45deg, var(--color2) 25%, transparent 25%, transparent 75%, var(--color2) 75%, var(--color2)),
+    linear-gradient(45deg, var(--color2) 25%, var(--color1) 25%, var(--color1) 75%, var(--color2) 75%, var(--color2));
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .updateinfo {
   height: 350px;
   overflow: auto;
 }
+
 .left {
   /* width: 330px; */
   float: left;
 }
+
 .right {
   overflow: hidden;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
- 
+
 .router-link-active {
   text-decoration: none;
+}
+
+.user-container {
+  position: relative;
+  width: 250px;
+  font-family: monospace;
+  height: 45px;
+  margin: 20px 0;
+}
+
+.user {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  background-color: #fff;
+  border: 4px solid #000;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 5px 5px 0 #000, 10px 10px 0 #4a90e2;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+.user:hover {
+  animation: focus-pulse 4s cubic-bezier(0.25, 0.8, 0.25, 1) infinite,
+    glitch 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
+}
+
+.user:hover::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: white;
+  z-index: -1;
+}
+
+.user:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: -2;
+  clip-path: inset(0 100% 0 0);
+  animation: glitch-slice 4s steps(2, end) infinite;
+}
+
+@keyframes glitch-slice {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  10% {
+    clip-path: inset(0 5% 0 0);
+  }
+
+  20% {
+    clip-path: inset(0 80% 0 0);
+  }
+
+  30% {
+    clip-path: inset(0 10% 0 0);
+  }
+
+  40% {
+    clip-path: inset(0 50% 0 0);
+  }
+
+  50% {
+    clip-path: inset(0 30% 0 0);
+  }
+
+  60% {
+    clip-path: inset(0 70% 0 0);
+  }
+
+  70% {
+    clip-path: inset(0 15% 0 0);
+  }
+
+  80% {
+    clip-path: inset(0 90% 0 0);
+  }
+
+  90% {
+    clip-path: inset(0 5% 0 0);
+  }
+
+  100% {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+
+.user-label {
+  position: absolute;
+  left: -3px;
+  top: -28px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #000;
+  padding: 5px 10px;
+  transform: rotate(-1deg);
+  z-index: 1;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.user:hover+.user-label {
+  transform: rotate(0deg) scale(1.05);
+  background-color: #4a90e2;
+  cursor: pointer;
+}
+
+.smooth-type {
+  position: relative;
+  overflow: hidden;
+}
+
+.smooth-type::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.smooth-type:hover::before {
+  opacity: 1;
+  animation: type-gradient 2s linear infinite;
+}
+
+@keyframes type-gradient {
+  0% {
+    background-position: 300px 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.user:hover {
+  animation: focus-pulse 4s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
+}
+
+@keyframes focus-pulse {
+
+  0%,
+  100% {
+    border-color: #000;
+  }
+
+  50% {
+    border-color: #4a90e2;
+  }
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  width:100%;
+  margin: auto 30px;
+  gap: 0px;
+  border-radius: 19px 19px 0px 0px;
+  background: rgb(255, 250, 235);
+  min-height: 450px;
+  box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+.form{
+  margin-top: 0;
+  width: 100%;
+  height: 350px ;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,100px);
+  grid-template-rows: repeat(auto-fill,100px);
+}
+.title {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  padding-left: 20px;
+  border-bottom: 1px solid rgba(16, 86, 82, .75);
+  ;
+  font-weight: 700;
+  font-size: 20px;
+  color: #000000;
+  margin: 20px auto;
+}
+.el-form-item {
+  position: relative;
+}
+
+.input-container {
+  position: relative;
+  min-width: 250px;
+  width: auto;
+}
+.input {
+  padding: 10px;
+  height: 40px;
+  width: 100%;
+  border: 2px solid #0b2447;
+  border-top: none;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+  box-shadow: 7px 7px 0px 0px #0b2447;
+  transition: all 0.5s;
+}
+
+.input.active {
+  box-shadow: none;
+  transition: all 0.5s;
+}
+
+.label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #0b2447;
+  height:auto;
+  transition: all 0.5s;
+  transform: scale(0);
+  z-index: 0;
+  font-size:18px;
+}
+
+.input-container .top-line {
+  position: absolute;
+  background-color: #0b2447;
+  width: 100%;
+  height: 2px;
+  right: 0;
+  top: 0;
+  transition: all 0.5s;
+}
+
+.input-container .under-line {
+  position: absolute;
+  background-color: #0b2447;
+  width: 0%;
+  height: 2px;
+  right: 0;
+  bottom: 0;
+  transition: all 0.5s;
+}
+
+.input.active ~ .top-line {
+  width: 35%;
+  transition: all 0.5s;
+}
+
+.input.active ~ .under-line {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.input.active ~ .label {
+  top: -20px;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+.name {
+  grid-column: 1/5;
+}
+.id{
+  grid-column: 5/9;
+  justify-self:start;
+  grid-row: 1;
+}
+::v-deep.form .el-form-item__label {
+  color: #0b2447;         
+  font-size: 18px;        
+  font-weight: bold;      
+  text-align: left;   
+  vertical-align: middle; 
+  line-height: 80px;
+}
+.password{
+  grid-column: 1/5;
+  grid-row: 2;
+}
+.phone{
+  grid-column: 5/9;
+  justify-self:start;
+  grid-row: 2;
+}
+.birthday{
+  grid-column: 1/5;
+  grid-row: 2;
+}
+.sex{
+  grid-column: 5/9;
+  justify-self:start;
+  grid-row: 3/4;
+  }
+  .icon {
+  position: absolute;
+  right: -25px; /* 根据需要调整图标位置 */
+  top: 50%;
+  scale:1.5;
+  transform: translateY(-50%);
+  cursor: pointer; /* 可选，表示图标可点击 */
 }
 </style>
