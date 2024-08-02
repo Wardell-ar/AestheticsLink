@@ -11,15 +11,23 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.32" />
     <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="8.0.0" />
     <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="7.6.3" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\LogRegService\LogRegService.csproj" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="LogFile\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FinancialService\FinancialService.csproj" />
+    <ProjectReference Include="..\LogRegService\LogRegService.csproj" />
+    <ProjectReference Include="..\OperateService\OperateService.csproj" />
+    <ProjectReference Include="..\OrderService\OrderService.csproj" />
+    <ProjectReference Include="..\QueryAllUsersService\QueryAllUsersService.csproj" />
+    <ProjectReference Include="..\RechargeService\RechargeService.csproj" />
+    <ProjectReference Include="..\ServerInformation\ServerInformation.csproj" />
+    <ProjectReference Include="..\ServerSigninService\ServerSigninService.csproj" />
+    <ProjectReference Include="..\UpdateAt0amService\UpdateAt0amService.csproj" />
   </ItemGroup>
 
 </Project>

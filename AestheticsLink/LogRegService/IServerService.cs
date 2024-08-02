@@ -1,4 +1,5 @@
-﻿using LogRegService.Dto;
+﻿using Dm.filter;
+using LogRegService.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;

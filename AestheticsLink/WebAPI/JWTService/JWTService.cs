@@ -1,6 +1,8 @@
-﻿using LogRegService.Dto;
+﻿/*using DocumentFormat.OpenXml.Spreadsheet;
+using LogRegService.Dto;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using ServerInformation.Dto;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
@@ -68,9 +70,9 @@ namespace WebAPI.JWTService
 
             var claims = new[]
             {
-            new Claim(JwtRegisteredClaimNames.Sub, server.SER_ID.ToString()),
-            new Claim("PHONE_NUM", server.PHONE_NUM),
-            new Claim("NAME", server.NAME)
+                new Claim(JwtRegisteredClaimNames.Sub, server.SER_ID.ToString()),
+                new Claim("PHONE_NUM", server.PHONE_NUM),
+                new Claim("NAME", server.NAME)
             };
 
             var token = new JwtSecurityToken(
@@ -96,7 +98,7 @@ namespace WebAPI.JWTService
 
             var claims = new[]
             {
-            new Claim(JwtRegisteredClaimNames.Sub, admin.UID.ToString()),
+            new Claim(JwtRegisteredClaimNames.Sub, admin.uid.ToString()),
             };
 
             var token = new JwtSecurityToken(
@@ -109,6 +111,33 @@ namespace WebAPI.JWTService
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
+        string IJWTService.GenerateToken(ServerInfoDto serverinfo)
+        {
+            if (_jwtTokenOptions == null)
+            {
+                throw new NullReferenceException("JWTTokenOptions is not configured properly.");
+            }
+
+            var key = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_jwtTokenOptions.Secret));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var claims = new[]
+            {
+            new Claim(JwtRegisteredClaimNames.Sub, serverinfo.id.ToString()),
+            };
+
+            var token = new JwtSecurityToken(
+                issuer: _jwtTokenOptions.Issuer,
+                audience: _jwtTokenOptions.Audience,
+                claims: claims,
+                expires: DateTime.UtcNow.AddMinutes(60),
+                signingCredentials: creds
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
         // 验证 JWT
         public bool ValidateToken(string token)
         {
@@ -134,3 +163,4 @@ namespace WebAPI.JWTService
         }
     }
 }
+*/

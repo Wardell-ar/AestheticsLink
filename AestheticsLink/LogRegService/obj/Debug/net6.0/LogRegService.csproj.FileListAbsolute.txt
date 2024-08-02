@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 D:\C#_Project\AestheticsLink\LogRegService\bin\Debug\net6.0\wwwroot\rezero\default_ui\authorization.html
 D:\C#_Project\AestheticsLink\LogRegService\bin\Debug\net6.0\wwwroot\rezero\default_ui\cache.html
 D:\C#_Project\AestheticsLink\LogRegService\bin\Debug\net6.0\wwwroot\rezero\default_ui\css\animate.css
@@ -1195,7 +1193,6 @@ D:\database\AestheticsLink\AestheticsLink\LogRegService\bin\Debug\net6.0\wwwroot
 D:\database\AestheticsLink\AestheticsLink\LogRegService\bin\Debug\net6.0\wwwroot\rezero\default_ui\template\page_control.html
 D:\database\AestheticsLink\AestheticsLink\LogRegService\bin\Debug\net6.0\wwwroot\rezero\default_ui\try_api.html
 D:\database\AestheticsLink\AestheticsLink\LogRegService\bin\Debug\net6.0\wwwroot\rezero\default_ui\tutorials.html
->>>>>>> Stashed changes
 D:\database\AestheticsLink\AestheticsLink\LogRegService\bin\Debug\net6.0\LogRegService.deps.json
 D:\database\AestheticsLink\AestheticsLink\LogRegService\bin\Debug\net6.0\LogRegService.dll
 D:\database\AestheticsLink\AestheticsLink\LogRegService\bin\Debug\net6.0\LogRegService.pdb

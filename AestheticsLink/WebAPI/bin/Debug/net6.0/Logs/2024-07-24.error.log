@@ -1,0 +1,216 @@
+2024-07-24 11:18:54,690 [19] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 11:23:23,470 [24] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 11:24:16,831 [11] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 11:27:53,660 [19] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 11:35:00,715 [15] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 15:12:55,979 [13] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 15:15:26,921 [14] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 15:15:29,448 [14] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=string
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-00904: "BILL_ID": 标识符无效
+https://docs.oracle.com/error-help/db/ora-00904/
+   at OracleInternal.ServiceObjects.OracleFailoverMgrImpl.OnError(OracleConnection connection, CallHistoryRecord chr, Object mi, Exception ex, Boolean bTopLevelCall, Boolean& bCanRecordNewCall)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteScalar()
+   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetString(String sql, SugarParameter[] parameters)
+   at OrderService.OrdersService.GetMaxBillId() in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 95
+   at OrderService.OrdersService.TransBillDto(PlaceOrderDto order) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 68
+   at OrderService.OrdersService.AddBill(PlaceOrderDto order) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 41
+   at WebAPI.Controllers.OrderPlaceController.PlaceOrder(PlaceOrderDto placeOrderDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 33
+2024-07-24 15:16:45,782 [17] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 15:17:24,691 [17] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=string
+System.Exception: 订单创建失败
+   at OrderService.OrdersService.AddBill(PlaceOrderDto order) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 59
+   at WebAPI.Controllers.OrderPlaceController.PlaceOrder(PlaceOrderDto placeOrderDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 33
+2024-07-24 15:17:28,230 [24] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=string
+System.Exception: 订单创建失败
+   at OrderService.OrdersService.AddBill(PlaceOrderDto order) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 59
+   at WebAPI.Controllers.OrderPlaceController.PlaceOrder(PlaceOrderDto placeOrderDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 33
+2024-07-24 15:18:34,542 [19] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 15:18:36,529 [19] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=string
+System.Exception: 订单创建失败
+   at OrderService.OrdersService.AddBill(PlaceOrderDto order) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 59
+   at WebAPI.Controllers.OrderPlaceController.PlaceOrder(PlaceOrderDto placeOrderDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 33
+2024-07-24 15:20:28,233 [13] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 15:21:19,909 [22] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 15:21:22,204 [22] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+System.Exception: 订单创建失败
+   at OrderService.OrdersService.AddBill(PlaceOrderDto order) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 59
+   at WebAPI.Controllers.OrderPlaceController.PlaceOrder(PlaceOrderDto placeOrderDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 33
+2024-07-24 15:33:31,705 [17] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 15:33:34,262 [17] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+System.Exception: 订单创建失败
+   at OrderService.OrdersService.AddBill(PlaceOrderDto order) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 59
+   at WebAPI.Controllers.OrderPlaceController.PlaceOrder(PlaceOrderDto placeOrderDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 33
+2024-07-24 15:34:28,148 [12] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 15:40:34,608 [16] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 16:02:13,789 [22] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 16:02:15,589 [22] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+System.Exception: 订单创建失败
+   at OrderService.OrdersService.AddBill(PlaceOrderDto order) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 79
+   at WebAPI.Controllers.OrderPlaceController.PlaceOrder(PlaceOrderDto placeOrderDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 33
+2024-07-24 16:04:01,550 [8] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 17:46:28,644 [19] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 17:47:52,141 [24] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-00933: SQL 命令未正确结束
+https://docs.oracle.com/error-help/db/ora-00933/
+   at OracleInternal.ServiceObjects.OracleFailoverMgrImpl.OnError(OracleConnection connection, CallHistoryRecord chr, Object mi, Exception ex, Boolean bTopLevelCall, Boolean& bCanRecordNewCall)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T,T2,T3,T4,T5,T6,T7](String sql, Object parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, Object parameters)
+   at OrderService.OrdersService.OrderService.IOrderService.CheckInfo(RestChoiceDto rest) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 123
+   at WebAPI.Controllers.OrderPlaceController.ChooseRest(RestChoiceDto restChoiceDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 60
+2024-07-24 17:48:21,979 [28] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-00933: SQL 命令未正确结束
+https://docs.oracle.com/error-help/db/ora-00933/
+   at OracleInternal.ServiceObjects.OracleFailoverMgrImpl.OnError(OracleConnection connection, CallHistoryRecord chr, Object mi, Exception ex, Boolean bTopLevelCall, Boolean& bCanRecordNewCall)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T,T2,T3,T4,T5,T6,T7](String sql, Object parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, Object parameters)
+   at OrderService.OrdersService.OrderService.IOrderService.CheckInfo(RestChoiceDto rest) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 123
+   at WebAPI.Controllers.OrderPlaceController.ChooseRest(RestChoiceDto restChoiceDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 60
+2024-07-24 17:50:37,850 [15] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 17:51:13,783 [15] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-00918: 未明确定义列
+https://docs.oracle.com/error-help/db/ora-00918/
+   at OracleInternal.ServiceObjects.OracleFailoverMgrImpl.OnError(OracleConnection connection, CallHistoryRecord chr, Object mi, Exception ex, Boolean bTopLevelCall, Boolean& bCanRecordNewCall)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T,T2,T3,T4,T5,T6,T7](String sql, Object parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, Object parameters)
+   at OrderService.OrdersService.OrderService.IOrderService.CheckInfo(RestChoiceDto rest) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 123
+   at WebAPI.Controllers.OrderPlaceController.ChooseRest(RestChoiceDto restChoiceDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 60
+2024-07-24 17:51:20,579 [14] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-00918: 未明确定义列
+https://docs.oracle.com/error-help/db/ora-00918/
+   at OracleInternal.ServiceObjects.OracleFailoverMgrImpl.OnError(OracleConnection connection, CallHistoryRecord chr, Object mi, Exception ex, Boolean bTopLevelCall, Boolean& bCanRecordNewCall)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T,T2,T3,T4,T5,T6,T7](String sql, Object parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, Object parameters)
+   at OrderService.OrdersService.OrderService.IOrderService.CheckInfo(RestChoiceDto rest) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 123
+   at WebAPI.Controllers.OrderPlaceController.ChooseRest(RestChoiceDto restChoiceDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 60
+2024-07-24 17:51:33,352 [15] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-00918: 未明确定义列
+https://docs.oracle.com/error-help/db/ora-00918/
+   at OracleInternal.ServiceObjects.OracleFailoverMgrImpl.OnError(OracleConnection connection, CallHistoryRecord chr, Object mi, Exception ex, Boolean bTopLevelCall, Boolean& bCanRecordNewCall)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T,T2,T3,T4,T5,T6,T7](String sql, Object parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, Object parameters)
+   at OrderService.OrdersService.OrderService.IOrderService.CheckInfo(RestChoiceDto rest) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 123
+   at WebAPI.Controllers.OrderPlaceController.ChooseRest(RestChoiceDto restChoiceDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 60
+2024-07-24 17:53:19,108 [17] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 17:55:12,640 [19] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 17:58:08,267 [15] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 17:58:10,022 [15] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-00904: "HOSPITAL"."HOS_ID": 标识符无效
+https://docs.oracle.com/error-help/db/ora-00904/
+   at OracleInternal.ServiceObjects.OracleFailoverMgrImpl.OnError(OracleConnection connection, CallHistoryRecord chr, Object mi, Exception ex, Boolean bTopLevelCall, Boolean& bCanRecordNewCall)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T,T2,T3,T4,T5,T6,T7](String sql, Object parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, Object parameters)
+   at OrderService.OrdersService.OrderService.IOrderService.CheckInfo(RestChoiceDto rest) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 124
+   at WebAPI.Controllers.OrderPlaceController.ChooseRest(RestChoiceDto restChoiceDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 60
+2024-07-24 17:59:02,421 [14] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 17:59:36,623 [14] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 18:01:48,997 [13] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 18:03:06,885 [3] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 18:07:07,210 [17] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 18:07:09,822 [17] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-00923: 未找到要求的 FROM 关键字
+https://docs.oracle.com/error-help/db/ora-00923/
+   at OracleInternal.ServiceObjects.OracleFailoverMgrImpl.OnError(OracleConnection connection, CallHistoryRecord chr, Object mi, Exception ex, Boolean bTopLevelCall, Boolean& bCanRecordNewCall)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T,T2,T3,T4,T5,T6,T7](String sql, Object parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, Object parameters)
+   at OrderService.OrdersService.OrderService.IOrderService.CheckInfo(RestChoiceDto rest) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 142
+   at WebAPI.Controllers.OrderPlaceController.ChooseRest(RestChoiceDto restChoiceDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 60
+2024-07-24 18:10:09,400 [13] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 20:19:14,921 [11] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 20:19:17,528 [11] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-00923: 未找到要求的 FROM 关键字
+https://docs.oracle.com/error-help/db/ora-00923/
+   at OracleInternal.ServiceObjects.OracleFailoverMgrImpl.OnError(OracleConnection connection, CallHistoryRecord chr, Object mi, Exception ex, Boolean bTopLevelCall, Boolean& bCanRecordNewCall)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T,T2,T3,T4,T5,T6,T7](String sql, Object parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, Object parameters)
+   at OrderService.OrdersService.OrderService.IOrderService.CheckInfo(RestChoiceDto rest) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 148
+   at WebAPI.Controllers.OrderPlaceController.ChooseRest(RestChoiceDto restChoiceDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 61
+2024-07-24 20:19:44,202 [16] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 20:19:46,440 [16] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-00923: 未找到要求的 FROM 关键字
+https://docs.oracle.com/error-help/db/ora-00923/
+   at OracleInternal.ServiceObjects.OracleFailoverMgrImpl.OnError(OracleConnection connection, CallHistoryRecord chr, Object mi, Exception ex, Boolean bTopLevelCall, Boolean& bCanRecordNewCall)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T,T2,T3,T4,T5,T6,T7](String sql, Object parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, Object parameters)
+   at OrderService.OrdersService.OrderService.IOrderService.CheckInfo(RestChoiceDto rest) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 148
+   at WebAPI.Controllers.OrderPlaceController.ChooseRest(RestChoiceDto restChoiceDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 61
+2024-07-24 20:20:06,642 [19] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-00923: 未找到要求的 FROM 关键字
+https://docs.oracle.com/error-help/db/ora-00923/
+   at OracleInternal.ServiceObjects.OracleFailoverMgrImpl.OnError(OracleConnection connection, CallHistoryRecord chr, Object mi, Exception ex, Boolean bTopLevelCall, Boolean& bCanRecordNewCall)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T,T2,T3,T4,T5,T6,T7](String sql, Object parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, Object parameters)
+   at OrderService.OrdersService.OrderService.IOrderService.CheckInfo(RestChoiceDto rest) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 148
+   at WebAPI.Controllers.OrderPlaceController.ChooseRest(RestChoiceDto restChoiceDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 61
+2024-07-24 20:20:16,152 [18] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-00923: 未找到要求的 FROM 关键字
+https://docs.oracle.com/error-help/db/ora-00923/
+   at OracleInternal.ServiceObjects.OracleFailoverMgrImpl.OnError(OracleConnection connection, CallHistoryRecord chr, Object mi, Exception ex, Boolean bTopLevelCall, Boolean& bCanRecordNewCall)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T,T2,T3,T4,T5,T6,T7](String sql, Object parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.SqlQuery[T](String sql, Object parameters)
+   at OrderService.OrdersService.OrderService.IOrderService.CheckInfo(RestChoiceDto rest) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 148
+   at WebAPI.Controllers.OrderPlaceController.ChooseRest(RestChoiceDto restChoiceDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 61
+2024-07-24 20:21:35,348 [13] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 20:23:47,899 [13] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 20:30:59,582 [17] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 20:31:39,281 [17] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-00927: 缺失等号
+https://docs.oracle.com/error-help/db/ora-00927/
+   at SqlSugar.AdoProvider.ExecuteCommand(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.ExecuteCommand(String sql, Object parameters)
+   at WebAPI.Controllers.OrderPlaceController.ChooseRest(RestChoiceDto restChoiceDto)
+2024-07-24 20:33:21,464 [16] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 20:34:13,342 [16] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-02290: 违反检查约束条件 (SYSTEM.SYS_C007520)
+https://docs.oracle.com/error-help/db/ora-02290/
+   at SqlSugar.AdoProvider.ExecuteCommand(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.ExecuteCommand(String sql, Object parameters)
+   at OrderService.OrdersService.OrderService.IOrderService.CheckInfo(RestChoiceDto rest) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 162
+   at WebAPI.Controllers.OrderPlaceController.ChooseRest(RestChoiceDto restChoiceDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 61
+2024-07-24 20:35:42,856 [15] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 20:38:51,782 [17] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-07-24 20:39:22,520 [16] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.

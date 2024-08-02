@@ -8,7 +8,7 @@ namespace LogRegService.Dto
 {
     public class LoginDto
     {
-        public string UID { get; set; }//电话号码
-        public string PSW { get; set; }
+        public string uid { get; set; }//电话号码
+        public string psw { get; set; }
     }
 }

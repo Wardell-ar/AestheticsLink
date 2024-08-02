@@ -17,32 +17,39 @@ namespace WebAPI.Controllers
         [HttpPost("GetFinancial")]
         public IActionResult GetFinancial([FromBody] FinancialDto financial)
         {
-            // 将月份和年份合并成一个字符串
-            string monthYear = financial.month + "-" + financial.year;
-            // 使用 DateTime.ParseExact 方法进行转换
-            DateTime dateTime = DateTime.ParseExact(monthYear, "MM-yyyy", null);
-            var result = DbContext.db.Ado.SqlQuerySingle<FinancialReturnDto>(
-            "SELECT INCOME, PAYOUT " +
-                "FROM FINANCIAL NATURAL JOIN HOSPITAL " +
-                "WHERE NAME = :name AND TO_CHAR(FINANCE_MONTH, 'YYYY-MM') = TO_CHAR(:date, 'YYYY-MM')",
-                new
+            try
+            {
+                // 将月份和年份合并成一个字符串
+                string monthYear = financial.month + "-" + financial.year;
+                // 使用 DateTime.ParseExact 方法进行转换
+                DateTime dateTime = DateTime.ParseExact(monthYear, "MM-yyyy", null);
+                var result = DbContext.db.Ado.SqlQuerySingle<FinancialReturnDto>(
+                "SELECT INCOME, PAYOUT " +
+                    "FROM FINANCIAL NATURAL JOIN HOSPITAL " +
+                    "WHERE NAME = :name AND TO_CHAR(FINANCE_MONTH, 'YYYY-MM') = TO_CHAR(:date, 'YYYY-MM')",
+                    new
+                    {
+                        name = financial.hospitalname,
+                        date = dateTime.Date,
+                    });
+                if (result == null)
                 {
-                    name = financial.hospitalname,
-                    date = dateTime.Date,
-                });
-            if(result == null ) 
-            {
-                return BadRequest("日期或医院有误");
+                    return Ok(new FinancialReturnDto {income = -1,payout = -1});
+                }
+                else
+                {
+                    return Ok(result);
+                }
             }
-            else
+            catch (Exception ex) 
             {
-                return Ok(result);
+                return BadRequest(ex.Message);
             }
         }
-        [HttpGet("GetHospital")]
+        [HttpPost("GetHospital")]
         public IActionResult GetHospital()
         {
-            var hospitalname = DbContext.db.Ado.SqlQuerySingle<string>(
+            var hospitalname = DbContext.db.Ado.SqlQuery<string>(
                "SELECT NAME " +
                "FROM HOSPITAL ");
             return Ok(hospitalname);

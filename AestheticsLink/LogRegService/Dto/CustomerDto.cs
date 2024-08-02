@@ -14,7 +14,6 @@ namespace LogRegService.Dto
         public DateTime BIRTHDAY { get; set; }
         public string GENDER { get; set; }
         public string NAME { get; set; }
-        public int EX { get; set; }
         public string PASSWORD { get; set; }
         public int BALANCE { get; set; }
         public string VIPLEVEL { get; set; }

@@ -1,4 +1,5 @@
-﻿using LogRegService.Dto;
+﻿using Dm.filter;
+using LogRegService.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace LogRegService
             {
                 // 查询数据库，验证用户名和密码
                 var server = await DbContext.db.Queryable<SERVER>()
-                                        .Where(c => c.PHONE_NUM == login.UID && c.PASSWORD == login.PSW)
+                                        .Where(c => c.PHONE_NUM == login.uid && c.PASSWORD == login.psw)
                                         .FirstAsync();
 
                 return server;
