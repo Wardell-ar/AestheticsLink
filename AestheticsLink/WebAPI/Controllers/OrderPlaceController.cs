@@ -1,9 +1,10 @@
-﻿using LogRegService.Dto;
+﻿using DocumentFormat.OpenXml.Drawing.Spreadsheet;
 using Microsoft.AspNetCore.Mvc;
+using OperateService.Dto;
 using OrderService;
 using OrderService.Dto;
-using System.DirectoryServices.Protocols;
 using WebCommon.Database;
+using WebModel.Entity;
 
 namespace WebAPI.Controllers
 {
@@ -70,18 +71,77 @@ namespace WebAPI.Controllers
                 DbContext.db.Ado.BeginTran();
                 //检验信息是否对应
                 bool orderState = _orderService.CheckInfo(restChoiceDto);
-                if(orderState) 
+                if (orderState)
                 {
-                    //医生和手术时间、手术室自动分配，下单后优惠券核销，扣除余额
+                    var timeNow = DateTime.Now;
+                    //医生和手术时间、手术室自动分配
+                    //找到可用的时间和手术室,从当前时间往后找找到第一个可用时间
+                    var availableTimes = DbContext.db.Ado.SqlQuery<OperateTimeDto>(
+                        "SELECT OP_TIME_ID FROM OPERATE_TIME WHERE STATUS = :status AND START_TIME > :time AND DAY = :day ",
+                        new
+                        {
+                            status = "0",
+                            time = timeNow,
+                            day = timeNow.Date,
+                        });
+                    //选择两个链表里的第一个
+                    var project = DbContext.db.Ado.SqlQuery<string>("SELECT PROJ_ID FROM BILL NATURAL JOIN OPERATE WHERE BILL_ID = :billID",
+                        new { billID = restChoiceDto.BILL_ID });
+                    int i = 0;
+                    foreach (var proj in project)
+                    {
+                        DbContext.db.Ado.ExecuteCommand(
+                        "UPDATE OPERATE SET OP_TIME_ID = :timeID WHERE BILL_ID = :billID AND PROJ_ID = :projID",
+                        new
+                        {
+                            timeID = availableTimes[i].OP_TIME_ID,
+                            billID = restChoiceDto.BILL_ID,
+                            projID = proj,
+                        });
+                        DbContext.db.Ado.ExecuteCommand(
+                        "UPDATE OPERATE_TIME SET STATUS = :status WHERE OP_TIME_ID = :timeID",
+                        new
+                        {
+                            status = "1",
+                            timeID = availableTimes[i].OP_TIME_ID,
+                        });
 
-
+                        //找到在可用时间可用的医生
+                        var availableDoctors = DbContext.db.Ado.SqlQuery<SERVER>(
+                            "SELECT SER_ID " +
+                              "FROM SERVER " +
+                              "WHERE SER_ID NOT IN (" +
+                                  "SELECT SER_ID " +
+                                  "FROM OPERATE " +
+                                  "NATURAL JOIN OPERATE_TIME " +
+                                  "WHERE STATUS = :status AND START_TIME = :time AND DAY = :day AND HOS_ID = :hosID) ",
+                            new
+                            {
+                                status = "1",
+                                time = availableTimes[i].START_TIME,
+                                day = availableTimes[i].DAY,
+                                hosID = restChoiceDto.HOS_ID,
+                            });
+                        DbContext.db.Ado.ExecuteCommand(
+                            "UPDATE OPERATE SET SER_ID = :serID WHERE BILL_ID = :billID AND PROJ_ID = :projID",
+                            new
+                            {
+                                serID = availableDoctors[i].SER_ID,
+                                billID = restChoiceDto.BILL_ID,
+                                projID = proj,
+                            });
+                        i++;
+                    }
                     //核销优惠券
-                    DbContext.db.Ado.ExecuteCommand(
+                    if (restChoiceDto.COU_ID != null)
+                    {
+                        DbContext.db.Ado.ExecuteCommand(
                         "DELETE FROM CUS_COU WHERE COU_ID = :couID",
                         new
                         {
                             couID = restChoiceDto.COU_ID,
                         });
+                    }
                     //减去付款金额
                     DbContext.db.Ado.ExecuteCommand(
                         "UPDATE CUSTOMER SET BALANCE = BALANCE - :balance WHERE CUS_ID = :cusID",
