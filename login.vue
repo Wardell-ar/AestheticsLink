@@ -22,20 +22,27 @@
             </div>
         </div>
     </div>
-
+    <el-dialog v-model="dialog" width="400">
+        <div class="flexcontainer">
+            <span class="birthday">生日快乐</span>
+            <el-button style="margin-top: 50px;" type="success" @click="recv">收到祝福</el-button>
+        </div>
+    </el-dialog>
 </template>
 
 
 <script>
-import {loginReq} from "../HTTP/http"
+import { loginReq } from "../HTTP/http"
 import { useRouter } from "vue-router";
-import { get_id,get_role,set_id,set_role } from "../identification"
+import { get_id, get_role, set_id, set_role } from "../identification"
+import { ElMessage } from "element-plus";
 export default {
     data() {
         return {
             UID: "",
             PSW: "",
-            router: useRouter()
+            router: useRouter(),
+            dialog: false,
         }
     },
 
@@ -43,41 +50,74 @@ export default {
         // 点击登录按键
         loginHandle() {
             if (this.UID === "" || this.PSW === "") {
-                alert("手机号与密码不能为空！");
+                ElMessage({
+                    type: "warning",
+                    message: "手机号与密码不能为空！",
+                    showClose: false
+                });
                 return;
             }
-            loginReq(this.UID,this.PSW,this.callback);
+            loginReq(this.UID, this.PSW, this.callback);
         },
-
         // 点击注册按键
         logupHandle() {
             // 跳转界面到注册界面
             this.router.push("/logup");
         },
-
         // 回调函数处理HTTP响应的数据
         callback(response) {
             set_id(response.id);
             set_role(response.role);
             if (get_role() === "0") {
-                alert("管理员登录成功！");
+                ElMessage({
+                    type: "success",
+                    message: "管理员登录成功！",
+                    showClose: false
+                });
+                this.IsBirthday(response.month, response.day);
                 // 跳转到管理员页面
 
             } else if (get_role() === "1") {
-                alert("客户登录成功！");
+                ElMessage({
+                    type: "success",
+                    message: "客户登录成功！",
+                    showClose: false
+                });
+                this.IsBirthday(response.month, response.day);
                 // 跳转到客户页面
 
             } else if (get_role() === "2") {
-                alert("员工登录成功！");
+                ElMessage({
+                    type: "success",
+                    message: "员工登录成功！",
+                    showClose: false
+                });
+                this.IsBirthday(response.month, response.day);
                 // 跳转到员工页面
 
             }
-            else{
-                alert("登录失败");
+            else {
+                ElMessage({
+                    type: "error",
+                    message: "登录失败",
+                    showClose: false
+                });
                 this.UID = "";
                 this.PSW = "";
             }
-        }
+        },
+        // 检测今天是否是生日
+        IsBirthday(month, day) {
+            const m = new Date().getMonth() + 1;
+            const d = new Date().getDate();
+            if (month == m && day == d) {
+                this.dialog=true;  // 显示生日祝福的对话框
+            }
+        },
+        // 用于接收祝福后的关闭对话框
+        recv(){
+            this.dialog=false;
+        },
     }
 }
 
@@ -107,7 +147,7 @@ export default {
 
 .image-container {
     flex: 1;
-    background: url("../assets/logo.svg") no-repeat center center;
+    background: url("../assets/logo.png") no-repeat center center;
     background-size: cover;
 }
 
@@ -160,5 +200,21 @@ h1 {
 .terms a {
     color: #007bff;
     text-decoration: none;
+}
+.flexcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.birthday {
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 20px;
+  padding: 10px;
 }
 </style>
