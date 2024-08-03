@@ -100,7 +100,7 @@ namespace LogRegService
         }
         private string GetMaxCustomerId()
         {
-            string sql = "SELECT MAX(CUS_ID) FROM CUSTOMER";
+            string sql = "SELECT MAX(TO_NUMBER(CUS_ID)) FROM CUSTOMER";
 
             // 执行 SQL 查询
             var result = DbContext.db.Ado.GetString(sql);

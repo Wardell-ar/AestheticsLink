@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SqlSugar;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace WebModel.Entity
 {
     public class OPERATE
     {
+        [SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
         public string PROJ_ID { get; set; }
         public string SER_ID { get; set; }
         public string BILL_ID { get; set; }

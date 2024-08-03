@@ -1146,7 +1146,7 @@
           }
         }
       },
-      "Oracle.ManagedDataAccess.Core/23.4.0": {
+      "Oracle.ManagedDataAccess.Core/23.5.0": {
         "type": "package",
         "dependencies": {
           "System.Diagnostics.PerformanceCounter": "6.0.1",
@@ -3138,6 +3138,21 @@
           "lib/netstandard1.6/XLParser.dll": {}
         }
       },
+      "FinancialService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Quartz": "3.11.0",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FinancialService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FinancialService.dll": {}
+        }
+      },
       "LogRegService/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3151,6 +3166,36 @@
         },
         "runtime": {
           "bin/placeholder/LogRegService.dll": {}
+        }
+      },
+      "OperateService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Quartz": "3.11.0",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OperateService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OperateService.dll": {}
+        }
+      },
+      "OrderService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Oracle.ManagedDataAccess.Core": "23.5.0",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OrderService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OrderService.dll": {}
         }
       },
       "ORScheduleService/1.0.0": {
@@ -3172,7 +3217,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "FinancialService": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "OperateService": "1.0.0",
           "Quartz": "3.11.0",
           "UpdateAt0amService": "1.0.0"
         },
@@ -3196,6 +3243,20 @@
         },
         "runtime": {
           "bin/placeholder/QueryAllUsersService.dll": {}
+        }
+      },
+      "RechargeService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RechargeService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RechargeService.dll": {}
         }
       },
       "ServerInformation/1.0.0": {
@@ -5577,10 +5638,10 @@
         "postgresql.png"
       ]
     },
-    "Oracle.ManagedDataAccess.Core/23.4.0": {
-      "sha512": "RXpnu1C2HZnOHWTXKdftTNxtGi5AKSayVLKopsS8550GgSFxTJy0wTTxmz78PUnh0I5hLtkrahUg+RYedZsYBw==",
+    "Oracle.ManagedDataAccess.Core/23.5.0": {
+      "sha512": "TmWvKM2aF0nRo4HHqp0Wz6JgTYYVxCXudRKgHjB7UM96axg2viXOniAy+cm/3+XOuF3NJ1JpMiDYOxNbObN/zg==",
       "type": "package",
-      "path": "oracle.manageddataaccess.core/23.4.0",
+      "path": "oracle.manageddataaccess.core/23.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5590,7 +5651,7 @@
         "README.md",
         "info.txt",
         "lib/netstandard2.1/Oracle.ManagedDataAccess.dll",
-        "oracle.manageddataaccess.core.23.4.0.nupkg.sha512",
+        "oracle.manageddataaccess.core.23.5.0.nupkg.sha512",
         "oracle.manageddataaccess.core.nuspec",
         "oracle.png"
       ]
@@ -10268,10 +10329,25 @@
         "xlparser.nuspec"
       ]
     },
+    "FinancialService/1.0.0": {
+      "type": "project",
+      "path": "../FinancialService/FinancialService.csproj",
+      "msbuildProject": "../FinancialService/FinancialService.csproj"
+    },
     "LogRegService/1.0.0": {
       "type": "project",
       "path": "../LogRegService/LogRegService.csproj",
       "msbuildProject": "../LogRegService/LogRegService.csproj"
+    },
+    "OperateService/1.0.0": {
+      "type": "project",
+      "path": "../OperateService/OperateService.csproj",
+      "msbuildProject": "../OperateService/OperateService.csproj"
+    },
+    "OrderService/1.0.0": {
+      "type": "project",
+      "path": "../OrderService/OrderService.csproj",
+      "msbuildProject": "../OrderService/OrderService.csproj"
     },
     "ORScheduleService/1.0.0": {
       "type": "project",
@@ -10287,6 +10363,11 @@
       "type": "project",
       "path": "../QueryAllUsersService/QueryAllUsersService.csproj",
       "msbuildProject": "../QueryAllUsersService/QueryAllUsersService.csproj"
+    },
+    "RechargeService/1.0.0": {
+      "type": "project",
+      "path": "../RechargeService/RechargeService.csproj",
+      "msbuildProject": "../RechargeService/RechargeService.csproj"
     },
     "ServerInformation/1.0.0": {
       "type": "project",
@@ -10316,14 +10397,18 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "FinancialService >= 1.0.0",
       "LogRegService >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.32",
       "Microsoft.Extensions.DependencyInjection >= 8.0.0",
       "Microsoft.Extensions.Logging.Log4Net.AspNetCore >= 8.0.0",
       "Microsoft.IdentityModel.Protocols.OpenIdConnect >= 7.6.3",
       "ORScheduleService >= 1.0.0",
+      "OperateService >= 1.0.0",
+      "OrderService >= 1.0.0",
       "QuartzJobLibrary >= 1.0.0",
       "QueryAllUsersService >= 1.0.0",
+      "RechargeService >= 1.0.0",
       "ServerInformation >= 1.0.0",
       "ServerSigninService >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.6.2",
@@ -10358,8 +10443,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "D:\\C#_Project\\AestheticsLink\\FinancialService\\FinancialService.csproj": {
+              "projectPath": "D:\\C#_Project\\AestheticsLink\\FinancialService\\FinancialService.csproj"
+            },
             "D:\\C#_Project\\AestheticsLink\\LogRegService\\LogRegService.csproj": {
               "projectPath": "D:\\C#_Project\\AestheticsLink\\LogRegService\\LogRegService.csproj"
+            },
+            "D:\\C#_Project\\AestheticsLink\\OperateService\\OperateService.csproj": {
+              "projectPath": "D:\\C#_Project\\AestheticsLink\\OperateService\\OperateService.csproj"
+            },
+            "D:\\C#_Project\\AestheticsLink\\OrderService\\OrderService.csproj": {
+              "projectPath": "D:\\C#_Project\\AestheticsLink\\OrderService\\OrderService.csproj"
             },
             "D:\\C#_Project\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj": {
               "projectPath": "D:\\C#_Project\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj"
@@ -10369,6 +10463,9 @@
             },
             "D:\\C#_Project\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj": {
               "projectPath": "D:\\C#_Project\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj"
+            },
+            "D:\\C#_Project\\AestheticsLink\\RechargeService\\RechargeService.csproj": {
+              "projectPath": "D:\\C#_Project\\AestheticsLink\\RechargeService\\RechargeService.csproj"
             },
             "D:\\C#_Project\\AestheticsLink\\ServerInformation\\ServerInformation.csproj": {
               "projectPath": "D:\\C#_Project\\AestheticsLink\\ServerInformation\\ServerInformation.csproj"
@@ -10386,6 +10483,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -10428,6 +10530,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.28, 6.0.28]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -10436,7 +10556,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -33,7 +33,7 @@ namespace ORScheduleService
                 NAME = p.NAME,
                 PRICE = p.PRICE,
                 DAY = t.DAY,
-                EXE_STATE = o.EXE_STATE,
+                STATUS = t.STATUS,
                 OP_TIME_ID = o.OP_TIME_ID,
                 START_TIME = t.START_TIME,
                 END_TIME = t.END_TIME,
@@ -70,9 +70,9 @@ namespace ORScheduleService
                 query = query.Where(r => r.HOS_ID == hosId);
             }
 
-            if (criteria.ContainsKey("EXE_STATE") && criteria["EXE_STATE"] is string exeState)
+            if (criteria.ContainsKey("STATUS") && criteria["STATUS"] is string exeState)
             {
-                query = query.Where(o => o.EXE_STATE == exeState);
+                query = query.Where(o => o.STATUS == exeState);
             }
 
             // 执行查询

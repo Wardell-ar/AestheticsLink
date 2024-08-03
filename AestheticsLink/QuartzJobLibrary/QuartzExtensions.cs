@@ -5,6 +5,9 @@ using System.Reflection.Metadata;
 using UpdateAt0amService;
 using UpdateAt0amService.UpdateAt0am;
 using Microsoft.Extensions.DependencyInjection;
+using OperateService;
+using FinancialService;
+using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
 
 namespace QuartzJobLibrary
 {
@@ -20,7 +23,7 @@ namespace QuartzJobLibrary
             services.AddSingleton<UpdateSigninService>();
             services.AddSingleton(new JobSchedule(
                 jobType: typeof(UpdateSigninService),
-                cronExpression: "0 0 0 * * ?")); // 每天凌晨12点
+                cronExpression: "30 0 0 * * ?")); // 每天凌晨12点
 
             // 注册每月绩效更新服务
             services.AddSingleton<MonthlyPerformanceService>();
@@ -39,6 +42,23 @@ namespace QuartzJobLibrary
             services.AddSingleton(new JobSchedule(
                 jobType: typeof(MonthlyCouponService),
                 cronExpression: "0 5 0 1 * ?")); // 每月的1号凌晨12点5分
+
+            // 添加手术的调度服务
+            services.AddSingleton<OperateExcuteService>();
+            services.AddSingleton(new JobSchedule(
+                jobType: typeof(OperateExcuteService),
+                cronExpression: "0 0 8,12,14,16 * * ?")); // 每天8点12点14点16点0 0 8,12,14,16 * * ?
+
+            services.AddSingleton<FinancialFound>();
+            services.AddSingleton(new JobSchedule(
+                jobType: typeof(FinancialFound),
+                cronExpression: "0 0 0 1 * ?")); // 每月第一天0点0 0 0 1 * ?
+
+            services.AddSingleton<FinanBalance>();
+            services.AddSingleton(new JobSchedule(
+                jobType: typeof(FinanBalance),
+                cronExpression: "59 59 23 L * ?")); // 每月最后一天23点59分0 59 23 L * ?
+
         }
 
         public static async Task UseQuartzServices(this IServiceProvider serviceProvider)

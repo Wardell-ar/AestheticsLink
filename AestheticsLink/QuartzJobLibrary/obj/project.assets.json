@@ -3112,6 +3112,36 @@
           "lib/netstandard1.6/XLParser.dll": {}
         }
       },
+      "FinancialService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Quartz": "3.11.0",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FinancialService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FinancialService.dll": {}
+        }
+      },
+      "OperateService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Quartz": "3.11.0",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OperateService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OperateService.dll": {}
+        }
+      },
       "UpdateAt0amService/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -9794,6 +9824,16 @@
         "xlparser.nuspec"
       ]
     },
+    "FinancialService/1.0.0": {
+      "type": "project",
+      "path": "../FinancialService/FinancialService.csproj",
+      "msbuildProject": "../FinancialService/FinancialService.csproj"
+    },
+    "OperateService/1.0.0": {
+      "type": "project",
+      "path": "../OperateService/OperateService.csproj",
+      "msbuildProject": "../OperateService/OperateService.csproj"
+    },
     "UpdateAt0amService/1.0.0": {
       "type": "project",
       "path": "../UpdateAt0amService/UpdateAt0amService.csproj",
@@ -9812,7 +9852,9 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "FinancialService >= 1.0.0",
       "Microsoft.Extensions.DependencyInjection >= 8.0.0",
+      "OperateService >= 1.0.0",
       "Quartz >= 3.11.0",
       "UpdateAt0amService >= 1.0.0"
     ]
@@ -9844,6 +9886,12 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "D:\\C#_Project\\AestheticsLink\\FinancialService\\FinancialService.csproj": {
+              "projectPath": "D:\\C#_Project\\AestheticsLink\\FinancialService\\FinancialService.csproj"
+            },
+            "D:\\C#_Project\\AestheticsLink\\OperateService\\OperateService.csproj": {
+              "projectPath": "D:\\C#_Project\\AestheticsLink\\OperateService\\OperateService.csproj"
+            },
             "D:\\C#_Project\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj": {
               "projectPath": "D:\\C#_Project\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj"
             }
@@ -9854,6 +9902,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -9880,12 +9933,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -12,6 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FinancialService\FinancialService.csproj" />
+    <ProjectReference Include="..\OperateService\OperateService.csproj" />
     <ProjectReference Include="..\UpdateAt0amService\UpdateAt0amService.csproj" />
   </ItemGroup>
 

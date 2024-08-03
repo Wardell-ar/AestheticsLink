@@ -8,7 +8,9 @@
     ".NETCoreApp,Version=v6.0": {
       "QuartzJobLibrary/1.0.0": {
         "dependencies": {
+          "FinancialService": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "OperateService": "1.0.0",
           "Quartz": "3.11.0",
           "UpdateAt0amService": "1.0.0"
         },
@@ -2001,6 +2003,26 @@
           }
         }
       },
+      "FinancialService/1.0.0": {
+        "dependencies": {
+          "Quartz": "3.11.0",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "runtime": {
+          "FinancialService.dll": {}
+        }
+      },
+      "OperateService/1.0.0": {
+        "dependencies": {
+          "Quartz": "3.11.0",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "runtime": {
+          "OperateService.dll": {}
+        }
+      },
       "UpdateAt0amService/1.0.0": {
         "dependencies": {
           "Quartz": "3.11.0",
@@ -3186,6 +3208,16 @@
       "sha512": "sha512-8tnUCmMbn6c/HGuHFyq1sulHym8YReTKDNXFFQk0U8nldNx6RGrwRvLh0+aQjEc7YoC3Q1ztH1npLt7dClKqjw==",
       "path": "xlparser/1.5.2",
       "hashPath": "xlparser.1.5.2.nupkg.sha512"
+    },
+    "FinancialService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OperateService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "UpdateAt0amService/1.0.0": {
       "type": "project",

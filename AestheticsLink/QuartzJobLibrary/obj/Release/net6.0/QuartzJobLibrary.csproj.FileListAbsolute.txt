@@ -404,3 +404,7 @@ D:\C#_Project\AestheticsLink\QuartzJobLibrary\obj\Release\net6.0\QuartzJobLibrar
 D:\C#_Project\AestheticsLink\QuartzJobLibrary\obj\Release\net6.0\refint\QuartzJobLibrary.dll
 D:\C#_Project\AestheticsLink\QuartzJobLibrary\obj\Release\net6.0\QuartzJobLibrary.pdb
 D:\C#_Project\AestheticsLink\QuartzJobLibrary\obj\Release\net6.0\ref\QuartzJobLibrary.dll
+D:\C#_Project\AestheticsLink\QuartzJobLibrary\bin\Release\net6.0\FinancialService.dll
+D:\C#_Project\AestheticsLink\QuartzJobLibrary\bin\Release\net6.0\OperateService.dll
+D:\C#_Project\AestheticsLink\QuartzJobLibrary\bin\Release\net6.0\FinancialService.pdb
+D:\C#_Project\AestheticsLink\QuartzJobLibrary\bin\Release\net6.0\OperateService.pdb

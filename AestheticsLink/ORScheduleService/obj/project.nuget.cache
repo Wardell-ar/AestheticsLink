@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fnZE1vrO18Ghm4AzE64H0OpDc5EmQ78lQ9MoGTymhHogj4/buNsJCfz/NLwu17BWAE7sqrCl2yPxkgjFbJClqA==",
+  "dgSpecHash": "nbirpOtLbQ4J8dY1uOuEAkPdzNW/HfQijN9lGKqVvz4zdxKZmfIMMOBUnMUcL9EjnAktAoGUHSGm6iIAKJWXFA==",
   "success": true,
   "projectFilePath": "D:\\C#_Project\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj",
   "expectedPackageFiles": [
@@ -170,7 +170,10 @@
     "C:\\Users\\Xyy\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512"
+    "C:\\Users\\Xyy\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512"
   ],
   "logs": []
 }

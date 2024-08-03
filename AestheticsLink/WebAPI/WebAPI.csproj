@@ -20,10 +20,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FinancialService\FinancialService.csproj" />
     <ProjectReference Include="..\LogRegService\LogRegService.csproj" />
+    <ProjectReference Include="..\OperateService\OperateService.csproj" />
+    <ProjectReference Include="..\OrderService\OrderService.csproj" />
     <ProjectReference Include="..\ORScheduleService\ORScheduleService.csproj" />
     <ProjectReference Include="..\QuartzJobLibrary\QuartzJobLibrary.csproj" />
     <ProjectReference Include="..\QueryAllUsersService\QueryAllUsersService.csproj" />
+    <ProjectReference Include="..\RechargeService\RechargeService.csproj" />
     <ProjectReference Include="..\ServerInformation\ServerInformation.csproj" />
     <ProjectReference Include="..\ServerSigninService\ServerSigninService.csproj" />
     <ProjectReference Include="..\UpdateAt0amService\UpdateAt0amService.csproj" />

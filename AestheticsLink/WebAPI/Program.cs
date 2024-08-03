@@ -13,6 +13,9 @@ using QuartzJobLibrary;
 using ServerInformation;
 using QueryAllUsersService.QueryAllCustomers;
 using ORScheduleService;
+using OperateService;
+using OrderService;
+using RechargeService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,6 +38,10 @@ builder.Services.AddScoped<IServerInfoService, ServerInfoService>();
 builder.Services.AddScoped<IQueryAllCustomersService, QueryAllCustomersService>();
 //注册手术室排版表服务
 builder.Services.AddScoped<IO_RScheduleService, O_RScheduleService>();
+//注册下单服务
+builder.Services.AddTransient<IOrderService, OrdersService>();
+//注册充值服务
+builder.Services.AddTransient<IRechargeService, RechargeServices>();
 // 添加Quartz.NET服务
 builder.Services.AddQuartzServices();
 //添加跨域策略

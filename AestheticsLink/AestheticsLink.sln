@@ -21,7 +21,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueryAllUsersService", "Que
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuartzJobLibrary", "QuartzJobLibrary\QuartzJobLibrary.csproj", "{E87E01A3-65F6-4E56-B7CC-C2B8A2D74389}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORScheduleService", "ORScheduleService\ORScheduleService.csproj", "{F26ABC8C-803E-46A1-9727-9AB1BEC4E261}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ORScheduleService", "ORScheduleService\ORScheduleService.csproj", "{F26ABC8C-803E-46A1-9727-9AB1BEC4E261}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialService", "FinancialService\FinancialService.csproj", "{D7D21A01-9BCA-4780-858D-F7AD7AE8B5CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperateService", "OperateService\OperateService.csproj", "{C230B969-82A6-4F93-94DE-B7FC7B699222}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService", "OrderService\OrderService.csproj", "{2E6F5A9B-BED7-4937-A744-90B1D0CE68F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RechargeService", "RechargeService\RechargeService.csproj", "{B62A6811-202C-45EB-BD10-886A723D572D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +77,22 @@ Global
 		{F26ABC8C-803E-46A1-9727-9AB1BEC4E261}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F26ABC8C-803E-46A1-9727-9AB1BEC4E261}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F26ABC8C-803E-46A1-9727-9AB1BEC4E261}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7D21A01-9BCA-4780-858D-F7AD7AE8B5CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7D21A01-9BCA-4780-858D-F7AD7AE8B5CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7D21A01-9BCA-4780-858D-F7AD7AE8B5CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D21A01-9BCA-4780-858D-F7AD7AE8B5CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C230B969-82A6-4F93-94DE-B7FC7B699222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C230B969-82A6-4F93-94DE-B7FC7B699222}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C230B969-82A6-4F93-94DE-B7FC7B699222}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C230B969-82A6-4F93-94DE-B7FC7B699222}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E6F5A9B-BED7-4937-A744-90B1D0CE68F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E6F5A9B-BED7-4937-A744-90B1D0CE68F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E6F5A9B-BED7-4937-A744-90B1D0CE68F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E6F5A9B-BED7-4937-A744-90B1D0CE68F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B62A6811-202C-45EB-BD10-886A723D572D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B62A6811-202C-45EB-BD10-886A723D572D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B62A6811-202C-45EB-BD10-886A723D572D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B62A6811-202C-45EB-BD10-886A723D572D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

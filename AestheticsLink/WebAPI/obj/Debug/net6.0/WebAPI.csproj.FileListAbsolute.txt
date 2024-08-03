@@ -1180,3 +1180,11 @@ D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\WebAPI.deps.json
 D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\WebAPI.runtimeconfig.json
 D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\ORScheduleService.dll
 D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\ORScheduleService.pdb
+D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\FinancialService.dll
+D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\OperateService.dll
+D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\OrderService.dll
+D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\RechargeService.dll
+D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\FinancialService.pdb
+D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\OperateService.pdb
+D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\OrderService.pdb
+D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\RechargeService.pdb

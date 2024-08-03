@@ -586,3 +586,13 @@ D:\C#_Project\AestheticsLink\WebAPI\obj\Release\net6.0\WebAPI.genruntimeconfig.c
 D:\C#_Project\AestheticsLink\WebAPI\obj\Release\net6.0\ref\WebAPI.dll
 D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\QuartzJobLibrary.dll
 D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\QuartzJobLibrary.pdb
+D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\FinancialService.dll
+D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\OperateService.dll
+D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\OrderService.dll
+D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\ORScheduleService.dll
+D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\RechargeService.dll
+D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\FinancialService.pdb
+D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\OperateService.pdb
+D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\OrderService.pdb
+D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\ORScheduleService.pdb
+D:\C#_Project\AestheticsLink\WebAPI\bin\Release\net6.0\RechargeService.pdb
