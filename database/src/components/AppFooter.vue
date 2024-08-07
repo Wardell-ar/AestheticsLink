@@ -40,15 +40,23 @@
           <ul>
             <li>              
               <i class="fas fa-map-marker-alt icon"></i>
-              <a href="#">地址: 上海市同济大学</a>
+              <a href="#">地址: 上海市嘉定区同济大学</a>
             </li>
             <li>
               <i class="fas fa-phone-alt icon"></i>
-              <a href="#">电话: 123-456-789</a>
+              <a href="#">电话:13079096197</a>
+            </li>
+            <li>              
+              <i class="fas fa-at icon"></i>
+              <a href="#">Email: 2253542@tongji.edu.cn</a>
             </li>
             <li>              
               <i class="fas fa-envelope icon"></i>
-              <a href="#">Email: info@example.com</a>
+              <a href="#">邮编: 210000</a>
+            </li>
+            <li>              
+              <i class="fas fa-desktop-alt icon"></i>
+              <a href="#">网址: www.tongji.com</a>
             </li>
           </ul>
         </div>
@@ -93,8 +101,8 @@
     position: relative;
     bottom: 0;
     left: 0;
-    z-index: 1000;
-    height:300px;
+    z-index: 1;
+    height:310px;
   }
   .container {
     display: flex;

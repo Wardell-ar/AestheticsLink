@@ -37,7 +37,7 @@
     right: 30px;
     bottom: 30px;
     transition: 0.5s;
-    z-index: 99;
+    z-index: 0;
     padding: 0;
     display: flex;
     align-items: center;

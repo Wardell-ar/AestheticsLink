@@ -28,6 +28,11 @@ const router = createRouter({
       component: () => import("../components/ourService.vue"),
     },
     {
+      path: "/pay",
+      name: "pay",
+      component: () => import("../components/pay.vue"),
+    },
+    {
       path: "/login",
       name: "login",
       component: () => import("../components/login.vue"),
@@ -73,5 +78,8 @@ const router = createRouter({
     
   ],
 });
-
+router.afterEach(() => {
+  // 确保每次路由切换后滚动到顶部
+  window.scrollTo(0, 0);
+});
 export default router

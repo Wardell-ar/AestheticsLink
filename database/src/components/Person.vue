@@ -8,7 +8,7 @@
         <div class='info'>
           <div class="user-container">
             <div class="user smooth-type">{{ customer.name }}</div>
-            <label class="user-label">用户名</label>
+            <label class="user-label">姓名</label>
           </div>
           <div class="user-container">
             <div class="user smooth-type">{{ customer.id }}</div>
@@ -18,15 +18,6 @@
         <div class="user-level">
           <span>会员等级：lv.{{ customer.level }}</span>
         </div>
-        <el-button class='button' :disabled="isEditing" @click="isEditing = true" type="primary" size="large">
-          <i class="fas fa-pen-to-square icon1"></i>编辑
-        </el-button>
-        <el-button class='button' :disabled="!isEditing" @click="handleSave" type="primary" size="large">
-          <i class="fas fa-circle-check icon1"></i>保存
-        </el-button>
-        <el-button class='button' :disabled="!isEditing" @click="handleCancel" type="primary" size="large">
-          <i class="fas fa-trash-can icon1"></i>取消
-        </el-button>
       </el-header>
       <el-container>
         <el-aside class="aside">
@@ -59,58 +50,98 @@
         <el-main class="main">
           <div class="container">
           <div v-if="selectIndex==='1'">
-            <label class="title">个人信息</label>
+            <div class="title">
+              <label >个人信息</label>
+              <el-button class='button' @click="openOldPasswordDialog" type="primary" size="large">
+                <i class="fas fa-pen-to-square icon1"></i>修改密码
+              </el-button>            
+            </div>
             <el-form :model="customer" :rules="rules" ref="customer" class="form ">
+              <div class="row">
               <el-form-item label="姓名" prop="name" class="name">
                 <div class="input-container">
-                  <input type="text" v-model="customer.name" :class="{'input': true, 'active': isEditing}" :disabled="!isEditing">
-                  <label class="label">name</label>
+                  <input type="text" v-model="customer.name" class="input" disabled>
                   <span class="top-line"></span>
                   <span class="under-line"></span>
-                  <i v-if="isEditing" class="fa fa-edit icon"></i>
                 </div>
               </el-form-item>
               <el-form-item label="账号" prop="id" class="id">
                 <div class="input-container">
-                  <input type="text" v-model="customer.id" class="input" :disabled="true">
-                  <label class="label">id</label>
+                  <input type="text" v-model="customer.id" class="input" disabled>
                   <span class="top-line"></span>
                   <span class="under-line"></span>
                 </div>
               </el-form-item>
-              <el-form-item label="手机号"  prop="phone" class="phone">
+            </div>
+            <div class="row">
+              <el-form-item label="会员"  prop="level" class="phone">
                 <div class="input-container">
-                  <input type="text" v-model="customer.phone" :class="{'input': true, 'active': isEditing}" :disabled="!isEditing">
-                  <label class="label">phone</label>
+                  <input type="text" v-model="displayLevel" class="input" disabled>
                   <span class="top-line"></span>
                   <span class="under-line"></span>
-                  <i v-if="isEditing" class="fa fa-edit icon"></i>
-                </div>
-              </el-form-item>
-              <el-form-item label="密码"  prop="password" class="password">
-                <div class="input-container">
-                  <input v-model="customer.password" type="password" required :class="{'input': true, 'active': isEditing}" :disabled="!isEditing">
-                  <label class="label">password</label>
-                  <span class="top-line"></span>
-                  <span class="under-line"></span>
-                  <i v-if="isEditing" class="fa fa-edit icon"></i>
-                </div>
-              </el-form-item>
-              <el-form-item label="出生日期"  prop="birth" class="birth">
-                <div class="input-container">
-                  <input v-model="customer.birthday" type="date" required :class="{'input': true, 'active': isEditing}" :disabled="!isEditing">
-                  <label class="label">birthday</label>
-                  <span class="top-line"></span>
-                  <span class="under-line"></span>
-                  <i v-if="isEditing" class="fa fa-edit icon"></i>
                 </div>
               </el-form-item>
               <el-form-item label="性别"  prop="sex" class="sex">
-                <el-switch v-model="customer.sex" active-color="#13ce66" inactive-color="#ff4949" active-text="男"
-                  inactive-text="女" :active-value="1" :inactive-value="0">
-                </el-switch>
+                <div class="input-container">
+                  <input v-model="displaySex" type="text" class="input" disabled>
+                  <span class="top-line"></span>
+                  <span class="under-line"></span>
+                </div>
               </el-form-item>
+            </div>
+            <div class="row">
+              <el-form-item label="生日"  prop="birth" class="birth">
+                <div class="input-container">
+                  <input v-model="customer.birthday" type="date" class="input" disabled>
+                  <span class="top-line"></span>
+                  <span class="under-line"></span>
+                </div>
+              </el-form-item>
+            </div>
             </el-form>
+            <el-dialog title="输入旧密码" v-model="isOldPasswordDialogVisible" width="30%" class="dialog" style="  background-color: rgb(255, 250, 235)">
+              <el-form ref="oldPasswordForm" :model="oldPasswordForm" :rules="rules">
+                <el-form-item prop="oldPassword" >
+                  <div class="input-container">
+                    <input v-model="oldPasswordForm.oldPassword" @focus="isEditing=true" @blur="isEditing = false" placeholder="请输入旧密码"  type="password" :class="{'input': true, 'active': isEditing}">
+                    <label class="label">旧密码</label>
+                    <span class="top-line"></span>
+                    <span class="under-line"></span>
+                    <i v-if="isEditing" class="fa fa-edit icon"></i>
+                  </div>
+                </el-form-item>
+              </el-form>
+              <div slot="footer" class="dialog-footer">
+                <el-button @click="closeOldPasswordDialog">取消</el-button>
+                <el-button type="primary" @click="checkOldPassword">确定</el-button>
+              </div>
+            </el-dialog>
+            <el-dialog title="输入新密码" v-model="isNewPasswordDialogVisible" width="30%"  class="dialog" style="  background-color: rgb(255, 250, 235)">
+              <el-form ref="newPasswordForm" :model="newPasswordForm" :rules="newPasswordRules">
+                <el-form-item prop="newPassword">
+                  <div class="input-container">
+                    <input v-model="newPasswordForm.newPassword" @click="isEditing=true" @blur="isEditing = false" placeholder="请输入新密码"  type="password" :class="{'input': true, 'active': isEditing}" :readonly="!isEditing">
+                    <label class="label">新密码</label>
+                    <span class="top-line"></span>
+                    <span class="under-line"></span>
+                    <i v-if="isEditing" class="fa fa-edit icon"></i>
+                  </div>
+                </el-form-item>
+                <el-form-item prop="confirmPassword">
+                  <div class="input-container">
+                    <input v-model="newPasswordForm.confirmPassword" @focus="isEditing=true" @blur="isEditing = false" placeholder="请再次输入新密码"  type="password" :class="{'input': true, 'active': isEditing}" :readonly="!isEditing">
+                    <label class="label">确认新密码</label>
+                    <span class="top-line"></span>
+                    <span class="under-line"></span>
+                    <i v-if="isEditing" class="fa fa-edit icon"></i>
+                  </div>
+                </el-form-item>
+              </el-form>
+              <div slot="footer" class="dialog-footer">
+                <el-button @click="closeNewPasswordDialog">取消</el-button>
+                <el-button type="primary" @click="saveNewPassword">保存</el-button>
+              </div>
+            </el-dialog>
           </div>
           <router-view v-else></router-view>
         </div>
@@ -130,24 +161,40 @@ export default {
     return {
       selectIndex: "1",
       isEditing: false,
+      isOldPasswordDialogVisible: false,
+      isNewPasswordDialogVisible: false,
+      oldPasswordForm: { oldPassword: '' },
+      newPasswordForm: { newPassword: '', confirmPassword: '' },
       customer: {//客户信息
         level: '5',
         password: "111",
         name: '111',
-        age: 12,
-        phone: "11111111111",
-        sex: 1,
+        sex: '0',//1是女
         id: '1234',
         birthday: ref('2024-08-09'),//格式
       },
-      originalCustomer:{},
       rules: {
-        name: [
-          { required: true, message: "昵称不能为空", trigger: "blur" },
+        oldPassword: [
+          { required: true, message: "密码不能为空", trigger: "blur" },
         ],
-        password: [
-          { required: true, message: "账号密码不能为空", trigger: "blur" },
+      },
+      newPasswordRules: {
+        newPassword: [
+          { required: true, message: '请输入新密码', trigger: 'blur' },
         ],
+        confirmPassword: [
+          { required: true, message: '请再次输入新密码', trigger: 'blur' },
+          {
+            validator: (rule, value, callback) => {
+              if (value !== this.newPasswordForm.newPassword) {
+                callback(new Error('两次输入的新密码不一致'));
+              } else {
+                callback();
+              }
+            },
+            trigger: 'blur'
+          }
+        ]
       },
     }
   },
@@ -159,28 +206,54 @@ export default {
         type: 'success',
       });
   },
+  computed: {
+    displaySex: {
+      get() {
+        return this.customer.sex === '1' ? '女' : '男';
+      }
+    },
+    displayLevel: {
+      get() {
+        return 'lv.'+this.customer.level;
+      }
+    }
+  },
   methods: {
     selectMenu(index) {
       this.selectIndex = index;
       console.log(this.selectIndex);
     },
-    handleSave() {
-      this.$refs.customer.validate((valid) => {
-        if (valid) {
-          // 保存成功后记录原始数据
-          this.originalCustomer = { ...this.customer };
-          this.isEditing = false;
-          console.log("保存成功");
-        } else {
-          console.log("验证失败");
-          return false;
-        }
-      });
+    openOldPasswordDialog() {
+      this.isOldPasswordDialogVisible = true;
+      this.oldPasswordForm.oldPassword='';
     },
-    handleCancel() {
-      this.customer = { ...this.originalCustomer };
-      this.isEditing = false;
+    closeOldPasswordDialog() {
+      this.isOldPasswordDialogVisible = false;
     },
+    checkOldPassword() {
+      if (this.oldPasswordForm.oldPassword === this.customer.password) {
+        this.isOldPasswordDialogVisible = false;
+        this.isNewPasswordDialogVisible = true;
+        this.newPasswordForm.newPassword='';
+        this.newPasswordForm.confirmPassword='';
+      } else {
+        ElMessage.error('旧密码错误');
+        this.isOldPasswordDialogVisible = false;
+      }
+    },
+    closeNewPasswordDialog() {
+      this.isNewPasswordDialogVisible = false;
+    },
+    saveNewPassword() {
+      if (this.newPasswordForm.newPassword === this.newPasswordForm.confirmPassword) {
+        //修改密码
+        // this.customer.password = this.newPasswordForm.newPassword;
+        ElMessage.success('密码修改成功');
+        this.isNewPasswordDialogVisible = false;
+      } else {
+        ElMessage.error('两次输入的新密码不一致');
+      }
+    }
   }
 }
 </script>
@@ -188,13 +261,11 @@ export default {
 <style scoped>
 .common-layout {
   width: 100%;
-
 }
 
 .person-img {
   width: 150px;
   height: 150px;
-  /* background-color: #8c939d; */
   margin-right: 24px;
   margin-left: 60px;
   overflow: hidden;
@@ -221,7 +292,7 @@ export default {
   display: flex;
   border-radius: 5px;
   align-items: center;
-  /* background: repeating-linear-gradient(45deg, #0050fc,#0050fc 20px, #0684fade 20px,#0684fade 40px); */
+  justify-content: space-around;
   --color: #E1E1E1;
   background-color: #F3F3F3;
   background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
@@ -244,11 +315,8 @@ export default {
   margin-bottom: -5px;
   font-size: 18px;
   color: #00c3ff;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background:  -webkit-linear-gradient(90deg, #c7f2ff,#5cd3ff);
+  background: linear-gradient(90deg, #c7f2ff,#5cd3ff);
   background-repeat: no-repeat;
   border-radius: 25px;
   border-color: transparent;
@@ -291,11 +359,10 @@ export default {
 }
 
 .main {
-  width: 75%;
+  width: 80%;
   height: 500px;
   border-radius: 5px;
   background-color: white;
-  /* height: 100%; */
   --color1: hwb(210 42% 9%);
   --color2: #d9ecff;
   background-color: var(--color1);
@@ -308,19 +375,6 @@ export default {
   justify-content: center;
 }
 
-.updateinfo {
-  height: 350px;
-  overflow: auto;
-}
-
-.left {
-  /* width: 330px; */
-  float: left;
-}
-
-.right {
-  overflow: hidden;
-}
 
 a {
   text-decoration: none;
@@ -536,19 +590,26 @@ a:hover {
 .container {
   width:100%;
   margin: auto 30px;
-  gap: 0px;
   border-radius: 19px 19px 0px 0px;
   background: rgb(255, 250, 235);
   min-height: 450px;
   box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
 }
+.dialog{
+  box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+.dialog .el-dialog__title{
+  border-bottom: 1px solid rgba(16, 86, 82, .75);
+
+}
+
 .form{
   margin-top: 0;
   width: 100%;
   height: 350px ;
-  display: grid;
-  grid-template-columns: repeat(auto-fill,100px);
-  grid-template-rows: repeat(auto-fill,100px);
+  display: flex;
+  padding:0;
+  flex-direction: column;
 }
 .title {
   width: 100%;
@@ -556,10 +617,9 @@ a:hover {
   position: relative;
   display: flex;
   align-items: center;
-  justify-self: center;
+  justify-content:space-between;
   padding-left: 20px;
   border-bottom: 1px solid rgba(16, 86, 82, .75);
-  ;
   font-weight: 700;
   font-size: 20px;
   color: #000000;
@@ -639,13 +699,11 @@ a:hover {
   transform: scale(1);
   transition: all 0.5s;
 }
-.name {
-  grid-column: 1/5;
-}
-.id{
-  grid-column: 5/9;
-  justify-self:start;
-  grid-row: 1;
+.row{
+  margin:10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 ::v-deep.form .el-form-item__label {
   color: #0b2447;         
@@ -653,32 +711,17 @@ a:hover {
   font-weight: bold;      
   text-align: left;   
   vertical-align: middle; 
-  line-height: 80px;
+  line-height: 45px;
 }
-.password{
-  grid-column: 1/5;
-  grid-row: 2;
-}
-.phone{
-  grid-column: 5/9;
-  justify-self:start;
-  grid-row: 2;
-}
-.birthday{
-  grid-column: 1/5;
-  grid-row: 2;
-}
-.sex{
-  grid-column: 5/9;
-  justify-self:start;
-  grid-row: 3/4;
-  }
-  .icon {
+.icon {
   position: absolute;
-  right: -25px; /* 根据需要调整图标位置 */
+  right: -25px; 
   top: 50%;
   scale:1.5;
   transform: translateY(-50%);
-  cursor: pointer; /* 可选，表示图标可点击 */
+  cursor: pointer;
+}
+.button{
+  margin-bottom: 10px;
 }
 </style>

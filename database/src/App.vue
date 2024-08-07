@@ -1,12 +1,12 @@
 <template>
-  <!-- <AppHeader></AppHeader>
+  <AppHeader></AppHeader>
   <div class="main-content">
       <router-view />
       <BackToTop></BackToTop>
   </div>  
-  <AppFooter></AppFooter>  -->
+  <AppFooter></AppFooter> 
   <!-- <OperatingRooms></OperatingRooms> -->
-  <BranchManage></BranchManage>
+  <!-- <BranchManage></BranchManage> -->
 </template>
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'

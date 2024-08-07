@@ -46,7 +46,7 @@
         <nav class="nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <router-link to="/Person">
+              <router-link to="/ourService">
                 <div style="display: flex; align-items: center; cursor: pointer" class="signup">
                   <el-icon class="icon"><ShoppingCart /></el-icon>
                   <span>购物车</span>
@@ -125,7 +125,7 @@
         <nav class="nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <router-link to="/Person">
+              <router-link to="/ourService">
                 <div style="display: flex; align-items: center; cursor: pointer" class="signup">
                   <el-icon class="icon"><ShoppingCart /></el-icon>
                   <span>购物车</span>
