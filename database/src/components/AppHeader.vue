@@ -22,10 +22,6 @@
               <router-link to="/ourService">
                 <div style="display: flex; align-items: center; cursor: pointer">
                   <span class="gradient-text">服务</span>
-                  <!-- <ul class="submenu">
-                    <li><a href="#">了解项目</a></li>
-                    <li><a href="#">预约</a></li>
-                  </ul> -->
                 </div>
               </router-link>
             </li>
@@ -72,7 +68,7 @@
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/login">
+              <router-link to="/logup">
                 <div style="display: flex; align-items: center; cursor: pointer" class="signup">
                   <span>注册</span>
                 </div>
@@ -105,10 +101,6 @@
               <router-link to="/ourService">
                 <div style="display: flex; align-items: center; cursor: pointer">
                   <span class="gradient-text">服务</span>
-                  <!-- <ul class="submenu">
-                    <li><a href="#">了解项目</a></li>
-                    <li><a href="#">预约</a></li>
-                  </ul> -->
                 </div>
               </router-link>
             </li>
@@ -155,7 +147,7 @@
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/login">
+              <router-link to="/logup">
                 <div style="display: flex; align-items: center; cursor: pointer" class="signup">
                   <span>注册</span>
                 </div>
