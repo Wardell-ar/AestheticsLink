@@ -1,0 +1,19 @@
+2024-08-11 14:26:06,526 [26] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-08-11 14:36:23,712 [82] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+System.Exception: 订单创建失败
+   at OrderService.OrdersService.AddBill(PlaceOrderDto order)
+   at WebAPI.Controllers.OrderPlaceController.PlaceOrder(PlaceOrderDto placeOrderDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 38
+2024-08-11 14:40:03,049 [23] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-08-11 14:41:18,190 [14] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-08-11 14:41:30,373 [14] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+System.Exception: 订单创建失败
+   at OrderService.OrdersService.AddBill(PlaceOrderDto order) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 114
+   at WebAPI.Controllers.OrderPlaceController.PlaceOrder(PlaceOrderDto placeOrderDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 38
+2024-08-11 14:43:40,217 [17] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-08-11 14:51:25,821 [15] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-08-11 14:53:15,367 [15] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+System.Exception: 订单创建失败
+   at OrderService.OrdersService.AddBill(PlaceOrderDto order) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 161
+   at WebAPI.Controllers.OrderPlaceController.PlaceOrder(PlaceOrderDto placeOrderDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 38
+2024-08-11 14:54:06,669 [17] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-08-11 18:18:33,937 [19] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.

@@ -1807,3 +1807,9 @@ D:\database\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\publis
 D:\database\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\publish\publish\publish\publish\publish\WebAPI.deps.json
 D:\database\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\publish\publish\publish\publish\WebAPI.deps.json
 D:\database\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\publish\publish\publish\publish\WebAPI.runtimeconfig.json
+D:\database\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\publish\publish\publish\publish\publish\publish\LogFile\log4net.Config
+D:\database\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\publish\publish\publish\publish\publish\publish\web.config
+D:\database\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json
+D:\database\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\publish\publish\publish\publish\publish\publish\appsettings.json
+D:\database\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\publish\publish\publish\publish\publish\publish\WebAPI.deps.json
+D:\database\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\publish\publish\publish\publish\publish\WebAPI.runtimeconfig.json

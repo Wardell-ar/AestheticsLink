@@ -8,7 +8,7 @@ namespace OrderService.Dto
 {
     public class PlaceOrderDto
     {
-        public string id { get; set; }
+        public string clientid { get; set; }
         public List<ProjectDto> items { get; set; }
         public string hospital { get; set; }
 
