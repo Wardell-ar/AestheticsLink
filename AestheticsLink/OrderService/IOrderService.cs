@@ -14,7 +14,5 @@ namespace OrderService
         public List<HospitalChoiceDto> GetHospital();
 
         public BillDto AddBill(PlaceOrderDto order);
-        public bool CheckInfo(RestChoiceDto rest);
-
     }
 }

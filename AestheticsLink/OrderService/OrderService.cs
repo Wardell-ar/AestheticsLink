@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Data;
 using WebModel.Entity;
 using Microsoft.Win32;
+using OperateService.Dto;
 
 namespace OrderService
 {
@@ -17,12 +18,12 @@ namespace OrderService
         public bool CheckProject(PlaceOrderDto order)
         {
             //检查项目是否正确
-            List<ProjectDto> projects = order.PROJECT;
+            List<ProjectDto> projects = order.items;
             foreach (ProjectDto project in projects) 
             {
                 var result = DbContext.db.Ado.SqlQuery<ProjectDto>(
-                        "SELECT PROJ_ID FROM PROJECT WHERE PROJ_ID = :projectId",
-                        new { projectId = project.PROJ_ID }
+                        "SELECT PROJ_ID FROM PROJECT WHERE NAME = :name",
+                        new { name = project.NAME }
                     );
                 if (result.Count == 0)
                 {
@@ -30,17 +31,47 @@ namespace OrderService
                 }
             }
             //检查客户是否存在,余额是否足够
+            int paid = 0;
+            foreach (ProjectDto project in order.items)
+            {
+                var money = DbContext.db.Ado.SqlQuerySingle<int>(
+                        "SELECT PRICE FROM PROJECT WHERE NAME = :name",
+                        new { name = project.NAME }
+                    );
+                //计算订单金额
+                paid += money;
+            }
             var customer = DbContext.db.Ado.SqlQuery<CUSTOMER>(
                         "SELECT CUS_ID FROM CUSTOMER WHERE CUS_ID = :cus_ID AND BALANCE >= : paidAmount",
                         new 
                         { 
-                            cus_ID = order.CUS_ID, 
-                            paidAmount = order.PAID_AMOUNT
+                            cus_ID = order.id, 
+                            paidAmount = paid
                         }
                     );
             if( customer.Count == 0 )
             {
                 return false;
+            }
+            //检查医院是否存在
+            if (!DbContext.db.Queryable<HOSPITAL>().Any(c => c.NAME.Equals(order.hospital)))
+                return false;
+            //检查优惠券是否正确
+            if (order.couponid != "")
+            {
+                var check = DbContext.db.Ado.SqlQuery<PlaceOrderDto>(
+                    "SELECT CUS_ID " +
+                    "FROM CUS_COU " +
+                    "WHERE CUS_ID = :cusId AND COU_ID = :couID",
+                    new
+                    {
+                        cusId = order.id,
+                        couID = order.couponid,
+                    });
+                if (check.Count == 0)
+                {
+                    return false;
+                }
             }
             return true;
         }
@@ -59,13 +90,59 @@ namespace OrderService
                 DbContext.db.Insertable(bill).ExecuteCommand();
                 //为每个项目添加手术安排
                 OPERATE operate = new OPERATE();
-                List<ProjectDto> projects = order.PROJECT;
+                List<ProjectDto> projects = order.items;
+                var timeNow = DateTime.Now;
+                //医生和手术时间、手术室自动分配
+                //找到可用的时间和手术室,从当前时间往后找找到第一个可用时间
+                var availableTimes = DbContext.db.Ado.SqlQuery<OperateTimeDto>(
+                    "SELECT OP_TIME_ID FROM OPERATE_TIME WHERE STATUS = :status AND START_TIME > :time AND DAY >= :day ",
+                    new
+                    {
+                        status = "0",
+                        time = timeNow,
+                        day = timeNow.Date,
+                    });
+                int i = 0;
                 foreach (ProjectDto project in projects)
                 {
-                    operate.PROJ_ID = project.PROJ_ID;
+                    var id = DbContext.db.Ado.SqlQuerySingle<string>(
+                    "SELECT PROJ_ID " +
+                    "FROM PROJECT " +
+                    "WHERE NAME = :name",
+                    new
+                    {
+                        name = project.NAME,
+                    });
+                    operate.PROJ_ID = id;
                     operate.BILL_ID = bill.BILL_ID;
                     operate.FOUND_DATE = bill.FOUND_DATE;
                     operate.EXE_STATE = "0";
+                    operate.OP_TIME_ID = availableTimes[i].OP_TIME_ID;
+                    DbContext.db.Ado.ExecuteCommand(
+                    "UPDATE OPERATE_TIME SET STATUS = :status WHERE OP_TIME_ID = :timeID",
+                    new
+                    {
+                        status = "1",
+                        timeID = availableTimes[i].OP_TIME_ID,
+                    });
+                    //找到在可用时间可用的医生
+                    var availableDoctors = DbContext.db.Ado.SqlQuery<SERVER>(
+                        "SELECT SER_ID " +
+                          "FROM SERVER " +
+                          "WHERE SER_ID NOT IN (" +
+                              "SELECT SER_ID " +
+                              "FROM OPERATE " +
+                              "NATURAL JOIN OPERATE_TIME " +
+                              "WHERE STATUS = :status AND START_TIME = :time AND DAY = :day AND NAME = :name) ",
+                        new
+                        {
+                            status = "1",
+                            time = availableTimes[i].START_TIME,
+                            day = availableTimes[i].DAY,
+                            name = order.hospital,
+                        });
+                    operate.SER_ID = availableDoctors[i].SER_ID;
+                    i++;
                     DbContext.db.Insertable(operate).ExecuteCommand();
                 }
 
@@ -77,8 +154,6 @@ namespace OrderService
                     FOUND_DATE = bill.FOUND_DATE,
                     PAID_AMOUNT = bill.PAID_AMOUNT,
                     HOS_ID = bill.HOS_ID,
-                    COMPLE_STATE = bill.COMPLE_STATE,
-
                 };
             }
             catch(Exception ex) 
@@ -104,12 +179,25 @@ namespace OrderService
                 newId = int.Parse(lastCustomerId) + 1;
             }
             bill.BILL_ID = newId.ToString();// 自己设置
-            bill.CUS_ID = order.CUS_ID;
-            bill.COU_ID = null;
+            bill.CUS_ID = order.id;
+            bill.COU_ID = order.couponid;
             bill.FOUND_DATE = foundDate;
-            bill.PAID_AMOUNT = order.PAID_AMOUNT;
-            bill.HOS_ID = null;
-            bill.COMPLE_STATE = "0";// 0为还未完全创建好，部分值仍待填写
+            int paid = 0;
+            foreach (ProjectDto project in order.items)
+            {
+                var money = DbContext.db.Ado.SqlQuerySingle<int>(
+                        "SELECT PRICE FROM PROJECT WHERE NAME = :name",
+                        new { name = project.NAME }
+                    );
+                //计算订单金额
+                paid += money;
+            }
+            bill.PAID_AMOUNT = paid;
+            var hosId = DbContext.db.Ado.SqlQuerySingle<string>(
+                       "SELECT HOS_ID FROM HOSPITAL WHERE NAME = :name",
+                       new { name = order.hospital }
+                   );
+            bill.HOS_ID = hosId;
 
             return bill;
 
@@ -124,69 +212,5 @@ namespace OrderService
             return result;
         }
 
-        bool IOrderService.CheckInfo(RestChoiceDto rest)
-        {
-            //只有STATE为0才可以修改
-            var state = DbContext.db.Ado.SqlQuerySingle<RestChoiceDto>("SELECT BILL_ID FROM BILL WHERE COMPLE_STATE = 0 AND BILL_ID = :billID",
-                new { billID = rest.BILL_ID });
-            if (state == null)
-            {
-                return false;
-            }
-            //检查CUS_ID和BILL_ID是否存在且对应
-            var result = DbContext.db.Ado.SqlQuerySingle<RestChoiceDto>(
-                "SELECT CUSTOMER.CUS_ID, BILL.BILL_ID " +
-                "FROM CUSTOMER " +
-                "JOIN BILL ON CUSTOMER.CUS_ID = BILL.CUS_ID " +
-                "WHERE CUSTOMER.CUS_ID = :cusId AND BILL.BILL_ID = :billID",
-                new
-                {
-                    cusId = rest.CUS_ID,
-                    billID = rest.BILL_ID,
-                });
-            if (result == null)
-            {
-                return false;
-            }
-            //检查医院是否存在
-            if (!DbContext.db.Queryable<HOSPITAL>().Any(c => c.HOS_ID.Equals(rest.HOS_ID)))
-                return false;
-            //检查优惠券是否正确
-            if (rest.COU_ID != "")
-            {
-                var check = DbContext.db.Ado.SqlQuery<RestChoiceDto>(
-                    "SELECT CUS_ID " +
-                    "FROM CUS_COU " +
-                    "WHERE CUS_ID = :cusId AND COU_ID = :couID",
-                    new
-                    {
-                        cusId = rest.CUS_ID,
-                        couID = rest.COU_ID,
-                    });
-                if (check.Count == 0)
-                {
-                    return false;
-                }
-            }
-            //填写BILL的COU_ID和HOS_ID
-            DbContext.db.Ado.ExecuteCommand(
-                "UPDATE BILL SET HOS_ID =:hosID, COU_ID =:couID WHERE BILL_ID =:billID",
-                new
-                {
-                    hosID = rest.HOS_ID,
-                    couID = rest.COU_ID,
-                    billID = rest.BILL_ID,
-                });
-            //修改订单状态
-            DbContext.db.Ado.ExecuteCommand(
-                "UPDATE BILL SET COMPLE_STATE =:state WHERE BILL_ID =:billID",
-                new
-                {
-                    state = "1",
-                    billID = rest.BILL_ID,
-                });
-
-            return true;
-        }
     }
 }
