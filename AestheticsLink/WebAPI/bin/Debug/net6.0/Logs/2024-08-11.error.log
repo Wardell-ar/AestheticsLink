@@ -1,0 +1,2 @@
+2024-08-11 15:31:45,710 [5] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-08-11 15:47:07,339 [16] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.

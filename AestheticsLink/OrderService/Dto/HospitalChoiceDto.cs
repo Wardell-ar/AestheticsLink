@@ -8,6 +8,6 @@ namespace OrderService.Dto
 {
     public class HospitalChoiceDto
     {
-        public string HOS_ID { get; set; }
+        public string HospitalName { get; set; }
     }
 }

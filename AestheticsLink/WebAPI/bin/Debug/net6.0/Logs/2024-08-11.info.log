@@ -1,0 +1,51 @@
+## 2024-08-11 15:31:33,212 [1] INFO  (null) Default Quartz.NET properties loaded from embedded resource file 
+## 2024-08-11 15:31:33,299 [1] INFO  (null) Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl 
+## 2024-08-11 15:31:33,300 [1] INFO  (null) Quartz Scheduler created 
+## 2024-08-11 15:31:33,301 [1] INFO  (null) RAMJobStore initialized. 
+## 2024-08-11 15:31:33,302 [1] INFO  (null) Quartz Scheduler 3.11.0.0 - 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED' initialized 
+## 2024-08-11 15:31:33,303 [1] INFO  (null) Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10 
+## 2024-08-11 15:31:33,309 [1] INFO  (null) Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False 
+## 2024-08-11 15:31:33,311 [1] INFO  (null) JobFactory set to: QuartzJobLibrary.SingletonJobFactory 
+## 2024-08-11 15:31:33,361 [1] INFO  (null) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started. 
+## 2024-08-11 15:31:33,580 [1] INFO  (null) Now listening on: http://localhost:5283 
+## 2024-08-11 15:31:33,590 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-08-11 15:31:33,593 [1] INFO  (null) Hosting environment: Development 
+## 2024-08-11 15:31:33,595 [1] INFO  (null) Content root path: D:\C#_Project\AestheticsLink\WebAPI\ 
+## 2024-08-11 15:31:45,731 [5] INFO  (null) CORS policy execution successful. 
+## 2024-08-11 15:31:45,818 [5] INFO  (null) Received Cus_Coupons request: UID=23 
+## 2024-08-11 15:31:46,837 [5] INFO  (null) Received error order request: UID=23 
+## 2024-08-11 15:31:51,310 [33] INFO  (null) CORS policy execution successful. 
+## 2024-08-11 15:31:51,316 [33] INFO  (null) Received Cus_Coupons request: UID=24 
+## 2024-08-11 15:31:58,184 [34] INFO  (null) CORS policy execution successful. 
+## 2024-08-11 15:31:58,189 [34] INFO  (null) Received Cus_Coupons request: UID=1 
+## 2024-08-11 15:32:08,884 [35] INFO  (null) CORS policy execution successful. 
+## 2024-08-11 15:32:08,887 [35] INFO  (null) Received Cus_Coupons request: UID=3 
+## 2024-08-11 15:32:13,169 [30] INFO  (null) CORS policy execution successful. 
+## 2024-08-11 15:32:13,173 [30] INFO  (null) Received Cus_Coupons request: UID=4 
+## 2024-08-11 15:32:16,403 [30] INFO  (null) CORS policy execution successful. 
+## 2024-08-11 15:32:16,406 [30] INFO  (null) Received Cus_Coupons request: UID=2 
+## 2024-08-11 15:46:55,822 [1] INFO  (null) Default Quartz.NET properties loaded from embedded resource file 
+## 2024-08-11 15:46:55,916 [1] INFO  (null) Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl 
+## 2024-08-11 15:46:55,917 [1] INFO  (null) Quartz Scheduler created 
+## 2024-08-11 15:46:55,919 [1] INFO  (null) RAMJobStore initialized. 
+## 2024-08-11 15:46:55,920 [1] INFO  (null) Quartz Scheduler 3.11.0.0 - 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED' initialized 
+## 2024-08-11 15:46:55,920 [1] INFO  (null) Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10 
+## 2024-08-11 15:46:55,927 [1] INFO  (null) Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False 
+## 2024-08-11 15:46:55,929 [1] INFO  (null) JobFactory set to: QuartzJobLibrary.SingletonJobFactory 
+## 2024-08-11 15:46:55,980 [1] INFO  (null) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started. 
+## 2024-08-11 15:46:56,234 [1] INFO  (null) Now listening on: http://localhost:5283 
+## 2024-08-11 15:46:56,241 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-08-11 15:46:56,244 [1] INFO  (null) Hosting environment: Development 
+## 2024-08-11 15:46:56,246 [1] INFO  (null) Content root path: D:\C#_Project\AestheticsLink\WebAPI\ 
+## 2024-08-11 15:47:07,364 [16] INFO  (null) CORS policy execution successful. 
+## 2024-08-11 15:47:07,478 [16] INFO  (null) Received QueryCustomers request! 
+## 2024-08-11 15:47:28,548 [5] INFO  (null) CORS policy execution successful. 
+## 2024-08-11 15:47:28,555 [5] INFO  (null) Received QueryCustomers request! 
+## 2024-08-11 15:47:41,944 [29] INFO  (null) CORS policy execution successful. 
+## 2024-08-11 15:47:41,948 [29] INFO  (null) Received QueryCustomers request! 
+## 2024-08-11 15:47:47,373 [26] INFO  (null) CORS policy execution successful. 
+## 2024-08-11 15:47:47,376 [26] INFO  (null) Received QueryCustomers request! 
+## 2024-08-11 15:47:56,641 [26] INFO  (null) CORS policy execution successful. 
+## 2024-08-11 15:47:56,646 [26] INFO  (null) Received QueryCustomers request! 
+## 2024-08-11 15:48:24,547 [30] INFO  (null) CORS policy execution successful. 
+## 2024-08-11 15:48:24,549 [30] INFO  (null) Received QueryCustomers request! 

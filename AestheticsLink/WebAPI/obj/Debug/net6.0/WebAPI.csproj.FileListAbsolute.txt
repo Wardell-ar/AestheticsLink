@@ -1172,12 +1172,6 @@ D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\QueryAllUsersService.dll
 D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\QueryAllUsersService.pdb
 D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\QuartzJobLibrary.dll
 D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\QuartzJobLibrary.pdb
-D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\LogFile\log4net.Config
-D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\web.config
-D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\appsettings.Development.json
-D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\appsettings.json
-D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\WebAPI.deps.json
-D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\WebAPI.runtimeconfig.json
 D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\ORScheduleService.dll
 D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\ORScheduleService.pdb
 D:\C#_Project\AestheticsLink\WebAPI\bin\Debug\net6.0\FinancialService.dll

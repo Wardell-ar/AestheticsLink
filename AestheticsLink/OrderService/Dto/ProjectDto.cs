@@ -8,7 +8,7 @@ namespace OrderService.Dto
 {
     public class ProjectDto
     {
-        public string PROJ_ID { get; set; }
+        public string NAME { get; set; }
 
     }
 }

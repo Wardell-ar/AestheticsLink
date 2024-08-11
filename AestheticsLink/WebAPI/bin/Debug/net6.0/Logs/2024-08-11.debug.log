@@ -1,0 +1,9 @@
+2024-08-11 15:31:33,285 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-08-11 15:31:33,373 [9] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-08-11 15:31:57,230 [9] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-08-11 15:32:25,792 [9] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-08-11 15:46:55,903 [1] DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] (null) - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-08-11 15:46:55,993 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-08-11 15:47:19,735 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-08-11 15:47:45,492 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers
+2024-08-11 15:48:14,911 [3] DEBUG [Quartz.Core.QuartzSchedulerThread] (null) - Batch acquisition of 0 triggers

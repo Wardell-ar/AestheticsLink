@@ -11,5 +11,6 @@ namespace OperateService.Dto
         public string PROJ_ID { get; set; }
         public string BILL_ID { get; set; }
         public string OP_TIME_ID { get; set; }
+
     }
 }

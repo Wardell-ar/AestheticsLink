@@ -12,7 +12,7 @@ namespace OrderService.Dto
         public string COU_ID { get; set; }
         public string BILL_ID { get; set; }
         public string CUS_ID { get; set; }
-        public int PAID_AMOUNT { get; set; }
+        public decimal PAID_AMOUNT { get; set; }
 
     }
 }
