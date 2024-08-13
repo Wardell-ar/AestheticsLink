@@ -1,0 +1,122 @@
+## 2024-08-01 00:41:56,067 [1] INFO  (null) Default Quartz.NET properties loaded from embedded resource file 
+## 2024-08-01 00:41:56,145 [1] INFO  (null) Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl 
+## 2024-08-01 00:41:56,146 [1] INFO  (null) Quartz Scheduler created 
+## 2024-08-01 00:41:56,147 [1] INFO  (null) RAMJobStore initialized. 
+## 2024-08-01 00:41:56,148 [1] INFO  (null) Quartz Scheduler 3.11.0.0 - 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED' initialized 
+## 2024-08-01 00:41:56,149 [1] INFO  (null) Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10 
+## 2024-08-01 00:41:56,150 [1] INFO  (null) Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False 
+## 2024-08-01 00:41:56,157 [1] INFO  (null) JobFactory set to: QuartzJobLibrary.SingletonJobFactory 
+## 2024-08-01 00:41:56,203 [1] INFO  (null) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started. 
+## 2024-08-01 00:41:56,435 [1] INFO  (null) Now listening on: http://192.168.123.27:5283 
+## 2024-08-01 00:41:56,444 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-08-01 00:41:56,448 [1] INFO  (null) Hosting environment: Development 
+## 2024-08-01 00:41:56,450 [1] INFO  (null) Content root path: D:\C#_Project\AestheticsLink\WebAPI\ 
+## 2024-08-01 00:42:33,181 [35] INFO  (null) CORS policy execution successful. 
+## 2024-08-01 00:42:33,268 [35] INFO  (null) Received O_RSchedule request! 
+## 2024-08-01 00:54:56,302 [1] INFO  (null) Default Quartz.NET properties loaded from embedded resource file 
+## 2024-08-01 00:54:56,370 [1] INFO  (null) Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl 
+## 2024-08-01 00:54:56,375 [1] INFO  (null) Quartz Scheduler created 
+## 2024-08-01 00:54:56,376 [1] INFO  (null) RAMJobStore initialized. 
+## 2024-08-01 00:54:56,377 [1] INFO  (null) Quartz Scheduler 3.11.0.0 - 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED' initialized 
+## 2024-08-01 00:54:56,378 [1] INFO  (null) Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10 
+## 2024-08-01 00:54:56,379 [1] INFO  (null) Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False 
+## 2024-08-01 00:54:56,380 [1] INFO  (null) JobFactory set to: QuartzJobLibrary.SingletonJobFactory 
+## 2024-08-01 00:54:56,420 [1] INFO  (null) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started. 
+## 2024-08-01 00:54:56,592 [1] INFO  (null) Now listening on: http://192.168.123.27:5283 
+## 2024-08-01 00:54:56,599 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-08-01 00:54:56,602 [1] INFO  (null) Hosting environment: Development 
+## 2024-08-01 00:54:56,604 [1] INFO  (null) Content root path: D:\C#_Project\AestheticsLink\WebAPI\ 
+## 2024-08-01 00:55:07,406 [23] INFO  (null) CORS policy execution successful. 
+## 2024-08-01 00:55:07,467 [23] INFO  (null) Received O_RSchedule request! 
+## 2024-08-01 00:57:29,880 [1] INFO  (null) Default Quartz.NET properties loaded from embedded resource file 
+## 2024-08-01 00:57:29,943 [1] INFO  (null) Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl 
+## 2024-08-01 00:57:29,948 [1] INFO  (null) Quartz Scheduler created 
+## 2024-08-01 00:57:29,949 [1] INFO  (null) RAMJobStore initialized. 
+## 2024-08-01 00:57:29,950 [1] INFO  (null) Quartz Scheduler 3.11.0.0 - 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED' initialized 
+## 2024-08-01 00:57:29,951 [1] INFO  (null) Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10 
+## 2024-08-01 00:57:29,952 [1] INFO  (null) Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False 
+## 2024-08-01 00:57:29,953 [1] INFO  (null) JobFactory set to: QuartzJobLibrary.SingletonJobFactory 
+## 2024-08-01 00:57:29,990 [1] INFO  (null) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started. 
+## 2024-08-01 00:57:30,144 [1] INFO  (null) Now listening on: http://192.168.123.27:5283 
+## 2024-08-01 00:57:30,151 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-08-01 00:57:30,154 [1] INFO  (null) Hosting environment: Development 
+## 2024-08-01 00:57:30,156 [1] INFO  (null) Content root path: D:\C#_Project\AestheticsLink\WebAPI\ 
+## 2024-08-01 00:57:39,464 [13] INFO  (null) CORS policy execution successful. 
+## 2024-08-01 00:57:39,546 [13] INFO  (null) Received O_RSchedule request! 
+## 2024-08-01 01:04:35,625 [1] INFO  (null) Default Quartz.NET properties loaded from embedded resource file 
+## 2024-08-01 01:04:35,704 [1] INFO  (null) Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl 
+## 2024-08-01 01:04:35,706 [1] INFO  (null) Quartz Scheduler created 
+## 2024-08-01 01:04:35,711 [1] INFO  (null) RAMJobStore initialized. 
+## 2024-08-01 01:04:35,712 [1] INFO  (null) Quartz Scheduler 3.11.0.0 - 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED' initialized 
+## 2024-08-01 01:04:35,713 [1] INFO  (null) Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10 
+## 2024-08-01 01:04:35,714 [1] INFO  (null) Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False 
+## 2024-08-01 01:04:35,716 [1] INFO  (null) JobFactory set to: QuartzJobLibrary.SingletonJobFactory 
+## 2024-08-01 01:04:35,761 [1] INFO  (null) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started. 
+## 2024-08-01 01:04:35,932 [1] INFO  (null) Now listening on: http://192.168.123.27:5283 
+## 2024-08-01 01:04:35,939 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-08-01 01:04:35,942 [1] INFO  (null) Hosting environment: Development 
+## 2024-08-01 01:04:35,943 [1] INFO  (null) Content root path: D:\C#_Project\AestheticsLink\WebAPI\ 
+## 2024-08-01 01:04:45,685 [12] INFO  (null) CORS policy execution successful. 
+## 2024-08-01 01:04:45,768 [12] INFO  (null) Received O_RSchedule request! 
+## 2024-08-01 01:08:19,189 [1] INFO  (null) Default Quartz.NET properties loaded from embedded resource file 
+## 2024-08-01 01:08:19,256 [1] INFO  (null) Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl 
+## 2024-08-01 01:08:19,257 [1] INFO  (null) Quartz Scheduler created 
+## 2024-08-01 01:08:19,262 [1] INFO  (null) RAMJobStore initialized. 
+## 2024-08-01 01:08:19,263 [1] INFO  (null) Quartz Scheduler 3.11.0.0 - 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED' initialized 
+## 2024-08-01 01:08:19,264 [1] INFO  (null) Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10 
+## 2024-08-01 01:08:19,265 [1] INFO  (null) Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False 
+## 2024-08-01 01:08:19,266 [1] INFO  (null) JobFactory set to: QuartzJobLibrary.SingletonJobFactory 
+## 2024-08-01 01:08:19,309 [1] INFO  (null) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started. 
+## 2024-08-01 01:08:19,471 [1] INFO  (null) Now listening on: http://192.168.123.27:5283 
+## 2024-08-01 01:08:19,478 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-08-01 01:08:19,481 [1] INFO  (null) Hosting environment: Development 
+## 2024-08-01 01:08:19,482 [1] INFO  (null) Content root path: D:\C#_Project\AestheticsLink\WebAPI\ 
+## 2024-08-01 01:08:27,681 [28] INFO  (null) CORS policy execution successful. 
+## 2024-08-01 01:08:27,764 [28] INFO  (null) Received O_RSchedule request! 
+## 2024-08-01 01:11:06,181 [1] INFO  (null) Default Quartz.NET properties loaded from embedded resource file 
+## 2024-08-01 01:11:06,253 [1] INFO  (null) Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl 
+## 2024-08-01 01:11:06,257 [1] INFO  (null) Quartz Scheduler created 
+## 2024-08-01 01:11:06,259 [1] INFO  (null) RAMJobStore initialized. 
+## 2024-08-01 01:11:06,260 [1] INFO  (null) Quartz Scheduler 3.11.0.0 - 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED' initialized 
+## 2024-08-01 01:11:06,261 [1] INFO  (null) Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10 
+## 2024-08-01 01:11:06,262 [1] INFO  (null) Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False 
+## 2024-08-01 01:11:06,263 [1] INFO  (null) JobFactory set to: QuartzJobLibrary.SingletonJobFactory 
+## 2024-08-01 01:11:06,305 [1] INFO  (null) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started. 
+## 2024-08-01 01:11:06,464 [1] INFO  (null) Now listening on: http://192.168.123.27:5283 
+## 2024-08-01 01:11:06,471 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-08-01 01:11:06,473 [1] INFO  (null) Hosting environment: Development 
+## 2024-08-01 01:11:06,475 [1] INFO  (null) Content root path: D:\C#_Project\AestheticsLink\WebAPI\ 
+## 2024-08-01 01:11:27,947 [5] INFO  (null) CORS policy execution successful. 
+## 2024-08-01 01:11:28,032 [5] INFO  (null) Received O_RSchedule request! 
+## 2024-08-01 01:15:31,140 [1] INFO  (null) Default Quartz.NET properties loaded from embedded resource file 
+## 2024-08-01 01:15:31,214 [1] INFO  (null) Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl 
+## 2024-08-01 01:15:31,219 [1] INFO  (null) Quartz Scheduler created 
+## 2024-08-01 01:15:31,220 [1] INFO  (null) RAMJobStore initialized. 
+## 2024-08-01 01:15:31,222 [1] INFO  (null) Quartz Scheduler 3.11.0.0 - 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED' initialized 
+## 2024-08-01 01:15:31,222 [1] INFO  (null) Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10 
+## 2024-08-01 01:15:31,223 [1] INFO  (null) Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False 
+## 2024-08-01 01:15:31,225 [1] INFO  (null) JobFactory set to: QuartzJobLibrary.SingletonJobFactory 
+## 2024-08-01 01:15:31,267 [1] INFO  (null) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started. 
+## 2024-08-01 01:15:31,429 [1] INFO  (null) Now listening on: http://192.168.123.27:5283 
+## 2024-08-01 01:15:31,436 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-08-01 01:15:31,439 [1] INFO  (null) Hosting environment: Development 
+## 2024-08-01 01:15:31,441 [1] INFO  (null) Content root path: D:\C#_Project\AestheticsLink\WebAPI\ 
+## 2024-08-01 01:15:50,780 [28] INFO  (null) CORS policy execution successful. 
+## 2024-08-01 01:15:50,863 [28] INFO  (null) Received O_RSchedule request! 
+## 2024-08-01 01:18:15,010 [1] INFO  (null) Default Quartz.NET properties loaded from embedded resource file 
+## 2024-08-01 01:18:15,079 [1] INFO  (null) Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl 
+## 2024-08-01 01:18:15,084 [1] INFO  (null) Quartz Scheduler created 
+## 2024-08-01 01:18:15,085 [1] INFO  (null) RAMJobStore initialized. 
+## 2024-08-01 01:18:15,086 [1] INFO  (null) Quartz Scheduler 3.11.0.0 - 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED' initialized 
+## 2024-08-01 01:18:15,087 [1] INFO  (null) Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10 
+## 2024-08-01 01:18:15,088 [1] INFO  (null) Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False 
+## 2024-08-01 01:18:15,090 [1] INFO  (null) JobFactory set to: QuartzJobLibrary.SingletonJobFactory 
+## 2024-08-01 01:18:15,131 [1] INFO  (null) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started. 
+## 2024-08-01 01:18:15,301 [1] INFO  (null) Now listening on: http://192.168.123.27:5283 
+## 2024-08-01 01:18:15,308 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-08-01 01:18:15,310 [1] INFO  (null) Hosting environment: Development 
+## 2024-08-01 01:18:15,312 [1] INFO  (null) Content root path: D:\C#_Project\AestheticsLink\WebAPI\ 
+## 2024-08-01 01:18:42,349 [34] INFO  (null) CORS policy execution successful. 
+## 2024-08-01 01:18:42,428 [34] INFO  (null) Received O_RSchedule request! 
+## 2024-08-01 01:19:39,432 [35] INFO  (null) CORS policy execution successful. 
+## 2024-08-01 01:19:39,435 [35] INFO  (null) Received O_RSchedule request! 
