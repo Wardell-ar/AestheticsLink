@@ -18,12 +18,12 @@ namespace OrderService
         public bool CheckProject(PlaceOrderDto order)
         {
             //检查项目是否正确
-            List<ProjectDto> projects = order.items;
-            foreach (ProjectDto project in projects) 
+            List<string> projects = order.items;
+            foreach (string project in projects) 
             {
-                var result = DbContext.db.Ado.SqlQuery<ProjectDto>(
+                var result = DbContext.db.Ado.SqlQuery<string>(
                         "SELECT PROJ_ID FROM PROJECT WHERE NAME = :name",
-                        new { name = project.NAME }
+                        new { name = project }
                     );
                 if (result.Count == 0)
                 {
@@ -32,11 +32,11 @@ namespace OrderService
             }
             //检查客户是否存在,余额是否足够
             int paid = 0;
-            foreach (ProjectDto project in order.items)
+            foreach (string project in order.items)
             {
                 var money = DbContext.db.Ado.SqlQuerySingle<int>(
                         "SELECT PRICE FROM PROJECT WHERE NAME = :name",
-                        new { name = project.NAME }
+                        new { name = project }
                     );
                 //计算订单金额
                 paid += money;
@@ -90,7 +90,7 @@ namespace OrderService
                 DbContext.db.Insertable(bill).ExecuteCommand();
                 //为每个项目添加手术安排
                 OPERATE operate = new OPERATE();
-                List<ProjectDto> projects = order.items;
+                List<string> projects = order.items;
                 var timeNow = DateTime.Now;
                 //医生和手术时间、手术室自动分配
                 //找到可用的时间和手术室,从当前时间往后找找到第一个可用时间
@@ -103,7 +103,7 @@ namespace OrderService
                         day = timeNow.Date,
                     });
                 int i = 0;
-                foreach (ProjectDto project in projects)
+                foreach (string project in projects)
                 {
                     var id = DbContext.db.Ado.SqlQuerySingle<string>(
                     "SELECT PROJ_ID " +
@@ -111,7 +111,7 @@ namespace OrderService
                     "WHERE NAME = :name",
                     new
                     {
-                        name = project.NAME,
+                        name = project,
                     });
                     operate.PROJ_ID = id;
                     operate.BILL_ID = bill.BILL_ID;
@@ -183,11 +183,11 @@ namespace OrderService
             bill.COU_ID = order.couponid;
             bill.FOUND_DATE = foundDate;
             int paid = 0;
-            foreach (ProjectDto project in order.items)
+            foreach (string project in order.items)
             {
                 var money = DbContext.db.Ado.SqlQuerySingle<int>(
                         "SELECT PRICE FROM PROJECT WHERE NAME = :name",
-                        new { name = project.NAME }
+                        new { name = project }
                     );
                 //计算订单金额
                 paid += money;

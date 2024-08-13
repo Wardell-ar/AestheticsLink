@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WebCommon\WebCommon.csproj" />
+    <ProjectReference Include="..\WebModel\WebModel.csproj" />
   </ItemGroup>
 
 </Project>

@@ -23,6 +23,7 @@
     <ProjectReference Include="..\LogRegService\LogRegService.csproj" />
     <ProjectReference Include="..\OperateService\OperateService.csproj" />
     <ProjectReference Include="..\OrderService\OrderService.csproj" />
+    <ProjectReference Include="..\ORScheduleService\ORScheduleService.csproj" />
     <ProjectReference Include="..\QueryAllUsersService\QueryAllUsersService.csproj" />
     <ProjectReference Include="..\RechargeService\RechargeService.csproj" />
     <ProjectReference Include="..\ServerInformation\ServerInformation.csproj" />

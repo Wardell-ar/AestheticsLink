@@ -23,7 +23,7 @@ namespace WebAPI.Controllers
         [HttpPost("CheckOrder")]
         public IActionResult PlaceOrder([FromBody] PlaceOrderDto placeOrderDto)
         {
-            _logger.LogInformation("Received place order request: UID={UID}", placeOrderDto.id);
+            _logger.LogInformation("Received place order request: UID={UID}", placeOrderDto.clientid);
 
             try
             {
@@ -61,7 +61,7 @@ namespace WebAPI.Controllers
                 else
                 {
                     // 下单失败，有项目不在数据库中，出现异常
-                    _logger.LogInformation("Received error order request: UID={UID}", placeOrderDto.id);
+                    _logger.LogInformation("Received error order request: UID={UID}", placeOrderDto.clientid);
                     //事物回滚
                     DbContext.db.Ado.RollbackTran();
                     return Ok("0");
@@ -69,7 +69,7 @@ namespace WebAPI.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "An unexpected error occurred while processing the order request: UID={UID}", placeOrderDto.id);
+                _logger.LogError(ex, "An unexpected error occurred while processing the order request: UID={UID}", placeOrderDto.clientid);
                 //事物回滚
                 DbContext.db.Ado.RollbackTran();
                 return Ok("0");

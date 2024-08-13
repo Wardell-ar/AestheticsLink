@@ -25,7 +25,7 @@ namespace ServerInformation.Dto
         public int age { get; set; }
         public string title { get; set; }
         public string hospital { get; set; }
-        public int attendanceStatus { get; set; }
+        public string attendanceStatus { get; set; }
         public List<OrderData> orderData { get; set; }
     }
 

@@ -10,9 +10,10 @@ namespace QueryAllUsersService.QueryAllCustomers
 {
     public interface IQueryAllCustomersService
     {
-        Task<List<QueryCustomersDto>> GetCustomersByCriteria(Dictionary<string, object> criteria);
-
         int CalculateAge(DateTime birthday);
+
         int GetIntFromJsonElement(object obj);
+
+        Task<List<QueryCustomersDto>> GetCustomersByCriteria(Dictionary<string, object> criteria);
     }
 }

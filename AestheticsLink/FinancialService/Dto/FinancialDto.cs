@@ -8,7 +8,7 @@ namespace FinancialService.Dto
 {
     public class FinancialDto
     {
-        public string hospitalname {  get; set; }
+        public string hospitalname { get; set; }
         public string year { get; set; }
         public string month { get; set; }
     }

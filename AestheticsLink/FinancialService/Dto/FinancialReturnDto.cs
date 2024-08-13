@@ -8,7 +8,7 @@ namespace FinancialService.Dto
 {
     public class FinancialReturnDto
     {
-        public int income { get; set; }
-        public int payout { get; set;}
+        public decimal income { get; set; }
+        public decimal payout { get; set; }
     }
 }

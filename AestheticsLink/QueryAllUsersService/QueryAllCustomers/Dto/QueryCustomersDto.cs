@@ -15,6 +15,11 @@ namespace QueryAllUsersService.QueryAllCustomers.Dto
         public int age { get; set; }
         public DateTime birthday { get; set; }
         public string viplevel { get; set; }
-        public int balance { get; set; }
+        public decimal balance { get; set; }
+    }
+
+    public class DeleteCustomersDto
+    {
+        public List<string> cus_ids { get; set; }
     }
 }

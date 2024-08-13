@@ -13,6 +13,7 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.32",
           "Microsoft.Extensions.Logging.Log4Net.AspNetCore": "8.0.0",
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "7.6.3",
+          "ORScheduleService": "1.0.0",
           "OperateService": "1.0.0",
           "OrderService": "1.0.0",
           "QueryAllUsersService": "1.0.0",
@@ -1961,7 +1962,8 @@
       "FinancialService/1.0.0": {
         "dependencies": {
           "Quartz": "3.11.0",
-          "WebCommon": "1.0.0"
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
         },
         "runtime": {
           "FinancialService.dll": {}
@@ -1995,6 +1997,16 @@
         },
         "runtime": {
           "OrderService.dll": {}
+        }
+      },
+      "ORScheduleService/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.32",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "runtime": {
+          "ORScheduleService.dll": {}
         }
       },
       "QueryAllUsersService/1.0.0": {
@@ -3252,6 +3264,11 @@
       "sha512": ""
     },
     "OrderService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ORScheduleService/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

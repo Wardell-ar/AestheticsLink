@@ -33,9 +33,6 @@ namespace QueryAllUsersService.QueryAllCustomers
             {
                 switch (criterion.Key.ToLower())
                 {
-                    case "cus_id":
-                        query = query.Where(c => c.CUS_ID == criterion.Value.ToString());
-                        break;
                     case "phone_num":
                         query = query.Where(c => c.PHONE_NUM == criterion.Value.ToString());
                         break;
@@ -44,6 +41,9 @@ namespace QueryAllUsersService.QueryAllCustomers
                         break;
                     case "name":
                         query = query.Where(c => c.NAME == criterion.Value.ToString());
+                        break;
+                    case "viplevel":
+                        query = query.Where(c => c.VIPLEVEL == criterion.Value.ToString());
                         break;
                 }
             }

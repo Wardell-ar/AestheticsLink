@@ -17,7 +17,7 @@ namespace WebModel.Entity
         public string GENDER { get; set; }
         public string NAME { get; set; }
         public string PASSWORD { get; set; }
-        public int BALANCE { get; set; }
+        public decimal BALANCE { get; set; }
         public string VIPLEVEL { get; set; }
     }
 }

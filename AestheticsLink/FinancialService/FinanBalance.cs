@@ -64,7 +64,7 @@ namespace FinancialService
                 //事物提交
                 DbContext.db.Ado.CommitTran();
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 //事物回滚
                 DbContext.db.Ado.RollbackTran();

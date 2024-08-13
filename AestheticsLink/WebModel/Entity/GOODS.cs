@@ -9,9 +9,8 @@ namespace WebModel.Entity
     public class GOODS
     {
         public string G_ID { get; set; }
-        public string NAME { get; set;}
-
-        public int PRICE { get; set; }
+        public string NAME { get; set; }
+        public decimal PRICE { get; set; }
         public string PRODUCER { get; set; }
     }
 }

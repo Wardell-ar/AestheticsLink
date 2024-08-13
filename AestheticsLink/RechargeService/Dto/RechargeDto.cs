@@ -9,6 +9,6 @@ namespace RechargeService.Dto
     public class RechargeDto
     {
         public string CUS_ID { get; set; }
-        public int RECHARGE_AMOUNT { get; set; }
+        public decimal RECHARGE_AMOUNT { get; set; }
     }
 }
