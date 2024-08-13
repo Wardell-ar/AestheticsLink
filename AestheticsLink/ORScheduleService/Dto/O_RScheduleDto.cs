@@ -9,24 +9,16 @@ namespace ORScheduleService.Dto
 {
     public class QueryO_RScheduleDto
     {
-        public string ROOM_ID { get; set; }//手术室id
-        public string HOS_ID { get; set; }//医院id
-        public string HOS_NAME { get; set; }//医院名称
+        public string roomId { get; set; }//手术室id       
 
-        public string PROJ_ID { get; set; }//项目id
-        public string NAME { get; set; }//项目名称
-        public string PRICE { get; set; }//手术价格
-        public DateTime DAY { get; set; }//手术日期
-        public string STATUS { get; set; }//手术状态
-        public string OP_TIME_ID { get; set; }//手术时间id
-        public Timestamp START_TIME { get; set; }//手术开始时间
-        public Timestamp END_TIME { get; set; }//手术结束时间
+        public List<O_RScheduleSlotsDto> slots { get; set; } // 排班的时间段信息
+    }
 
-        public string SER_ID { get; set; }//员工id
-        public string SER_NAME { get; set; }//员工姓名
-
-        public string CUS_ID { get; set; }//顾客id
-        public string CUS_NAME { get; set; }//顾客姓名
-        public string BILL_ID { get; set; }//账单id
+    public class O_RScheduleSlotsDto
+    {
+        public string status { get; set; } //字符串的0、1；0表示没预约，1表示有预约
+        public string info { get; set; } // 预约的手术名称(没有预约时给“无预约”)
+        public string doctor { get; set; } //负责手术的医生名字
+        public string customer { get; set; } // 进行手术的客户的名字
     }
 }

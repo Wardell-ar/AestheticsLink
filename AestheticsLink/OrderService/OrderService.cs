@@ -45,7 +45,7 @@ namespace OrderService
                         "SELECT CUS_ID FROM CUSTOMER WHERE CUS_ID = :cus_ID AND BALANCE >= : paidAmount",
                         new
                         {
-                            cus_ID = order.id,
+                            cus_ID = order.clientid,
                             paidAmount = paid
                         }
                     );
@@ -65,7 +65,7 @@ namespace OrderService
                     "WHERE CUS_ID = :cusId AND COU_ID = :couID",
                     new
                     {
-                        cusId = order.id,
+                        cusId = order.clientid,
                         couID = order.couponid,
                     });
                 if (check.Count == 0)
@@ -162,6 +162,7 @@ namespace OrderService
             }
 
         }
+
         private BILL TransBillDto(PlaceOrderDto order)
         {
             var bill = new BILL();
@@ -179,7 +180,7 @@ namespace OrderService
                 newId = int.Parse(lastCustomerId) + 1;
             }
             bill.BILL_ID = newId.ToString();// 自己设置
-            bill.CUS_ID = order.id;
+            bill.CUS_ID = order.clientid;
             bill.COU_ID = order.couponid;
             bill.FOUND_DATE = foundDate;
             int paid = 0;
@@ -202,6 +203,7 @@ namespace OrderService
             return bill;
 
         }
+
         private string GetMaxBillId()
         {
             string sql = "SELECT MAX(TO_NUMBER(BILL_ID)) FROM BILL"; // 替换YourTableName为实际的表名
@@ -211,6 +213,7 @@ namespace OrderService
 
             return result;
         }
+
         public bool CheckCustomer(Cus_CouReceptionDto cus_CouReception)
         {
             var result = DbContext.db.Ado.SqlQuery<CUSTOMER>(

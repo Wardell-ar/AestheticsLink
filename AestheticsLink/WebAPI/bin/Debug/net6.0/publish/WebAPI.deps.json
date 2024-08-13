@@ -8,13 +8,18 @@
     ".NETCoreApp,Version=v6.0": {
       "WebAPI/1.0.0": {
         "dependencies": {
+          "FinancialService": "1.0.0",
           "LogRegService": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.32",
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "Microsoft.Extensions.Logging.Log4Net.AspNetCore": "8.0.0",
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "7.6.3",
+          "ORScheduleService": "1.0.0",
+          "OperateService": "1.0.0",
+          "OrderService": "1.0.0",
           "QuartzJobLibrary": "1.0.0",
           "QueryAllUsersService": "1.0.0",
+          "RechargeService": "1.0.0",
           "ServerInformation": "1.0.0",
           "ServerSigninService": "1.0.0",
           "Swashbuckle.AspNetCore": "6.6.2",
@@ -793,7 +798,7 @@
           }
         }
       },
-      "Oracle.ManagedDataAccess.Core/23.4.0": {
+      "Oracle.ManagedDataAccess.Core/23.5.0": {
         "dependencies": {
           "System.Diagnostics.PerformanceCounter": "6.0.1",
           "System.DirectoryServices.Protocols": "6.0.2",
@@ -1065,7 +1070,7 @@
           "MySqlConnector": "2.2.5",
           "Newtonsoft.Json": "13.0.2",
           "Npgsql": "5.0.18",
-          "Oracle.ManagedDataAccess.Core": "23.4.0",
+          "Oracle.ManagedDataAccess.Core": "23.5.0",
           "Oscar.Data.SqlClient": "4.0.4",
           "SqlSugarCore.Dm": "8.3.0",
           "SqlSugarCore.Kdbndp": "9.3.6.711",
@@ -1955,6 +1960,16 @@
           }
         }
       },
+      "FinancialService/1.0.0": {
+        "dependencies": {
+          "Quartz": "3.11.0",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "runtime": {
+          "FinancialService.dll": {}
+        }
+      },
       "LogRegService/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.32",
@@ -1965,9 +1980,41 @@
           "LogRegService.dll": {}
         }
       },
+      "OperateService/1.0.0": {
+        "dependencies": {
+          "Quartz": "3.11.0",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "runtime": {
+          "OperateService.dll": {}
+        }
+      },
+      "OrderService/1.0.0": {
+        "dependencies": {
+          "Oracle.ManagedDataAccess.Core": "23.5.0",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "runtime": {
+          "OrderService.dll": {}
+        }
+      },
+      "ORScheduleService/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.32",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "runtime": {
+          "ORScheduleService.dll": {}
+        }
+      },
       "QuartzJobLibrary/1.0.0": {
         "dependencies": {
+          "FinancialService": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "OperateService": "1.0.0",
           "Quartz": "3.11.0",
           "UpdateAt0amService": "1.0.0"
         },
@@ -1983,6 +2030,15 @@
         },
         "runtime": {
           "QueryAllUsersService.dll": {}
+        }
+      },
+      "RechargeService/1.0.0": {
+        "dependencies": {
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "runtime": {
+          "RechargeService.dll": {}
         }
       },
       "ServerInformation/1.0.0": {
@@ -2027,7 +2083,7 @@
       },
       "WebModel/1.0.0": {
         "dependencies": {
-          "Oracle.ManagedDataAccess.Core": "23.4.0",
+          "Oracle.ManagedDataAccess.Core": "23.5.0",
           "Rezero.Api": "1.7.9",
           "SqlSugarCore": "5.1.4.162"
         },
@@ -2428,12 +2484,12 @@
       "path": "npgsql/5.0.18",
       "hashPath": "npgsql.5.0.18.nupkg.sha512"
     },
-    "Oracle.ManagedDataAccess.Core/23.4.0": {
+    "Oracle.ManagedDataAccess.Core/23.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-RXpnu1C2HZnOHWTXKdftTNxtGi5AKSayVLKopsS8550GgSFxTJy0wTTxmz78PUnh0I5hLtkrahUg+RYedZsYBw==",
-      "path": "oracle.manageddataaccess.core/23.4.0",
-      "hashPath": "oracle.manageddataaccess.core.23.4.0.nupkg.sha512"
+      "sha512": "sha512-TmWvKM2aF0nRo4HHqp0Wz6JgTYYVxCXudRKgHjB7UM96axg2viXOniAy+cm/3+XOuF3NJ1JpMiDYOxNbObN/zg==",
+      "path": "oracle.manageddataaccess.core/23.5.0",
+      "hashPath": "oracle.manageddataaccess.core.23.5.0.nupkg.sha512"
     },
     "Oscar.Data.SqlClient/4.0.4": {
       "type": "package",
@@ -3205,7 +3261,27 @@
       "path": "xlparser/1.5.2",
       "hashPath": "xlparser.1.5.2.nupkg.sha512"
     },
+    "FinancialService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "LogRegService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OperateService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OrderService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ORScheduleService/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -3216,6 +3292,11 @@
       "sha512": ""
     },
     "QueryAllUsersService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RechargeService/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
