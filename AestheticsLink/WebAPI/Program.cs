@@ -16,6 +16,9 @@ using ORScheduleService;
 using OperateService;
 using OrderService;
 using RechargeService;
+using MedcineService;
+using CustomerMessageService;
+using SurgeryProjectService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,6 +47,15 @@ builder.Services.AddTransient<IOrderService, OrdersService>();
 builder.Services.AddTransient<IRechargeService, RechargeServices>();
 // 添加Quartz.NET服务
 builder.Services.AddQuartzServices();
+//添加药品查询
+builder.Services.AddScoped<IMedicineService, MedicineService>();
+// 添加自动检查过期药品ExpiredMedicineCheckerService 后台服务
+builder.Services.AddHostedService<ExpiredMedicineCheckerService>();
+//查询顾客信息，优惠券，手术
+builder.Services.AddScoped<ICustomerMessageService, CustomerMessageService.CustomerMessageService>();
+//手术信息查询
+builder.Services.AddScoped<ISurgeryProjectService, SurgeryProjectService.SurgeryProjectService>();
+
 //添加跨域策略
 builder.Services.AddCors(options =>
 {

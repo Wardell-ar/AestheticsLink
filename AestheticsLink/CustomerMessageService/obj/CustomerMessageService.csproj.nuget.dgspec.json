@@ -1,0 +1,214 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\前端\\AestheticsLink\\AestheticsLink\\CustomerMessageService\\CustomerMessageService.csproj": {}
+  },
+  "projects": {
+    "G:\\前端\\AestheticsLink\\AestheticsLink\\CustomerMessageService\\CustomerMessageService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\前端\\AestheticsLink\\AestheticsLink\\CustomerMessageService\\CustomerMessageService.csproj",
+        "projectName": "CustomerMessageService",
+        "projectPath": "G:\\前端\\AestheticsLink\\AestheticsLink\\CustomerMessageService\\CustomerMessageService.csproj",
+        "packagesPath": "C:\\Users\\ly\\.nuget\\packages\\",
+        "outputPath": "G:\\前端\\AestheticsLink\\AestheticsLink\\CustomerMessageService\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ly\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "G:\\前端\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
+                "projectPath": "G:\\前端\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj"
+              },
+              "G:\\前端\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj": {
+                "projectPath": "G:\\前端\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Oracle.ManagedDataAccess.Core": {
+              "target": "Package",
+              "version": "[23.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\前端\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\前端\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj",
+        "projectName": "WebCommon",
+        "projectPath": "G:\\前端\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj",
+        "packagesPath": "C:\\Users\\ly\\.nuget\\packages\\",
+        "outputPath": "G:\\前端\\AestheticsLink\\AestheticsLink\\WebCommon\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ly\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Caching.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "SqlSugarCore": {
+              "target": "Package",
+              "version": "[5.1.4.162, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\前端\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\前端\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj",
+        "projectName": "WebModel",
+        "projectPath": "G:\\前端\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj",
+        "packagesPath": "C:\\Users\\ly\\.nuget\\packages\\",
+        "outputPath": "G:\\前端\\AestheticsLink\\AestheticsLink\\WebModel\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ly\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Oracle.ManagedDataAccess.Core": {
+              "target": "Package",
+              "version": "[23.4.0, )"
+            },
+            "Rezero.Api": {
+              "target": "Package",
+              "version": "[1.7.9, )"
+            },
+            "SqlSugarCore": {
+              "target": "Package",
+              "version": "[5.1.4.162, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

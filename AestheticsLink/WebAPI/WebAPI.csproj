@@ -20,8 +20,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CustomerMessageService\CustomerMessageService.csproj" />
     <ProjectReference Include="..\FinancialService\FinancialService.csproj" />
+    <ProjectReference Include="..\GoodsService\MedcineService.csproj" />
     <ProjectReference Include="..\LogRegService\LogRegService.csproj" />
+    <ProjectReference Include="..\OperateMessageService\SurgeryProjectService.csproj" />
     <ProjectReference Include="..\OperateService\OperateService.csproj" />
     <ProjectReference Include="..\OrderService\OrderService.csproj" />
     <ProjectReference Include="..\ORScheduleService\ORScheduleService.csproj" />

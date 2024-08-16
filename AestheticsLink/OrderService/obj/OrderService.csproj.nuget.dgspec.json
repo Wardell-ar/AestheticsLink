@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#_Project\\AestheticsLink\\OrderService\\OrderService.csproj": {}
+    "G:\\前端\\AestheticsLink\\AestheticsLink\\OrderService\\OrderService.csproj": {}
   },
   "projects": {
-    "D:\\C#_Project\\AestheticsLink\\OrderService\\OrderService.csproj": {
+    "G:\\前端\\AestheticsLink\\AestheticsLink\\OrderService\\OrderService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#_Project\\AestheticsLink\\OrderService\\OrderService.csproj",
+        "projectUniqueName": "G:\\前端\\AestheticsLink\\AestheticsLink\\OrderService\\OrderService.csproj",
         "projectName": "OrderService",
-        "projectPath": "D:\\C#_Project\\AestheticsLink\\OrderService\\OrderService.csproj",
-        "packagesPath": "C:\\Users\\Xyy\\.nuget\\packages\\",
-        "outputPath": "D:\\C#_Project\\AestheticsLink\\OrderService\\obj\\",
+        "projectPath": "G:\\前端\\AestheticsLink\\AestheticsLink\\OrderService\\OrderService.csproj",
+        "packagesPath": "C:\\Users\\ly\\.nuget\\packages\\",
+        "outputPath": "G:\\前端\\AestheticsLink\\AestheticsLink\\OrderService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Xyy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ly\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\C#_Project\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
-                "projectPath": "D:\\C#_Project\\AestheticsLink\\WebCommon\\WebCommon.csproj"
+              "G:\\前端\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
+                "projectPath": "G:\\前端\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj"
               },
-              "D:\\C#_Project\\AestheticsLink\\WebModel\\WebModel.csproj": {
-                "projectPath": "D:\\C#_Project\\AestheticsLink\\WebModel\\WebModel.csproj"
+              "G:\\前端\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj": {
+                "projectPath": "G:\\前端\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj"
               }
             }
           }
@@ -41,11 +41,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -68,40 +63,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\C#_Project\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
+    "G:\\前端\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#_Project\\AestheticsLink\\WebCommon\\WebCommon.csproj",
+        "projectUniqueName": "G:\\前端\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj",
         "projectName": "WebCommon",
-        "projectPath": "D:\\C#_Project\\AestheticsLink\\WebCommon\\WebCommon.csproj",
-        "packagesPath": "C:\\Users\\Xyy\\.nuget\\packages\\",
-        "outputPath": "D:\\C#_Project\\AestheticsLink\\WebCommon\\obj\\",
+        "projectPath": "G:\\前端\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj",
+        "packagesPath": "C:\\Users\\ly\\.nuget\\packages\\",
+        "outputPath": "G:\\前端\\AestheticsLink\\AestheticsLink\\WebCommon\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Xyy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ly\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -121,11 +102,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -156,40 +132,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\C#_Project\\AestheticsLink\\WebModel\\WebModel.csproj": {
+    "G:\\前端\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#_Project\\AestheticsLink\\WebModel\\WebModel.csproj",
+        "projectUniqueName": "G:\\前端\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj",
         "projectName": "WebModel",
-        "projectPath": "D:\\C#_Project\\AestheticsLink\\WebModel\\WebModel.csproj",
-        "packagesPath": "C:\\Users\\Xyy\\.nuget\\packages\\",
-        "outputPath": "D:\\C#_Project\\AestheticsLink\\WebModel\\obj\\",
+        "projectPath": "G:\\前端\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj",
+        "packagesPath": "C:\\Users\\ly\\.nuget\\packages\\",
+        "outputPath": "G:\\前端\\AestheticsLink\\AestheticsLink\\WebModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Xyy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ly\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -209,11 +171,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -244,26 +201,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

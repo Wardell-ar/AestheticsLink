@@ -11740,19 +11740,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Xyy\\.nuget\\packages\\": {}
+    "C:\\Users\\ly\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#_Project\\AestheticsLink\\WebModel\\WebModel.csproj",
+      "projectUniqueName": "G:\\前端\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj",
       "projectName": "WebModel",
-      "projectPath": "D:\\C#_Project\\AestheticsLink\\WebModel\\WebModel.csproj",
-      "packagesPath": "C:\\Users\\Xyy\\.nuget\\packages\\",
-      "outputPath": "D:\\C#_Project\\AestheticsLink\\WebModel\\obj\\",
+      "projectPath": "G:\\前端\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj",
+      "packagesPath": "C:\\Users\\ly\\.nuget\\packages\\",
+      "outputPath": "G:\\前端\\AestheticsLink\\AestheticsLink\\WebModel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Xyy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ly\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11772,11 +11772,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -11807,26 +11802,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.28, 6.0.28]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.28, 6.0.28]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.28, 6.0.28]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
