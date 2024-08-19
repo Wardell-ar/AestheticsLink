@@ -5,6 +5,7 @@
       <BackToTop></BackToTop>
   </div>  
   <AppFooter></AppFooter> 
+  <!-- <Person></Person> -->
   <!-- <OperatingRooms></OperatingRooms> -->
   <!-- <BranchManage></BranchManage> -->
 </template>

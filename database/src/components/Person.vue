@@ -247,7 +247,7 @@ export default {
     saveNewPassword() {
       if (this.newPasswordForm.newPassword === this.newPasswordForm.confirmPassword) {
         //修改密码
-        // this.customer.password = this.newPasswordForm.newPassword;
+        this.customer.password = this.newPasswordForm.newPassword;
         ElMessage.success('密码修改成功');
         this.isNewPasswordDialogVisible = false;
       } else {

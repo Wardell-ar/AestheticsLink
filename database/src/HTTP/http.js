@@ -137,8 +137,8 @@ export function getHospitalNameReq(callback){
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
             if (xhr.status >= 200 && xhr.status < 300) {
-                //const response = JSON.parse(xhr.response);  // 解析
-                callback(xhr.response);
+                const response = JSON.parse(xhr.response);  // 解析
+                callback(response);
             }
             else {
                 alert("网络异常");
@@ -163,6 +163,77 @@ export function getFinanceReq(year, month, hospitalname, callback){
         if (xhr.readyState === 4) {
             if (xhr.status >= 200 && xhr.status < 300) {
                 const response = JSON.parse(xhr.response);
+                callback(response);
+            }
+            else {
+                alert("网络异常");
+            }
+        }
+    };
+}
+
+// 获取某个顾客的所有优惠券信息
+export function getAllCoupons(id, callback){
+    let obj = {
+        id: id
+    };
+    const str = JSON.stringify(obj);
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://121.199.32.139:8081/OrderPlace/Cus_Coupons/Cus_Coupons', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(str);
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4) {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                const response = JSON.parse(xhr.response);
+                callback(response);
+            }
+            else {
+                alert("网络异常");
+            }
+        }
+    };
+}
+
+// 下单信息
+export function setOrder(clientid, items, hospital, couponid, callback){
+    let obj = {
+        clientid: clientid,
+        items: items,
+        hospital: hospital,
+        couponid: couponid
+    };
+    const str = JSON.stringify(obj);
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://121.199.32.139:8081/OrderPlace/PlaceOrder/CheckOrder', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(str);
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4) {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                callback(xhr.response);  // 由于直接接收0、1字符串，无需解析
+            }
+            else {
+                alert("网络异常");
+            }
+        }
+    };
+}
+
+// 手术室预约情况查看
+export function getRoomInfo(hospitalname, callback){
+    let obj = {
+        hospitalname: hospitalname
+    };
+    const str = JSON.stringify(obj);
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://121.199.32.139:8081/ORSchedule/QueryO_RSchedule/QueryO_RSchedule', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(str);
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4) {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                let response = JSON.parse(xhr.response);
                 callback(response);
             }
             else {
