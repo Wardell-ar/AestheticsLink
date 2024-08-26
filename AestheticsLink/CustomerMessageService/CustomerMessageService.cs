@@ -62,15 +62,35 @@ namespace CustomerMessageService
             {
                 CusId = customer.CUS_ID,
                 Name = customer.NAME,
-                PhoneNum = customer.PHONE_NUM,
-                FoundDate = customer.FOUND_DATE,
-                Birthday = customer.BIRTHDAY,
+                Year = customer.BIRTHDAY.Year.ToString(),      // 年
+                Month = customer.BIRTHDAY.Month.ToString(),    // 月
+                Day = customer.BIRTHDAY.Day.ToString(),        // 日
                 Gender = customer.GENDER,
-                Balance = customer.BALANCE,
                 VIPLevel = customer.VIPLEVEL,
-                Coupons = coupons,
-                Operations = operations
+                Password = customer.PASSWORD
             };
         }
+
+        public async Task<int> UpdateCustomerPasswordAsync(string cusId, string newPassword)
+        {
+            // 查询顾客
+            var customer = await DbContext.db.Queryable<CUSTOMER>()
+                                           .Where(c => c.CUS_ID == cusId)
+                                           .FirstAsync();
+
+            if (customer == null)
+            {
+                return 0; // 修改失败，顾客不存在
+            }
+
+            // 更新密码
+            customer.PASSWORD = newPassword;
+
+            // 保存修改
+            var updateResult = await DbContext.db.Updateable(customer).ExecuteCommandAsync();
+
+            return updateResult > 0 ? 1 : 0; // 修改成功返回 1，失败返回 0
+        }
+
     }
 }

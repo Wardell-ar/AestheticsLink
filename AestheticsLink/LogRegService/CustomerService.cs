@@ -22,13 +22,6 @@ namespace LogRegService
                                         .Where(c => c.PHONE_NUM == login.uid && c.PASSWORD == login.psw)
                                         .FirstAsync();
 
-                // 检测当天是否是客户的生日
-                if (customer.BIRTHDAY.Date == DateTime.Now.Date)
-                {
-                    // 生日匹配，返回客户信息并告知今天是他们的生日
-                    customer.NAME += "，祝你生日快乐！";
-                }
-
                 return customer;
             }
             catch (Exception ex)

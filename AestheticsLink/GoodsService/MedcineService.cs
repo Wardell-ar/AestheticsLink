@@ -8,15 +8,132 @@ using MedcineService.Dto;
 using Microsoft.Extensions.Hosting;
 using System.Threading;
 using Microsoft.Extensions.DependencyInjection;
-
+using SqlSugar;
 
 namespace MedcineService
 {
     public interface IMedicineService
     {
-        Task<int> CheckStorageAndReplenish(string HOS_ID, string G_ID);
-        Task DiscardExpiredMedicines();
+        Task<int> GetStorageByName(string HOS_ID, string NAME);  // 根据药品名称查询库存
+        Task AutoReplenishStorage();  // 自动补货
+        Task DiscardExpiredMedicines();  // 丢弃过期药品
+        Task<IEnumerable<MedicineInfoDto>> GetMedicineInfo(CheckStorageDto dto); // 根据传入的字段查询药品信息
     }
+
+    public class MedicineService : IMedicineService
+    {
+        // 根据药品名称查询库存
+        public async Task<int> GetStorageByName(string hosId, string name)
+        {
+            var inventory = await DbContext.db.Queryable<INVENTORY, GOODS>((i, g) => new object[]
+                {
+                JoinType.Inner, i.G_ID == g.G_ID
+                })
+                .Where((i, g) => i.HOS_ID == hosId && g.NAME == name)
+                .Select((i, g) => i.STORAGE)
+                .FirstAsync();
+
+            return inventory;
+        }
+
+        // 自动补货
+        public async Task AutoReplenishStorage()
+        {
+            // 查询库存小于10的药品
+            var lowStockInventories = await DbContext.db.Queryable<INVENTORY, GOODS>((i, g) => new object[]
+                {
+                JoinType.Inner, i.G_ID == g.G_ID
+                })
+                .Where((i, g) => i.STORAGE < 10)
+                .Select((i, g) => new { i, g.PRICE })
+                .ToListAsync();
+
+            foreach (var item in lowStockInventories)
+            {
+                var inventory = item.i;
+
+                var replenishAmount = 100;
+                inventory.STORAGE += replenishAmount;
+                var replenishCost = item.PRICE * replenishAmount;
+
+                await DbContext.db.Updateable(inventory).ExecuteCommandAsync();
+                await RecordHospitalOutcome(inventory.HOS_ID, replenishCost);
+            }
+        }
+
+        // 丢弃过期药品
+        public async Task DiscardExpiredMedicines()
+        {
+            var today = DateTime.Today;
+            var expiredInventories = await DbContext.db.Queryable<INVENTORY>()
+                                                       .Where(i => i.SELL_BY_DATE < today)
+                                                       .ToListAsync();
+
+            foreach (var inventory in expiredInventories)
+            {
+                // 从数据库中删除该药品记录，确保外键约束
+                await DbContext.db.Deleteable<INVENTORY>().Where(i => i.G_ID == inventory.G_ID && i.HOS_ID == inventory.HOS_ID).ExecuteCommandAsync();
+            }
+        }
+
+        // 记录医院支出
+        private async Task RecordHospitalOutcome(string hosId, decimal amount)
+        {
+            var currentMonth = DateTime.Now.ToString("yyyy-MM");
+            var bill = await DbContext.db.Queryable<HOSPITALBILL>()
+                                          .Where(b => b.HOS_ID == hosId && b.FOUND_DATE.ToString("yyyy-MM") == currentMonth)
+                                          .FirstAsync();
+
+            if (bill != null)
+            {
+                bill.OUTCOME += amount;
+                await DbContext.db.Updateable(bill).ExecuteCommandAsync();
+            }
+            else
+            {
+                bill = new HOSPITALBILL
+                {
+                    HOS_ID = hosId,
+                    FOUND_DATE = DateTime.Now,
+                    OUTCOME = amount,
+                    INCOME = 0 // 如果需要初始化收入
+                };
+                await DbContext.db.Insertable(bill).ExecuteCommandAsync();
+            }
+        }
+
+        // 根据传入的字段查询药品信息
+        // 根据传入的字段查询药品信息
+        // 根据传入的字段查询药品信息
+        public async Task<IEnumerable<MedicineInfoDto>> GetMedicineInfo(CheckStorageDto dto)
+        {
+            var query = DbContext.db.Queryable<INVENTORY, GOODS>((i, g) => new object[]
+            {
+            JoinType.Inner, i.G_ID == g.G_ID
+            })
+            .WhereIF(dto.hos_id == "null" && dto.name == "null", (i, g) => true)
+            .WhereIF(dto.hos_id != "null" && dto.name == "null", (i, g) => i.HOS_ID == dto.hos_id)
+            .WhereIF(dto.name != "null" && dto.hos_id == "null", (i, g) => g.NAME == dto.name)
+            .WhereIF(dto.hos_id != "null" && dto.name != "null", (i, g) => i.HOS_ID == dto.hos_id && g.NAME == dto.name);
+
+            var result = await query.Select((i, g) => new MedicineInfoDto
+            {
+                g_id = g.G_ID,
+                hos_id = i.HOS_ID,
+                name = g.NAME,
+                storage = i.STORAGE,
+                producer = g.PRODUCER,
+                sell_by_date = i.SELL_BY_DATE,
+                price = g.PRICE
+            }).ToListAsync();
+
+            // 如果查询结果为空列表，返回null
+            return result.Any() ? result : null;
+        }
+
+    }
+
+    // 创建一个后台服务来定期检查和丢弃过期药品
     public class ExpiredMedicineCheckerService : BackgroundService
     {
         private readonly IServiceScopeFactory _serviceScopeFactory;
@@ -40,82 +157,6 @@ namespace MedcineService
 
                 // 等待24小时后再次执行任务
                 await Task.Delay(TimeSpan.FromHours(24), stoppingToken);
-            }
-        }
-    }
-
-
-    public class MedicineService : IMedicineService
-    {
-        public async Task<int> CheckStorageAndReplenish(string hosId, string gId)
-        {
-
-            var inventory = await DbContext.db.Queryable<INVENTORY>()
-                                               .Where(i => i.HOS_ID == hosId && i.G_ID == gId)
-                                               .FirstAsync();
-
-            if (inventory != null)
-            {
-                // 如果库存小于10，自动补货
-                if (inventory.STORAGE < 10)
-                {
-                    var good = await DbContext.db.Queryable<GOODS>()
-                                                  .Where(g => g.G_ID == gId)
-                                                  .FirstAsync();
-
-                    if (good != null)
-                    {
-                        var replenishAmount = 10 - inventory.STORAGE;
-                        inventory.STORAGE += replenishAmount;
-                        var replenishCost = good.PRICE * replenishAmount;
-
-                        await DbContext.db.Updateable(inventory).ExecuteCommandAsync();
-                        await RecordHospitalOutcome(hosId, replenishCost);
-                    }
-                }
-
-                return inventory.STORAGE;
-            }
-
-            return 0; // 若库存不存在，返回 0
-        }
-
-        public async Task DiscardExpiredMedicines()
-        {
-            var today = DateTime.Today;
-            var expiredInventories = await DbContext.db.Queryable<INVENTORY>()
-                                                       .Where(i => i.SELL_BY_DATE < today)
-                                                       .ToListAsync();
-
-            foreach (var inventory in expiredInventories)
-            {
-                inventory.STORAGE = 0;
-                await DbContext.db.Updateable(inventory).ExecuteCommandAsync();
-            }
-        }
-
-        private async Task RecordHospitalOutcome(string hosId, decimal amount)
-        {
-            var currentMonth = DateTime.Now.ToString("yyyy-MM");
-            var bill = await DbContext.db.Queryable<HOSPITALBILL>()
-                                          .Where(b => b.HOS_ID == hosId && b.FOUND_DATE.ToString("yyyy-MM") == currentMonth)
-                                          .FirstAsync();
-
-            if (bill != null)
-            {
-                bill.OUTCOME += amount;
-                await DbContext.db.Updateable(bill).ExecuteCommandAsync();
-            }
-            else
-            {
-                bill = new HOSPITALBILL
-                {
-                    HOS_ID = hosId,
-                    FOUND_DATE = DateTime.Now,
-                    OUTCOME = amount,
-                    INCOME = 0 // 如果需要初始化收入
-                };
-                await DbContext.db.Insertable(bill).ExecuteCommandAsync();
             }
         }
     }

@@ -17,15 +17,50 @@ namespace WebAPI.Controllers
             _operationService = operationService;
         }
 
-        [HttpGet("{projId}")]
-        public async Task<IActionResult> GetOperationDetails(string projId)
+        [HttpPost("GetOperationDetails")]
+        public async Task<IActionResult> GetOperationDetails([FromBody] SurgeryProjectRequest request)
         {
-            var result = await _operationService.GetSurgeryProjectDetailsAsync(projId);
-            if (result == null)
+            try
             {
-                return NotFound();
+                var result = await _operationService.GetSurgeryProjectDetailsAsync(request.cusId);
+                if (result == null || !result.Any())
+                {
+                    return Ok("0"); // 修改为返回 "0"
+                }
+                return Ok(result); // 返回 JSON 数据
             }
-            return Ok(result);
+            catch (Exception ex)
+            {
+                // 捕获并记录异常
+                Console.WriteLine($"Error in GetOperationDetails: {ex.Message}");
+                return StatusCode(500, "An error occurred while processing your request.");
+            }
         }
+
+        [HttpPost("GetProjectInfo")]
+        public async Task<IActionResult> GetProjectInfo([FromBody] ProjectInfoRequest request)
+        {
+            try
+            {
+                var result = await _operationService.GetProjectInfoAsync(request);
+                if (result == null || !result.Any())
+                {
+                    return Ok("0"); // 修改为返回 "0"
+                }
+                return Ok(result); // 返回 JSON 数据
+            }
+            catch (Exception ex)
+            {
+                // 捕获并记录异常
+                Console.WriteLine($"Error in GetProjectInfo: {ex.Message}");
+                return StatusCode(500, "An error occurred while processing your request.");
+            }
+        }
+    }
+
+    // DTO 类定义
+    public class SurgeryProjectRequest
+    {
+        public string cusId { get; set; }
     }
 }

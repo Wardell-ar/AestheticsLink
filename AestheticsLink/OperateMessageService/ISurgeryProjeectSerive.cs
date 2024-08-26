@@ -5,6 +5,8 @@ namespace SurgeryProjectService
 {
     public interface ISurgeryProjectService
     {
-        Task<SurgeryProjectDto> GetSurgeryProjectDetailsAsync(string projId);
+        Task<List<SurgeryProjectDto>> GetSurgeryProjectDetailsAsync(string cusId);
+
+        Task<List<ProjectDto>> GetProjectInfoAsync(ProjectInfoRequest dto);
     }
 }

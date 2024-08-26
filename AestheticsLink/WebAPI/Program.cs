@@ -19,6 +19,8 @@ using RechargeService;
 using MedcineService;
 using CustomerMessageService;
 using SurgeryProjectService;
+using Microsoft.Extensions.DependencyInjection;  // 服务注入相关
+using Microsoft.Extensions.Hosting;  // 背景服务相关
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,7 +51,9 @@ builder.Services.AddTransient<IRechargeService, RechargeServices>();
 builder.Services.AddQuartzServices();
 //添加药品查询
 builder.Services.AddScoped<IMedicineService, MedicineService>();
-// 添加自动检查过期药品ExpiredMedicineCheckerService 后台服务
+// 注册 MedicineService 服务
+builder.Services.AddScoped<IMedicineService, MedicineService>();
+//自动丢弃过期药品
 builder.Services.AddHostedService<ExpiredMedicineCheckerService>();
 //查询顾客信息，优惠券，手术
 builder.Services.AddScoped<ICustomerMessageService, CustomerMessageService.CustomerMessageService>();

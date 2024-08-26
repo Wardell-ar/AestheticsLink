@@ -10,5 +10,6 @@ namespace CustomerMessageService
     public interface ICustomerMessageService
     {
         Task<CustomerDto> GetCustomerInfoAsync(string cusId);
+        Task<int> UpdateCustomerPasswordAsync(string cusId, string newPassword);
     }
 }
