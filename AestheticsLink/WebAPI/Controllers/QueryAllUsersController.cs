@@ -256,7 +256,7 @@ namespace WebAPI.Controllers
                     else
                     {
                         DbContext.db.Ado.RollbackTran();
-                        return BadRequest("查无此医院");
+                        return BadRequest("查无此医院!");
                     }
                 }
                 if (!string.IsNullOrEmpty(updateServersDto.dep_name))
@@ -272,12 +272,114 @@ namespace WebAPI.Controllers
                     else
                     {
                         DbContext.db.Ado.RollbackTran();
-                        return BadRequest("查无此部门");
+                        return BadRequest("查无此部门!");
                     }
                 }
                 // 更新SERVER表中的记录
                 await DbContext.db.Updateable(existingServer)
                     .ExecuteCommandAsync();
+
+                DbContext.db.Ado.CommitTran();
+                return Ok("1");
+            }
+            catch (Exception ex)
+            {
+                //事物回滚
+                DbContext.db.Ado.RollbackTran();
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPost("CreateServer")]
+        public async Task<IActionResult> CreateServer([FromBody] CreateServerDto createServerDto)
+        {
+            _logger.LogInformation("Received CreateServer request!");
+            try
+            {
+                DbContext.db.Ado.BeginTran();
+
+                // 检查是否有重复的 SER_ID
+                var existingServer = await DbContext.db.Queryable<SERVER>()
+                    .Where(s => s.SER_ID == createServerDto.ser_id)
+                    .FirstAsync();
+
+                if (existingServer != null)
+                {
+                    DbContext.db.Ado.RollbackTran();
+                    return BadRequest("员工ID已存在，无法创建新员工。");
+                }
+
+                // 获取 HOS_ID
+                var hosId = await DbContext.db.Queryable<HOSPITAL>()
+                    .Where(h => h.NAME == createServerDto.hos_name)
+                    .Select(h => h.HOS_ID)
+                    .FirstAsync();
+
+                if (hosId == null)
+                {
+                    // 如果没有找到医院，回滚事务并返回错误
+                    DbContext.db.Ado.RollbackTran();
+                    return StatusCode(400, "查无此医院，无法创建新员工。");
+                }
+
+                // 获取 DEP_ID
+                var depId = await DbContext.db.Queryable<DEPARTMENT>()
+                    .Where(d => d.NAME == createServerDto.dep_name)
+                    .Select(d => d.DEP_ID)
+                    .FirstAsync();
+
+                if (depId == null)
+                {
+                    // 如果没有找到部门，回滚事务并返回错误
+                    DbContext.db.Ado.RollbackTran();
+                    return StatusCode(400, "查无此部门，无法创建新员工。");
+                }
+
+                // 检查医院是否有此部门
+                var isDepartmentInHospital = await DbContext.db.Queryable<HOS_DEP>()
+                    .Where(hd => hd.H_ID == hosId && hd.D_ID == depId)
+                    .AnyAsync();
+
+                if (!isDepartmentInHospital)
+                {
+                    DbContext.db.Ado.RollbackTran();
+                    return BadRequest("在指定医院中未找到指定部门，无法创建新员工。");
+                }
+
+                // 验证work_time_id是否正确
+                var workTimeExists = await DbContext.db.Queryable<WORK_TIME>()
+                    .Where(w => w.WORK_TIME_ID == createServerDto.work_time_id)
+                    .AnyAsync();
+
+                if (!workTimeExists)
+                {
+                    DbContext.db.Ado.RollbackTran();
+                    return BadRequest("无效的工作时间ID，无法创建新员工。");
+                }
+
+
+
+                // 添加新员工、设置默认值
+                var newServer = new SERVER
+                {
+                    SER_ID = createServerDto.ser_id,
+                    JOINED_DATE = createServerDto.joined_date,
+                    NAME = createServerDto.name,
+                    PASSWORD = createServerDto.ser_id, // 默认密码为 SER_ID
+                    POSITION = createServerDto.position,
+                    PHONE_NUM = createServerDto.phone_num,
+                    BASICSALARY = createServerDto.salary,
+                    TAKEHOMEPAY = createServerDto.salary, // TAKEHOMEPAY 默认等于 BASICSALARY
+                    HOS_ID = hosId,
+                    DEP_ID = depId,
+                    BIRTHDAY = createServerDto.birthday,
+                    WORK_TIME_ID = createServerDto.work_time_id,
+                    IS_WORK_TODAY = 0, // 默认值为 0
+                    GENDER = createServerDto.gender
+                };
+
+                // 插入新员工记录
+                await DbContext.db.Insertable(newServer).ExecuteCommandAsync();
 
                 DbContext.db.Ado.CommitTran();
                 return Ok("1");
