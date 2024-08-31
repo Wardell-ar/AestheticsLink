@@ -21,6 +21,7 @@ namespace LogRegService
                 var customer = await DbContext.db.Queryable<CUSTOMER>()
                                         .Where(c => c.PHONE_NUM == login.uid && c.PASSWORD == login.psw)
                                         .FirstAsync();
+
                 return customer;
             }
             catch (Exception ex)

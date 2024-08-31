@@ -16,6 +16,6 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LogRegService
-build_property.ProjectDir = D:\C#_Project\AestheticsLink\LogRegService\
+build_property.ProjectDir = D:\C#_Project\new\AestheticsLink\LogRegService\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

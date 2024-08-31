@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#_Project\\AestheticsLink\\WebCommon\\WebCommon.csproj": {}
+    "D:\\C#_Project\\new\\AestheticsLink\\WebCommon\\WebCommon.csproj": {}
   },
   "projects": {
-    "D:\\C#_Project\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
+    "D:\\C#_Project\\new\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#_Project\\AestheticsLink\\WebCommon\\WebCommon.csproj",
+        "projectUniqueName": "D:\\C#_Project\\new\\AestheticsLink\\WebCommon\\WebCommon.csproj",
         "projectName": "WebCommon",
-        "projectPath": "D:\\C#_Project\\AestheticsLink\\WebCommon\\WebCommon.csproj",
+        "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\WebCommon\\WebCommon.csproj",
         "packagesPath": "C:\\Users\\Xyy\\.nuget\\packages\\",
-        "outputPath": "D:\\C#_Project\\AestheticsLink\\WebCommon\\obj\\",
+        "outputPath": "D:\\C#_Project\\new\\AestheticsLink\\WebCommon\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Xyy\\AppData\\Roaming\\NuGet\\NuGet.Config",

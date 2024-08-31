@@ -8,8 +8,11 @@
     ".NETCoreApp,Version=v6.0": {
       "WebAPI/1.0.0": {
         "dependencies": {
+          "CustomerMessageService": "1.0.0",
           "FinancialService": "1.0.0",
+          "HosAndDepService": "1.0.0",
           "LogRegService": "1.0.0",
+          "MedcineService": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.32",
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "Microsoft.Extensions.Logging.Log4Net.AspNetCore": "8.0.0",
@@ -22,6 +25,7 @@
           "RechargeService": "1.0.0",
           "ServerInformation": "1.0.0",
           "ServerSigninService": "1.0.0",
+          "SurgeryProjectService": "1.0.0",
           "Swashbuckle.AspNetCore": "6.6.2",
           "UpdateAt0amService": "1.0.0",
           "log4net": "2.0.17"
@@ -1960,6 +1964,16 @@
           }
         }
       },
+      "CustomerMessageService/1.0.0": {
+        "dependencies": {
+          "Oracle.ManagedDataAccess.Core": "23.5.0",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "runtime": {
+          "CustomerMessageService.dll": {}
+        }
+      },
       "FinancialService/1.0.0": {
         "dependencies": {
           "Quartz": "3.11.0",
@@ -1970,6 +1984,15 @@
           "FinancialService.dll": {}
         }
       },
+      "HosAndDepService/1.0.0": {
+        "dependencies": {
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "runtime": {
+          "HosAndDepService.dll": {}
+        }
+      },
       "LogRegService/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.32",
@@ -1978,6 +2001,16 @@
         },
         "runtime": {
           "LogRegService.dll": {}
+        }
+      },
+      "MedcineService/1.0.0": {
+        "dependencies": {
+          "Oracle.ManagedDataAccess.Core": "23.5.0",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "runtime": {
+          "MedcineService.dll": {}
         }
       },
       "OperateService/1.0.0": {
@@ -2059,6 +2092,15 @@
         },
         "runtime": {
           "ServerSigninService.dll": {}
+        }
+      },
+      "SurgeryProjectService/1.0.0": {
+        "dependencies": {
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "runtime": {
+          "SurgeryProjectService.dll": {}
         }
       },
       "UpdateAt0amService/1.0.0": {
@@ -3261,12 +3303,27 @@
       "path": "xlparser/1.5.2",
       "hashPath": "xlparser.1.5.2.nupkg.sha512"
     },
+    "CustomerMessageService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "FinancialService/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
+    "HosAndDepService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "LogRegService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MedcineService/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -3307,6 +3364,11 @@
       "sha512": ""
     },
     "ServerSigninService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SurgeryProjectService/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

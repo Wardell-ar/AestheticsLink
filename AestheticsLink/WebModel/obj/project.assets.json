@@ -11745,11 +11745,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#_Project\\AestheticsLink\\WebModel\\WebModel.csproj",
+      "projectUniqueName": "D:\\C#_Project\\new\\AestheticsLink\\WebModel\\WebModel.csproj",
       "projectName": "WebModel",
-      "projectPath": "D:\\C#_Project\\AestheticsLink\\WebModel\\WebModel.csproj",
+      "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\WebModel\\WebModel.csproj",
       "packagesPath": "C:\\Users\\Xyy\\.nuget\\packages\\",
-      "outputPath": "D:\\C#_Project\\AestheticsLink\\WebModel\\obj\\",
+      "outputPath": "D:\\C#_Project\\new\\AestheticsLink\\WebModel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Xyy\\AppData\\Roaming\\NuGet\\NuGet.Config",

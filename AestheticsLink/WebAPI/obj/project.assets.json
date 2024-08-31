@@ -3138,6 +3138,21 @@
           "lib/netstandard1.6/XLParser.dll": {}
         }
       },
+      "CustomerMessageService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Oracle.ManagedDataAccess.Core": "23.5.0",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CustomerMessageService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CustomerMessageService.dll": {}
+        }
+      },
       "FinancialService/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3153,6 +3168,20 @@
           "bin/placeholder/FinancialService.dll": {}
         }
       },
+      "HosAndDepService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/HosAndDepService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HosAndDepService.dll": {}
+        }
+      },
       "LogRegService/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3166,6 +3195,21 @@
         },
         "runtime": {
           "bin/placeholder/LogRegService.dll": {}
+        }
+      },
+      "MedcineService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Oracle.ManagedDataAccess.Core": "23.5.0",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MedcineService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MedcineService.dll": {}
         }
       },
       "OperateService/1.0.0": {
@@ -3287,6 +3331,20 @@
         },
         "runtime": {
           "bin/placeholder/ServerSigninService.dll": {}
+        }
+      },
+      "SurgeryProjectService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SurgeryProjectService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SurgeryProjectService.dll": {}
         }
       },
       "UpdateAt0amService/1.0.0": {
@@ -10329,15 +10387,30 @@
         "xlparser.nuspec"
       ]
     },
+    "CustomerMessageService/1.0.0": {
+      "type": "project",
+      "path": "../CustomerMessageService/CustomerMessageService.csproj",
+      "msbuildProject": "../CustomerMessageService/CustomerMessageService.csproj"
+    },
     "FinancialService/1.0.0": {
       "type": "project",
       "path": "../FinancialService/FinancialService.csproj",
       "msbuildProject": "../FinancialService/FinancialService.csproj"
     },
+    "HosAndDepService/1.0.0": {
+      "type": "project",
+      "path": "../HosAndDepService/HosAndDepService.csproj",
+      "msbuildProject": "../HosAndDepService/HosAndDepService.csproj"
+    },
     "LogRegService/1.0.0": {
       "type": "project",
       "path": "../LogRegService/LogRegService.csproj",
       "msbuildProject": "../LogRegService/LogRegService.csproj"
+    },
+    "MedcineService/1.0.0": {
+      "type": "project",
+      "path": "../GoodsService/MedcineService.csproj",
+      "msbuildProject": "../GoodsService/MedcineService.csproj"
     },
     "OperateService/1.0.0": {
       "type": "project",
@@ -10379,6 +10452,11 @@
       "path": "../ServerSigninService/ServerSigninService.csproj",
       "msbuildProject": "../ServerSigninService/ServerSigninService.csproj"
     },
+    "SurgeryProjectService/1.0.0": {
+      "type": "project",
+      "path": "../OperateMessageService/SurgeryProjectService.csproj",
+      "msbuildProject": "../OperateMessageService/SurgeryProjectService.csproj"
+    },
     "UpdateAt0amService/1.0.0": {
       "type": "project",
       "path": "../UpdateAt0amService/UpdateAt0amService.csproj",
@@ -10397,8 +10475,11 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "CustomerMessageService >= 1.0.0",
       "FinancialService >= 1.0.0",
+      "HosAndDepService >= 1.0.0",
       "LogRegService >= 1.0.0",
+      "MedcineService >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.32",
       "Microsoft.Extensions.DependencyInjection >= 8.0.0",
       "Microsoft.Extensions.Logging.Log4Net.AspNetCore >= 8.0.0",
@@ -10411,6 +10492,7 @@
       "RechargeService >= 1.0.0",
       "ServerInformation >= 1.0.0",
       "ServerSigninService >= 1.0.0",
+      "SurgeryProjectService >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.6.2",
       "UpdateAt0amService >= 1.0.0",
       "log4net >= 2.0.17"
@@ -10422,11 +10504,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#_Project\\AestheticsLink\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "D:\\C#_Project\\new\\AestheticsLink\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "D:\\C#_Project\\AestheticsLink\\WebAPI\\WebAPI.csproj",
+      "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\Xyy\\.nuget\\packages\\",
-      "outputPath": "D:\\C#_Project\\AestheticsLink\\WebAPI\\obj\\",
+      "outputPath": "D:\\C#_Project\\new\\AestheticsLink\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Xyy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10443,38 +10525,50 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\C#_Project\\AestheticsLink\\FinancialService\\FinancialService.csproj": {
-              "projectPath": "D:\\C#_Project\\AestheticsLink\\FinancialService\\FinancialService.csproj"
+            "D:\\C#_Project\\new\\AestheticsLink\\CustomerMessageService\\CustomerMessageService.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\CustomerMessageService\\CustomerMessageService.csproj"
             },
-            "D:\\C#_Project\\AestheticsLink\\LogRegService\\LogRegService.csproj": {
-              "projectPath": "D:\\C#_Project\\AestheticsLink\\LogRegService\\LogRegService.csproj"
+            "D:\\C#_Project\\new\\AestheticsLink\\FinancialService\\FinancialService.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\FinancialService\\FinancialService.csproj"
             },
-            "D:\\C#_Project\\AestheticsLink\\OperateService\\OperateService.csproj": {
-              "projectPath": "D:\\C#_Project\\AestheticsLink\\OperateService\\OperateService.csproj"
+            "D:\\C#_Project\\new\\AestheticsLink\\GoodsService\\MedcineService.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\GoodsService\\MedcineService.csproj"
             },
-            "D:\\C#_Project\\AestheticsLink\\OrderService\\OrderService.csproj": {
-              "projectPath": "D:\\C#_Project\\AestheticsLink\\OrderService\\OrderService.csproj"
+            "D:\\C#_Project\\new\\AestheticsLink\\HosAndDepService\\HosAndDepService.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\HosAndDepService\\HosAndDepService.csproj"
             },
-            "D:\\C#_Project\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj": {
-              "projectPath": "D:\\C#_Project\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj"
+            "D:\\C#_Project\\new\\AestheticsLink\\LogRegService\\LogRegService.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\LogRegService\\LogRegService.csproj"
             },
-            "D:\\C#_Project\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj": {
-              "projectPath": "D:\\C#_Project\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj"
+            "D:\\C#_Project\\new\\AestheticsLink\\OperateMessageService\\SurgeryProjectService.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\OperateMessageService\\SurgeryProjectService.csproj"
             },
-            "D:\\C#_Project\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj": {
-              "projectPath": "D:\\C#_Project\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj"
+            "D:\\C#_Project\\new\\AestheticsLink\\OperateService\\OperateService.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\OperateService\\OperateService.csproj"
             },
-            "D:\\C#_Project\\AestheticsLink\\RechargeService\\RechargeService.csproj": {
-              "projectPath": "D:\\C#_Project\\AestheticsLink\\RechargeService\\RechargeService.csproj"
+            "D:\\C#_Project\\new\\AestheticsLink\\OrderService\\OrderService.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\OrderService\\OrderService.csproj"
             },
-            "D:\\C#_Project\\AestheticsLink\\ServerInformation\\ServerInformation.csproj": {
-              "projectPath": "D:\\C#_Project\\AestheticsLink\\ServerInformation\\ServerInformation.csproj"
+            "D:\\C#_Project\\new\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj"
             },
-            "D:\\C#_Project\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj": {
-              "projectPath": "D:\\C#_Project\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj"
+            "D:\\C#_Project\\new\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj"
             },
-            "D:\\C#_Project\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj": {
-              "projectPath": "D:\\C#_Project\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj"
+            "D:\\C#_Project\\new\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj"
+            },
+            "D:\\C#_Project\\new\\AestheticsLink\\RechargeService\\RechargeService.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\RechargeService\\RechargeService.csproj"
+            },
+            "D:\\C#_Project\\new\\AestheticsLink\\ServerInformation\\ServerInformation.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\ServerInformation\\ServerInformation.csproj"
+            },
+            "D:\\C#_Project\\new\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj"
+            },
+            "D:\\C#_Project\\new\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj"
             }
           }
         }

@@ -9896,11 +9896,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#_Project\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj",
+      "projectUniqueName": "D:\\C#_Project\\new\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj",
       "projectName": "QueryAllUsersService",
-      "projectPath": "D:\\C#_Project\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj",
+      "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj",
       "packagesPath": "C:\\Users\\Xyy\\.nuget\\packages\\",
-      "outputPath": "D:\\C#_Project\\AestheticsLink\\QueryAllUsersService\\obj\\",
+      "outputPath": "D:\\C#_Project\\new\\AestheticsLink\\QueryAllUsersService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Xyy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9917,11 +9917,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\C#_Project\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
-              "projectPath": "D:\\C#_Project\\AestheticsLink\\WebCommon\\WebCommon.csproj"
+            "D:\\C#_Project\\new\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\WebCommon\\WebCommon.csproj"
             },
-            "D:\\C#_Project\\AestheticsLink\\WebModel\\WebModel.csproj": {
-              "projectPath": "D:\\C#_Project\\AestheticsLink\\WebModel\\WebModel.csproj"
+            "D:\\C#_Project\\new\\AestheticsLink\\WebModel\\WebModel.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\WebModel\\WebModel.csproj"
             }
           }
         }

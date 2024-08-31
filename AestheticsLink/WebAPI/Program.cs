@@ -16,6 +16,13 @@ using ORScheduleService;
 using OperateService;
 using OrderService;
 using RechargeService;
+using MedcineService;
+using CustomerMessageService;
+using SurgeryProjectService;
+using Microsoft.Extensions.DependencyInjection;  // 服务注入相关
+using Microsoft.Extensions.Hosting;  // 背景服务相关
+using QueryAllUsersService.QueryAllServers;
+using HosAndDepService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,25 +32,41 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-//日志
+// 日志
 builder.Logging.AddLog4Net("LogFile/log4net.Config");
-//注册LogAndReg服务
+// 注册LogAndReg服务
 builder.Services.AddTransient<ICustomerService, CustomerService>();
 builder.Services.AddTransient<IServerService, ServerService>();
-//注册签到服务
+// 注册签到服务
 builder.Services.AddTransient<ISigninService, SigninService>();
-//注册员工信息请求服务
+// 注册员工信息请求服务
 builder.Services.AddScoped<IServerInfoService, ServerInfoService>();
-//注册查询所有客户服务
+// 注册查询所有客户服务
 builder.Services.AddScoped<IQueryAllCustomersService, QueryAllCustomersService>();
-//注册手术室排版表服务
+// 注册手术室排版表服务
 builder.Services.AddScoped<IO_RScheduleService, O_RScheduleService>();
-//注册下单服务
+// 注册下单服务
 builder.Services.AddTransient<IOrderService, OrdersService>();
-//注册充值服务
+// 注册充值服务
 builder.Services.AddTransient<IRechargeService, RechargeServices>();
 // 添加Quartz.NET服务
 builder.Services.AddQuartzServices();
+// 添加药品查询
+builder.Services.AddScoped<IMedicineService, MedicineService>();
+// 注册 MedicineService 服务
+builder.Services.AddScoped<IMedicineService, MedicineService>();
+// 自动丢弃过期药品
+builder.Services.AddHostedService<ExpiredMedicineCheckerService>();
+// 查询顾客信息，优惠券，手术
+builder.Services.AddScoped<ICustomerMessageService, CustomerMessageService.CustomerMessageService>();
+// 手术信息查询
+builder.Services.AddScoped<ISurgeryProjectService, SurgeryProjectService.SurgeryProjectService>();
+// 注册查询所有员工服务
+builder.Services.AddScoped<IQueryAllServersService, QueryAllServersService>();
+// 注册查询所有分院和部门服务
+builder.Services.AddScoped<IHosAndDepInfoService, HosAndDepInfoService>();
+
+
 //添加跨域策略
 builder.Services.AddCors(options =>
 {

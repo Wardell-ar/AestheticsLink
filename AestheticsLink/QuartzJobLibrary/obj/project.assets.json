@@ -9865,11 +9865,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#_Project\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj",
+      "projectUniqueName": "D:\\C#_Project\\new\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj",
       "projectName": "QuartzJobLibrary",
-      "projectPath": "D:\\C#_Project\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj",
+      "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj",
       "packagesPath": "C:\\Users\\Xyy\\.nuget\\packages\\",
-      "outputPath": "D:\\C#_Project\\AestheticsLink\\QuartzJobLibrary\\obj\\",
+      "outputPath": "D:\\C#_Project\\new\\AestheticsLink\\QuartzJobLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Xyy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9886,14 +9886,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\C#_Project\\AestheticsLink\\FinancialService\\FinancialService.csproj": {
-              "projectPath": "D:\\C#_Project\\AestheticsLink\\FinancialService\\FinancialService.csproj"
+            "D:\\C#_Project\\new\\AestheticsLink\\FinancialService\\FinancialService.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\FinancialService\\FinancialService.csproj"
             },
-            "D:\\C#_Project\\AestheticsLink\\OperateService\\OperateService.csproj": {
-              "projectPath": "D:\\C#_Project\\AestheticsLink\\OperateService\\OperateService.csproj"
+            "D:\\C#_Project\\new\\AestheticsLink\\OperateService\\OperateService.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\OperateService\\OperateService.csproj"
             },
-            "D:\\C#_Project\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj": {
-              "projectPath": "D:\\C#_Project\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj"
+            "D:\\C#_Project\\new\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k3XZwyHvSpuCelC5Llj54tWEWeLH+jlLD5jVICYUWX4dH+1YSEUlz3Qy21t6hfoUZ4xv053U7H7Rh+sm3sfNcg==",
+  "dgSpecHash": "RpbCK0jiK/nH4D1ZH08sdzb3DfycAZJXDCDfVNWLNFcDHGgjz1AqQ+PzebzhWpAkuiJ8aLgso81FMTCVZau1Fw==",
   "success": true,
-  "projectFilePath": "D:\\C#_Project\\AestheticsLink\\LogRegService\\LogRegService.csproj",
+  "projectFilePath": "D:\\C#_Project\\new\\AestheticsLink\\LogRegService\\LogRegService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Xyy\\.nuget\\packages\\closedxml\\0.102.2\\closedxml.0.102.2.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\documentformat.openxml\\2.16.0\\documentformat.openxml.2.16.0.nupkg.sha512",
