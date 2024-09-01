@@ -23,6 +23,8 @@ using Microsoft.Extensions.DependencyInjection;  // 服务注入相关
 using Microsoft.Extensions.Hosting;  // 背景服务相关
 using QueryAllUsersService.QueryAllServers;
 using HosAndDepService;
+using ProjectChange;
+using RebookOperateService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -65,6 +67,10 @@ builder.Services.AddScoped<ISurgeryProjectService, SurgeryProjectService.Surgery
 builder.Services.AddScoped<IQueryAllServersService, QueryAllServersService>();
 // 注册查询所有分院和部门服务
 builder.Services.AddScoped<IHosAndDepInfoService, HosAndDepInfoService>();
+//注册项目修改服务
+builder.Services.AddTransient<IProjectService, ProjectService>();
+//注册推迟手术服务
+builder.Services.AddTransient<IRebookService, RebookService>();
 
 
 //添加跨域策略

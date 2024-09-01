@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using System.Threading;
+using DocumentFormat.OpenXml.Presentation;
 
 
 namespace CustomerMessageService
@@ -90,6 +91,39 @@ namespace CustomerMessageService
             var updateResult = await DbContext.db.Updateable(customer).ExecuteCommandAsync();
 
             return updateResult > 0 ? 1 : 0; // 修改成功返回 1，失败返回 0
+        }
+
+
+
+        public async Task<VipDto> GetCustomerVipInfoAsync(string cusId)
+        {
+            // 查询顾客基本信息
+            var customer = await DbContext.db.Queryable<CUSTOMER>()
+                                           .Where(c => c.CUS_ID == cusId)
+                                           .FirstAsync();
+
+            if (customer == null)
+            {
+                return null;
+            }
+
+            // 查询顾客的VIP等级和对应的折扣
+            var vipInfo = await DbContext.db.Queryable<CUSTOMER, MEMBER>((cu, m) => new object[] {
+                                                 JoinType.Inner, cu.VIPLEVEL == m.VIPLEVEL })
+                                            .Where(cu => cu.CUS_ID == cusId)
+                                            .Select((cu, m) => new
+                                            {
+                                                VIPLevel = cu.VIPLEVEL,
+                                                Discount = m.DISCOUNT  // 获取对应的折扣
+                                            })
+                                            .FirstAsync();
+
+            // 构造返回的 DTO
+            return new VipDto
+            {
+                vipLevel = vipInfo.VIPLevel,
+                discount = vipInfo.Discount
+            };
         }
 
     }

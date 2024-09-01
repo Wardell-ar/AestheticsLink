@@ -23,6 +23,8 @@ namespace SurgeryProjectService.Dto
         public string duration { get; set; }   // 手术持续时间
         public string room { get; set; }
         public string status { get; set; }
+
+        public string billid { get; set; }
     }
 
     public class ProjectDto

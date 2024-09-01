@@ -126,6 +126,7 @@ namespace OrderService
                         timeID = availableTimes[i].OP_TIME_ID,
                     });
                     //找到在可用时间可用的医生
+                    string hosID = DbContext.db.Ado.SqlQuerySingle<string>("SELECT HOS_ID FROM HOSPITAL WHERE NAME = :name", new { name = order.hospital });
                     var availableDoctors = DbContext.db.Ado.SqlQuery<SERVER>(
                         "SELECT SER_ID " +
                           "FROM SERVER " +
@@ -133,13 +134,14 @@ namespace OrderService
                               "SELECT SER_ID " +
                               "FROM OPERATE " +
                               "NATURAL JOIN OPERATE_TIME " +
-                              "WHERE STATUS = :status AND START_TIME = :time AND DAY = :day AND NAME = :name) ",
+                              "WHERE STATUS = :status AND START_TIME = :time AND DAY = :day ) " +
+                              "AND HOS_ID = :hos",
                         new
                         {
                             status = "1",
                             time = availableTimes[i].START_TIME,
                             day = availableTimes[i].DAY,
-                            name = order.hospital,
+                            hos = hosID,
                         });
                     operate.SER_ID = availableDoctors[i].SER_ID;
                     i++;
@@ -162,7 +164,6 @@ namespace OrderService
             }
 
         }
-
         private BILL TransBillDto(PlaceOrderDto order)
         {
             var bill = new BILL();
@@ -203,7 +204,6 @@ namespace OrderService
             return bill;
 
         }
-
         private string GetMaxBillId()
         {
             string sql = "SELECT MAX(TO_NUMBER(BILL_ID)) FROM BILL"; // 替换YourTableName为实际的表名

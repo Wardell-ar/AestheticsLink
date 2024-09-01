@@ -557,8 +557,10 @@ D:\C#_Project\new\AestheticsLink\WebAPI\publish\MedcineService.dll
 D:\C#_Project\new\AestheticsLink\WebAPI\publish\OperateService.dll
 D:\C#_Project\new\AestheticsLink\WebAPI\publish\OrderService.dll
 D:\C#_Project\new\AestheticsLink\WebAPI\publish\ORScheduleService.dll
+D:\C#_Project\new\AestheticsLink\WebAPI\publish\ProjectChange.dll
 D:\C#_Project\new\AestheticsLink\WebAPI\publish\QuartzJobLibrary.dll
 D:\C#_Project\new\AestheticsLink\WebAPI\publish\QueryAllUsersService.dll
+D:\C#_Project\new\AestheticsLink\WebAPI\publish\RebookOperateService.dll
 D:\C#_Project\new\AestheticsLink\WebAPI\publish\RechargeService.dll
 D:\C#_Project\new\AestheticsLink\WebAPI\publish\ServerInformation.dll
 D:\C#_Project\new\AestheticsLink\WebAPI\publish\ServerSigninService.dll
@@ -575,8 +577,10 @@ D:\C#_Project\new\AestheticsLink\WebAPI\publish\SurgeryProjectService.pdb
 D:\C#_Project\new\AestheticsLink\WebAPI\publish\OperateService.pdb
 D:\C#_Project\new\AestheticsLink\WebAPI\publish\OrderService.pdb
 D:\C#_Project\new\AestheticsLink\WebAPI\publish\ORScheduleService.pdb
+D:\C#_Project\new\AestheticsLink\WebAPI\publish\ProjectChange.pdb
 D:\C#_Project\new\AestheticsLink\WebAPI\publish\QuartzJobLibrary.pdb
 D:\C#_Project\new\AestheticsLink\WebAPI\publish\QueryAllUsersService.pdb
+D:\C#_Project\new\AestheticsLink\WebAPI\publish\RebookOperateService.pdb
 D:\C#_Project\new\AestheticsLink\WebAPI\publish\RechargeService.pdb
 D:\C#_Project\new\AestheticsLink\WebAPI\publish\ServerInformation.pdb
 D:\C#_Project\new\AestheticsLink\WebAPI\publish\ServerSigninService.pdb

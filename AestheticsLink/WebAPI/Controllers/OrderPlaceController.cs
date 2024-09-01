@@ -1,4 +1,5 @@
 ﻿using DocumentFormat.OpenXml.Drawing.Spreadsheet;
+using DocumentFormat.OpenXml.Spreadsheet;
 using Microsoft.AspNetCore.Mvc;
 using OperateService.Dto;
 using OrderService;
@@ -47,12 +48,20 @@ namespace WebAPI.Controllers
                             couID = order.COU_ID,
                         });
                     }
+                    //会员打折
+                    var viplevel = DbContext.db.Ado.SqlQuerySingle<MEMBER>(
+                    "SELECT * FROM CUSTOMER NATURAL JOIN MEMBER WHERE CUS_ID = :id ",
+                    new
+                    {
+                        id = placeOrderDto.clientid,
+                    });
+                    decimal pay = order.PAID_AMOUNT * viplevel.DISCOUNT;
                     //减去付款金额
                     DbContext.db.Ado.ExecuteCommand(
                         "UPDATE CUSTOMER SET BALANCE = BALANCE - :balance WHERE CUS_ID = :cusID",
                         new
                         {
-                            balance = order.PAID_AMOUNT,
+                            balance = pay,
                             cusID = order.CUS_ID,
                         });
                     //事物提交

@@ -3257,6 +3257,20 @@
           "bin/placeholder/ORScheduleService.dll": {}
         }
       },
+      "ProjectChange/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProjectChange.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProjectChange.dll": {}
+        }
+      },
       "QuartzJobLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3287,6 +3301,21 @@
         },
         "runtime": {
           "bin/placeholder/QueryAllUsersService.dll": {}
+        }
+      },
+      "RebookOperateService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "OperateService": "1.0.0",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RebookOperateService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RebookOperateService.dll": {}
         }
       },
       "RechargeService/1.0.0": {
@@ -10427,6 +10456,11 @@
       "path": "../ORScheduleService/ORScheduleService.csproj",
       "msbuildProject": "../ORScheduleService/ORScheduleService.csproj"
     },
+    "ProjectChange/1.0.0": {
+      "type": "project",
+      "path": "../ProjectChange/ProjectChange.csproj",
+      "msbuildProject": "../ProjectChange/ProjectChange.csproj"
+    },
     "QuartzJobLibrary/1.0.0": {
       "type": "project",
       "path": "../QuartzJobLibrary/QuartzJobLibrary.csproj",
@@ -10436,6 +10470,11 @@
       "type": "project",
       "path": "../QueryAllUsersService/QueryAllUsersService.csproj",
       "msbuildProject": "../QueryAllUsersService/QueryAllUsersService.csproj"
+    },
+    "RebookOperateService/1.0.0": {
+      "type": "project",
+      "path": "../RebookOperateService/RebookOperateService.csproj",
+      "msbuildProject": "../RebookOperateService/RebookOperateService.csproj"
     },
     "RechargeService/1.0.0": {
       "type": "project",
@@ -10487,8 +10526,10 @@
       "ORScheduleService >= 1.0.0",
       "OperateService >= 1.0.0",
       "OrderService >= 1.0.0",
+      "ProjectChange >= 1.0.0",
       "QuartzJobLibrary >= 1.0.0",
       "QueryAllUsersService >= 1.0.0",
+      "RebookOperateService >= 1.0.0",
       "RechargeService >= 1.0.0",
       "ServerInformation >= 1.0.0",
       "ServerSigninService >= 1.0.0",
@@ -10552,11 +10593,17 @@
             "D:\\C#_Project\\new\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj": {
               "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj"
             },
+            "D:\\C#_Project\\new\\AestheticsLink\\ProjectChange\\ProjectChange.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\ProjectChange\\ProjectChange.csproj"
+            },
             "D:\\C#_Project\\new\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj": {
               "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj"
             },
             "D:\\C#_Project\\new\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj": {
               "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj"
+            },
+            "D:\\C#_Project\\new\\AestheticsLink\\RebookOperateService\\RebookOperateService.csproj": {
+              "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\RebookOperateService\\RebookOperateService.csproj"
             },
             "D:\\C#_Project\\new\\AestheticsLink\\RechargeService\\RechargeService.csproj": {
               "projectPath": "D:\\C#_Project\\new\\AestheticsLink\\RechargeService\\RechargeService.csproj"

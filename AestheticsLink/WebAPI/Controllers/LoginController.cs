@@ -83,12 +83,6 @@ namespace WebAPI.Controllers
             }
         }
 
-        [Authorize]
-        [HttpGet]
-        public bool Get()
-        {
-            return true;
-        }
     }
     public class LoginResponse
     {

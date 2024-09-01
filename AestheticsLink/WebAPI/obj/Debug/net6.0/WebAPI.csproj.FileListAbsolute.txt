@@ -1214,3 +1214,7 @@ D:\C#_Project\new\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\appsettings.Dev
 D:\C#_Project\new\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\appsettings.json
 D:\C#_Project\new\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\WebAPI.deps.json
 D:\C#_Project\new\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\WebAPI.runtimeconfig.json
+D:\C#_Project\new\AestheticsLink\WebAPI\bin\Debug\net6.0\ProjectChange.dll
+D:\C#_Project\new\AestheticsLink\WebAPI\bin\Debug\net6.0\RebookOperateService.dll
+D:\C#_Project\new\AestheticsLink\WebAPI\bin\Debug\net6.0\ProjectChange.pdb
+D:\C#_Project\new\AestheticsLink\WebAPI\bin\Debug\net6.0\RebookOperateService.pdb

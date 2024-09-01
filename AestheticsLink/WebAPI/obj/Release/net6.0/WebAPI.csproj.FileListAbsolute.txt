@@ -604,3 +604,7 @@ D:\C#_Project\new\AestheticsLink\WebAPI\obj\Release\net6.0\refint\WebAPI.dll
 D:\C#_Project\new\AestheticsLink\WebAPI\obj\Release\net6.0\WebAPI.pdb
 D:\C#_Project\new\AestheticsLink\WebAPI\obj\Release\net6.0\WebAPI.genruntimeconfig.cache
 D:\C#_Project\new\AestheticsLink\WebAPI\obj\Release\net6.0\ref\WebAPI.dll
+D:\C#_Project\new\AestheticsLink\WebAPI\bin\Release\net6.0\ProjectChange.dll
+D:\C#_Project\new\AestheticsLink\WebAPI\bin\Release\net6.0\RebookOperateService.dll
+D:\C#_Project\new\AestheticsLink\WebAPI\bin\Release\net6.0\ProjectChange.pdb
+D:\C#_Project\new\AestheticsLink\WebAPI\bin\Release\net6.0\RebookOperateService.pdb

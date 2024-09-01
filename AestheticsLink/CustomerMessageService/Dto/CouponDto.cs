@@ -12,4 +12,12 @@ namespace CustomerMessageService.Dto
         public string Type { get; set; }
         public decimal Price { get; set; }
     }
+
+    public class VipDto
+    {
+        public string vipLevel { get; set; }
+
+        public decimal discount { get; set; }
+    }
+
 }

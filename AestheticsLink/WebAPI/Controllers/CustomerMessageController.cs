@@ -59,6 +59,27 @@ namespace WebAPI.Controllers
                 return StatusCode(500, "An error occurred while processing your request.");
             }
         }
+
+        // 新增的 GetCustomerVipInfo 接口
+        [HttpPost("getVipInfo")]
+        public async Task<IActionResult> GetCustomerVipInfo([FromBody] CustomerInfoRequest request)
+        {
+            try
+            {
+                var vipInfo = await _customerMessageService.GetCustomerVipInfoAsync(request.CusId);
+                if (vipInfo == null)
+                {
+                    return NotFound();
+                }
+                return Ok(vipInfo); // 返回 JSON 格式的数据
+            }
+            catch (Exception ex)
+            {
+                // 捕获并记录异常
+                Console.WriteLine($"Error in GetCustomerVipInfo: {ex.Message}");
+                return StatusCode(500, "An error occurred while processing your request.");
+            }
+        }
     }
 
     // DTO 类定义
