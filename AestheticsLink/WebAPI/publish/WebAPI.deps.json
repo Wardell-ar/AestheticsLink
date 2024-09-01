@@ -16,7 +16,9 @@
           "ORScheduleService": "1.0.0",
           "OperateService": "1.0.0",
           "OrderService": "1.0.0",
+          "ProjectChange": "1.0.0",
           "QueryAllUsersService": "1.0.0",
+          "RebookOperateService": "1.0.0",
           "RechargeService": "1.0.0",
           "ServerInformation": "1.0.0",
           "ServerSigninService": "1.0.0",
@@ -2009,6 +2011,15 @@
           "ORScheduleService.dll": {}
         }
       },
+      "ProjectChange/1.0.0": {
+        "dependencies": {
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "runtime": {
+          "ProjectChange.dll": {}
+        }
+      },
       "QueryAllUsersService/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.32",
@@ -2017,6 +2028,14 @@
         },
         "runtime": {
           "QueryAllUsersService.dll": {}
+        }
+      },
+      "RebookOperateService/1.0.0": {
+        "dependencies": {
+          "OrderService": "1.0.0"
+        },
+        "runtime": {
+          "RebookOperateService.dll": {}
         }
       },
       "RechargeService/1.0.0": {
@@ -3273,7 +3292,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "ProjectChange/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "QueryAllUsersService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RebookOperateService/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

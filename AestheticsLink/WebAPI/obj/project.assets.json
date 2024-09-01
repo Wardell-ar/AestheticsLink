@@ -3214,6 +3214,20 @@
           "bin/placeholder/ORScheduleService.dll": {}
         }
       },
+      "ProjectChange/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProjectChange.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProjectChange.dll": {}
+        }
+      },
       "QueryAllUsersService/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3227,6 +3241,19 @@
         },
         "runtime": {
           "bin/placeholder/QueryAllUsersService.dll": {}
+        }
+      },
+      "RebookOperateService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "OrderService": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RebookOperateService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RebookOperateService.dll": {}
         }
       },
       "RechargeService/1.0.0": {
@@ -10331,10 +10358,20 @@
       "path": "../ORScheduleService/ORScheduleService.csproj",
       "msbuildProject": "../ORScheduleService/ORScheduleService.csproj"
     },
+    "ProjectChange/1.0.0": {
+      "type": "project",
+      "path": "../ProjectChange/ProjectChange.csproj",
+      "msbuildProject": "../ProjectChange/ProjectChange.csproj"
+    },
     "QueryAllUsersService/1.0.0": {
       "type": "project",
       "path": "../QueryAllUsersService/QueryAllUsersService.csproj",
       "msbuildProject": "../QueryAllUsersService/QueryAllUsersService.csproj"
+    },
+    "RebookOperateService/1.0.0": {
+      "type": "project",
+      "path": "../RebookOperateService/RebookOperateService.csproj",
+      "msbuildProject": "../RebookOperateService/RebookOperateService.csproj"
     },
     "RechargeService/1.0.0": {
       "type": "project",
@@ -10377,7 +10414,9 @@
       "ORScheduleService >= 1.0.0",
       "OperateService >= 1.0.0",
       "OrderService >= 1.0.0",
+      "ProjectChange >= 1.0.0",
       "QueryAllUsersService >= 1.0.0",
+      "RebookOperateService >= 1.0.0",
       "RechargeService >= 1.0.0",
       "ServerInformation >= 1.0.0",
       "ServerSigninService >= 1.0.0",
@@ -10392,11 +10431,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "D:\\database\\AestheticsLink\\AestheticsLink\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebAPI\\WebAPI.csproj",
+      "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\彭之芯\\.nuget\\packages\\",
-      "outputPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebAPI\\obj\\",
+      "outputPath": "D:\\database\\AestheticsLink\\AestheticsLink\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\彭之芯\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10413,35 +10452,41 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\FinancialService\\FinancialService.csproj": {
-              "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\FinancialService\\FinancialService.csproj"
+            "D:\\database\\AestheticsLink\\AestheticsLink\\FinancialService\\FinancialService.csproj": {
+              "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\FinancialService\\FinancialService.csproj"
             },
-            "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\LogRegService\\LogRegService.csproj": {
-              "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\LogRegService\\LogRegService.csproj"
+            "D:\\database\\AestheticsLink\\AestheticsLink\\LogRegService\\LogRegService.csproj": {
+              "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\LogRegService\\LogRegService.csproj"
             },
-            "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\OperateService\\OperateService.csproj": {
-              "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\OperateService\\OperateService.csproj"
+            "D:\\database\\AestheticsLink\\AestheticsLink\\OperateService\\OperateService.csproj": {
+              "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\OperateService\\OperateService.csproj"
             },
-            "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\OrderService\\OrderService.csproj": {
-              "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\OrderService\\OrderService.csproj"
+            "D:\\database\\AestheticsLink\\AestheticsLink\\OrderService\\OrderService.csproj": {
+              "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\OrderService\\OrderService.csproj"
             },
-            "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj": {
-              "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj"
+            "D:\\database\\AestheticsLink\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj": {
+              "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj"
             },
-            "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj": {
-              "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj"
+            "D:\\database\\AestheticsLink\\AestheticsLink\\ProjectChange\\ProjectChange.csproj": {
+              "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\ProjectChange\\ProjectChange.csproj"
             },
-            "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\RechargeService\\RechargeService.csproj": {
-              "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\RechargeService\\RechargeService.csproj"
+            "D:\\database\\AestheticsLink\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj": {
+              "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj"
             },
-            "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\ServerInformation\\ServerInformation.csproj": {
-              "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\ServerInformation\\ServerInformation.csproj"
+            "D:\\database\\AestheticsLink\\AestheticsLink\\RebookOperateService\\RebookOperateService.csproj": {
+              "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\RebookOperateService\\RebookOperateService.csproj"
             },
-            "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj": {
-              "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj"
+            "D:\\database\\AestheticsLink\\AestheticsLink\\RechargeService\\RechargeService.csproj": {
+              "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\RechargeService\\RechargeService.csproj"
             },
-            "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj": {
-              "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj"
+            "D:\\database\\AestheticsLink\\AestheticsLink\\ServerInformation\\ServerInformation.csproj": {
+              "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\ServerInformation\\ServerInformation.csproj"
+            },
+            "D:\\database\\AestheticsLink\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj": {
+              "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj"
+            },
+            "D:\\database\\AestheticsLink\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj": {
+              "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj"
             }
           }
         }
@@ -10450,6 +10495,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -10488,6 +10538,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.31, 6.0.31]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.31, 6.0.31]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.31, 6.0.31]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.31, 6.0.31]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -10496,7 +10564,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

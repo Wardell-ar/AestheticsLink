@@ -1,0 +1,23 @@
+2024-08-30 16:26:55,520 [24] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-08-30 16:33:41,074 [21] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-08-30 16:47:07,039 [24] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-08-30 16:54:56,832 [22] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-08-30 19:17:04,487 [3] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-08-30 19:35:41,173 [19] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-08-30 19:38:22,590 [13] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-08-30 19:40:28,394 [5] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-08-30 19:41:32,274 [17] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+System.Exception: 订单创建失败
+   at OrderService.OrdersService.AddBill(PlaceOrderDto order) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 163
+   at WebAPI.Controllers.OrderPlaceController.PlaceOrder(PlaceOrderDto placeOrderDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 38
+2024-08-30 19:41:58,049 [5] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+System.Exception: 订单创建失败
+   at OrderService.OrdersService.AddBill(PlaceOrderDto order) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 163
+   at WebAPI.Controllers.OrderPlaceController.PlaceOrder(PlaceOrderDto placeOrderDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 38
+2024-08-30 19:42:55,001 [17] ERROR [WebAPI.Controllers.LoginController] (null) - An unexpected error occurred while processing the order request: UID=1
+System.Exception: 订单创建失败
+   at OrderService.OrdersService.AddBill(PlaceOrderDto order) in D:\database\AestheticsLink\AestheticsLink\OrderService\OrderService.cs:line 163
+   at WebAPI.Controllers.OrderPlaceController.PlaceOrder(PlaceOrderDto placeOrderDto) in D:\database\AestheticsLink\AestheticsLink\WebAPI\Controllers\OrderPlaceController.cs:line 38
+2024-08-30 19:50:34,246 [16] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-08-30 19:55:34,858 [25] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.
+2024-08-30 20:15:35,320 [21] WARN  [Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware] (null) - Failed to determine the https port for redirect.

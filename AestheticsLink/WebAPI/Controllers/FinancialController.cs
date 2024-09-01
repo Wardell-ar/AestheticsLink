@@ -19,6 +19,9 @@ namespace WebAPI.Controllers
         {
             try
             {
+                //事物开始
+                DbContext.db.Ado.BeginTran();
+
                 // 将月份和年份合并成一个字符串
                 string monthYear = financial.month + "-" + financial.year;
                 // 使用 DateTime.ParseExact 方法进行转换
@@ -34,15 +37,21 @@ namespace WebAPI.Controllers
                     });
                 if (result == null)
                 {
+                    //事物回滚
+                    DbContext.db.Ado.RollbackTran();
                     return Ok(new FinancialReturnDto {income = -1,payout = -1});
                 }
                 else
                 {
+                    //事物提交
+                    DbContext.db.Ado.CommitTran();
                     return Ok(result);
                 }
             }
             catch (Exception ex) 
             {
+                //事物回滚
+                DbContext.db.Ado.RollbackTran();
                 return BadRequest(ex.Message);
             }
         }
