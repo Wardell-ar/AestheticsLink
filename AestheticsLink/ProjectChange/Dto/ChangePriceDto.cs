@@ -8,7 +8,7 @@ namespace ProjectChange.Dto
 {
     public class ChangePriceDto
     {
-        public string PROJ_ID { get; set; }
-        public string PRICE { get; set; }
+        public string proj_id { get; set; }
+        public string price { get; set; }
     }
 }

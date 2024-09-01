@@ -66,8 +66,8 @@ namespace ProjectChange
                     "UPDATE PROJECT SET PRICE =:newPrice WHERE PROJ_ID =:projID",
                     new
                     {
-                        newPrice = price.PRICE,
-                        projID = price.PROJ_ID,
+                        newPrice = price.price,
+                        projID = price.proj_id,
                     });
                 return true;
             }
