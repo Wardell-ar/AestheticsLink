@@ -58,7 +58,7 @@ namespace ProjectChange
 
             return result;
         }
-        public bool ChangePrice(ChangePriceDto price)
+    public bool ChangePrice(ChangePriceDto price)
         {
             try
             {
@@ -71,7 +71,7 @@ namespace ProjectChange
                     });
                 return true;
             }
-            catch
+            catch 
             {
                 return false;
             }
@@ -81,13 +81,13 @@ namespace ProjectChange
         {
             try
             {
-                foreach (string id in remove.ids)
-                    DbContext.db.Ado.ExecuteCommand(
-                        "DELETE FROM PROJECT WHERE PROJ_ID =:projID",
-                         new
-                         {
-                             cusID = id,
-                         });
+                foreach(string id in remove.ids)
+                DbContext.db.Ado.ExecuteCommand(
+                    "DELETE FROM PROJECT WHERE PROJ_ID =:projID",
+                     new
+                     {
+                         projID = id,
+                     });
                 return true;
             }
             catch

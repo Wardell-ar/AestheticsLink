@@ -27,12 +27,18 @@ namespace WebAPI.Controllers
             {
                 //事物开始
                 DbContext.db.Ado.BeginTran();
-                _projectService.AddProject(project);
-                DbContext.db.Ado.CommitTran();
-                return Ok("1");
-
+                if (_projectService.AddProject(project))
+                {
+                    DbContext.db.Ado.CommitTran();
+                    return Ok("1");
+                }
+                else
+                {
+                    DbContext.db.Ado.RollbackTran();
+                    return Ok("0");
+                }
             }
-            catch
+            catch 
             {
                 DbContext.db.Ado.RollbackTran();
                 return Ok("0");
@@ -44,9 +50,16 @@ namespace WebAPI.Controllers
             try
             {
                 DbContext.db.Ado.BeginTran();
-                _projectService.RemoveProject(project);
-                DbContext.db.Ado.CommitTran();
-                return Ok("1");
+                if (_projectService.RemoveProject(project))
+                {
+                    DbContext.db.Ado.CommitTran();
+                    return Ok("1");
+                }
+                else
+                {
+                    DbContext.db.Ado.RollbackTran();
+                    return Ok("0");
+                }
 
             }
             catch
@@ -61,10 +74,16 @@ namespace WebAPI.Controllers
             try
             {
                 DbContext.db.Ado.BeginTran();
-                _projectService.ChangePrice(project);
-                DbContext.db.Ado.CommitTran();
-                return Ok("1");
-
+                if (_projectService.ChangePrice(project))
+                {
+                    DbContext.db.Ado.CommitTran();
+                    return Ok("1");
+                }
+                else
+                {
+                    DbContext.db.Ado.RollbackTran();
+                    return Ok("0");
+                }
             }
             catch
             {

@@ -8,7 +8,7 @@ namespace ProjectChange.Dto
 {
     public class RemoveReturnDto
     {
-        public string proj_id { get; set; }
+        public string proj_id {  get; set; }
         public string name { get; set; }
         public string price { get; set; }
         public string found_date { get; set; }
