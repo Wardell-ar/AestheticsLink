@@ -80,6 +80,27 @@ namespace WebAPI.Controllers
                 return StatusCode(500, "An error occurred while processing your request.");
             }
         }
+
+        // 新增的 GetCustomerCouponInfo 接口
+        [HttpPost("getCouponInfo")]
+        public async Task<IActionResult> GetCustomerCouponInfo([FromBody] CustomerInfoRequest request)
+        {
+            try
+            {
+                var couponInfo = await _customerMessageService.GetCustomerCouponInfoAsync(request.CusId);
+                if (couponInfo == null || couponInfo.Count == 0)
+                {
+                    return NotFound();
+                }
+                return Ok(couponInfo); // 返回 JSON 格式的数据
+            }
+            catch (Exception ex)
+            {
+                // 捕获并记录异常
+                Console.WriteLine($"Error in GetCustomerCouponInfo: {ex.Message}");
+                return StatusCode(500, "An error occurred while processing your request.");
+            }
+        }
     }
 
     // DTO 类定义

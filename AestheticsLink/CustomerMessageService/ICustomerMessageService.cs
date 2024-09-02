@@ -11,7 +11,7 @@ namespace CustomerMessageService
     {
         Task<CustomerDto> GetCustomerInfoAsync(string cusId);
         Task<int> UpdateCustomerPasswordAsync(string cusId, string newPassword);
-
         Task<VipDto> GetCustomerVipInfoAsync(string cusId);
+        Task<List<CouponDto>> GetCustomerCouponInfoAsync(string cusId);
     }
 }
