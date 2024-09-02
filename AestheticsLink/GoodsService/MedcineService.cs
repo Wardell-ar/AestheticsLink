@@ -15,7 +15,7 @@ namespace MedcineService
     public interface IMedicineService
     {
         Task<int> GetStorageByName(string HOS_ID, string NAME);  // 根据药品名称查询库存
-        Task AutoReplenishStorage();  // 自动补货
+        Task<char> AutoReplenishStorage();
         Task DiscardExpiredMedicines();  // 丢弃过期药品
         Task<IEnumerable<MedicineInfoDto>> GetMedicineInfo(CheckStorageDto dto); // 根据传入的字段查询药品信息
     }
@@ -37,27 +37,40 @@ namespace MedcineService
         }
 
         // 自动补货
-        public async Task AutoReplenishStorage()
+        public async Task<char> AutoReplenishStorage()
         {
-            // 查询库存小于10的药品
-            var lowStockInventories = await DbContext.db.Queryable<INVENTORY, GOODS>((i, g) => new object[]
+            try
+            {
+                // 查询库存小于10的药品
+                var lowStockInventories = await DbContext.db.Queryable<INVENTORY, GOODS>((i, g) => new object[]
                 {
-                JoinType.Inner, i.G_ID == g.G_ID
+            JoinType.Inner, i.G_ID == g.G_ID
                 })
                 .Where((i, g) => i.STORAGE < 10)
                 .Select((i, g) => new { i, g.PRICE })
                 .ToListAsync();
 
-            foreach (var item in lowStockInventories)
+                foreach (var item in lowStockInventories)
+                {
+                    var inventory = item.i;
+
+                    var replenishAmount = 100;
+                    inventory.STORAGE += replenishAmount;
+                    var replenishCost = item.PRICE * replenishAmount;
+
+                    await DbContext.db.Updateable(inventory).ExecuteCommandAsync();
+                    await RecordHospitalOutcome(inventory.HOS_ID, replenishCost);
+                }
+
+                // 如果补货过程完成没有异常，返回 '1'
+                return '1';
+            }
+            catch (Exception ex)
             {
-                var inventory = item.i;
-
-                var replenishAmount = 100;
-                inventory.STORAGE += replenishAmount;
-                var replenishCost = item.PRICE * replenishAmount;
-
-                await DbContext.db.Updateable(inventory).ExecuteCommandAsync();
-                await RecordHospitalOutcome(inventory.HOS_ID, replenishCost);
+                // 捕获并记录异常
+                Console.WriteLine($"Error in AutoReplenishStorage: {ex.Message}");
+                // 如果发生异常，返回 '0'
+                return '0';
             }
         }
 

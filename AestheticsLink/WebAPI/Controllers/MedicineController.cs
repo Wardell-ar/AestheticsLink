@@ -45,21 +45,20 @@ namespace WebAPI.Controllers
             }
         }
 
-        // 自动补货接口，不需要前端传递数据
         [HttpPost("AutoReplenish")]
         public async Task<IActionResult> AutoReplenish()
         {
-            try
+            var result = await _medicineService.AutoReplenishStorage();
+
+            if (result == '1')
             {
-                await _medicineService.AutoReplenishStorage();
-                return Ok(new { Message = "Replenishment completed." });
+                return Ok("1");
             }
-            catch (Exception ex)
+            else
             {
-                // 捕获并记录异常
-                Console.WriteLine($"Error in AutoReplenish: {ex.Message}");
-                return StatusCode(500, "An error occurred while processing your request.");
+                return Ok("0");
             }
         }
+
     }
 }

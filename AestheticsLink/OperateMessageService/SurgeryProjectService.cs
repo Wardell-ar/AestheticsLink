@@ -85,7 +85,8 @@ namespace SurgeryProjectService
                         endTime = operationTime?.END_TIME.ToString("HH:mm:ss"),
                         duration = duration?.ToString(@"hh\:mm\:ss"),
                         room = operationTime?.ROOM_ID,
-                        status = operation.EXE_STATE
+                        status = operation.EXE_STATE,
+                        billid= bill.BILL_ID
                     };
 
                     surgeryProjects.Add(surgeryProjectDto);

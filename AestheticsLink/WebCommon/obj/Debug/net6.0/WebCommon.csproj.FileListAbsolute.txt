@@ -22,3 +22,15 @@ D:\git\AestheticsLink-----\AestheticsLink\WebCommon\obj\Debug\net6.0\WebCommon.d
 D:\git\AestheticsLink-----\AestheticsLink\WebCommon\obj\Debug\net6.0\refint\WebCommon.dll
 D:\git\AestheticsLink-----\AestheticsLink\WebCommon\obj\Debug\net6.0\WebCommon.pdb
 D:\git\AestheticsLink-----\AestheticsLink\WebCommon\obj\Debug\net6.0\ref\WebCommon.dll
+G:\前端\AestheticsLink\AestheticsLink\WebCommon\bin\Debug\net6.0\WebCommon.deps.json
+G:\前端\AestheticsLink\AestheticsLink\WebCommon\bin\Debug\net6.0\WebCommon.dll
+G:\前端\AestheticsLink\AestheticsLink\WebCommon\bin\Debug\net6.0\WebCommon.pdb
+G:\前端\AestheticsLink\AestheticsLink\WebCommon\obj\Debug\net6.0\WebCommon.csproj.AssemblyReference.cache
+G:\前端\AestheticsLink\AestheticsLink\WebCommon\obj\Debug\net6.0\WebCommon.GeneratedMSBuildEditorConfig.editorconfig
+G:\前端\AestheticsLink\AestheticsLink\WebCommon\obj\Debug\net6.0\WebCommon.AssemblyInfoInputs.cache
+G:\前端\AestheticsLink\AestheticsLink\WebCommon\obj\Debug\net6.0\WebCommon.AssemblyInfo.cs
+G:\前端\AestheticsLink\AestheticsLink\WebCommon\obj\Debug\net6.0\WebCommon.csproj.CoreCompileInputs.cache
+G:\前端\AestheticsLink\AestheticsLink\WebCommon\obj\Debug\net6.0\WebCommon.dll
+G:\前端\AestheticsLink\AestheticsLink\WebCommon\obj\Debug\net6.0\refint\WebCommon.dll
+G:\前端\AestheticsLink\AestheticsLink\WebCommon\obj\Debug\net6.0\WebCommon.pdb
+G:\前端\AestheticsLink\AestheticsLink\WebCommon\obj\Debug\net6.0\ref\WebCommon.dll

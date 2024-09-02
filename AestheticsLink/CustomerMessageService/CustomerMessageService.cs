@@ -92,5 +92,79 @@ namespace CustomerMessageService
             return updateResult > 0 ? 1 : 0; // 修改成功返回 1，失败返回 0
         }
 
+
+
+        public async Task<VipDto> GetCustomerVipInfoAsync(string cusId)
+        {
+            // 查询顾客基本信息
+            var customer = await DbContext.db.Queryable<CUSTOMER>()
+                                           .Where(c => c.CUS_ID == cusId)
+                                           .FirstAsync();
+
+            if (customer == null)
+            {
+                return null;
+            }
+
+            // 查询顾客的VIP等级和对应的折扣
+            var vipInfo = await DbContext.db.Queryable<CUSTOMER, MEMBER>((cu, m) => new object[] {
+                                                 JoinType.Inner, cu.VIPLEVEL == m.VIPLEVEL })
+                                            .Where(cu => cu.CUS_ID == cusId)
+                                            .Select((cu, m) => new
+                                            {
+                                                VIPLevel = cu.VIPLEVEL,
+                                                Discount = m.DISCOUNT  // 获取对应的折扣
+                                            })
+                                            .FirstAsync();
+
+            // 构造返回的 DTO
+            return new VipDto
+            {
+                vipLevel = vipInfo.VIPLevel,
+                discount= vipInfo.Discount
+            };
+        }
+
+        public async Task<List<CouponDto>> GetCustomerCouponInfoAsync(string cusId)
+        {
+            // 查询顾客基本信息
+            var customer = await DbContext.db.Queryable<CUSTOMER>()
+                                             .Where(c => c.CUS_ID == cusId)
+                                             .FirstAsync();
+
+            if (customer == null)
+            {
+                return null;
+            }
+
+            // 查询顾客的优惠券
+            var coupons = await DbContext.db.Queryable<COUPON, CUS_COU>((c, cc) => new object[] {
+                                                JoinType.Inner, c.COU_ID == cc.COU_ID })
+                                            .Where((c, cc) => cc.CUS_ID == cusId)
+                                            .Select((c, cc) => new CouponDto
+                                            {
+                                                Name = c.NAME,
+                                                Type = c.TYPE,
+                                                Price = c.PRICE
+                                            })
+                                            .ToListAsync();
+
+            // 获取当前时间并计算当月最后一天
+            DateTime now = DateTime.Now;
+            DateTime lastDayOfMonth = new DateTime(now.Year, now.Month, DateTime.DaysInMonth(now.Year, now.Month));
+
+            // 构造返回的 DTO 列表
+            var couponList = coupons.Select(coupon => new CouponDto
+            {
+                Name = coupon.Name,
+                Type = coupon.Type,
+                Price = coupon.Price,
+                Year = lastDayOfMonth.Year.ToString(),
+                Month = lastDayOfMonth.Month.ToString(),
+                Day = lastDayOfMonth.Day.ToString()
+            }).ToList();
+
+            return couponList; // 返回所有优惠券信息
+        }
     }
 }
