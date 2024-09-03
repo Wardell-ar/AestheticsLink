@@ -7,6 +7,7 @@ namespace WebAPI.Controllers
 {
     [ApiController]
     [Route("[controller]/[Action]")]
+
     public class RechargeController : ControllerBase
     {
         private readonly IRechargeService _rechargeService;
@@ -26,20 +27,20 @@ namespace WebAPI.Controllers
                 {
                     //事物提交
                     DbContext.db.Ado.CommitTran();
-                    return Ok();
+                    return Ok("1");
                 }
                 else
                 {
                     //事物回滚
                     DbContext.db.Ado.RollbackTran();
-                    return BadRequest("顾客信息有误");
+                    return Ok("0");
                 }
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
                 //事物回滚
                 DbContext.db.Ado.RollbackTran();
-                return StatusCode(500, ex.Message);
+                return Ok("0");
             }
         }
     }

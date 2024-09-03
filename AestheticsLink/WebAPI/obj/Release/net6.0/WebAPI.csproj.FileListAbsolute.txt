@@ -608,3 +608,6 @@ D:\C#_Project\new\AestheticsLink\WebAPI\bin\Release\net6.0\ProjectChange.dll
 D:\C#_Project\new\AestheticsLink\WebAPI\bin\Release\net6.0\RebookOperateService.dll
 D:\C#_Project\new\AestheticsLink\WebAPI\bin\Release\net6.0\ProjectChange.pdb
 D:\C#_Project\new\AestheticsLink\WebAPI\bin\Release\net6.0\RebookOperateService.pdb
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\obj\Release\net6.0\WebAPI.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\obj\Release\net6.0\refint\WebAPI.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\obj\Release\net6.0\WebAPI.pdb

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RechargeService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7cc3db4dd6ef1c926cbfd93a9525e70e72c5e2f3")]
 [assembly: System.Reflection.AssemblyProductAttribute("RechargeService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RechargeService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
