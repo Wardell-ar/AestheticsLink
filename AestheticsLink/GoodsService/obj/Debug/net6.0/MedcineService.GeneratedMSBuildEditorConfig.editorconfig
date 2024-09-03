@@ -16,4 +16,4 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MedcineService
-build_property.ProjectDir = D:\C#_Project\new\AestheticsLink\GoodsService\
+build_property.ProjectDir = D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\GoodsService\
