@@ -14,9 +14,15 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream:test/WebService/obj/Debug/net6.0/WebService.AssemblyInfo.cs
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebService")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7cc3db4dd6ef1c926cbfd93a9525e70e72c5e2f3")]
+[assembly: System.Reflection.AssemblyProductAttribute("HosAndDepService")]
+[assembly: System.Reflection.AssemblyTitleAttribute("HosAndDepService")]
+>>>>>>> Stashed changes:AestheticsLink/HosAndDepService/obj/Release/net6.0/HosAndDepService.AssemblyInfo.cs
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // 由 MSBuild WriteCodeFragment 类生成。

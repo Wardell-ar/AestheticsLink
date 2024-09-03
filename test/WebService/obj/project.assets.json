@@ -9746,11 +9746,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream:test/WebService/obj/project.assets.json
       "projectUniqueName": "D:\\database\\test\\test\\WebService\\WebService.csproj",
       "projectName": "WebService",
       "projectPath": "D:\\database\\test\\test\\WebService\\WebService.csproj",
       "packagesPath": "C:\\Users\\彭之芯\\.nuget\\packages\\",
       "outputPath": "D:\\database\\test\\test\\WebService\\obj\\",
+=======
+      "projectUniqueName": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\CustomerMessageService\\CustomerMessageService.csproj",
+      "projectName": "CustomerMessageService",
+      "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\CustomerMessageService\\CustomerMessageService.csproj",
+      "packagesPath": "C:\\Users\\彭之芯\\.nuget\\packages\\",
+      "outputPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\CustomerMessageService\\obj\\",
+>>>>>>> Stashed changes:AestheticsLink/CustomerMessageService/obj/project.assets.json
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\彭之芯\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9767,11 +9775,19 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+<<<<<<< Updated upstream:test/WebService/obj/project.assets.json
             "D:\\database\\test\\test\\WebModel\\WebModel.csproj": {
               "projectPath": "D:\\database\\test\\test\\WebModel\\WebModel.csproj"
             },
             "D:\\database\\test\\test\\WenCommon\\WenCommon.csproj": {
               "projectPath": "D:\\database\\test\\test\\WenCommon\\WenCommon.csproj"
+=======
+            "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
+              "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebCommon\\WebCommon.csproj"
+            },
+            "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebModel\\WebModel.csproj": {
+              "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebModel\\WebModel.csproj"
+>>>>>>> Stashed changes:AestheticsLink/CustomerMessageService/obj/project.assets.json
             }
           }
         }
@@ -9802,12 +9818,33 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+<<<<<<< Updated upstream:test/WebService/obj/project.assets.json
+=======
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.31, 6.0.31]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.31, 6.0.31]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.31, 6.0.31]"
+          }
+        ],
+>>>>>>> Stashed changes:AestheticsLink/CustomerMessageService/obj/project.assets.json
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
+<<<<<<< Updated upstream:test/WebService/obj/project.assets.json
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
+>>>>>>> Stashed changes:AestheticsLink/CustomerMessageService/obj/project.assets.json
       }
     }
   }

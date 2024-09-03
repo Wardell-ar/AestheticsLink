@@ -8,20 +8,38 @@
     ".NETCoreApp,Version=v6.0": {
       "WebAPI/1.0.0": {
         "dependencies": {
+<<<<<<< Updated upstream
           "FinancialService": "1.0.0",
           "LogRegService": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.32",
+=======
+          "CustomerMessageService": "1.0.0",
+          "FinancialService": "1.0.0",
+          "HosAndDepService": "1.0.0",
+          "LogRegService": "1.0.0",
+          "MedcineService": "1.0.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.32",
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+>>>>>>> Stashed changes
           "Microsoft.Extensions.Logging.Log4Net.AspNetCore": "8.0.0",
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "7.6.3",
           "ORScheduleService": "1.0.0",
           "OperateService": "1.0.0",
           "OrderService": "1.0.0",
           "ProjectChange": "1.0.0",
+<<<<<<< Updated upstream
+=======
+          "QuartzJobLibrary": "1.0.0",
+>>>>>>> Stashed changes
           "QueryAllUsersService": "1.0.0",
           "RebookOperateService": "1.0.0",
           "RechargeService": "1.0.0",
           "ServerInformation": "1.0.0",
           "ServerSigninService": "1.0.0",
+<<<<<<< Updated upstream
+=======
+          "SurgeryProjectService": "1.0.0",
+>>>>>>> Stashed changes
           "Swashbuckle.AspNetCore": "6.6.2",
           "UpdateAt0amService": "1.0.0",
           "log4net": "2.0.17"
@@ -460,7 +478,11 @@
           "Microsoft.EntityFrameworkCore.Abstractions": "6.0.32",
           "Microsoft.EntityFrameworkCore.Analyzers": "6.0.32",
           "Microsoft.Extensions.Caching.Memory": "8.0.0",
+<<<<<<< Updated upstream
           "Microsoft.Extensions.DependencyInjection": "6.0.1",
+=======
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+>>>>>>> Stashed changes
           "Microsoft.Extensions.Logging": "6.0.0",
           "System.Collections.Immutable": "8.0.0",
           "System.Diagnostics.DiagnosticSource": "6.0.1"
@@ -524,6 +546,7 @@
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
         }
       },
+<<<<<<< Updated upstream
       "Microsoft.Extensions.DependencyInjection/6.0.1": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
@@ -533,6 +556,16 @@
           "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.1022.47605"
+=======
+      "Microsoft.Extensions.DependencyInjection/8.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+>>>>>>> Stashed changes
           }
         }
       },
@@ -551,7 +584,11 @@
       },
       "Microsoft.Extensions.Logging/6.0.0": {
         "dependencies": {
+<<<<<<< Updated upstream
           "Microsoft.Extensions.DependencyInjection": "6.0.1",
+=======
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+>>>>>>> Stashed changes
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
           "Microsoft.Extensions.Options": "8.0.0",
@@ -1961,6 +1998,19 @@
           }
         }
       },
+<<<<<<< Updated upstream
+=======
+      "CustomerMessageService/1.0.0": {
+        "dependencies": {
+          "Oracle.ManagedDataAccess.Core": "23.5.0",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "runtime": {
+          "CustomerMessageService.dll": {}
+        }
+      },
+>>>>>>> Stashed changes
       "FinancialService/1.0.0": {
         "dependencies": {
           "Quartz": "3.11.0",
@@ -1971,6 +2021,18 @@
           "FinancialService.dll": {}
         }
       },
+<<<<<<< Updated upstream
+=======
+      "HosAndDepService/1.0.0": {
+        "dependencies": {
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "runtime": {
+          "HosAndDepService.dll": {}
+        }
+      },
+>>>>>>> Stashed changes
       "LogRegService/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.32",
@@ -1981,6 +2043,19 @@
           "LogRegService.dll": {}
         }
       },
+<<<<<<< Updated upstream
+=======
+      "MedcineService/1.0.0": {
+        "dependencies": {
+          "Oracle.ManagedDataAccess.Core": "23.5.0",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "runtime": {
+          "MedcineService.dll": {}
+        }
+      },
+>>>>>>> Stashed changes
       "OperateService/1.0.0": {
         "dependencies": {
           "Quartz": "3.11.0",
@@ -2020,6 +2095,21 @@
           "ProjectChange.dll": {}
         }
       },
+<<<<<<< Updated upstream
+=======
+      "QuartzJobLibrary/1.0.0": {
+        "dependencies": {
+          "FinancialService": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "OperateService": "1.0.0",
+          "Quartz": "3.11.0",
+          "UpdateAt0amService": "1.0.0"
+        },
+        "runtime": {
+          "QuartzJobLibrary.dll": {}
+        }
+      },
+>>>>>>> Stashed changes
       "QueryAllUsersService/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.32",
@@ -2032,7 +2122,13 @@
       },
       "RebookOperateService/1.0.0": {
         "dependencies": {
+<<<<<<< Updated upstream
           "OrderService": "1.0.0"
+=======
+          "OperateService": "1.0.0",
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+>>>>>>> Stashed changes
         },
         "runtime": {
           "RebookOperateService.dll": {}
@@ -2067,6 +2163,18 @@
           "ServerSigninService.dll": {}
         }
       },
+<<<<<<< Updated upstream
+=======
+      "SurgeryProjectService/1.0.0": {
+        "dependencies": {
+          "WebCommon": "1.0.0",
+          "WebModel": "1.0.0"
+        },
+        "runtime": {
+          "SurgeryProjectService.dll": {}
+        }
+      },
+>>>>>>> Stashed changes
       "UpdateAt0amService/1.0.0": {
         "dependencies": {
           "Quartz": "3.11.0",
@@ -2308,12 +2416,21 @@
       "path": "microsoft.extensions.configuration.binder/6.0.0",
       "hashPath": "microsoft.extensions.configuration.binder.6.0.0.nupkg.sha512"
     },
+<<<<<<< Updated upstream
     "Microsoft.Extensions.DependencyInjection/6.0.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-vWXPg3HJQIpZkENn1KWq8SfbqVujVD7S7vIAyFXXqK5xkf1Vho+vG0bLBCHxU36lD1cLLtmGpfYf0B3MYFi9tQ==",
       "path": "microsoft.extensions.dependencyinjection/6.0.1",
       "hashPath": "microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512"
+=======
+    "Microsoft.Extensions.DependencyInjection/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-V8S3bsm50ig6JSyrbcJJ8bW2b9QLGouz+G1miK3UTaOWmMtFwNNNzUf4AleyDWUmTrWMLNnFSLEQtxmxgNQnNQ==",
+      "path": "microsoft.extensions.dependencyinjection/8.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512"
+>>>>>>> Stashed changes
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
       "type": "package",
@@ -3267,16 +3384,40 @@
       "path": "xlparser/1.5.2",
       "hashPath": "xlparser.1.5.2.nupkg.sha512"
     },
+<<<<<<< Updated upstream
+=======
+    "CustomerMessageService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+>>>>>>> Stashed changes
     "FinancialService/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
+<<<<<<< Updated upstream
+=======
+    "HosAndDepService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+>>>>>>> Stashed changes
     "LogRegService/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
+<<<<<<< Updated upstream
+=======
+    "MedcineService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+>>>>>>> Stashed changes
     "OperateService/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -3297,6 +3438,14 @@
       "serviceable": false,
       "sha512": ""
     },
+<<<<<<< Updated upstream
+=======
+    "QuartzJobLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+>>>>>>> Stashed changes
     "QueryAllUsersService/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -3322,6 +3471,14 @@
       "serviceable": false,
       "sha512": ""
     },
+<<<<<<< Updated upstream
+=======
+    "SurgeryProjectService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+>>>>>>> Stashed changes
     "UpdateAt0amService/1.0.0": {
       "type": "project",
       "serviceable": false,

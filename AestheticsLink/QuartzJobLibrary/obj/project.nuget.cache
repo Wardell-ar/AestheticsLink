@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "EqxVE3ETRE3FqexiMGhRsDJHnfnrOrg1lscUQ+s8gNkPfSR3qgH4pFa31mAOmODI/haz2rI7nzpKv6Gsi4YoLg==",
   "success": true,
   "projectFilePath": "D:\\database\\AestheticsLink\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj",
+=======
+  "dgSpecHash": "vfiSf5YJZUo=",
+  "success": true,
+  "projectFilePath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj",
+>>>>>>> Stashed changes
   "expectedPackageFiles": [
     "C:\\Users\\彭之芯\\.nuget\\packages\\closedxml\\0.102.2\\closedxml.0.102.2.nupkg.sha512",
     "C:\\Users\\彭之芯\\.nuget\\packages\\documentformat.openxml\\2.16.0\\documentformat.openxml.2.16.0.nupkg.sha512",
@@ -167,7 +173,14 @@
     "C:\\Users\\彭之芯\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\彭之芯\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\彭之芯\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+<<<<<<< Updated upstream
     "C:\\Users\\彭之芯\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512"
+=======
+    "C:\\Users\\彭之芯\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512",
+    "C:\\Users\\彭之芯\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.31\\microsoft.netcore.app.ref.6.0.31.nupkg.sha512",
+    "C:\\Users\\彭之芯\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.31\\microsoft.windowsdesktop.app.ref.6.0.31.nupkg.sha512",
+    "C:\\Users\\彭之芯\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.31\\microsoft.aspnetcore.app.ref.6.0.31.nupkg.sha512"
+>>>>>>> Stashed changes
   ],
   "logs": []
 }

@@ -14,9 +14,15 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebApplication1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream:test/WebApplication1/obj/Debug/net6.0/WebApplication1.AssemblyInfo.cs
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebApplication1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebApplication1")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7cc3db4dd6ef1c926cbfd93a9525e70e72c5e2f3")]
+[assembly: System.Reflection.AssemblyProductAttribute("SurgeryProjectService")]
+[assembly: System.Reflection.AssemblyTitleAttribute("SurgeryProjectService")]
+>>>>>>> Stashed changes:AestheticsLink/OperateMessageService/obj/Release/net6.0/SurgeryProjectService.AssemblyInfo.cs
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // 由 MSBuild WriteCodeFragment 类生成。

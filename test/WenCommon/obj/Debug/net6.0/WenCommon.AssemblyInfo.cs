@@ -14,9 +14,15 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WenCommon")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream:test/WenCommon/obj/Debug/net6.0/WenCommon.AssemblyInfo.cs
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("WenCommon")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WenCommon")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7cc3db4dd6ef1c926cbfd93a9525e70e72c5e2f3")]
+[assembly: System.Reflection.AssemblyProductAttribute("MedcineService")]
+[assembly: System.Reflection.AssemblyTitleAttribute("MedcineService")]
+>>>>>>> Stashed changes:AestheticsLink/GoodsService/obj/Release/net6.0/MedcineService.AssemblyInfo.cs
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // 由 MSBuild WriteCodeFragment 类生成。

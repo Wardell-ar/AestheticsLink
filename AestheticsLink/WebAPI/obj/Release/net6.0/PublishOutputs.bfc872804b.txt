@@ -388,17 +388,23 @@ D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\wwwroot\rezero\default_ui\tutorials.html
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\LogFile\log4net.Config
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\publish\LogFile\log4net.Config
+<<<<<<< Updated upstream
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\publish\publish\LogFile\log4net.Config
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\publish\publish\web.config
+=======
+>>>>>>> Stashed changes
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\publish\web.config
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\appsettings.Development.json
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\appsettings.json
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\publish\appsettings.Development.json
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\publish\appsettings.json
+<<<<<<< Updated upstream
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\publish\publish\appsettings.Development.json
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\publish\publish\appsettings.json
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\publish\publish\WebAPI.deps.json
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\publish\publish\WebAPI.runtimeconfig.json
+=======
+>>>>>>> Stashed changes
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\publish\WebAPI.deps.json
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\publish\WebAPI.runtimeconfig.json
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\WebAPI.dll
@@ -561,6 +567,7 @@ D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+<<<<<<< Updated upstream
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\FinancialService.dll
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\LogRegService.dll
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\OperateService.dll
@@ -579,6 +586,40 @@ D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\OrderService.pdb
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\ORScheduleService.pdb
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\QueryAllUsersService.pdb
+=======
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\CustomerMessageService.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\FinancialService.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\HosAndDepService.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\LogRegService.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\MedcineService.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\OperateService.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\OrderService.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\ORScheduleService.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\ProjectChange.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\QuartzJobLibrary.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\QueryAllUsersService.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\RebookOperateService.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\RechargeService.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\ServerInformation.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\ServerSigninService.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\SurgeryProjectService.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\UpdateAt0amService.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\WebCommon.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\WebModel.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\CustomerMessageService.pdb
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\FinancialService.pdb
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\MedcineService.pdb
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\HosAndDepService.pdb
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\LogRegService.pdb
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\SurgeryProjectService.pdb
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\OperateService.pdb
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\OrderService.pdb
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\ORScheduleService.pdb
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\ProjectChange.pdb
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\QuartzJobLibrary.pdb
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\QueryAllUsersService.pdb
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\RebookOperateService.pdb
+>>>>>>> Stashed changes
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\RechargeService.pdb
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\ServerInformation.pdb
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\publish\ServerSigninService.pdb

@@ -15,5 +15,12 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
+<<<<<<< Updated upstream:test/WenCommon/obj/Debug/net6.0/WenCommon.GeneratedMSBuildEditorConfig.editorconfig
 build_property.RootNamespace = WenCommon
 build_property.ProjectDir = D:\database\test\test\WenCommon\
+=======
+build_property.RootNamespace = SurgeryProjectService
+build_property.ProjectDir = D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\OperateMessageService\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+>>>>>>> Stashed changes:AestheticsLink/OperateMessageService/obj/Release/net6.0/SurgeryProjectService.GeneratedMSBuildEditorConfig.editorconfig

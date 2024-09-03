@@ -2,6 +2,7 @@
   "format": 1,
   "restore": {
 <<<<<<< Updated upstream:test/WenCommon/obj/WenCommon.csproj.nuget.dgspec.json
+<<<<<<< Updated upstream:test/WenCommon/obj/WenCommon.csproj.nuget.dgspec.json
     "D:\\database\\test\\test\\WenCommon\\WenCommon.csproj": {}
   },
   "projects": {
@@ -31,6 +32,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\彭之芯\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\CustomerMessageService\\CustomerMessageService.csproj": {}
+  },
+  "projects": {
+    "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\CustomerMessageService\\CustomerMessageService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\CustomerMessageService\\CustomerMessageService.csproj",
+        "projectName": "CustomerMessageService",
+        "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\CustomerMessageService\\CustomerMessageService.csproj",
+        "packagesPath": "C:\\Users\\彭之芯\\.nuget\\packages\\",
+        "outputPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\CustomerMessageService\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\彭之芯\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes:AestheticsLink/CustomerMessageService/obj/CustomerMessageService.csproj.nuget.dgspec.json
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,11 +61,19 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< Updated upstream:test/WenCommon/obj/WenCommon.csproj.nuget.dgspec.json
               "D:\\database\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
                 "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj"
               },
               "D:\\database\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj": {
                 "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj"
+=======
+              "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
+                "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebCommon\\WebCommon.csproj"
+              },
+              "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebModel\\WebModel.csproj": {
+                "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebModel\\WebModel.csproj"
+>>>>>>> Stashed changes:AestheticsLink/CustomerMessageService/obj/CustomerMessageService.csproj.nuget.dgspec.json
               }
             }
           }
@@ -73,11 +98,29 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+<<<<<<< Updated upstream:test/WenCommon/obj/WenCommon.csproj.nuget.dgspec.json
+=======
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            }
+          ],
+>>>>>>> Stashed changes:AestheticsLink/CustomerMessageService/obj/CustomerMessageService.csproj.nuget.dgspec.json
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
+<<<<<<< Updated upstream:test/WenCommon/obj/WenCommon.csproj.nuget.dgspec.json
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
@@ -94,6 +137,23 @@
         "configFilePaths": [
           "C:\\Users\\彭之芯\\AppData\\Roaming\\NuGet\\NuGet.Config",
 >>>>>>> Stashed changes:AestheticsLink/RechargeService/obj/RechargeService.csproj.nuget.dgspec.json
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebCommon\\WebCommon.csproj",
+        "projectName": "WebCommon",
+        "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebCommon\\WebCommon.csproj",
+        "packagesPath": "C:\\Users\\彭之芯\\.nuget\\packages\\",
+        "outputPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebCommon\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\彭之芯\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes:AestheticsLink/CustomerMessageService/obj/CustomerMessageService.csproj.nuget.dgspec.json
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -113,6 +173,102 @@
           "warnAsError": [
             "NU1605"
           ]
+<<<<<<< Updated upstream:test/WenCommon/obj/WenCommon.csproj.nuget.dgspec.json
+=======
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Caching.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "SqlSugarCore": {
+              "target": "Package",
+              "version": "[5.1.4.162, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebModel\\WebModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebModel\\WebModel.csproj",
+        "projectName": "WebModel",
+        "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebModel\\WebModel.csproj",
+        "packagesPath": "C:\\Users\\彭之芯\\.nuget\\packages\\",
+        "outputPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebModel\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\彭之芯\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+>>>>>>> Stashed changes:AestheticsLink/CustomerMessageService/obj/CustomerMessageService.csproj.nuget.dgspec.json
         }
       },
       "frameworks": {
@@ -143,11 +299,29 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+<<<<<<< Updated upstream:test/WenCommon/obj/WenCommon.csproj.nuget.dgspec.json
+=======
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            }
+          ],
+>>>>>>> Stashed changes:AestheticsLink/CustomerMessageService/obj/CustomerMessageService.csproj.nuget.dgspec.json
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
+<<<<<<< Updated upstream:test/WenCommon/obj/WenCommon.csproj.nuget.dgspec.json
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
@@ -251,6 +425,9 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
+>>>>>>> Stashed changes:AestheticsLink/CustomerMessageService/obj/CustomerMessageService.csproj.nuget.dgspec.json
         }
       }
     }

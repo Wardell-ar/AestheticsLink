@@ -14,9 +14,15 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebModel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream:test/WebModel/obj/Debug/net6.0/WebModel.AssemblyInfo.cs
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebModel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebModel")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7cc3db4dd6ef1c926cbfd93a9525e70e72c5e2f3")]
+[assembly: System.Reflection.AssemblyProductAttribute("CustomerMessageService")]
+[assembly: System.Reflection.AssemblyTitleAttribute("CustomerMessageService")]
+>>>>>>> Stashed changes:AestheticsLink/CustomerMessageService/obj/Release/net6.0/CustomerMessageService.AssemblyInfo.cs
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // 由 MSBuild WriteCodeFragment 类生成。

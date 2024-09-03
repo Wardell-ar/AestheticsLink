@@ -9865,11 +9865,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream
       "projectUniqueName": "D:\\database\\AestheticsLink\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj",
       "projectName": "QuartzJobLibrary",
       "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj",
       "packagesPath": "C:\\Users\\彭之芯\\.nuget\\packages\\",
       "outputPath": "D:\\database\\AestheticsLink\\AestheticsLink\\QuartzJobLibrary\\obj\\",
+=======
+      "projectUniqueName": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj",
+      "projectName": "QuartzJobLibrary",
+      "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj",
+      "packagesPath": "C:\\Users\\彭之芯\\.nuget\\packages\\",
+      "outputPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\QuartzJobLibrary\\obj\\",
+>>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\彭之芯\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9886,6 +9894,7 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+<<<<<<< Updated upstream
             "D:\\database\\AestheticsLink\\AestheticsLink\\FinancialService\\FinancialService.csproj": {
               "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\FinancialService\\FinancialService.csproj"
             },
@@ -9894,6 +9903,16 @@
             },
             "D:\\database\\AestheticsLink\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj": {
               "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj"
+=======
+            "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\FinancialService\\FinancialService.csproj": {
+              "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\FinancialService\\FinancialService.csproj"
+            },
+            "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\OperateService\\OperateService.csproj": {
+              "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\OperateService\\OperateService.csproj"
+            },
+            "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj": {
+              "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj"
+>>>>>>> Stashed changes
             }
           }
         }
@@ -9928,12 +9947,33 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+<<<<<<< Updated upstream
+=======
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.31, 6.0.31]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.31, 6.0.31]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.31, 6.0.31]"
+          }
+        ],
+>>>>>>> Stashed changes
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
+<<<<<<< Updated upstream
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
+>>>>>>> Stashed changes
       }
     }
   }

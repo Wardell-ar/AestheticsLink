@@ -9798,11 +9798,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\database\\AestheticsLink\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj",
+      "projectUniqueName": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj",
       "projectName": "ServerSigninService",
-      "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj",
+      "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj",
       "packagesPath": "C:\\Users\\彭之芯\\.nuget\\packages\\",
-      "outputPath": "D:\\database\\AestheticsLink\\AestheticsLink\\ServerSigninService\\obj\\",
+      "outputPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\ServerSigninService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\彭之芯\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9819,11 +9819,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\database\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
-              "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj"
+            "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
+              "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebCommon\\WebCommon.csproj"
             },
-            "D:\\database\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj": {
-              "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj"
+            "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebModel\\WebModel.csproj": {
+              "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebModel\\WebModel.csproj"
             }
           }
         }
@@ -9881,5 +9881,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "读取缓存文件 D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\ServerSigninService\\obj\\project.nuget.cache 时遇到问题: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

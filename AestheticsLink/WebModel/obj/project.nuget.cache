@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5z9Ee7vJ2pAUfBgeI8UO00yyCYOXFaqjj7COkNDhFCPBhL9Umhj+oFcmqcAH5gAC3KsyJzkwACzH+cEZ/BRrrQ==",
+  "dgSpecHash": "xPKUID97t8o=",
   "success": true,
-  "projectFilePath": "D:\\database\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj",
+  "projectFilePath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebModel\\WebModel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\彭之芯\\.nuget\\packages\\closedxml\\0.102.2\\closedxml.0.102.2.nupkg.sha512",
     "C:\\Users\\彭之芯\\.nuget\\packages\\documentformat.openxml\\2.16.0\\documentformat.openxml.2.16.0.nupkg.sha512",
@@ -163,7 +163,17 @@
     "C:\\Users\\彭之芯\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\彭之芯\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\彭之芯\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\彭之芯\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512"
+    "C:\\Users\\彭之芯\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512",
+    "C:\\Users\\彭之芯\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.31\\microsoft.netcore.app.ref.6.0.31.nupkg.sha512",
+    "C:\\Users\\彭之芯\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.31\\microsoft.windowsdesktop.app.ref.6.0.31.nupkg.sha512",
+    "C:\\Users\\彭之芯\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.31\\microsoft.aspnetcore.app.ref.6.0.31.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "读取缓存文件 D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\WebModel\\obj\\project.nuget.cache 时遇到问题: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

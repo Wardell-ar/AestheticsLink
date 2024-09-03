@@ -15,6 +15,7 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
+<<<<<<< Updated upstream:test/WebApplication1/obj/Debug/net6.0/WebApplication1.GeneratedMSBuildEditorConfig.editorconfig
 build_property.RootNamespace = WebApplication1
 build_property.RootNamespace = WebApplication1
 build_property.ProjectDir = D:\database\test\test\WebApplication1\
@@ -23,3 +24,9 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = D:\database\test\test\WebApplication1
 build_property._RazorSourceGeneratorDebug = 
+=======
+build_property.RootNamespace = CustomerMessageService
+build_property.ProjectDir = D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\CustomerMessageService\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+>>>>>>> Stashed changes:AestheticsLink/CustomerMessageService/obj/Release/net6.0/CustomerMessageService.GeneratedMSBuildEditorConfig.editorconfig

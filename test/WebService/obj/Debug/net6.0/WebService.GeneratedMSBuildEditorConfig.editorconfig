@@ -15,5 +15,12 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
+<<<<<<< Updated upstream:test/WebService/obj/Debug/net6.0/WebService.GeneratedMSBuildEditorConfig.editorconfig
 build_property.RootNamespace = WebService
 build_property.ProjectDir = D:\database\test\test\WebService\
+=======
+build_property.RootNamespace = HosAndDepService
+build_property.ProjectDir = D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\HosAndDepService\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+>>>>>>> Stashed changes:AestheticsLink/HosAndDepService/obj/Release/net6.0/HosAndDepService.GeneratedMSBuildEditorConfig.editorconfig

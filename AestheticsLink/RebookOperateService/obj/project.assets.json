@@ -9732,11 +9732,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\database\\AestheticsLink\\AestheticsLink\\RebookOperateService\\RebookOperateService.csproj",
+      "projectUniqueName": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\RebookOperateService\\RebookOperateService.csproj",
       "projectName": "RebookOperateService",
-      "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\RebookOperateService\\RebookOperateService.csproj",
+      "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\RebookOperateService\\RebookOperateService.csproj",
       "packagesPath": "C:\\Users\\彭之芯\\.nuget\\packages\\",
-      "outputPath": "D:\\database\\AestheticsLink\\AestheticsLink\\RebookOperateService\\obj\\",
+      "outputPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\RebookOperateService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\彭之芯\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9753,8 +9753,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\database\\AestheticsLink\\AestheticsLink\\OrderService\\OrderService.csproj": {
-              "projectPath": "D:\\database\\AestheticsLink\\AestheticsLink\\OrderService\\OrderService.csproj"
+            "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\OrderService\\OrderService.csproj": {
+              "projectPath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\OrderService\\OrderService.csproj"
             }
           }
         }
@@ -9806,5 +9806,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "读取缓存文件 D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\RebookOperateService\\obj\\project.nuget.cache 时遇到问题: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
