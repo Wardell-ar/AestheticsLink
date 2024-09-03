@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UpdateAt0amService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7cc3db4dd6ef1c926cbfd93a9525e70e72c5e2f3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6bc1a1d82f18218b7c7583c2e4a594a83ea276b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("UpdateAt0amService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UpdateAt0amService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

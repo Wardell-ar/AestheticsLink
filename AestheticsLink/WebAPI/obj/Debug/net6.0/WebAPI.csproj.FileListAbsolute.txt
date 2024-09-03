@@ -1834,3 +1834,9 @@ D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\obj\Deb
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\obj\Debug\net6.0\WebAPI.csproj.CopyComplete
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\obj\Debug\net6.0\WebAPI.genruntimeconfig.cache
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\obj\Debug\net6.0\ref\WebAPI.dll
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\publish\LogFile\log4net.Config
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\publish\web.config
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\publish\appsettings.Development.json
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\publish\appsettings.json
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\publish\WebAPI.deps.json
+D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\publish\WebAPI.runtimeconfig.json
