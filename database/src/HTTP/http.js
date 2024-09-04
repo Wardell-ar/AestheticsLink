@@ -383,3 +383,27 @@ export function GetCouponsInfo(cusId, callback){
         }
     };
 }
+
+// 客户充值功能
+export function sendRecharge(cusId, money, callback){
+    let obj = {
+        cusId: cusId,
+        money: money
+    };
+    const str = JSON.stringify(obj);
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://121.199.32.139:8081/Recharge/PostRecharge/Recharge', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(str);
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4) {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                let response = JSON.parse(xhr.response);
+                callback(response);
+            }
+            else {
+                alert("网络异常");
+            }
+        }
+    };
+}

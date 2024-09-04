@@ -104,7 +104,7 @@
                                             <span class="under-line"></span>
                                         </div>
                                     </el-form-item>
-                                    <el-button class='recharge' @click="isRecharge=true" type="primary" size="large">
+                                    <el-button class='recharge' @click="isRecharge = true" type="primary" size="large">
                                         <i class="fas fa-donate icon1"></i>充值
                                     </el-button>
                                 </div>
@@ -125,7 +125,7 @@
                                     </el-form-item>
                                 </el-form>
                                 <div slot="footer" class="dialog-footer">
-                                    <el-button @click="isRecharge=false">取消</el-button>
+                                    <el-button @click="isRecharge = false">取消</el-button>
                                     <el-button type="primary" @click="confirmRecharge">确定</el-button>
                                 </div>
                             </el-dialog>
@@ -192,7 +192,7 @@
 <script scoped>
 import { ref } from 'vue';
 import { ElMessage } from 'element-plus';
-import { getClientInfo, editClientPassword } from '../HTTP/http';
+import { getClientInfo, editClientPassword ,sendRecharge } from '../HTTP/http';
 import { get_id } from "../identification"
 
 export default {
@@ -203,7 +203,7 @@ export default {
             isEditing: false,
             isOldPasswordDialogVisible: false,
             isNewPasswordDialogVisible: false,
-            isRecharge:false,
+            isRecharge: false,
             oldPasswordForm: { oldPassword: '' },
             newPasswordForm: { newPassword: '', confirmPassword: '' },
             rechargeForm: { amount: '' },
@@ -214,7 +214,7 @@ export default {
                 sex: '',
                 id: '',
                 birthday: "",
-                balance:'',
+                balance: "",
             },
             rules: {
                 oldPassword: [
@@ -264,19 +264,32 @@ export default {
         }
     },
     methods: {
+        isNumeric(value) {
+            return !isNaN(value) && !isNaN(parseFloat(value));
+        },
         selectMenu(index) {
             this.selectIndex = index;
             console.log(this.selectIndex);
         },
-        confirmRecharge(){
-            if(1){
-                //充值
-                ElMessage.success('充值成功');
+        confirmRecharge() {
+            if(this.isNumeric(this.rechargeForm.amount)){
+                let money = Number(this.rechargeForm.amount);
+                sendRecharge(get_id(), money, this.chargeVerdict);
             }
             else{
-                ElMessage.error('充值失败');
+                ElMessage.error("输入内容不可用");
             }
-            this.isRecharge=false;
+            this.isRecharge = false;
+        },
+        chargeVerdict(response){
+            if(response == "1"){
+                this.customer.balance = Number(this.customer.balance) + Number(this.rechargeForm.amount) + "";
+                ElMessage.success("充值成功");
+            }
+            else{
+                ElMessage.error("充值失败");
+            }
+            this.rechargeForm.amount='';
         },
         openOldPasswordDialog() {
             this.isOldPasswordDialogVisible = true;
@@ -303,37 +316,38 @@ export default {
             if (this.newPasswordForm.newPassword === this.newPasswordForm.confirmPassword) {
                 //修改密码
                 editClientPassword(this.customer.id, this.newPasswordForm.newPassword, this.IsNewpwdSaved);
-                
+
             } else {
                 ElMessage.error('两次输入的新密码不一致');
             }
         },
-        IsNewpwdSaved(response){
-            if(response == "1"){
+        IsNewpwdSaved(response) {
+            if (response == "1") {
                 this.customer.password = this.newPasswordForm.newPassword;
                 ElMessage.success('密码修改成功');
                 this.isNewPasswordDialogVisible = false;
             }
-            else{
+            else {
                 ElMessage.error('网络异常，请稍后重试');
             }
         },
-        setClientData(response){
+        setClientData(response) {
             this.customer.level = response.vipLevel;
             this.customer.password = response.password;
             this.customer.name = response.name;
             this.customer.sex = (response.gender == "男") ? 0 : 1;
             this.customer.id = get_id();
+            this.customer.balance = response.money + "";
             let year = response.year;
             let month = response.month;
             let day = response.day;
-            if(month.length == 1){
+            if (month.length == 1) {
                 month = '0' + month;
             }
-            if(day.length == 1){
+            if (day.length == 1) {
                 day = '0' + day;
             }
-            this.customer.birthday = ref(year+'-'+month+'-'+day);
+            this.customer.birthday = ref(year + '-' + month + '-' + day);
         }
     }
 }
@@ -792,15 +806,18 @@ a:hover {
     margin: 10px 40px;
     display: flex;
     align-items: center;
-    gap:0px;
+    gap: 0px;
 }
-.row > :first-child {
-    margin-right: 120px; 
+
+.row> :first-child {
+    margin-right: 120px;
 }
-.recharge{
+
+.recharge {
     margin-left: 30px;
     margin-bottom: 10px;
 }
+
 ::v-deep.form .el-form-item__label {
     color: #0b2447;
     font-size: 18px;
