@@ -86,7 +86,6 @@ export default {
                 this.IsBirthday(response.month, response.day);
                 // 跳转到客户页面
                 this.router.push("/Person");
-
             } else if (get_role() === "2") {
                 ElMessage({
                     type: "success",
@@ -96,7 +95,6 @@ export default {
                 this.IsBirthday(response.month, response.day);
                 // 跳转到员工页面
                 this.router.push("/Worker");
-
             }
             else {
                 ElMessage({

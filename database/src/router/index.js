@@ -1,5 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import Advertise from '../components/Advertise.vue'
+import { get_id } from '@/identification';
+
+function isAuthenticated() {
+  return !!get_id();  // 返回 true 表示已登录，false 表示未登录
+}
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -64,22 +68,21 @@ const router = createRouter({
       name: "Worker",
       component: () => import("../components/workerCenter.vue"),
     },
-    // {
-    //   path: "/orders",
-    //   name: "orders",
-    //   component: () => import("../components/Orders.vue"),
-    // },    
-    // {
-    //   path: "/myBenefits",
-    //   name: "myBenefits",
-    //   component: () => import("../components/myBenefits.vue"),
-    //   info:"myBenefits",
-    // },
-    
   ],
 });
 router.afterEach(() => {
   // 确保每次路由切换后滚动到顶部
   window.scrollTo(0, 0);
 });
+// 全局路由守卫
+router.beforeEach((to, from, next) => {
+  // console.log(!isAuthenticated());
+  if ((to.path === '/person'||to.path === '/Worker')&& !isAuthenticated()) {
+    // 如果用户未登录，跳转到登录页面
+    next('/login');
+  } else {
+    next();
+  }
+});
+
 export default router

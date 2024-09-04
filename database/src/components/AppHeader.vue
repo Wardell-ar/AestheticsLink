@@ -54,7 +54,12 @@
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/login">
+              <router-link v-if="!isLoggedIn()" to="/login">
+                <div style="display: flex; align-items: center; cursor: pointer" class="signup">
+                  <span>个人中心</span>
+                </div>
+              </router-link>
+              <router-link v-else to="/Person">
                 <div style="display: flex; align-items: center; cursor: pointer" class="signup">
                   <span>个人中心</span>
                 </div>
@@ -133,7 +138,12 @@
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/login">
+              <router-link v-if="!isLoggedIn()" to="/login">
+                <div style="display: flex; align-items: center; cursor: pointer" class="signup">
+                  <span>个人中心</span>
+                </div>
+              </router-link>
+              <router-link v-else to="/Person">
                 <div style="display: flex; align-items: center; cursor: pointer" class="signup">
                   <span>个人中心</span>
                 </div>
@@ -160,6 +170,7 @@
   </template>
   
   <script lang="ts">
+  import { get_id } from "@/identification";
   import { defineComponent, ref, onMounted, onBeforeUnmount } from "vue";
   
   export default defineComponent({
@@ -181,7 +192,12 @@
       return {
         isVisible
       };
-    }
+    },
+    methods: {
+      isLoggedIn() {
+        return !!get_id();
+      }
+    },
   });
   </script>
   

@@ -27,7 +27,6 @@
                 <button class="add-to-cart" @click="addToCart">加入到购物车</button>
             </div>
         </div>
-
         <!-- 查看购物车界面 -->
         <div v-if="cart.length > 0" class="view-cart">
             <h2>购物车</h2>
@@ -150,18 +149,24 @@ export default {
         },
 
         addToCart() {
-            const isAlreadyInCart = this.cart.some(item => item.service.title === this.selectedService.title);
-            if (!isAlreadyInCart) {
-                const cartItem = {
-                    service: this.selectedService,
-                };
-                this.cart.push(cartItem);
-                this.$message.success('已成功加入购物车！');
+            console.log(!!get_id());
+            if(!!get_id()){
+                const isAlreadyInCart = this.cart.some(item => item.service.title === this.selectedService.title);
+                if (!isAlreadyInCart) {
+                    const cartItem = {
+                        service: this.selectedService,
+                    };
+                    this.cart.push(cartItem);
+                    this.$message.success('已成功加入购物车！');
+                }
+                else {
+                    this.$message.error('该服务已在购物车中！');
+                }
+                this.closeDetailModal();
             }
-            else {
-                this.$message.error('该服务已在购物车中！');
+            else{
+                this.$router.push("/login");
             }
-            this.closeDetailModal();
         },
 
         removeFromCart(index) {
@@ -265,7 +270,7 @@ export default {
         selectedCoupon(n){
             console.log(n);
         }
-    }
+    },
 };
 </script>
 

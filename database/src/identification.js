@@ -1,5 +1,5 @@
-let id = "123";
-let role = "456";
+let id = "";
+let role = "";
 
 export function set_id(i){
     id = i;
