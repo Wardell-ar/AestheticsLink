@@ -47,3 +47,16 @@ D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebCommon\obj\
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebCommon\obj\Release\net6.0\refint\WebCommon.dll
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebCommon\obj\Release\net6.0\WebCommon.pdb
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebCommon\obj\Release\net6.0\ref\WebCommon.dll
+D:\Github\AestheticsLink\AestheticsLink\WebCommon\bin\Release\net6.0\WebCommon.deps.json
+D:\Github\AestheticsLink\AestheticsLink\WebCommon\bin\Release\net6.0\WebCommon.dll
+D:\Github\AestheticsLink\AestheticsLink\WebCommon\bin\Release\net6.0\WebCommon.pdb
+D:\Github\AestheticsLink\AestheticsLink\WebCommon\obj\Release\net6.0\WebCommon.csproj.AssemblyReference.cache
+D:\Github\AestheticsLink\AestheticsLink\WebCommon\obj\Release\net6.0\WebCommon.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\AestheticsLink\AestheticsLink\WebCommon\obj\Release\net6.0\WebCommon.AssemblyInfoInputs.cache
+D:\Github\AestheticsLink\AestheticsLink\WebCommon\obj\Release\net6.0\WebCommon.AssemblyInfo.cs
+D:\Github\AestheticsLink\AestheticsLink\WebCommon\obj\Release\net6.0\WebCommon.csproj.CoreCompileInputs.cache
+D:\Github\AestheticsLink\AestheticsLink\WebCommon\obj\Release\net6.0\WebCommon.sourcelink.json
+D:\Github\AestheticsLink\AestheticsLink\WebCommon\obj\Release\net6.0\WebCommon.dll
+D:\Github\AestheticsLink\AestheticsLink\WebCommon\obj\Release\net6.0\refint\WebCommon.dll
+D:\Github\AestheticsLink\AestheticsLink\WebCommon\obj\Release\net6.0\WebCommon.pdb
+D:\Github\AestheticsLink\AestheticsLink\WebCommon\obj\Release\net6.0\ref\WebCommon.dll

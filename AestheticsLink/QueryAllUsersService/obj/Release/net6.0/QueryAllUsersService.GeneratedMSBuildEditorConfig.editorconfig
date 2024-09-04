@@ -16,6 +16,6 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = QueryAllUsersService
-build_property.ProjectDir = D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\QueryAllUsersService\
+build_property.ProjectDir = D:\Github\AestheticsLink\AestheticsLink\QueryAllUsersService\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

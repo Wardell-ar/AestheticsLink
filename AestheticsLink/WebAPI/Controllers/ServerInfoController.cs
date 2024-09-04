@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using ServerInformation;
 using ServerInformation.Dto;
 using ServerSigninService.Signin.Dto;
+using SqlSugar;
 using System.Dynamic;
 using WebCommon.Database;
 using WebModel.Entity;
@@ -43,70 +44,77 @@ namespace WebAPI.Controllers
             {
                 //事物开始
                 DbContext.db.Ado.BeginTran();
-                ServerInfoRequest serverInfoRequest = new ServerInfoRequest();
-                serverInfoRequest.id = serverinforequest.id;
-                var server = _serverInfoService.CheckSignin(serverInfoRequest).Result;
+                ServerInfoRequest serverInfoRequest = new ServerInfoRequest
+                {
+                    id = serverinforequest.id
+                };
+                var server = await _serverInfoService.CheckSignin(serverInfoRequest);
+
                 if (server != null)
                 {
                     _logger.LogInformation("Received login request: SER_ID={SER_ID}", serverinforequest.id);
                     var ser_id = server.SER_ID;
+                    
                     if (string.IsNullOrEmpty(ser_id))
                     {
                         _logger.LogError("ser_id is null or empty");
                         return Unauthorized();
                     }
-                    string sql = "SELECT s.SER_ID as id, s.NAME as name, s.GENDER as gender, s.BIRTHDAY as birthday, s.POSITION as title, h.NAME as hospital, s.IS_WORK_TODAY as attendanceStatus, b.BILL_ID as order_id, p.NAME as order_name, b.FOUND_DATE as order_date " +
-                        "FROM SERVER s " +
-                        "JOIN OPERATE o ON s.SER_ID = o.SER_ID " +
-                        "JOIN HOSPITAL h ON h.HOS_ID = s.HOS_ID " +
-                        "JOIN BILL b ON o.BILL_ID = b.BILL_ID " +
-                        "JOIN PROJECT p ON o.PROJ_ID = p.PROJ_ID " +
-                        "WHERE s.SER_ID = @ser_id";
-                    var serverinfo = DbContext.db.Ado.SqlQuery<dynamic>(sql, new { server.SER_ID });
+
+                    var serverinfo = await DbContext.db.Queryable<SERVER, OPERATE, HOSPITAL, BILL, PROJECT>((s, o, h, b, p) => new object[]
+                    {
+                        JoinType.Left, s.SER_ID == o.SER_ID,
+                        JoinType.Left, s.HOS_ID == h.HOS_ID,
+                        JoinType.Left, o.BILL_ID == b.BILL_ID,
+                        JoinType.Left, o.PROJ_ID == p.PROJ_ID
+                    })
+                    .Where((s, o, h, b, p) => s.SER_ID == ser_id)
+                    .Select((s, o, h, b, p) => new
+                    {
+                        id = s.SER_ID,
+                        name = s.NAME,
+                        gender = s.GENDER,
+                        birthday = s.BIRTHDAY,
+                        title = s.POSITION,
+                        hospital = h.NAME,
+                        attendanceStatus = s.IS_WORK_TODAY,
+                        order_id = b.BILL_ID,
+                        order_name = p.NAME,
+                        order_date = (DateTime?)b.FOUND_DATE  // 确保是 DateTime? 类型
+                    })
+                    .ToListAsync();
 
                     if (serverinfo == null || !serverinfo.Any())
                     {
                         _logger.LogWarning("No server info found for ser_id: {ser_id}", ser_id);
+                        DbContext.db.Ado.RollbackTran(); // 事务回滚
                         return NotFound();
                     }
-                    // 将 serverinfo 转换为 List<object>
-                    List<object> serverinfoList = serverinfo as List<object>;
 
-                    // 遍历每个动态对象
-                    foreach (var item in serverinfoList)
-                    {
-                        // 将动态对象转换为 IDictionary<string, object>
-                        IDictionary<string, object> dictionaryItem = item as IDictionary<string, object>;
-
-                        // 遍历动态对象的属性
-                        foreach (var property in dictionaryItem)
-                        {
-                            Console.WriteLine($"{property.Key}: {property.Value}");
-                        }
-                    }
                     var firstItem = serverinfo.First();
 
                     var serverInfo = new ServerInfoDto
                     {
-                        id = firstItem.ID,
-                        name = firstItem.NAME,
-                        gender = firstItem.GENDER,
-                        age = CalculateAge((DateTime)firstItem.BIRTHDAY),
-                        title = firstItem.TITLE,
-                        hospital = firstItem.HOSPITAL,
-                        attendanceStatus = firstItem.ATTENDANCESTATUS.ToString(),
+                        id = firstItem.id,
+                        name = firstItem.name,
+                        gender = firstItem.gender,
+                        age = CalculateAge((DateTime)firstItem.birthday),
+                        title = firstItem.title,
+                        hospital = firstItem.hospital,
+                        attendanceStatus = firstItem.attendanceStatus.ToString(),
                         orderData = serverinfo.Select(item => new OrderData
                         {
-                            order_id = item.ORDER_ID,
-                            order_name = item.ORDER_NAME,
-                            order_year = ((DateTime)item.ORDER_DATE).Year.ToString(),
-                            order_month = ((DateTime)item.ORDER_DATE).Month.ToString(),
-                            order_day = ((DateTime)item.ORDER_DATE).Day.ToString()
+                            order_id = item.order_id,
+                            order_name = item.order_name,
+                            order_year = item.order_date != null ? item.order_date.Value.Year.ToString() : "N/A",
+                            order_month = item.order_date != null ? item.order_date.Value.Month.ToString() : "N/A",
+                            order_day = item.order_date != null ? item.order_date.Value.Day.ToString() : "N/A"
                         }).ToList()
                     };
-                    //事物提交
+
+                    // 事务提交
                     DbContext.db.Ado.CommitTran();
-                    return Ok(serverInfo); 
+                    return Ok(serverInfo);
                 }
                 else
                 {
@@ -121,74 +129,7 @@ namespace WebAPI.Controllers
                 DbContext.db.Ado.RollbackTran();
                 return StatusCode(500, ex.Message);
             }
-            /*ServerInfoRequest serverInfoRequest = new ServerInfoRequest();
-            serverInfoRequest.id = serverinforequest.id;
-            var server = _serverInfoService.CheckSignin(serverInfoRequest).Result;
-            if (server != null)
-            {
-                _logger.LogInformation("Received login request: SER_ID={SER_ID}", serverinforequest.id);
-                var ser_id = server.SER_ID;
-                if (string.IsNullOrEmpty(ser_id))
-                {
-                    _logger.LogError("ser_id is null or empty");
-                    return Unauthorized();
-                }
-                string sql = "SELECT s.SER_ID as id, s.NAME as name, s.GENDER as gender, s.BIRTHDAY as birthday, s.POSITION as title, h.NAME as hospital, s.IS_WORK_TODAY as attendanceStatus, b.BILL_ID as order_id, p.NAME as order_name, b.FOUND_DATE as order_date " +
-                    "FROM SERVER s " +
-                    "JOIN OPERATE o ON s.SER_ID = o.SER_ID " +
-                    "JOIN HOSPITAL h ON h.HOS_ID = s.HOS_ID " +
-                    "JOIN BILL b ON o.BILL_ID = b.BILL_ID " +
-                    "JOIN PROJECT p ON o.PROJ_ID = p.PROJ_ID " +
-                    "WHERE s.SER_ID = @ser_id";
-                var serverinfo = DbContext.db.Ado.SqlQuery<dynamic>(sql, new { server.SER_ID });
-
-                if (serverinfo == null || !serverinfo.Any())
-                {
-                    _logger.LogWarning("No server info found for ser_id: {ser_id}", ser_id);
-                    return NotFound();
-                }
-                // 将 serverinfo 转换为 List<object>
-                List<object> serverinfoList = serverinfo as List<object>;
-
-                // 遍历每个动态对象
-                foreach (var item in serverinfoList)
-                {
-                    // 将动态对象转换为 IDictionary<string, object>
-                    IDictionary<string, object> dictionaryItem = item as IDictionary<string, object>;
-
-                    // 遍历动态对象的属性
-                    foreach (var property in dictionaryItem)
-                    {
-                        Console.WriteLine($"{property.Key}: {property.Value}");
-                    }
-                }
-                var firstItem = serverinfo.First();
-
-                var serverInfo = new ServerInfoDto
-                {
-                    id = firstItem.ID,
-                    name = firstItem.NAME,
-                    gender = firstItem.GENDER,
-                    age = CalculateAge((DateTime)firstItem.BIRTHDAY),
-                    title = firstItem.TITLE,
-                    hospital = firstItem.HOSPITAL,
-                    attendanceStatus = firstItem.ATTENDANCESTATUS.ToString(),
-                    orderData = serverinfo.Select(item => new OrderData
-                    {
-                        order_id = item.ORDER_ID,
-                        order_name = item.ORDER_NAME,
-                        order_year = ((DateTime)item.ORDER_DATE).Year.ToString(),
-                        order_month = ((DateTime)item.ORDER_DATE).Month.ToString(),
-                        order_day = ((DateTime)item.ORDER_DATE).Day.ToString()
-                    }).ToList()
-                };
-
-                return Ok(serverInfo);
-            }
-            else
-            {
-                return Ok("0");
-            }*/
+            
         }
     }
 }

@@ -1840,3 +1840,15 @@ D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\bin\Deb
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\publish\appsettings.json
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\publish\WebAPI.deps.json
 D:\database\AestheticsLink-Git\AestheticsLink-----\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\publish\WebAPI.runtimeconfig.json
+D:\Github\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\LogFile\log4net.Config
+D:\Github\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\appsettings.Development.json
+D:\Github\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\appsettings.json
+D:\Github\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\web.config
+D:\Github\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\WebAPI.deps.json
+D:\Github\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\publish\WebAPI.runtimeconfig.json
+D:\Github\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\HosAndDepService.dll
+D:\Github\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\ProjectChange.dll
+D:\Github\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\RebookOperateService.dll
+D:\Github\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\HosAndDepService.pdb
+D:\Github\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\ProjectChange.pdb
+D:\Github\AestheticsLink\AestheticsLink\WebAPI\bin\Debug\net6.0\RebookOperateService.pdb
