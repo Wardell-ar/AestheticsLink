@@ -11,7 +11,6 @@ namespace OrderService.Dto
         public string clientid { get; set; }
         public List<ProjectDto> items { get; set; }
         public string hospital { get; set; }
-
         public string couponid { get; set; }
 
     }

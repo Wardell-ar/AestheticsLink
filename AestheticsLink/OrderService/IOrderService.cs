@@ -11,8 +11,11 @@ namespace OrderService
     {
         public bool CheckProject(PlaceOrderDto order);
 
+        public bool CheckCustomer(Cus_CouReceptionDto cus_CouReception);
+
         public List<HospitalChoiceDto> GetHospital();
 
         public BillDto AddBill(PlaceOrderDto order);
     }
 }
+

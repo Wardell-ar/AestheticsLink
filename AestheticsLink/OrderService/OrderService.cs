@@ -19,7 +19,7 @@ namespace OrderService
         {
             //检查项目是否正确
             List<ProjectDto> projects = order.items;
-            foreach (ProjectDto project in projects) 
+            foreach (ProjectDto project in projects)
             {
                 var result = DbContext.db.Ado.SqlQuery<ProjectDto>(
                         "SELECT PROJ_ID FROM PROJECT WHERE NAME = :name",
@@ -43,13 +43,13 @@ namespace OrderService
             }
             var customer = DbContext.db.Ado.SqlQuery<CUSTOMER>(
                         "SELECT CUS_ID FROM CUSTOMER WHERE CUS_ID = :cus_ID AND BALANCE >= : paidAmount",
-                        new 
-                        { 
-                            cus_ID = order.clientid, 
+                        new
+                        {
+                            cus_ID = order.clientid,
                             paidAmount = paid
                         }
                     );
-            if( customer.Count == 0 )
+            if (customer.Count == 0)
             {
                 return false;
             }
@@ -82,7 +82,7 @@ namespace OrderService
             return result;
         }
 
-        public BillDto AddBill(PlaceOrderDto order) 
+        public BillDto AddBill(PlaceOrderDto order)
         {
             BILL bill = TransBillDto(order);
             try
@@ -94,57 +94,114 @@ namespace OrderService
                 var timeNow = DateTime.Now;
                 //医生和手术时间、手术室自动分配
                 //找到可用的时间和手术室,从当前时间往后找找到第一个可用时间
-                var availableTimes = DbContext.db.Ado.SqlQuery<OperateTimeDto>(
-                    "SELECT OP_TIME_ID FROM OPERATE_TIME WHERE STATUS = :status AND START_TIME > :time AND DAY >= :day ",
+                var rooms = DbContext.db.Ado.SqlQuery<string>(
+                    "SELECT ROOM_ID FROM OPERATING_ROOM WHERE HOS_ID = :hos",
                     new
                     {
-                        status = "0",
-                        time = timeNow,
-                        day = timeNow.Date,
+                        hos = bill.HOS_ID,
                     });
                 int i = 0;
                 foreach (ProjectDto project in projects)
                 {
-                    var id = DbContext.db.Ado.SqlQuerySingle<string>(
-                    "SELECT PROJ_ID " +
-                    "FROM PROJECT " +
-                    "WHERE NAME = :name",
-                    new
-                    {
-                        name = project.NAME,
-                    });
-                    operate.PROJ_ID = id;
-                    operate.BILL_ID = bill.BILL_ID;
-                    operate.FOUND_DATE = bill.FOUND_DATE;
-                    operate.EXE_STATE = "0";
-                    operate.OP_TIME_ID = availableTimes[i].OP_TIME_ID;
-                    DbContext.db.Ado.ExecuteCommand(
-                    "UPDATE OPERATE_TIME SET STATUS = :status WHERE OP_TIME_ID = :timeID",
-                    new
-                    {
-                        status = "1",
-                        timeID = availableTimes[i].OP_TIME_ID,
-                    });
-                    //找到在可用时间可用的医生
-                    string hosID = DbContext.db.Ado.SqlQuerySingle<string>("SELECT HOS_ID FROM HOSPITAL WHERE NAME = :name", new { name = order.hospital });
-                    var availableDoctors = DbContext.db.Ado.SqlQuery<SERVER>(
-                        "SELECT SER_ID " +
-                          "FROM SERVER " +
-                          "WHERE SER_ID NOT IN (" +
-                              "SELECT SER_ID " +
-                              "FROM OPERATE " +
-                              "NATURAL JOIN OPERATE_TIME " +
-                              "WHERE STATUS = :status AND START_TIME = :time AND DAY = :day ) " +
-                              "AND HOS_ID = :hos",
+                    // 先找到项目ID
+                    var projId = DbContext.db.Ado.SqlQuerySingle<string>(
+                        "SELECT PROJ_ID FROM PROJECT WHERE NAME = :name",
                         new
                         {
-                            status = "1",
-                            time = availableTimes[i].START_TIME,
-                            day = availableTimes[i].DAY,
-                            hos = hosID,
+                            name = project.NAME,
                         });
-                    operate.SER_ID = availableDoctors[i].SER_ID;
+
+                    // 遍历手术室
+                    foreach (var roomId in rooms)
+                    {
+                        // 查找该手术室的可用时间
+                        var availableTime = DbContext.db.Ado.SqlQuerySingle<OperateTimeDto>(
+                            "SELECT OP_TIME_ID FROM OPERATE_TIME WHERE ROOM_ID = :roomId AND STATUS = :status AND START_TIME > :time AND DAY >= :day ORDER BY START_TIME ASC",
+                            new
+                            {
+                                roomId = roomId,
+                                status = "0",
+                                time = timeNow,
+                                day = timeNow.Date,
+                            });
+
+                        if (availableTime != null)
+                        {
+                            // 分配找到的项目和时间给手术
+                            operate.PROJ_ID = projId;
+                            operate.BILL_ID = bill.BILL_ID;
+                            operate.FOUND_DATE = bill.FOUND_DATE;
+                            operate.EXE_STATE = "0";
+                            operate.OP_TIME_ID = availableTime.OP_TIME_ID;
+
+                            // 更新该时间为已占用
+                            DbContext.db.Ado.ExecuteCommand(
+                                "UPDATE OPERATE_TIME SET STATUS = :status WHERE OP_TIME_ID = :timeID",
+                                new
+                                {
+                                    status = "1",
+                                    timeID = availableTime.OP_TIME_ID,
+                                });
+
+                            break; // 找到一个可用的时间后跳出房间循环
+                        }
+                        else
+                            continue;
+                    }
+                    if (operate == null)
+                        return null;
                     i++;
+                    //var availableTimes = DbContext.db.Ado.SqlQuery<OperateTimeDto>(
+                    //    "SELECT OP_TIME_ID FROM OPERATE_TIME WHERE STATUS = :status AND START_TIME > :time AND DAY >= :day ",
+                    //    new
+                    //    {
+                    //        status = "0",
+                    //        time = timeNow,
+                    //        day = timeNow.Date,
+                    //    });
+                    //int i = 0;
+                    //foreach (ProjectDto project in projects)
+                    //{
+                    //    var id = DbContext.db.Ado.SqlQuerySingle<string>(
+                    //    "SELECT PROJ_ID " +
+                    //    "FROM PROJECT " +
+                    //    "WHERE NAME = :name",
+                    //    new
+                    //    {
+                    //        name = project.NAME,
+                    //    });
+                    //    operate.PROJ_ID = id;
+                    //    operate.BILL_ID = bill.BILL_ID;
+                    //    operate.FOUND_DATE = bill.FOUND_DATE;
+                    //    operate.EXE_STATE = "0";
+                    //    operate.OP_TIME_ID = availableTimes[i].OP_TIME_ID;
+                    //    DbContext.db.Ado.ExecuteCommand(
+                    //    "UPDATE OPERATE_TIME SET STATUS = :status WHERE OP_TIME_ID = :timeID",
+                    //    new
+                    //    {
+                    //        status = "1",
+                    //        timeID = availableTimes[i].OP_TIME_ID,
+                    //    });
+                    //    //找到在可用时间可用的医生
+                    //    string hosID = DbContext.db.Ado.SqlQuerySingle<string>("SELECT HOS_ID FROM HOSPITAL WHERE NAME = :name", new { name = order.hospital });
+                    //    var availableDoctors = DbContext.db.Ado.SqlQuery<SERVER>(
+                    //        "SELECT SER_ID " +
+                    //          "FROM SERVER " +
+                    //          "WHERE SER_ID NOT IN (" +
+                    //              "SELECT SER_ID " +
+                    //              "FROM OPERATE " +
+                    //              "NATURAL JOIN OPERATE_TIME " +
+                    //              "WHERE STATUS = :status AND START_TIME = :time AND DAY = :day ) " +
+                    //              "AND HOS_ID = :hos",
+                    //        new
+                    //        {
+                    //            status = "1",
+                    //            time = availableTimes[i].START_TIME,
+                    //            day = availableTimes[i].DAY,
+                    //            hos = hosID,
+                    //        });
+                    //    operate.SER_ID = availableDoctors[i].SER_ID;
+                    //    i++;
                     DbContext.db.Insertable(operate).ExecuteCommand();
                 }
 
@@ -158,7 +215,7 @@ namespace OrderService
                     HOS_ID = bill.HOS_ID,
                 };
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 throw new Exception("订单创建失败");
             }
@@ -214,5 +271,17 @@ namespace OrderService
             return result;
         }
 
+        public bool CheckCustomer(Cus_CouReceptionDto cus_CouReception)
+        {
+            var result = DbContext.db.Ado.SqlQuery<CUSTOMER>(
+                        "SELECT CUS_ID FROM CUSTOMER WHERE CUS_ID = :cusId",
+                        new { cusId = cus_CouReception.id }
+                    );
+            if (result.Count == 0)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }
