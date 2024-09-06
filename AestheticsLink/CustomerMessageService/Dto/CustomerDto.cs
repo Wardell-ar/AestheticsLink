@@ -15,11 +15,13 @@ namespace CustomerMessageService.Dto
         public string Month { get; set; } // 月
         public string Day { get; set; }   // 日
         public string Gender { get; set; }
-       // public decimal Balance { get; set; }
+
+        public decimal Money { get; set; }
         public string VIPLevel { get; set; }
         //public List<CouponDto> Coupons { get; set; }
         //public List<OperationDto> Operations { get; set; }
         public string Password { get; set; }
+
 
     }
 }

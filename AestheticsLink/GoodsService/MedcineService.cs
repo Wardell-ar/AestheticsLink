@@ -9,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using System.Threading;
 using Microsoft.Extensions.DependencyInjection;
 using SqlSugar;
+using Microsoft.VisualBasic;
 
 namespace MedcineService
 {
@@ -74,41 +75,64 @@ namespace MedcineService
             }
         }
 
-        // 丢弃过期药品
+        // 更新过期药品的库存并延长过期日期
         public async Task DiscardExpiredMedicines()
         {
             var today = DateTime.Today;
-            var expiredInventories = await DbContext.db.Queryable<INVENTORY>()
-                                                       .Where(i => i.SELL_BY_DATE < today)
-                                                       .ToListAsync();
 
-            foreach (var inventory in expiredInventories)
+            // 查询出过期药品的库存和相关信息
+            var expiredInventories = await DbContext.db.Queryable<INVENTORY, GOODS>((i, g) => new object[]
             {
-                // 从数据库中删除该药品记录，确保外键约束
-                await DbContext.db.Deleteable<INVENTORY>().Where(i => i.G_ID == inventory.G_ID && i.HOS_ID == inventory.HOS_ID).ExecuteCommandAsync();
+        JoinType.Inner, i.G_ID == g.G_ID
+            })
+            .Where((i, g) => i.SELL_BY_DATE < today)
+            .Select((i, g) => new { Inventory = i, Goods = g })
+            .ToListAsync();
+
+            foreach (var item in expiredInventories)
+            {
+                var inventory = item.Inventory;
+                var goods = item.Goods;
+
+                // 假设补充的数量为100
+                var replenishAmount = 100;
+                // 计算补充的成本
+                var replenishCost = goods.PRICE * replenishAmount;
+                // 延长过期日期三年
+                inventory.SELL_BY_DATE = inventory.SELL_BY_DATE.AddYears(3);
+                // 更新库存
+                inventory.STORAGE = replenishAmount;
+
+                // 更新药品记录
+                await DbContext.db.Updateable(inventory).ExecuteCommandAsync();
+
+                // 记录医院支出
+                await RecordHospitalOutcome(inventory.HOS_ID, replenishCost);
             }
         }
+
+
 
         // 记录医院支出
         private async Task RecordHospitalOutcome(string hosId, decimal amount)
         {
             var currentMonth = DateTime.Now.ToString("yyyy-MM");
-            var bill = await DbContext.db.Queryable<HOSPITALBILL>()
-                                          .Where(b => b.HOS_ID == hosId && b.FOUND_DATE.ToString("yyyy-MM") == currentMonth)
+            var bill = await DbContext.db.Queryable<FINANCIAL>()
+                                          .Where(b => b.HOS_ID == hosId && b.FINANCE_MONTH.ToString("yyyy-MM") == currentMonth)
                                           .FirstAsync();
 
             if (bill != null)
             {
-                bill.OUTCOME += amount;
+                bill.PAYOUT += amount;
                 await DbContext.db.Updateable(bill).ExecuteCommandAsync();
             }
             else
             {
-                bill = new HOSPITALBILL
+                bill = new FINANCIAL
                 {
                     HOS_ID = hosId,
-                    FOUND_DATE = DateTime.Now,
-                    OUTCOME = amount,
+                    FINANCE_MONTH = DateTime.Now,
+                    PAYOUT = amount,
                     INCOME = 0 // 如果需要初始化收入
                 };
                 await DbContext.db.Insertable(bill).ExecuteCommandAsync();

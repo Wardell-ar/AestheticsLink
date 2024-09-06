@@ -67,7 +67,8 @@ namespace CustomerMessageService
                 Day = customer.BIRTHDAY.Day.ToString(),        // 日
                 Gender = customer.GENDER,
                 VIPLevel = customer.VIPLEVEL,
-                Password = customer.PASSWORD
+                Password = customer.PASSWORD,
+                Money= customer.BALANCE
             };
         }
 
