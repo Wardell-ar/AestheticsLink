@@ -11,16 +11,7 @@
             <div class="employee-name">
               <span>您好, {{ employee.name }} {{ employee.title }}</span>
             </div>
-            <!-- <div class="employee-id">
-              <span>ID: {{ employee.id }}</span>
-            </div>
-            <div class="employee-title">
-              <span>职称: {{ employee.title }}</span>
-            </div> -->
           </div>
-          <!-- <el-button class="button" @click="create_dialog=true" type="primary">
-            <el-icon><Edit /></el-icon>编辑
-          </el-button> -->
         </div>
       </el-header>
       <el-container>
@@ -36,7 +27,7 @@
               <span>员工信息</span>
             </el-menu-item>
             <el-menu-item index="2">
-              <el-icon><icon-menu /></el-icon>
+              <el-icon><CircleCheckFilled /></el-icon>
               <span>员工考勤</span>
             </el-menu-item>
             <el-menu-item index="3">
@@ -49,7 +40,10 @@
           <div class="container">
           <div v-if="activeIndex === '1'">
             <div class="c-title">
-                <label >个人信息</label>        
+                <label >个人信息</label>   
+                <el-button class='button' @click="openOldPasswordDialog" type="primary" size="large">
+                                    <i class="fas fa-pen-to-square icon1"></i>修改密码
+                                </el-button>     
             </div>
             <el-form :model="employee" :rules="rules" ref="employee" class="form ">
               <div class="row">
@@ -100,16 +94,58 @@
                   </div>
                 </el-form-item>
               </div>
-              </el-form> 
-            <!-- <h3>员工信息</h3>
-            <el-table :data="[employee]">
-              <el-table-column prop="id" label="员工ID"></el-table-column>
-              <el-table-column prop="name" label="姓名"></el-table-column>
-              <el-table-column prop="gender" label="性别"></el-table-column>
-              <el-table-column prop="age" label="年龄"></el-table-column>
-              <el-table-column prop="title" label="职称"></el-table-column>
-              <el-table-column prop="hospital" label="所属医院"></el-table-column>
-            </el-table> -->
+            </el-form> 
+            <el-dialog title="输入旧密码" v-model="isOldPasswordDialogVisible" width="30%" class="dialog"
+                                style="  background-color: rgb(255, 250, 235)">
+                                <el-form ref="oldPasswordForm" :model="oldPasswordForm" :rules="rules">
+                                    <el-form-item prop="oldPassword">
+                                        <div class="input-container">
+                                            <input v-model="oldPasswordForm.oldPassword" @focus="isEditing = true"
+                                                @blur="isEditing = false" placeholder="请输入旧密码" type="password"
+                                                :class="{ 'input': true, 'active': isEditing }">
+                                            <label class="label">旧密码</label>
+                                            <span class="top-line"></span>
+                                            <span class="under-line"></span>
+                                            <i v-if="isEditing" class="fa fa-edit icon"></i>
+                                        </div>
+                                    </el-form-item>
+                                </el-form>
+                                <div slot="footer" class="dialog-footer">
+                                    <el-button @click="closeOldPasswordDialog">取消</el-button>
+                                    <el-button type="primary" @click="checkOldPassword">确定</el-button>
+                                </div>
+                            </el-dialog>
+                            <el-dialog title="输入新密码" v-model="isNewPasswordDialogVisible" width="30%" class="dialog"
+                                style="  background-color: rgb(255, 250, 235)">
+                                <el-form ref="newPasswordForm" :model="newPasswordForm" :rules="newPasswordRules">
+                                    <el-form-item prop="newPassword">
+                                        <div class="input-container">
+                                            <input v-model="newPasswordForm.newPassword" @click="isEditing = true"
+                                                @blur="isEditing = false" placeholder="请输入新密码" type="password"
+                                                :class="{ 'input': true, 'active': isEditing }" >
+                                            <label class="label">新密码</label>
+                                            <span class="top-line"></span>
+                                            <span class="under-line"></span>
+                                            <i v-if="isEditing" class="fa fa-edit icon"></i>
+                                        </div>
+                                    </el-form-item>
+                                    <el-form-item prop="confirmPassword">
+                                        <div class="input-container">
+                                            <input v-model="newPasswordForm.confirmPassword" @focus="isEditing = true"
+                                                @blur="isEditing = false" placeholder="请再次输入新密码" type="password"
+                                                :class="{ 'input': true, 'active': isEditing }" >
+                                            <label class="label">确认新密码</label>
+                                            <span class="top-line"></span>
+                                            <span class="under-line"></span>
+                                            <i v-if="isEditing" class="fa fa-edit icon"></i>
+                                        </div>
+                                    </el-form-item>
+                                </el-form>
+                                <div slot="footer" class="dialog-footer">
+                                    <el-button @click="closeNewPasswordDialog">取消</el-button>
+                                    <el-button type="primary" @click="saveNewPassword">保存</el-button>
+                                </div>
+                            </el-dialog>
           </div>
           <div v-if="activeIndex === '2'">
             <div class="c-title">
@@ -119,9 +155,10 @@
             <div class="attendanceButton-container">
               <el-button @click="handleAttendance" class="attendanceButton">考勤</el-button>
             </div>
-            <p class="encouragement-text">每天都要打卡哦~</p>
-            <p v-if="employee.attendanceStatus === '0'">您今天还没有考勤</p>
-            <p v-if="employee.attendanceStatus  === '1'">您今天已考勤</p>
+            <p class="attendance-text" v-if="employee.attendanceStatus === '0'">您今天还没有考勤</p>
+            <p class="attendance-text" v-if="employee.attendanceStatus  === '1'">您今天已考勤</p>
+            <p class="attendance-text">一天不打卡,工资减50 ^ ^</p>
+            <p class="attendance-text">您当前工资为{{ employee.salary }}/月</p>
           </div>
           <div v-if="activeIndex === '3'">
             <div class="c-title">
@@ -143,7 +180,7 @@
 <script>
 import { ref } from 'vue';
 import { Edit } from '@element-plus/icons-vue';
-import { getEmployeeInfoReq,getAttendReq,updateAttendReq } from "../HTTP/http"  // 请入HTTP请求函数
+//import { getEmployeeInfoReq,getAttendReq,updateAttendReq } from "../HTTP/http"  // 请入HTTP请求函数
 import {get_id} from "../identification"
 
 export default {
@@ -159,16 +196,45 @@ export default {
         age: 0,
         title: "",
         hospital: "",
+        salary:"3000",//新添加的薪水 
+        password: "123",//新添加的密码
         attendanceStatus: "",
       },
-      orderData: []
+      orderData: [],
+      isOldPasswordDialogVisible: false,
+      isNewPasswordDialogVisible: false,
+      oldPasswordForm: { oldPassword: '' },
+      newPasswordForm: { newPassword: '', confirmPassword: '' },
+      rules: {
+                oldPassword: [
+                    { required: true, message: "密码不能为空", trigger: "blur" },
+                ],
+      },
+      newPasswordRules: {
+          newPassword: [
+                      { required: true, message: '请输入新密码', trigger: 'blur' },
+          ],
+          confirmPassword: [
+              { required: true, message: '请再次输入新密码', trigger: 'blur' },
+                    {
+                        validator: (rule, value, callback) => {
+                            if (value !== this.newPasswordForm.newPassword) {
+                                callback(new Error('两次输入的新密码不一致'));
+                            } else {
+                                callback();
+                            }
+                        },
+                        trigger: 'blur'
+                    }
+          ]
+      },
     };
   },
 
-  // 在挂载前就发送请求获取数据
-  beforeMount(){
-    getEmployeeInfoReq(get_id(),this.setData);
-  },
+  // // 在挂载前就发送请求获取数据
+  // beforeMount(){
+  //   getEmployeeInfoReq(get_id(),this.setData);
+  // },
 
   methods: {
     handleMenuSelect(index) {
@@ -221,7 +287,53 @@ export default {
       else{
         this.$message.success('考勤信息录入失败，请稍后重试');
       }
-    }
+    },
+
+
+    openOldPasswordDialog() {
+            this.isOldPasswordDialogVisible = true;
+            this.oldPasswordForm.oldPassword = '';
+        },
+        closeOldPasswordDialog() {
+            this.isOldPasswordDialogVisible = false;
+        },
+        checkOldPassword() {
+            if (this.oldPasswordForm.oldPassword === this.employee.password) {
+                this.isOldPasswordDialogVisible = false;
+                this.isNewPasswordDialogVisible = true;
+                this.newPasswordForm.newPassword = '';
+                this.newPasswordForm.confirmPassword = '';
+            } else {
+              this.$message.error('旧密码错误');
+                this.isOldPasswordDialogVisible = false;
+            }
+        },
+        closeNewPasswordDialog() {
+            this.isNewPasswordDialogVisible = false;
+        },
+        saveNewPassword() {
+          
+            if (this.newPasswordForm.newPassword === this.newPasswordForm.confirmPassword) {
+                //修改密码
+                this.$message.success('点击');
+                //这个函数好像是后端的函数，这里没定义
+                editClientPassword(this.employee.id, this.newPasswordForm.newPassword, this.IsNewpwdSaved);
+
+            } else {
+                this.$message.error('两次输入的新密码不一致');
+            }
+        },
+        IsNewpwdSaved(response) {
+            if (response == "1") {
+                this.employee.password = this.newPasswordForm.newPassword;
+                this.$message.success('密码修改成功');
+                this.isNewPasswordDialogVisible = false;
+            }
+            else {
+              this.$message.error('网络异常，请稍后重试');
+            }
+        },
+
   },
   components: {
     Edit
@@ -282,7 +394,7 @@ export default {
 } */
 
 .button {
-  align-self: flex-end;
+  margin-bottom: 10px;
 }
 .aside {
   height: auto;
@@ -345,6 +457,14 @@ export default {
     box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
   }
 
+  .dialog {
+    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.dialog .el-dialog__title {
+    border-bottom: 1px solid rgba(16, 86, 82, .75);
+
+}
 
   .form{
     margin-top: 0;
@@ -468,9 +588,6 @@ export default {
     transform: translateY(-50%);
     cursor: pointer;
   }
-  /* .button{
-    margin-bottom: 10px;
-  } */
 
   .attendanceButton {
   width: 300px; /* 原按钮宽度 */
@@ -510,10 +627,10 @@ export default {
   transform: translateY(-1px);
 }
 
-.encouragement-text {
+.attendance-text {
   text-align: center;
-  margin-top: 100px;
-  font-size: 35px;
+  margin-top: 10px;
+  font-size: 25px;
   font-weight: bold;
   color: #f8c8c8;
 }

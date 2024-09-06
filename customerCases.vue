@@ -7,9 +7,9 @@
     <div class="section-video">
       <div class="section-video-header">精彩视频展示</div>
       <div class="video-content">
-        <video class="video" src="/videos/sample-video.mp4" controls></video>
+        <video class="video" src="/videos/video.mp4" controls></video>
         <div class="video-description">
-          这是视频的描述信息，可以随便填写。
+          来容颜医疗，获得您的新生！
         </div>
       </div>
     </div>
@@ -37,23 +37,24 @@
   
 <script>
 export default {
+  name:'customerCases',
   data() {
     return {
       cases: [
         {
-          image: "/images/contact-image.png",
+          image: "/images/case_1.jpg",
           project: "激光祛斑",
           name: "张女士",
           description: "我一直因为脸上的色斑而感到困扰，尝试了很多方法都没能有效改善。听朋友介绍了这家美容院的激光祛斑技术，决定来试一试。整个过程非常舒适，医生非常专业，详细解答了我所有的疑问。做完激光祛斑后，色斑明显淡化了，皮肤变得光滑细腻，整个人的气色都好了很多。非常感谢美容院的专业团队，让我重新找回了自信。"
         },
         {
-          image: "/images/contact-image.png",
+          image: "/images/case_2.jpeg",
           project: "割双眼皮",
           name: "李小姐",
           description: "我的单眼皮一直让我感到不太自信，尤其是拍照的时候，总觉得眼睛不够有神。经过朋友的推荐，我来到了这家美容院做双眼皮手术。医生非常专业，术前详细和我沟通了手术的细节，并根据我的面部特点设计了适合我的双眼皮方案。手术过程非常顺利，恢复期也比我预期的要快很多。现在我的双眼皮非常自然，眼睛看起来更大更有神，我对这次手术的效果非常满意。感谢美容院的专业服务，让我变得更加美丽。"
         },
         {
-          image: "/images/contact-image.png",
+          image: "/images/case_3.jpeg",
           project: "抗衰老保养",
           name: "王女士",
           description: "岁月不饶人，随着年龄的增长，我的皮肤开始出现各种衰老的迹象，比如细纹、松弛等。为了让自己看起来更年轻，我决定来这家美容院做抗衰老保养。美容院的护理项目非常全面，采用了最新的技术和高端的产品。护理师非常细心，整个护理过程非常放松舒适。几次护理下来，我的皮肤明显紧致了很多，细纹也淡化了，看起来年轻了不少。这里的服务让我感到非常满意，我会继续在这里做保养，保持青春活力。"
@@ -114,6 +115,9 @@ export default {
   background-color: #e8f0fa;
   padding: 20px;
   border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap; /* 确保项目在容器宽度不足时换行 */
+  gap: 20px; /* 为项目之间添加间距 */
 }
 
 .section-video-header {
@@ -121,8 +125,9 @@ export default {
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-left: 600px;
-  margin-right: 600px;
+  max-width: 600px; /* 设置最大宽度 */
+  margin-left: auto; /* 自动左边距 */
+  margin-right: auto; /* 自动右边距 */
   background: linear-gradient(to bottom, #8db8eb, #c6defa);
   padding: 10px;
   border-radius: 5px;
@@ -135,6 +140,7 @@ export default {
   margin-bottom: 40px;
   padding: 20px;
   border-radius: 10px;
+  
 }
 
 .video {
@@ -168,6 +174,9 @@ export default {
   margin: 20px;
   border-radius: 10px;
   background-color: #e8f0fa;
+  display: flex;
+  flex-wrap: wrap; /* 确保项目在容器宽度不足时换行 */
+  gap: 20px; /* 为项目之间添加间距 */
 }
 
 .section-case-header {
@@ -175,8 +184,9 @@ export default {
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 40px;
-  margin-left: 600px;
-  margin-right: 600px;
+  max-width: 600px; /* 设置最大宽度 */
+  margin-left: auto; /* 自动左边距 */
+  margin-right: auto; /* 自动右边距 */
   background: linear-gradient(to bottom, #8db8eb, #c6defa);
   padding: 10px;
   border-radius: 5px;
