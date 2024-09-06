@@ -9,6 +9,6 @@ namespace RebookOperateService
 {
     public interface IRebookService
     {
-        bool PostponeOperate(DelayedOperateDto delayedOperate);
+        ReturnDto PostponeOperate(DelayedOperateDto delayedOperate);
     }
 }

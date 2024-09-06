@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using OperateService;
 using FinancialService;
 using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
+using TimeService;
 
 namespace QuartzJobLibrary
 {
@@ -48,7 +49,7 @@ namespace QuartzJobLibrary
             services.AddSingleton(new JobSchedule(
                 jobType: typeof(OperateExcuteService),
                 cronExpression: "0 0 8,12,14,16 * * ?")); // 每天8点12点14点16点0 0 8,12,14,16 * * ?
-
+            //收支统计
             services.AddSingleton<FinancialFound>();
             services.AddSingleton(new JobSchedule(
                 jobType: typeof(FinancialFound),
@@ -57,7 +58,12 @@ namespace QuartzJobLibrary
             services.AddSingleton<FinanBalance>();
             services.AddSingleton(new JobSchedule(
                 jobType: typeof(FinanBalance),
-                cronExpression: "59 59 23 L * ?")); // 每月最后一天23点59分0 59 23 L * ?
+                cronExpression: "0 59 23 L * ?")); // 每月最后一天23点59分0 59 23 L * ?
+            //添加时间段增加服务
+            services.AddSingleton<TimeAddService>();
+            services.AddSingleton(new JobSchedule(
+                jobType: typeof(TimeAddService),
+                cronExpression: "0 0 0 ? * 2")); // 每周一凌晨 0 点执行0 0 0 ? * 2
 
         }
 

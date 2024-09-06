@@ -24,30 +24,9 @@ namespace WebAPI.Controllers
             {
                 //事物开始
                 DbContext.db.Ado.BeginTran();
-
-                if (_rebookService.PostponeOperate(opearte))
+                ReturnDto returnDto = _rebookService.PostponeOperate(opearte);
+                if (returnDto != null)
                 {
-                    var projid = DbContext.db.Ado.SqlQuerySingle<string>(
-                        "SELECT PROJ_ID FROM PROJECT WHERE NAME = :name ",
-                        new
-                        {
-                            name = opearte.operationName,
-                        });
-                    ReturnDto returnDto = new ReturnDto();
-                    //查找OPERATE_TIME
-                    var time = DbContext.db.Ado.SqlQuerySingle<OPERATE_TIME>(
-                        "SELECT * FROM OPERATE_TIME NATURAL JOIN OPERATE WHERE BILL_ID = :billId AND PROJ_ID = :projId ",
-                        new
-                        {
-                            billId = opearte.billid,
-                            projId = projid
-                        });
-
-                    returnDto.startTime = time.START_TIME.ToLongTimeString();
-                    returnDto.endTime = time.END_TIME.ToLongTimeString();
-                    returnDto.year = time.DAY.Year.ToString();
-                    returnDto.month = time.DAY.Month.ToString();
-                    returnDto.day = time.DAY.Day.ToString();
                     //事物提交
                     DbContext.db.Ado.CommitTran();
 

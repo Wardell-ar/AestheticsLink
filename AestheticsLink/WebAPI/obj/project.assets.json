@@ -1172,11 +1172,10 @@
           "lib/netstandard2.0/Oscar.Data.SqlClient.dll": {}
         }
       },
-      "Quartz/3.11.0": {
+      "Quartz/3.13.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Logging.Abstractions": "2.1.1",
-          "System.Configuration.ConfigurationManager": "6.0.1"
+          "Microsoft.Extensions.Logging.Abstractions": "2.1.1"
         },
         "compile": {
           "lib/net6.0/Quartz.dll": {
@@ -1738,7 +1737,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "System.Configuration.ConfigurationManager/6.0.1": {
+      "System.Configuration.ConfigurationManager/6.0.0": {
         "type": "package",
         "dependencies": {
           "System.Security.Cryptography.ProtectedData": "6.0.0",
@@ -3278,7 +3277,8 @@
           "FinancialService": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "OperateService": "1.0.0",
-          "Quartz": "3.11.0",
+          "Quartz": "3.13.0",
+          "TimeService": "1.0.0",
           "UpdateAt0amService": "1.0.0"
         },
         "compile": {
@@ -3374,6 +3374,20 @@
         },
         "runtime": {
           "bin/placeholder/SurgeryProjectService.dll": {}
+        }
+      },
+      "TimeService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Quartz": "3.13.0",
+          "WebCommon": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TimeService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TimeService.dll": {}
         }
       },
       "UpdateAt0amService/1.0.0": {
@@ -5755,10 +5769,10 @@
         "oscar.data.sqlclient.nuspec"
       ]
     },
-    "Quartz/3.11.0": {
-      "sha512": "dx8K/3C7P+o+tNI7LosOwoCWjT8aM/AojO+3IPlp4ArvgVcqf36pYu3Rqorcxc4kfklfHcFRrS9hQAIgp6TkGg==",
+    "Quartz/3.13.0": {
+      "sha512": "ddD1CPjWcDMbKdAhzuna3Ng23Sdv1YtuHbFMdAAFw0eBEj9jnadYkDWiKGo/c7BMnbI/ruuyd370sKVgdMCkDA==",
       "type": "package",
-      "path": "quartz/3.11.0",
+      "path": "quartz/3.13.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5771,7 +5785,7 @@
         "lib/netstandard2.0/Quartz.dll",
         "lib/netstandard2.0/Quartz.xml",
         "quartz-logo-small.png",
-        "quartz.3.11.0.nupkg.sha512",
+        "quartz.3.13.0.nupkg.sha512",
         "quartz.nuspec",
         "quick-start.md"
       ]
@@ -6928,10 +6942,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Configuration.ConfigurationManager/6.0.1": {
-      "sha512": "jXw9MlUu/kRfEU0WyTptAVueupqIeE3/rl0EZDMlf8pcvJnitQ8HeVEp69rZdaStXwTV72boi/Bhw8lOeO+U2w==",
+    "System.Configuration.ConfigurationManager/6.0.0": {
+      "sha512": "7T+m0kDSlIPTHIkPMIu6m6tV6qsMqJpvQWW2jIc2qi7sn40qxFo0q+7mEQAhMPXZHMKnWrnv47ntGlM/ejvw3g==",
       "type": "package",
-      "path": "system.configuration.configurationmanager/6.0.1",
+      "path": "system.configuration.configurationmanager/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6948,7 +6962,7 @@
         "lib/netstandard2.0/System.Configuration.ConfigurationManager.xml",
         "runtimes/win/lib/net461/System.Configuration.ConfigurationManager.dll",
         "runtimes/win/lib/net461/System.Configuration.ConfigurationManager.xml",
-        "system.configuration.configurationmanager.6.0.1.nupkg.sha512",
+        "system.configuration.configurationmanager.6.0.0.nupkg.sha512",
         "system.configuration.configurationmanager.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -10496,6 +10510,11 @@
       "path": "../OperateMessageService/SurgeryProjectService.csproj",
       "msbuildProject": "../OperateMessageService/SurgeryProjectService.csproj"
     },
+    "TimeService/1.0.0": {
+      "type": "project",
+      "path": "../TimeService/TimeService.csproj",
+      "msbuildProject": "../TimeService/TimeService.csproj"
+    },
     "UpdateAt0amService/1.0.0": {
       "type": "project",
       "path": "../UpdateAt0amService/UpdateAt0amService.csproj",
@@ -10545,11 +10564,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Github\\AestheticsLink\\AestheticsLink\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "D:\\C#_Project\\update\\AestheticsLink\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\WebAPI\\WebAPI.csproj",
+      "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\Xyy\\.nuget\\packages\\",
-      "outputPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\WebAPI\\obj\\",
+      "outputPath": "D:\\C#_Project\\update\\AestheticsLink\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Xyy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10566,56 +10585,56 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Github\\AestheticsLink\\AestheticsLink\\CustomerMessageService\\CustomerMessageService.csproj": {
-              "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\CustomerMessageService\\CustomerMessageService.csproj"
+            "D:\\C#_Project\\update\\AestheticsLink\\CustomerMessageService\\CustomerMessageService.csproj": {
+              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\CustomerMessageService\\CustomerMessageService.csproj"
             },
-            "D:\\Github\\AestheticsLink\\AestheticsLink\\FinancialService\\FinancialService.csproj": {
-              "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\FinancialService\\FinancialService.csproj"
+            "D:\\C#_Project\\update\\AestheticsLink\\FinancialService\\FinancialService.csproj": {
+              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\FinancialService\\FinancialService.csproj"
             },
-            "D:\\Github\\AestheticsLink\\AestheticsLink\\GoodsService\\MedcineService.csproj": {
-              "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\GoodsService\\MedcineService.csproj"
+            "D:\\C#_Project\\update\\AestheticsLink\\GoodsService\\MedcineService.csproj": {
+              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\GoodsService\\MedcineService.csproj"
             },
-            "D:\\Github\\AestheticsLink\\AestheticsLink\\HosAndDepService\\HosAndDepService.csproj": {
-              "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\HosAndDepService\\HosAndDepService.csproj"
+            "D:\\C#_Project\\update\\AestheticsLink\\HosAndDepService\\HosAndDepService.csproj": {
+              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\HosAndDepService\\HosAndDepService.csproj"
             },
-            "D:\\Github\\AestheticsLink\\AestheticsLink\\LogRegService\\LogRegService.csproj": {
-              "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\LogRegService\\LogRegService.csproj"
+            "D:\\C#_Project\\update\\AestheticsLink\\LogRegService\\LogRegService.csproj": {
+              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\LogRegService\\LogRegService.csproj"
             },
-            "D:\\Github\\AestheticsLink\\AestheticsLink\\OperateMessageService\\SurgeryProjectService.csproj": {
-              "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\OperateMessageService\\SurgeryProjectService.csproj"
+            "D:\\C#_Project\\update\\AestheticsLink\\OperateMessageService\\SurgeryProjectService.csproj": {
+              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\OperateMessageService\\SurgeryProjectService.csproj"
             },
-            "D:\\Github\\AestheticsLink\\AestheticsLink\\OperateService\\OperateService.csproj": {
-              "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\OperateService\\OperateService.csproj"
+            "D:\\C#_Project\\update\\AestheticsLink\\OperateService\\OperateService.csproj": {
+              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\OperateService\\OperateService.csproj"
             },
-            "D:\\Github\\AestheticsLink\\AestheticsLink\\OrderService\\OrderService.csproj": {
-              "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\OrderService\\OrderService.csproj"
+            "D:\\C#_Project\\update\\AestheticsLink\\OrderService\\OrderService.csproj": {
+              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\OrderService\\OrderService.csproj"
             },
-            "D:\\Github\\AestheticsLink\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj": {
-              "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj"
+            "D:\\C#_Project\\update\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj": {
+              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj"
             },
-            "D:\\Github\\AestheticsLink\\AestheticsLink\\ProjectChange\\ProjectChange.csproj": {
-              "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\ProjectChange\\ProjectChange.csproj"
+            "D:\\C#_Project\\update\\AestheticsLink\\ProjectChange\\ProjectChange.csproj": {
+              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\ProjectChange\\ProjectChange.csproj"
             },
-            "D:\\Github\\AestheticsLink\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj": {
-              "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj"
+            "D:\\C#_Project\\update\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj": {
+              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj"
             },
-            "D:\\Github\\AestheticsLink\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj": {
-              "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj"
+            "D:\\C#_Project\\update\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj": {
+              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj"
             },
-            "D:\\Github\\AestheticsLink\\AestheticsLink\\RebookOperateService\\RebookOperateService.csproj": {
-              "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\RebookOperateService\\RebookOperateService.csproj"
+            "D:\\C#_Project\\update\\AestheticsLink\\RebookOperateService\\RebookOperateService.csproj": {
+              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\RebookOperateService\\RebookOperateService.csproj"
             },
-            "D:\\Github\\AestheticsLink\\AestheticsLink\\RechargeService\\RechargeService.csproj": {
-              "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\RechargeService\\RechargeService.csproj"
+            "D:\\C#_Project\\update\\AestheticsLink\\RechargeService\\RechargeService.csproj": {
+              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\RechargeService\\RechargeService.csproj"
             },
-            "D:\\Github\\AestheticsLink\\AestheticsLink\\ServerInformation\\ServerInformation.csproj": {
-              "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\ServerInformation\\ServerInformation.csproj"
+            "D:\\C#_Project\\update\\AestheticsLink\\ServerInformation\\ServerInformation.csproj": {
+              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\ServerInformation\\ServerInformation.csproj"
             },
-            "D:\\Github\\AestheticsLink\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj": {
-              "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj"
+            "D:\\C#_Project\\update\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj": {
+              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj"
             },
-            "D:\\Github\\AestheticsLink\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj": {
-              "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj"
+            "D:\\C#_Project\\update\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj": {
+              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj"
             }
           }
         }
@@ -10624,11 +10643,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -10671,24 +10685,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.28, 6.0.28]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.28, 6.0.28]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.28, 6.0.28]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.28, 6.0.28]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -10697,7 +10693,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

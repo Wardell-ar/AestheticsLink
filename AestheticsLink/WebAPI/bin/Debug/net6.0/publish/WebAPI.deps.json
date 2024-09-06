@@ -90,7 +90,7 @@
       },
       "log4net/2.0.17": {
         "dependencies": {
-          "System.Configuration.ConfigurationManager": "6.0.1"
+          "System.Configuration.ConfigurationManager": "6.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/log4net.dll": {
@@ -393,7 +393,7 @@
           "Microsoft.IdentityModel.JsonWebTokens": "7.6.3",
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "7.6.3",
           "Microsoft.Win32.Registry": "4.7.0",
-          "System.Configuration.ConfigurationManager": "6.0.1",
+          "System.Configuration.ConfigurationManager": "6.0.0",
           "System.Diagnostics.DiagnosticSource": "6.0.1",
           "System.Runtime.Caching": "4.7.0",
           "System.Security.Principal.Windows": "4.7.0",
@@ -828,15 +828,14 @@
           }
         }
       },
-      "Quartz/3.11.0": {
+      "Quartz/3.13.0": {
         "dependencies": {
-          "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
-          "System.Configuration.ConfigurationManager": "6.0.1"
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.0"
         },
         "runtime": {
           "lib/net6.0/Quartz.dll": {
-            "assemblyVersion": "3.11.0.0",
-            "fileVersion": "3.11.0.0"
+            "assemblyVersion": "3.13.0.0",
+            "fileVersion": "3.13.0.0"
           }
         }
       },
@@ -845,7 +844,7 @@
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
           "Microsoft.Extensions.Options": "8.0.0",
-          "Quartz": "3.11.0"
+          "Quartz": "3.13.0"
         },
         "runtime": {
           "lib/net6.0/Quartz.Extensions.DependencyInjection.dll": {
@@ -1186,7 +1185,7 @@
           }
         }
       },
-      "System.Configuration.ConfigurationManager/6.0.1": {
+      "System.Configuration.ConfigurationManager/6.0.0": {
         "dependencies": {
           "System.Security.Cryptography.ProtectedData": "6.0.0",
           "System.Security.Permissions": "6.0.0"
@@ -1194,7 +1193,7 @@
         "runtime": {
           "lib/net6.0/System.Configuration.ConfigurationManager.dll": {
             "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.922.41905"
+            "fileVersion": "6.0.21.52210"
           }
         }
       },
@@ -1239,7 +1238,7 @@
       },
       "System.Diagnostics.PerformanceCounter/6.0.1": {
         "dependencies": {
-          "System.Configuration.ConfigurationManager": "6.0.1"
+          "System.Configuration.ConfigurationManager": "6.0.0"
         },
         "runtime": {
           "lib/net6.0/System.Diagnostics.PerformanceCounter.dll": {
@@ -1606,7 +1605,7 @@
       },
       "System.Runtime.Caching/4.7.0": {
         "dependencies": {
-          "System.Configuration.ConfigurationManager": "6.0.1"
+          "System.Configuration.ConfigurationManager": "6.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/System.Runtime.Caching.dll": {
@@ -1978,7 +1977,7 @@
       },
       "FinancialService/1.0.0": {
         "dependencies": {
-          "Quartz": "3.11.0",
+          "Quartz": "3.13.0",
           "WebCommon": "1.0.0",
           "WebModel": "1.0.0"
         },
@@ -2017,7 +2016,7 @@
       },
       "OperateService/1.0.0": {
         "dependencies": {
-          "Quartz": "3.11.0",
+          "Quartz": "3.13.0",
           "WebCommon": "1.0.0",
           "WebModel": "1.0.0"
         },
@@ -2059,7 +2058,8 @@
           "FinancialService": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "OperateService": "1.0.0",
-          "Quartz": "3.11.0",
+          "Quartz": "3.13.0",
+          "TimeService": "1.0.0",
           "UpdateAt0amService": "1.0.0"
         },
         "runtime": {
@@ -2124,9 +2124,18 @@
           "SurgeryProjectService.dll": {}
         }
       },
+      "TimeService/1.0.0": {
+        "dependencies": {
+          "Quartz": "3.13.0",
+          "WebCommon": "1.0.0"
+        },
+        "runtime": {
+          "TimeService.dll": {}
+        }
+      },
       "UpdateAt0amService/1.0.0": {
         "dependencies": {
-          "Quartz": "3.11.0",
+          "Quartz": "3.13.0",
           "WebCommon": "1.0.0",
           "WebModel": "1.0.0"
         },
@@ -2561,12 +2570,12 @@
       "path": "oscar.data.sqlclient/4.0.4",
       "hashPath": "oscar.data.sqlclient.4.0.4.nupkg.sha512"
     },
-    "Quartz/3.11.0": {
+    "Quartz/3.13.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-dx8K/3C7P+o+tNI7LosOwoCWjT8aM/AojO+3IPlp4ArvgVcqf36pYu3Rqorcxc4kfklfHcFRrS9hQAIgp6TkGg==",
-      "path": "quartz/3.11.0",
-      "hashPath": "quartz.3.11.0.nupkg.sha512"
+      "sha512": "sha512-ddD1CPjWcDMbKdAhzuna3Ng23Sdv1YtuHbFMdAAFw0eBEj9jnadYkDWiKGo/c7BMnbI/ruuyd370sKVgdMCkDA==",
+      "path": "quartz/3.13.0",
+      "hashPath": "quartz.3.13.0.nupkg.sha512"
     },
     "Quartz.Extensions.DependencyInjection/3.11.0": {
       "type": "package",
@@ -2820,12 +2829,12 @@
       "path": "system.collections.immutable/8.0.0",
       "hashPath": "system.collections.immutable.8.0.0.nupkg.sha512"
     },
-    "System.Configuration.ConfigurationManager/6.0.1": {
+    "System.Configuration.ConfigurationManager/6.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jXw9MlUu/kRfEU0WyTptAVueupqIeE3/rl0EZDMlf8pcvJnitQ8HeVEp69rZdaStXwTV72boi/Bhw8lOeO+U2w==",
-      "path": "system.configuration.configurationmanager/6.0.1",
-      "hashPath": "system.configuration.configurationmanager.6.0.1.nupkg.sha512"
+      "sha512": "sha512-7T+m0kDSlIPTHIkPMIu6m6tV6qsMqJpvQWW2jIc2qi7sn40qxFo0q+7mEQAhMPXZHMKnWrnv47ntGlM/ejvw3g==",
+      "path": "system.configuration.configurationmanager/6.0.0",
+      "hashPath": "system.configuration.configurationmanager.6.0.0.nupkg.sha512"
     },
     "System.Console/4.3.0": {
       "type": "package",
@@ -3400,6 +3409,11 @@
       "sha512": ""
     },
     "SurgeryProjectService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TimeService/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -38,35 +38,67 @@ namespace WebAPI.Controllers
                 if (orderState)
                 {
                     var order = _orderService.AddBill(placeOrderDto);
-                    //核销优惠券
-                    if (order.COU_ID != null)
+                    if (order != null)
                     {
+                        //核销优惠券
+                        if (order.COU_ID != null)
+                        {
+                            DbContext.db.Ado.ExecuteCommand(
+                            "DELETE FROM CUS_COU WHERE COU_ID = :couID",
+                            new
+                            {
+                                couID = order.COU_ID,
+                            });
+                        }
+                        //会员打折
+                        var viplevel = DbContext.db.Ado.SqlQuerySingle<MEMBER>(
+                        "SELECT * FROM CUSTOMER NATURAL JOIN MEMBER WHERE CUS_ID = :id ",
+                        new
+                        {
+                            id = placeOrderDto.clientid,
+                        });
+                        decimal pay = order.PAID_AMOUNT * viplevel.DISCOUNT;
+                        decimal price;
+                        if(order.COU_ID != null)
+                        { 
+                            price = DbContext.db.Ado.SqlQuerySingle<decimal>(
+                                "SELECT PRICE FROM COUPON WHERE COU_ID = :id ",
+                                new
+                                {
+                                    id = order.COU_ID,
+                                });
+                            if (pay > price)
+                                pay -= price;
+                            else
+                                pay = 0;
+                        }
+                       
+                            //减去付款金额
+                            DbContext.db.Ado.ExecuteCommand(
+                            "UPDATE CUSTOMER SET BALANCE = BALANCE - :balance WHERE CUS_ID = :cusID",
+                            new
+                            {
+                                balance = pay,
+                                cusID = order.CUS_ID,
+                            });
+                        //修改订单金额
                         DbContext.db.Ado.ExecuteCommand(
-                        "DELETE FROM CUS_COU WHERE COU_ID = :couID",
-                        new
-                        {
-                            couID = order.COU_ID,
-                        });
+                           "UPDATE BILL SET PAID_AMOUNT = :paid WHERE BILL_ID = :billID",
+                           new
+                           {
+                               paid = pay,
+                               billID = order.BILL_ID,
+                           });
+                        //事物提交
+                        DbContext.db.Ado.CommitTran();
+                        return Ok("1");
                     }
-                    //会员打折
-                    var viplevel = DbContext.db.Ado.SqlQuerySingle<MEMBER>(
-                    "SELECT * FROM CUSTOMER NATURAL JOIN MEMBER WHERE CUS_ID = :id ",
-                    new
+                    else
                     {
-                        id = placeOrderDto.clientid,
-                    });
-                    decimal pay = order.PAID_AMOUNT * viplevel.DISCOUNT;
-                    //减去付款金额
-                    DbContext.db.Ado.ExecuteCommand(
-                        "UPDATE CUSTOMER SET BALANCE = BALANCE - :balance WHERE CUS_ID = :cusID",
-                        new
-                        {
-                            balance = pay,
-                            cusID = order.CUS_ID,
-                        });
-                    //事物提交
-                    DbContext.db.Ado.CommitTran();
-                    return Ok("1");
+                        //事物回滚
+                        DbContext.db.Ado.RollbackTran();
+                        return Ok("0");
+                    }
                 }
                 else
                 {

@@ -37,6 +37,8 @@ namespace WebAPI.Controllers
 
                     var response = new LoginResponse
                     {
+                        month = "0",
+                        day = "0",
                         id = "admin",
                         role = "0"//登录账号类型，0为管理员
                     };
@@ -51,6 +53,8 @@ namespace WebAPI.Controllers
             {
                 var response = new LoginResponse
                 {
+                    month = customer.BIRTHDAY.Month.ToString(),
+                    day = customer.BIRTHDAY.Day.ToString(),
                     id = customer.CUS_ID,
                     role = "1"//登录账号类型，1为客户
                 };
@@ -65,6 +69,8 @@ namespace WebAPI.Controllers
 
                     var response = new LoginResponse
                     {
+                        month = server.BIRTHDAY.Month.ToString(),
+                        day = server.BIRTHDAY.Day.ToString(),
                         id = server.SER_ID,
                         role = "2"//登录账号类型，2为员工
                     };
@@ -75,6 +81,8 @@ namespace WebAPI.Controllers
                 {
                     var response = new LoginResponse
                     {
+                        month = "0",
+                        day = "0",
                         id = "-1",
                         role = "3"//登录账号类型，2为员工
                     };
@@ -86,6 +94,8 @@ namespace WebAPI.Controllers
     }
     public class LoginResponse
     {
+        public string month { get; set; }
+        public string day { get; set; }
         public string role { get; set; }
         public string id { get; set; }
     }

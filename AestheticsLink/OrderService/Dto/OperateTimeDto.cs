@@ -14,6 +14,5 @@ namespace OperateService.Dto
         public DateTime START_TIME { get; set; }
         public DateTime END_TIME { get; set; }
         public string STATUS { get; set; }
-
     }
 }

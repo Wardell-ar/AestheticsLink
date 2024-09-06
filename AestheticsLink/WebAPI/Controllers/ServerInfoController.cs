@@ -5,6 +5,7 @@ using LogRegService;
 using LogRegService.Dto;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using QueryAllUsersService.QueryAllServers.Dto;
 using ServerInformation;
 using ServerInformation.Dto;
 using ServerSigninService.Signin.Dto;
@@ -37,9 +38,53 @@ namespace WebAPI.Controllers
             return age;
         }
 
+        [HttpPost("UpdateServerPSW")]
+        public async Task<IActionResult> UpdateServerPSW([FromBody] UpdateServerPSWRequest updateServerPSWRequest)
+        {
+            _logger.LogInformation("Received UpdateServerPSW request!");
+            try
+            {
+                DbContext.db.Ado.BeginTran();
+
+                // 检查ser_id是否存在
+                var existingServer = await DbContext.db.Queryable<SERVER>()
+                    .Where(s => s.SER_ID == updateServerPSWRequest.employeeId)
+                    .SingleAsync();
+
+                if (existingServer == null)
+                {
+                    _logger.LogWarning($"Server with SER_ID: {updateServerPSWRequest.employeeId} does not exist.");
+                    DbContext.db.Ado.RollbackTran();
+                    return Ok("0");
+                }
+
+                // 更新salary字段
+                if (!string.IsNullOrEmpty(updateServerPSWRequest.newpassword))
+                {
+                    existingServer.PASSWORD = updateServerPSWRequest.newpassword;
+                }
+
+                
+                // 更新SERVER表中的记录
+                await DbContext.db.Updateable(existingServer)
+                    .ExecuteCommandAsync();
+
+                DbContext.db.Ado.CommitTran();
+                return Ok("1");
+            }
+            catch (Exception ex)
+            {
+                //事物回滚
+                DbContext.db.Ado.RollbackTran();
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+
         [HttpPost("ServerInfo")]
         public async Task<IActionResult> ServerInfo([FromBody] ServerInfoRequest serverinforequest)
         {
+            _logger.LogInformation("Received ServerInfo request!");
             try
             {
                 //事物开始
@@ -71,6 +116,8 @@ namespace WebAPI.Controllers
                     .Where((s, o, h, b, p) => s.SER_ID == ser_id)
                     .Select((s, o, h, b, p) => new
                     {
+                        paidMoney = s.TAKEHOMEPAY,
+                        password = s.PASSWORD,
                         id = s.SER_ID,
                         name = s.NAME,
                         gender = s.GENDER,
@@ -95,6 +142,8 @@ namespace WebAPI.Controllers
 
                     var serverInfo = new ServerInfoDto
                     {
+                        paidMoney = firstItem.paidMoney,
+                        password = firstItem.password,
                         id = firstItem.id,
                         name = firstItem.name,
                         gender = firstItem.gender,

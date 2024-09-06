@@ -116,22 +116,22 @@ namespace MedcineService
         private async Task RecordHospitalOutcome(string hosId, decimal amount)
         {
             var currentMonth = DateTime.Now.ToString("yyyy-MM");
-            var bill = await DbContext.db.Queryable<HOSPITALBILL>()
-                                          .Where(b => b.HOS_ID == hosId && b.FOUND_DATE.ToString("yyyy-MM") == currentMonth)
+            var bill = await DbContext.db.Queryable<FINANCIAL>()
+                                          .Where(b => b.HOS_ID == hosId && b.FINANCE_MONTH.ToString("yyyy-MM") == currentMonth)
                                           .FirstAsync();
 
             if (bill != null)
             {
-                bill.OUTCOME += amount;
+                bill.PAYOUT += amount;
                 await DbContext.db.Updateable(bill).ExecuteCommandAsync();
             }
             else
             {
-                bill = new HOSPITALBILL
+                bill = new FINANCIAL
                 {
                     HOS_ID = hosId,
-                    FOUND_DATE = DateTime.Now,
-                    OUTCOME = amount,
+                    FINANCE_MONTH = DateTime.Now,
+                    PAYOUT = amount,
                     INCOME = 0 // 如果需要初始化收入
                 };
                 await DbContext.db.Insertable(bill).ExecuteCommandAsync();

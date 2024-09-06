@@ -67,7 +67,9 @@ namespace CustomerMessageService
                 Day = customer.BIRTHDAY.Day.ToString(),        // 日
                 Gender = customer.GENDER,
                 VIPLevel = customer.VIPLEVEL,
-                Password = customer.PASSWORD
+                Password = customer.PASSWORD,
+                Money = customer.BALANCE,
+                phoneNum = customer.PHONE_NUM
             };
         }
 
@@ -121,7 +123,7 @@ namespace CustomerMessageService
             return new VipDto
             {
                 vipLevel = vipInfo.VIPLevel,
-                discount= vipInfo.Discount
+                discount = vipInfo.Discount
             };
         }
 
@@ -139,7 +141,7 @@ namespace CustomerMessageService
 
             // 查询顾客的优惠券
             var coupons = await DbContext.db.Queryable<COUPON, CUS_COU>((c, cc) => new object[] {
-                                                JoinType.Inner, c.COU_ID == cc.COU_ID })
+                                        JoinType.Inner, c.COU_ID == cc.COU_ID })
                                             .Where((c, cc) => cc.CUS_ID == cusId)
                                             .Select((c, cc) => new CouponDto
                                             {
@@ -148,6 +150,7 @@ namespace CustomerMessageService
                                                 Price = c.PRICE
                                             })
                                             .ToListAsync();
+
 
             // 获取当前时间并计算当月最后一天
             DateTime now = DateTime.Now;

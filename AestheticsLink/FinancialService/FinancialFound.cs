@@ -44,7 +44,7 @@ namespace FinancialService
                             hosID = hospital,
                             month = day.Date,
                             income = 0,
-                            payout = payoutTotal,
+                            payout = 0,
                         });
                 }
                 //事物提交

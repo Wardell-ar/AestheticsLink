@@ -9,6 +9,5 @@ namespace OrderService.Dto
     public class ProjectDto
     {
         public string NAME { get; set; }
-
     }
 }

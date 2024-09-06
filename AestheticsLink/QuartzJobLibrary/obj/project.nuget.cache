@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k1uoh4nKpiyVuqoUV2d8kq+96i8sW4b/lOlrKgaCKjTKk1Uvr4VRERaR0JZ2M4ixtuG5HdkslsfbdpdDJQ/oiA==",
+  "dgSpecHash": "0drY788GXDfsq4NS5MKegZyz5CFRQZax4ipX5QxleUexf18mIAeg7LYr3CqXkEbWoD+iuHP5p18T/eJbPfdHMA==",
   "success": true,
-  "projectFilePath": "D:\\Github\\AestheticsLink\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj",
+  "projectFilePath": "D:\\C#_Project\\update\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Xyy\\.nuget\\packages\\closedxml\\0.102.2\\closedxml.0.102.2.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\documentformat.openxml\\2.16.0\\documentformat.openxml.2.16.0.nupkg.sha512",
@@ -63,7 +63,7 @@
     "C:\\Users\\Xyy\\.nuget\\packages\\npgsql\\5.0.18\\npgsql.5.0.18.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\oracle.manageddataaccess.core\\23.4.0\\oracle.manageddataaccess.core.23.4.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\oscar.data.sqlclient\\4.0.4\\oscar.data.sqlclient.4.0.4.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\quartz\\3.11.0\\quartz.3.11.0.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\quartz\\3.13.0\\quartz.3.13.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\rezero\\1.7.9\\rezero.1.7.9.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\rezero.api\\1.7.9\\rezero.api.1.7.9.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
@@ -95,7 +95,7 @@
     "C:\\Users\\Xyy\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.collections.immutable\\8.0.0\\system.collections.immutable.8.0.0.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.1\\system.configuration.configurationmanager.6.0.1.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.console\\4.3.0\\system.console.4.3.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.data.common\\4.3.0\\system.data.common.4.3.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
@@ -167,10 +167,7 @@
     "C:\\Users\\Xyy\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512"
+    "C:\\Users\\Xyy\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512"
   ],
   "logs": []
 }

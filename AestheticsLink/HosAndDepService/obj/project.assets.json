@@ -9713,11 +9713,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Github\\AestheticsLink\\AestheticsLink\\HosAndDepService\\HosAndDepService.csproj",
+      "projectUniqueName": "D:\\C#_Project\\update\\AestheticsLink\\HosAndDepService\\HosAndDepService.csproj",
       "projectName": "HosAndDepService",
-      "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\HosAndDepService\\HosAndDepService.csproj",
+      "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\HosAndDepService\\HosAndDepService.csproj",
       "packagesPath": "C:\\Users\\Xyy\\.nuget\\packages\\",
-      "outputPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\HosAndDepService\\obj\\",
+      "outputPath": "D:\\C#_Project\\update\\AestheticsLink\\HosAndDepService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Xyy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9734,11 +9734,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Github\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
-              "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\WebCommon\\WebCommon.csproj"
+            "D:\\C#_Project\\update\\AestheticsLink\\WebCommon\\WebCommon.csproj": {
+              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\WebCommon\\WebCommon.csproj"
             },
-            "D:\\Github\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj": {
-              "projectPath": "D:\\Github\\AestheticsLink\\AestheticsLink\\WebModel\\WebModel.csproj"
+            "D:\\C#_Project\\update\\AestheticsLink\\WebModel\\WebModel.csproj": {
+              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\WebModel\\WebModel.csproj"
             }
           }
         }
@@ -9747,11 +9747,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -9768,26 +9763,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.28, 6.0.28]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.28, 6.0.28]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.28, 6.0.28]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

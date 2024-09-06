@@ -13,6 +13,5 @@ namespace OrderService.Dto
         public string BILL_ID { get; set; }
         public string CUS_ID { get; set; }
         public decimal PAID_AMOUNT { get; set; }
-
     }
 }

@@ -41,6 +41,11 @@ namespace LogRegService
             else
             {
                 DbContext.db.Insertable(customer).ExecuteCommand();
+                //发放代金券
+                CUS_COU cus_cou = new CUS_COU();
+                cus_cou.CUS_ID = customer.CUS_ID;
+                cus_cou.COU_ID = "0";
+                DbContext.db.Insertable(cus_cou).ExecuteCommand();
                 return new CustomerDto
                 {
                     CUS_ID = customer.CUS_ID,

@@ -19,6 +19,8 @@ namespace ServerInformation.Dto
 
     public class ServerInfoDto
     {
+        public decimal paidMoney { get; set; }
+        public string password { get; set; }
         public string id { get; set; }
         public string name { get; set; }
         public string gender { get; set; }
@@ -32,5 +34,11 @@ namespace ServerInformation.Dto
     public class ServerInfoRequest
     {
         public string id { get; set; }
+    }
+
+    public class UpdateServerPSWRequest
+    {
+        public string employeeId { get; set; }
+        public string newpassword { get; set; }
     }
 }

@@ -20,17 +20,15 @@ namespace WebAPI.Controllers
             try
             {
                 // 将月份和年份合并成一个字符串
-                //string monthYear = financial.date.Month + "-" + financial.date.Year;
-                //// 使用 DateTime.ParseExact 方法进行转换
-                //DateTime dateTime = DateTime.ParseExact(monthYear, "MM-yyyy", null);
+                string monthYear = financial.month + "-" + financial.year;
                 var result = DbContext.db.Ado.SqlQuerySingle<FinancialReturnDto>(
-                "SELECT INCOME, PAYOUT " +
+                    "SELECT INCOME, PAYOUT " +
                     "FROM FINANCIAL NATURAL JOIN HOSPITAL " +
-                    "WHERE NAME = :name AND TO_CHAR(FINANCE_MONTH, 'YYYY-MM') = TO_CHAR(:date, 'YYYY-MM')",
+                    "WHERE NAME = :name AND TO_CHAR(FINANCE_MONTH, 'MM-yyyy') = :date",
                     new
                     {
-                        name = financial.hos_name,
-                        date = financial.date,
+                        name = financial.hospitalname,
+                        date = monthYear // 传递格式化后的字符串
                     });
                 if (result == null)
                 {

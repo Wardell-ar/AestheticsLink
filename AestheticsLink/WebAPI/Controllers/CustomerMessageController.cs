@@ -90,7 +90,7 @@ namespace WebAPI.Controllers
                 var couponInfo = await _customerMessageService.GetCustomerCouponInfoAsync(request.CusId);
                 if (couponInfo == null || couponInfo.Count == 0)
                 {
-                    return NotFound();
+                    return Ok();
                 }
                 return Ok(couponInfo); // 返回 JSON 格式的数据
             }

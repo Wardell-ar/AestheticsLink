@@ -15,6 +15,5 @@ namespace OrderService.Dto
         public DateTime FOUND_DATE { get; set; }
         public string EXE_STATE { get; set; }
         public string OP_TIME_ID { get; set; }
-
     }
 }
