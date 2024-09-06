@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>客户案例_响应式网络建设设计公司网站织梦模板(自适应移动设备)</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="shortcut icon" type="image/x-icon" href="/templets/default/images/cpgwimages/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="skin/css/base.css" />
+<link rel="stylesheet" type="text/css" href="skin/css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="skin/css/owl.carousel.css" />
+<link rel="stylesheet" type="text/css" href="skin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="skin/css/responsive.css" />
+<script src="skin/js/jquery-1.11.0.min.js"></script>
+<script src="skin/js/wow.min_1.js"></script>
+<script src="skin/js/owl.carousel.min.js"></script>
+<script src="skin/js/page.js"></script>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .video-text-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 40px 0;
+        align-items: center;
+    }
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        background: #000;
+    }
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .content-section {
+        padding: 40px 0;
+        text-align: center;
+    }
+    .content-section h2 {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        animation: fadeInUp 1s;
+    }
+    .content-section p {
+        font-size: 1.2em;
+        margin: 20px 0;
+        line-height: 1.5;
+        animation: fadeInUp 1s;
+    }
+    .content-section .case {
+        margin: 20px 0;
+    }
+    .content-section .case-title {
+        font-weight: bold;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    .content-section .case-description {
+        font-size: 1.1em;
+        color: #555;
+    }
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .hidden {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    .visible {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.5s, transform 0.5s;
+    }
+    .header .user-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  .header .user-buttons a {
+    display: inline-block;
+  }
+  .header .user-buttons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+  .header .user-buttons img:hover {
+    transform: scale(1.1);
+  }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="rowFluid">
+    <div class="span2 col-md-12">
+      <div class="logo"> <a href="index.html" title="返回首页"> <img src="skin/images/logo.png" alt="响应式网络建设设计公司网站织梦模板(自适应移动设备)" /> </a> </div>
+    </div>
+    <div class="span8">
+      <div class="mobileMenuBtn"><span class="span1"></span><span class="span2"></span><span class="span3"></span></div>
+      <div class="mobileMenuBtn_shad"></div>
+      <div class="header_menu">
+        <ul id="menu">
+          <li><a href="index.html"   title="首页">首页</a></li>
+          <li><a href="解决方案.html" title="解决方案">解决方案</a></li>
+          <li><a href="客户案例.html" class='active'  title="客户案例">客户案例</a></li>
+          <li><a href="技术支持.html" title="技术支持">技术支持</a></li>
+          <li><a href="联系我们.html" title="联系我们">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="span2">
+      <div class="user-buttons">
+        <a href="登录.html" title="用户"><img src="skin/images/user-icon.png" alt="用户"></a>
+        <a href="https://weixin.qq.com" title="分享"><img src="skin/images/share-icon.png" alt="分享"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="rowFluid">
+    <div class="span12">
+      <div class="main">
+        <div class="z_banner">
+          <div class="rowFluid">
+            <div class="span12">
+              <div class="container">
+                <h3 class="z_banner_title">我们的客户案例</h3>
+                <div class="z_banner_text">专业运动指导，你也可以拥有</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2>精彩视频展示</h2>
+          <div class="video-text-container">
+            <div class="video-container hidden">
+              <iframe src="skin/images/CoM-Bot介绍视频.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="text-container">
+              <h1 class="hidden" >见证改变，分享故事</h1>
+              <p class="hidden">我们邀请您观看由真实用户录制的CoM-Bot介绍视频，<br>
+                一探这款软件机器人如何帮助他们提升运动技能，享受更健康、更科学、更高效的训练过程。</p>
+            </div>
+          </div>
+
+          
+          <div class="case-list">
+            <div class="case hidden">
+              <div class="case-title">CoM-Bot：运动重心跟踪与训练辅助的革新者</div>
+              <div class="case-description">在追求卓越运动表现的道路上，我们深知重心控制的重要性。<br>一款由同济大学创新创业团队精心打造的软件机器人，已经走出实验室，走进用户的日常生活。</div>
+            </div>
+            <div class="case hidden">
+              <div class="case-title">技术与创新的融合</div>
+              <div class="case-description">CoM-Bot结合了先进的体域传感器技术、人工智能算法和软件机器人集成能力，为用户提供实时的运动重心跟踪和训练反馈。<br>它不仅提高了运动表现，更在预防运动伤害方面发挥了重要作用。</div>
+            </div>
+            <div class="case hidden">
+              <div class="case-title">个性化训练体验</div>
+              <div class="case-description">每一位运动爱好者都是独一无二的。<br>CoM-Bot通过个性化的重心分析，为用户量身定制训练计划，确保每一次训练都精准有效。</div>
+            </div>
+            <div class="case hidden">
+              <div class="case-title">易于使用，效果显著</div>
+              <div class="case-description">通过简单的操作，用户即可录制自己的运动视频，采集压电数据。<br>CoM-Bot将分析这些内容，提供实时反馈和专业建议，帮助用户及时纠正动作，优化训练效果。</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer wow fadeInUp">
+          <div class="rowFluid">
+            <div class="span12">
+              <div class="container">
+                <div class="footer_content">
+                  <div class="span4 col-xm-12">
+                    <div class="footer_list">
+                      <div class="span6">
+                        <div class="bottom_logo"> <img src="skin/images/weixin.png" alt="微信服务号二维码" /> </div>
+                      </div>
+                      <div class="span6 col-xm-12">
+                        <div class="quick_navigation">
+                          <div class="quick_navigation_title">快速导航</div>
+                          <ul>
+                            <li> <a href="/" title="首页">首页</a> </li>
+                            <li> <a href="解决方案.html" title="解决方案">解决方案</a> </li>
+                            <li> <a href="客户案例.html" title="客户案例">客户案例</a> </li>
+                            <li> <a href="技术支持.html" title="技术支持">技术支持</a> </li>
+                            <li> <a href="联系我们.html" title="联系我们">联系我们</a> </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="span4 col-xm-6 col-xs-12">
+                    <div class="footer_list">
+                      <div class="footer_cotact">
+                        <div class="footer_cotact_title">联系方式</div>
+                        <ul>
+                          <li><span class="footer_cotact_type">地址：</span><span class="footer_cotact_content">上海市同济大学嘉定校区友园七号楼</span></li>
+                          <li><span class="footer_cotact_type">电话：</span><span class="footer_cotact_content"><a href="tel:66889888" class="call">13079096197</a></span></li>
+                          <li><span class="footer_cotact_type">网址：</span><span class="footer_cotact_content"><a href="#" title="官网">www.tongji.com</a></span></li>
+                          <li><span class="footer_cotact_type">邮箱：</span><span class="footer_cotact_content">2253542@tongji.edu.cn</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                </div>
+              </div>
+              <div class="container">
+                <div class="rowFluid">
+                  <div class="span12">
+                    <div class="footer_bottom">
+                      <div class="bottom">
+                        <p>Copyright &copy; 2024, All Rights Reserved</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    new WOW().init();
+    
+    $(window).on('scroll', function(){
+      $('.hidden').each(function(){
+        var elementTop = $(this).offset().top;
+        var viewportBottom = $(window).scrollTop() + $(window).height();
+        if(elementTop < viewportBottom - 100){
+          $(this).addClass('visible').removeClass('hidden');
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
