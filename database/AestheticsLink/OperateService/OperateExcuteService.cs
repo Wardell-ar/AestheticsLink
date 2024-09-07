@@ -28,49 +28,52 @@ namespace OperateService
 
                 var day = DateTime.Now;
                 //找到需要执行的手术
-                var operateToUpdate = await DbContext.db.Ado.SqlQuerySingleAsync<OperateDto>(
+                var operateToUpdates = await DbContext.db.Ado.SqlQueryAsync<OperateDto>(
                     "SELECT PROJ_ID, BILL_ID, OP_TIME_ID " +
                     "FROM OPERATE NATURAL JOIN OPERATE_TIME " +
-                    "WHERE DAY = :day AND END_TIME <= :time AND EXE_STATE = :state",
+                    "WHERE DAY <= :day AND END_TIME <= :time AND EXE_STATE = :state",
                     new
                     {
                         day = day.Date,
                         time = day,
                         state = "0"
                     });
-                if (operateToUpdate != null)
+                foreach (var operateToUpdate in operateToUpdates)
                 {
-                    //将该手术置为已完成
-                    await DbContext.db.Ado.ExecuteCommandAsync(
-                        "UPDATE OPERATE " +
-                        "SET EXE_STATE = :state " +
-                        "WHERE PROJ_ID = :projID AND BILL_ID = :billID AND OP_TIME_ID = :timeID",
-                        new
-                        {
-                            state = "1",
-                            projID = operateToUpdate.PROJ_ID,
-                            billID = operateToUpdate.BILL_ID,
-                            timeID = operateToUpdate.OP_TIME_ID,
-                        });
-                    //扣除药品
-                    var goodID = await DbContext.db.Ado.SqlQueryAsync<string>(
-                        "SELECT G_ID FROM OPERATE NATURAL JOIN PROJ_GOOD WHERE PROJ_ID = :projID AND BILL_ID = :billID",
-                        new
-                        {
-                            projID = operateToUpdate.PROJ_ID,
-                            billID = operateToUpdate.BILL_ID,
-                        });
-                    foreach (var item in goodID)
+                    if (operateToUpdate != null)
                     {
+                        //将该手术置为已完成
                         await DbContext.db.Ado.ExecuteCommandAsync(
-                            "UPDATE INVENTORY " +
-                            "SET STORAGE = STORAGE - :storage " +
-                            "WHERE G_ID = :gID",
+                            "UPDATE OPERATE " +
+                            "SET EXE_STATE = :state " +
+                            "WHERE PROJ_ID = :projID AND BILL_ID = :billID AND OP_TIME_ID = :timeID",
                             new
                             {
-                                storage = 1,
-                                gID = item,
+                                state = "1",
+                                projID = operateToUpdate.PROJ_ID,
+                                billID = operateToUpdate.BILL_ID,
+                                timeID = operateToUpdate.OP_TIME_ID,
                             });
+                        //扣除药品
+                        var goodID = await DbContext.db.Ado.SqlQueryAsync<string>(
+                            "SELECT G_ID FROM OPERATE NATURAL JOIN PROJ_GOOD WHERE PROJ_ID = :projID AND BILL_ID = :billID",
+                            new
+                            {
+                                projID = operateToUpdate.PROJ_ID,
+                                billID = operateToUpdate.BILL_ID,
+                            });
+                        foreach (var item in goodID)
+                        {
+                            await DbContext.db.Ado.ExecuteCommandAsync(
+                                "UPDATE INVENTORY " +
+                                "SET STORAGE = STORAGE - :storage " +
+                                "WHERE G_ID = :gID",
+                                new
+                                {
+                                    storage = 1,
+                                    gID = item,
+                                });
+                        }
                     }
                 }
                 //事物提交

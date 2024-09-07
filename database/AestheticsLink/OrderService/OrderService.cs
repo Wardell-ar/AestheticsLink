@@ -130,12 +130,13 @@ namespace OrderService
 
                     // 查找该手术室的可用时间
                     var availableTimes = DbContext.db.Ado.SqlQuery<OperateTimeDto>(
-                        "SELECT * FROM OPERATE_TIME WHERE STATUS = :status AND START_TIME > :time AND DAY >= :day ORDER BY START_TIME ASC",
+                        "SELECT * FROM OPERATE_TIME NATURAL JOIN OPERATING_ROOM WHERE STATUS = :status AND START_TIME > :time AND DAY >= :day AND HOS_ID = :hos ORDER BY START_TIME ASC",
                         new
                         {
                             status = "0",
                             time = timeNow,
                             day = timeNow.Date,
+                            hos = bill.HOS_ID,
                         });
                     // 遍历该手术室的所有可用时间段
                     foreach (var availableTime in availableTimes)
@@ -217,9 +218,9 @@ namespace OrderService
                     }
 
                 }
-                if (operate == null)
+                if (operate.BILL_ID == null)
                     return null;
-                
+
 
                 return new BillDto
                 {
@@ -279,7 +280,7 @@ namespace OrderService
         }
         private string GetMaxBillId()
         {
-            string sql = "SELECT MAX(TO_NUMBER(BILL_ID)) FROM BILL"; 
+            string sql = "SELECT MAX(TO_NUMBER(BILL_ID)) FROM BILL";
 
             // 执行 SQL 查询
             var result = DbContext.db.Ado.GetString(sql);
