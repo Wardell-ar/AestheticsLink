@@ -1,0 +1,45 @@
+D:\database\AestheticsLink (2)\AestheticsLink\TimeService\bin\Release\net6.0\TimeService.deps.json
+D:\database\AestheticsLink (2)\AestheticsLink\TimeService\bin\Release\net6.0\TimeService.dll
+D:\database\AestheticsLink (2)\AestheticsLink\TimeService\bin\Release\net6.0\TimeService.pdb
+D:\database\AestheticsLink (2)\AestheticsLink\TimeService\bin\Release\net6.0\WebCommon.dll
+D:\database\AestheticsLink (2)\AestheticsLink\TimeService\bin\Release\net6.0\WebCommon.pdb
+D:\database\AestheticsLink (2)\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.csproj.AssemblyReference.cache
+D:\database\AestheticsLink (2)\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.GeneratedMSBuildEditorConfig.editorconfig
+D:\database\AestheticsLink (2)\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.AssemblyInfoInputs.cache
+D:\database\AestheticsLink (2)\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.AssemblyInfo.cs
+D:\database\AestheticsLink (2)\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.csproj.CoreCompileInputs.cache
+D:\database\AestheticsLink (2)\AestheticsLink\TimeService\obj\Release\net6.0\TimeServ.1552E780.Up2Date
+D:\database\AestheticsLink (2)\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.dll
+D:\database\AestheticsLink (2)\AestheticsLink\TimeService\obj\Release\net6.0\refint\TimeService.dll
+D:\database\AestheticsLink (2)\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.pdb
+D:\database\AestheticsLink (2)\AestheticsLink\TimeService\obj\Release\net6.0\ref\TimeService.dll
+D:\C#_Project\update\AestheticsLink\TimeService\bin\Release\net6.0\TimeService.deps.json
+D:\C#_Project\update\AestheticsLink\TimeService\bin\Release\net6.0\TimeService.dll
+D:\C#_Project\update\AestheticsLink\TimeService\bin\Release\net6.0\TimeService.pdb
+D:\C#_Project\update\AestheticsLink\TimeService\bin\Release\net6.0\WebCommon.dll
+D:\C#_Project\update\AestheticsLink\TimeService\bin\Release\net6.0\WebCommon.pdb
+D:\C#_Project\update\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.csproj.AssemblyReference.cache
+D:\C#_Project\update\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#_Project\update\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.AssemblyInfoInputs.cache
+D:\C#_Project\update\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.AssemblyInfo.cs
+D:\C#_Project\update\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.csproj.CoreCompileInputs.cache
+D:\C#_Project\update\AestheticsLink\TimeService\obj\Release\net6.0\TimeServ.1552E780.Up2Date
+D:\C#_Project\update\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.dll
+D:\C#_Project\update\AestheticsLink\TimeService\obj\Release\net6.0\refint\TimeService.dll
+D:\C#_Project\update\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.pdb
+D:\C#_Project\update\AestheticsLink\TimeService\obj\Release\net6.0\ref\TimeService.dll
+D:\C#_Project\database\AestheticsLink\TimeService\bin\Release\net6.0\TimeService.deps.json
+D:\C#_Project\database\AestheticsLink\TimeService\bin\Release\net6.0\TimeService.dll
+D:\C#_Project\database\AestheticsLink\TimeService\bin\Release\net6.0\TimeService.pdb
+D:\C#_Project\database\AestheticsLink\TimeService\bin\Release\net6.0\WebCommon.dll
+D:\C#_Project\database\AestheticsLink\TimeService\bin\Release\net6.0\WebCommon.pdb
+D:\C#_Project\database\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.csproj.AssemblyReference.cache
+D:\C#_Project\database\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#_Project\database\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.AssemblyInfoInputs.cache
+D:\C#_Project\database\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.AssemblyInfo.cs
+D:\C#_Project\database\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.csproj.CoreCompileInputs.cache
+D:\C#_Project\database\AestheticsLink\TimeService\obj\Release\net6.0\TimeServ.1552E780.Up2Date
+D:\C#_Project\database\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.dll
+D:\C#_Project\database\AestheticsLink\TimeService\obj\Release\net6.0\refint\TimeService.dll
+D:\C#_Project\database\AestheticsLink\TimeService\obj\Release\net6.0\TimeService.pdb
+D:\C#_Project\database\AestheticsLink\TimeService\obj\Release\net6.0\ref\TimeService.dll
