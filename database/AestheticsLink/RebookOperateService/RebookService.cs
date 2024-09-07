@@ -22,7 +22,7 @@ namespace RebookOperateService
                 ReturnDto returnDto = new ReturnDto();
                 //判断cusid和projid是否对应
                 var isMatch = DbContext.db.Ado.SqlQuerySingle<string>("SELECT CUS_ID FROM BILL WHERE CUS_ID = :cus AND BILL_ID = :bill", new { cus = delayedOperate.customerId, bill = delayedOperate.billid });
-                if(isMatch == null) { return null; }
+                if (isMatch == null) { return null; }
                 var projid = DbContext.db.Ado.SqlQuerySingle<string>(
                     "SELECT PROJ_ID FROM PROJECT WHERE NAME = :name ",
                     new
@@ -44,13 +44,23 @@ namespace RebookOperateService
                     {
                         timeID = operate.OP_TIME_ID,
                     });
+                //找到对应医院
+                var Hos_Id = DbContext.db.Ado.SqlQuerySingle<string>(
+                    "SELECT HOS_ID FROM BILL WHERE BILL_ID = :billId",
+                    new
+                    {
+                        billId = delayedOperate.billid,
+                    });
+
                 //找到可用的时间和手术室,从当前时间往后找找到第一个可用时间
                 var availableTimes = DbContext.db.Ado.SqlQuery<OperateTimeDto>(
-                    "SELECT * FROM OPERATE_TIME WHERE STATUS = :status AND DAY > :day ",
+                    "SELECT * FROM OPERATE_TIME NATURAL JOIN OPERATING_ROOM WHERE STATUS = :status AND START_TIME > :time AND DAY >= :day AND HOS_ID = :hos ORDER BY START_TIME ASC",
                     new
                     {
                         status = "0",
-                        day = operateTime.DAY
+                        time = operateTime.START_TIME,
+                        day = operateTime.DAY,
+                        hos = Hos_Id,
                     });
                 // 查找客户已经安排的手术时间段
                 var scheduledTimes = DbContext.db.Ado.SqlQuery<OperateTimeDto>(
