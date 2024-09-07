@@ -1,0 +1,22 @@
+## 2024-08-07 15:11:08,349 [1] INFO  (null) Default Quartz.NET properties loaded from embedded resource file 
+## 2024-08-07 15:11:08,534 [1] INFO  (null) Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl 
+## 2024-08-07 15:11:08,535 [1] INFO  (null) Quartz Scheduler created 
+## 2024-08-07 15:11:08,539 [1] INFO  (null) RAMJobStore initialized. 
+## 2024-08-07 15:11:08,541 [1] INFO  (null) Quartz Scheduler 3.11.0.0 - 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED' initialized 
+## 2024-08-07 15:11:08,554 [1] INFO  (null) Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10 
+## 2024-08-07 15:11:08,556 [1] INFO  (null) Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False 
+## 2024-08-07 15:11:08,559 [1] INFO  (null) JobFactory set to: QuartzJobLibrary.SingletonJobFactory 
+## 2024-08-07 15:11:08,647 [1] INFO  (null) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started. 
+## 2024-08-07 15:12:42,255 [1] INFO  (null) Default Quartz.NET properties loaded from embedded resource file 
+## 2024-08-07 15:12:42,387 [1] INFO  (null) Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl 
+## 2024-08-07 15:12:42,390 [1] INFO  (null) Quartz Scheduler created 
+## 2024-08-07 15:12:42,398 [1] INFO  (null) RAMJobStore initialized. 
+## 2024-08-07 15:12:42,400 [1] INFO  (null) Quartz Scheduler 3.11.0.0 - 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED' initialized 
+## 2024-08-07 15:12:42,402 [1] INFO  (null) Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10 
+## 2024-08-07 15:12:42,404 [1] INFO  (null) Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False 
+## 2024-08-07 15:12:42,406 [1] INFO  (null) JobFactory set to: QuartzJobLibrary.SingletonJobFactory 
+## 2024-08-07 15:12:42,480 [1] INFO  (null) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started. 
+## 2024-08-07 15:12:42,780 [1] INFO  (null) Now listening on: http://192.168.0.106:5283 
+## 2024-08-07 15:12:42,793 [1] INFO  (null) Application started. Press Ctrl+C to shut down. 
+## 2024-08-07 15:12:42,798 [1] INFO  (null) Hosting environment: Development 
+## 2024-08-07 15:12:42,802 [1] INFO  (null) Content root path: D:\C#_Project\AestheticsLink\WebAPI\ 

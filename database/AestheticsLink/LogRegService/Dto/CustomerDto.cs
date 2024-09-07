@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LogRegService.Dto
+{
+    public class CustomerDto
+    {
+        public string CUS_ID { get; set; }
+        public string PHONE_NUM { get; set; }
+        public DateTime FOUND_DATE { get; set; }
+        public DateTime BIRTHDAY { get; set; }
+        public string GENDER { get; set; }
+        public string NAME { get; set; }
+        public string PASSWORD { get; set; }
+        public decimal BALANCE { get; set; }
+        public string VIPLEVEL { get; set; }
+    }
+}
