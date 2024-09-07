@@ -139,7 +139,6 @@ export default {
             }
             return false;
         },
-        
         // 注册信息录入成功后，回调函数，进行页面跳转
         callback() {
             this.router.push("/");
