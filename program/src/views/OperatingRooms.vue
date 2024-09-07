@@ -1,5 +1,5 @@
 <template>
-    <div class="common-layout">
+    <div class="common-layout"  v-if="IsAdmin">
         <el-container>
             <el-header class="header">
                 <div>{{ currentDate }} 手术室排班情况</div>
@@ -48,6 +48,7 @@
 
 <script>
 import { getHospitalNameReq, getRoomInfo } from "../HTTP/http"
+import { get_role } from '@/identification';
 export default {
     data() {
         return {
@@ -61,7 +62,8 @@ export default {
                 "18:00"
             ],
             hospitals: [],
-            operatingRooms: []
+            operatingRooms: [],
+            IsAdmin: get_role() == "0"
         };
     },
     methods: {

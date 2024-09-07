@@ -1,5 +1,5 @@
 <template>
-    <div class="hospital-finance">
+    <div class="hospital-finance"  v-if="IsAdmin">
         <div class="title">
             收支统计
             <!-- <img src="../assets/UI/收支管理.png" alt="img" width="50px" height="50px" position="absolute"
@@ -28,6 +28,7 @@
 
 <script>
 import { getHospitalNameReq, getFinanceReq } from "../HTTP/http"
+import { get_role } from '@/identification';
 export default {
     name: 'HospitalFinance',
     data() {
@@ -45,6 +46,7 @@ export default {
                     profit: ""
                 },
             ],  //需要从后端获取具体的收支，profit从income和expense计算出来的
+            IsAdmin: get_role() == "0"
         };
     },
     methods: {

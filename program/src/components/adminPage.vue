@@ -6,7 +6,7 @@
       </div>
       <ul>
         <li>
-          <RouterLink :to="{ path: '/admin/personal_managePage' }">
+          <RouterLink :to="{ path: '/admin/personal_managePage' }" v-if="isAdmin">
             <div class="sidebutton" @click="toggleHRInfo">
               <img src="@/assets/pics/hr_manage.png" alt="人事管理" width="20" height="20" style="margin: 0 8px 0 ">
               <p>人事管理</p>
@@ -16,7 +16,7 @@
           </RouterLink>
         </li>
         <li>
-          <RouterLink :to="{ path: '/admin/customer_infoPage' }">
+          <RouterLink :to="{ path: '/admin/customer_infoPage' }"  v-if="isAdmin">
             <div class="sidebutton" @click="toggleCustomerInfo">
               <img src="@/assets/pics/cus_info.png" alt="顾客信息" width="20" height="20" style="margin: 0 8px 0 ">
               <p>顾客信息</p>
@@ -26,7 +26,7 @@
           </RouterLink>
         </li>
         <li>
-          <RouterLink :to="{ path: '/admin/pill_managePage' }">
+          <RouterLink :to="{ path: '/admin/pill_managePage' }"  v-if="isAdmin">
             <div class="sidebutton" @click="togglePillInfo">
               <img src="@/assets/pics/pill_manage.png" alt="医药管理" width="20" height="20" style="margin: 0 8px 0 ">
               <p>医药管理</p>
@@ -36,7 +36,7 @@
           </RouterLink>
         </li>
         <li>
-          <RouterLink :to="{ path: '/admin/money_managePage' }">
+          <RouterLink :to="{ path: '/admin/money_managePage' }"  v-if="isAdmin">
             <div class="sidebutton" @click="toggleMoneyInfo">
               <img src="@/assets/pics/money_manage.png" alt="收支管理" width="20" height="20" style="margin: 0 8px 0 ">
               <p>收支管理</p>
@@ -46,7 +46,7 @@
           </RouterLink>
         </li>
         <li>
-          <RouterLink :to="{ path: '/admin/service_managePage' }">
+          <RouterLink :to="{ path: '/admin/service_managePage' }" v-if="isAdmin">
             <div class="sidebutton" @click="toggleServiceInfo">
               <img src="@/assets/pics/service_manage.png" alt="服务管理" width="20" height="20" style="margin: 0 8px 0 ">
               <p>服务管理</p>
@@ -56,7 +56,7 @@
           </RouterLink>
         </li>
         <li>
-          <RouterLink :to="{ path: '/admin/branch_managePage' }">
+          <RouterLink :to="{ path: '/admin/branch_managePage' }"  v-if="isAdmin">
             <div class="sidebutton" @click="toggleHospitalInfo">
               <img src="@/assets/pics/hospital_manage.png" alt="分院管理" width="25" height="25"
                 style="margin: 0 2px 0 8px ">
@@ -67,7 +67,7 @@
           </RouterLink>
         </li>
         <li>
-          <RouterLink :to="{ path: '/admin/or_managePage' }">
+          <RouterLink :to="{ path: '/admin/or_managePage' }"  v-if="isAdmin">
             <div class="sidebutton" @click="toggleORInfo">
               <img src="@/assets/pics/or_manage.png" alt="手术室管理" width="25" height="25" style="margin: 0 2px 0 8px ">
               <p>手术室管理</p>
@@ -85,6 +85,7 @@
 </template>
 
 <script>
+import { get_role } from '@/identification';
 export default {
   data() {
     return {
@@ -96,6 +97,7 @@ export default {
       isServiceInfoVisible: false,
       isHospitalInfoVisible: false,
       isORInfoVisible: false,
+      isAdmin: get_role() == "0"
     };
   },
   methods: {

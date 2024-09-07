@@ -1,5 +1,5 @@
 <template>
-    <div class="main-container">
+    <div class="main-container"  v-if="IsAdmin">
         <div class="title">
             医药信息资料表
         </div>
@@ -50,6 +50,7 @@
 <script>
 import { searchPills, ReplenishPills } from '../HTTP/http'
 import { onMounted, getCurrentInstance } from 'vue';
+import { get_role } from '@/identification';
 
 export default {
     data() {
@@ -65,7 +66,8 @@ export default {
             // 选中的ID集合
             selected_Ids: [],
             // 表单数据
-            tableData: []
+            tableData: [],
+            IsAdmin: get_role() == "0"
         };
     },
     methods: {

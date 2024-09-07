@@ -1,5 +1,5 @@
 <template>
-  <div class="common-layout">
+  <div class="common-layout"  v-if="IsAdmin">
     <el-container>
       <el-header class="header">
         <div>分院管理</div>
@@ -115,6 +115,7 @@
 import { batchdeleteBranch, deleteBranch, updateBranch, createBranch } from '../HTTP/http'
 import { onMounted, ref } from 'vue';
 import { ElMessage, ElMessageBox } from 'element-plus';
+import { get_role } from '@/identification';
 export default {
   setup() {
 
@@ -390,6 +391,11 @@ export default {
       filteredData,
     };
   },
+  data(){
+    return {
+      IsAdmin: get_role() == "0"
+    }
+  }
 }
 </script>
 

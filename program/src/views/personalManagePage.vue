@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container">
+  <div class="main-container"  v-if="IsAdmin">
     <div class="title">
       员工信息资料表
     </div>
@@ -98,6 +98,7 @@
 import { searchEmployeeInfo, deleteEmployeeInfo, changeServer, addServer } from '@/HTTP/http.js'
 import { onMounted, getCurrentInstance } from 'vue';
 import MultiInputModal from '../components/MultiInputModal_employee.vue';
+import { get_role } from '@/identification';
 
 export default {
   components: {
@@ -123,7 +124,8 @@ export default {
       selected_Ids: [],
 
       // 表单数据
-      tableData: []
+      tableData: [],
+      IsAdmin: get_role() == "0"
     };
   },
   methods: {

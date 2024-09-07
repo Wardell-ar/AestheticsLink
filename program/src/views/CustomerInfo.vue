@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container">
+  <div class="main-container" v-if="IsAdmin">
     <div class="title">
       顾客信息资料表
     </div>
@@ -70,6 +70,7 @@ import Dropdown_gender from '@/components/Dropdown_gender.vue'
 import Dropdown_level from '@/components/Dropdown_level.vue'
 import { searchCustomerInfo, deleteCustomerInfo } from '../HTTP/http'
 import { onMounted, getCurrentInstance } from 'vue';
+import { get_role } from '@/identification';
 
 export default {
   data() {
@@ -84,7 +85,8 @@ export default {
       // 选中的顾客ID集合
       selectedCus_Ids: [],
       // 表单数据
-      tableData: []
+      tableData: [],
+      IsAdmin: get_role() == "0"
     };
   },
   components: {
