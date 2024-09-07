@@ -362,7 +362,7 @@ export function GetVipInfo(cusId, callback) {
 }
 
 // 获取客户优惠券的具体信息
-export function GetCouponsInfo(cusId, callback){
+export function GetCouponsInfo(cusId, callback) {
     let obj = {
         cusId: cusId
     };
@@ -385,7 +385,7 @@ export function GetCouponsInfo(cusId, callback){
 }
 
 // 客户充值功能
-export function sendRecharge(cusId, money, callback){
+export function sendRecharge(cusId, money, callback) {
     let obj = {
         cusId: cusId,
         money: money
@@ -567,7 +567,7 @@ export async function addServer(dataToSend, Search) {
             if (data === 1) {
                 Search();
             }
-        } 
+        }
     } catch (error) {
         console.error("Error:", error);
         alert("网络异常");
@@ -754,9 +754,9 @@ export async function addService(dataToSend, Search) {
             console.log(data);
             if (data === 1) {
                 Search();
-              
+
             }
-        } 
+        }
     } catch (error) {
         console.error("Error:", error);
         alert("网络异常");
@@ -884,7 +884,7 @@ export async function createBranch(datatoSend, Search) {
 }
 
 // 修改员工密码
-export function editEmployeePsw(id, psw, callback){
+export function editEmployeePsw(id, psw, callback) {
     let obj = {
         employeeId: id,
         newpassword: psw
@@ -908,7 +908,7 @@ export function editEmployeePsw(id, psw, callback){
 }
 
 // 获取手术金额
-export function getSurgeryPrice(callback){
+export function getSurgeryPrice(callback) {
     const xhr = new XMLHttpRequest();
     xhr.open('POST', 'http://121.199.32.139:8081/OrderPlace/GetPrice/GetPrice', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
@@ -924,4 +924,33 @@ export function getSurgeryPrice(callback){
             }
         }
     };
+}
+
+//修改员工信息
+export async function changeServer(dataToSend, Search, alertSuccess, alertFail) {
+    let str = JSON.stringify(dataToSend); // 将对象转换为 JSON 字符串
+
+    try {
+        const response = await fetch('http://121.199.32.139:8081/QueryAllUsers/UpdateServers/UpdateServers', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: str
+        });
+        if (response.ok) {
+            const data = await response.json();
+            console.log("回复为：");
+            console.log(data);
+            if (data === 1) {
+                Search();
+                alertSuccess();
+            }
+            else
+                alertFail();
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("网络异常");
+    }
 }

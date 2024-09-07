@@ -44,10 +44,30 @@
         <el-table-column prop="name" label="员工姓名"></el-table-column>
         <el-table-column prop="gender" label="性别"></el-table-column>
         <el-table-column prop="phone_num" label="员工联系电话"></el-table-column>
-        <el-table-column prop="salary" label="员工薪水"></el-table-column>
-        <el-table-column prop="hos_name" label="所属医院"></el-table-column>
-        <el-table-column prop="dep_name" label="所属部门"></el-table-column>
-        <el-table-column prop="position" label="员工职位"></el-table-column>
+        <el-table-column prop="salary" label="员工薪水">
+          <template #default="scope">
+            <span>{{ scope.row.salary }}</span>
+            <el-button type="text" @click="editSalary(scope.row)" style="margin-left: 15px">修改</el-button>
+          </template>
+        </el-table-column>
+        <el-table-column prop="hos_name" label="所属医院">
+          <template #default="scope">
+            <span>{{ scope.row.hos_name }}</span>
+            <el-button type="text" @click="editHospital(scope.row)" style="margin-left: 15px">修改</el-button>
+          </template>
+        </el-table-column>
+        <el-table-column prop="dep_name" label="所属部门">
+          <template #default="scope">
+            <span>{{ scope.row.dep_name }}</span>
+            <el-button type="text" @click="editDepartment(scope.row)" style="margin-left: 15px">修改</el-button>
+          </template>
+        </el-table-column>
+        <el-table-column prop="position" label="员工职位">
+          <template #default="scope">
+            <span>{{ scope.row.position }}</span>
+            <el-button type="text" @click="editPosition(scope.row)" style="margin-left: 15px">修改</el-button>
+          </template>
+        </el-table-column>
         <el-table-column prop="joined_date" label="员工入职日期"></el-table-column>
       </el-table>
     </div>
@@ -75,7 +95,7 @@
 </template>
 
 <script>
-import { searchEmployeeInfo, deleteEmployeeInfo, addServer } from '../HTTP/http'
+import { searchEmployeeInfo, deleteEmployeeInfo, changeServer, addServer } from '@/HTTP/http.js'
 import { onMounted, getCurrentInstance } from 'vue';
 import MultiInputModal from '../components/MultiInputModal_employee.vue';
 
@@ -121,6 +141,20 @@ export default {
     },
     Reset() {
       this.clearData = false;
+    },
+
+    alertSuccess() {
+      this.$message({
+        type: 'success',
+        message: '修改成功'
+      });
+    },
+
+    alertFail() {
+      this.$message({
+        type: 'fail',
+        message: '修改失败'
+      });
     },
 
     // 查询方法实现
@@ -186,8 +220,8 @@ export default {
       }
     },
 
-     // 弹窗效果实现
-     openModal() {
+    // 弹窗效果实现
+    openModal() {
       this.$refs.multiInputModal.open({}); // 打开弹窗，不传入任何数据
     },
 
@@ -196,6 +230,101 @@ export default {
       console.log(data)
       addServer(data, this.Search)
     },
+
+    //修改价格
+    editSalary(row) {
+      this.$prompt('请输入新的薪水', '修改薪水', {
+        confirmButtonText: '确认',
+        cancelButtonText: '取消',
+        inputPattern: /^[0-9]+(\.[0-9]{1,2})?$/, // 价格格式验证
+        inputErrorMessage: '请输入有效的数字格式'
+      }).then(({ value }) => {
+        const datatoSend = {
+          ser_id: row.ser_id,
+          salary: parseFloat(value),
+          position: row.position,
+          hos_name: row.hos_name,
+          dep_name: row.dep_name,
+        };
+        console.log(datatoSend);
+        changeServer(datatoSend, this.Search, this.alertSuccess, this.alertFail);
+      }).catch(() => {
+        this.$message({
+          type: 'info',
+          message: '已取消修改'
+        });
+      });
+    },
+
+    //修改医院
+    editHospital(row) {
+      this.$prompt('请输入新的医院', '修改医院', {
+        confirmButtonText: '确认',
+        cancelButtonText: '取消',
+      }).then(({ value }) => {
+        const datatoSend = {
+          ser_id: row.ser_id,
+          salary: row.salary,
+          position: row.position,
+          hos_name: value,
+          dep_name: row.dep_name,
+        };
+        console.log(datatoSend);
+        changeServer(datatoSend, this.Search, this.alertSuccess, this.alertFail);
+      }).catch(() => {
+        this.$message({
+          type: 'info',
+          message: '已取消修改'
+        });
+      });
+    },
+
+    //修改部门
+    editDepartment(row) {
+      this.$prompt('请输入新的部门', '修改部门', {
+        confirmButtonText: '确认',
+        cancelButtonText: '取消',
+      }).then(({ value }) => {
+
+        const datatoSend = {
+          ser_id: row.ser_id,
+          salary: row.salary,
+          position: row.position,
+          hos_name: row.hos_name,
+          dep_name: value,
+        };
+        console.log(datatoSend);
+        changeServer(datatoSend, this.Search, this.alertSuccess, this.alertFail);
+      }).catch(() => {
+        this.$message({
+          type: 'info',
+          message: '已取消修改'
+        });
+      });
+    },
+
+    //修改职位
+    editPosition(row) {
+      this.$prompt('请输入新的职位', '修改职位', {
+        confirmButtonText: '确认',
+        cancelButtonText: '取消',
+      }).then(({ value }) => {
+        const datatoSend = {
+          ser_id: row.ser_id,
+          salary: row.salary,
+          position: value,
+          hos_name: row.hos_name,
+          dep_name: row.dep_name,
+        };
+        console.log(datatoSend);
+        changeServer(datatoSend, this.Search, this.alertSuccess, this.alertFail);
+      }).catch(() => {
+        this.$message({
+          type: 'info',
+          message: '已取消修改'
+        });
+      });
+    }
   },
   setup() {
     const instance = getCurrentInstance();
@@ -421,8 +550,10 @@ export default {
   table-layout: fixed;
   width: 100%;
   z-index: 0;
-  height: 200px; /* 设置固定高度 */
-  overflow: auto; /* 自动处理滚动条 */
+  height: 200px;
+  /* 设置固定高度 */
+  overflow: auto;
+  /* 自动处理滚动条 */
 }
 
 :deep(.el-table__row.warning-row) {
