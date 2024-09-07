@@ -59,8 +59,8 @@ namespace WebAPI.Controllers
                         });
                         decimal pay = order.PAID_AMOUNT * viplevel.DISCOUNT;
                         decimal price;
-                        if(order.COU_ID != null)
-                        { 
+                        if (order.COU_ID != null)
+                        {
                             price = DbContext.db.Ado.SqlQuerySingle<decimal>(
                                 "SELECT PRICE FROM COUPON WHERE COU_ID = :id ",
                                 new
@@ -72,15 +72,15 @@ namespace WebAPI.Controllers
                             else
                                 pay = 0;
                         }
-                       
-                            //减去付款金额
-                            DbContext.db.Ado.ExecuteCommand(
-                            "UPDATE CUSTOMER SET BALANCE = BALANCE - :balance WHERE CUS_ID = :cusID",
-                            new
-                            {
-                                balance = pay,
-                                cusID = order.CUS_ID,
-                            });
+
+                        //减去付款金额
+                        DbContext.db.Ado.ExecuteCommand(
+                        "UPDATE CUSTOMER SET BALANCE = BALANCE - :balance WHERE CUS_ID = :cusID",
+                        new
+                        {
+                            balance = pay,
+                            cusID = order.CUS_ID,
+                        });
                         //修改订单金额
                         DbContext.db.Ado.ExecuteCommand(
                            "UPDATE BILL SET PAID_AMOUNT = :paid WHERE BILL_ID = :billID",
@@ -164,6 +164,19 @@ namespace WebAPI.Controllers
                 //事物回滚
                 DbContext.db.Ado.RollbackTran();
                 return StatusCode(500, new { error = "An unexpected error occurred. Please try again later." });
+            }
+        }
+        [HttpPost("GetPrice")]
+        public IActionResult GetPrice([FromBody] string messeage)
+        {
+            try
+            {
+                var response = DbContext.db.Ado.SqlQuery<string>("SELECT PRICE FROM PROJECT");
+                return Ok(response);
+            }
+            catch
+            {
+                return Ok("0");
             }
         }
 
