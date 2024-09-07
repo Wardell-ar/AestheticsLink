@@ -212,7 +212,6 @@ body {
 /* 背景图 */
 .container1 {
   width: 100%;
-  height: 100%;
   background: linear-gradient(45deg,
       #3498db,
       rgb(46, 204, 204));
@@ -223,14 +222,14 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 100vh;
+  min-height: 100vh;
+  overflow-y: auto;
 }
 
 .container1::before {
   content: "";
   position: absolute;
   width: 100%;
-  height: 100%;
   background-image: linear-gradient(90deg,
       rgba(255, 255, 255, 0.1) 1px,
       transparent 1px),
@@ -238,6 +237,7 @@ body {
   background-size: 20px 20px;
   pointer-events: none;
   z-index: -1;
+  min-height: 100vh;
 }
 
 .sidebar {
@@ -247,18 +247,21 @@ body {
   flex-direction: column;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   flex: 0 0 240px;
-  /* 固定宽度 */
-  height: 100%;
+  /* 固定宽度 */  
+  min-height: 100vh;
 }
 
 .sidebar ul {
   list-style-type: none;
   padding: 0;
-  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .sidebar ul li {
-  margin: 20px 0;
+  margin: auto 0px;
 }
 
 .sidebar ul li a {
