@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RY4JGxww3ufsUQqFPG/6FS8pU2HRWqPWB4CeF+Q+j9cS2mD5PUCSx6Il7g98wse9seuLRbmKSSXSE3iN4m34cg==",
+  "dgSpecHash": "QY+ccMFShwsgjecRPMOxFZBCKlez+FeyE+OMI2xkNLPpDArG8tzOY8TqcrreVeYdZ/0EfUUci9fOYxS9GxRgsA==",
   "success": true,
-  "projectFilePath": "D:\\C#_Project\\update\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj",
+  "projectFilePath": "D:\\C#_Project\\database\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Xyy\\.nuget\\packages\\closedxml\\0.102.2\\closedxml.0.102.2.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\documentformat.openxml\\2.16.0\\documentformat.openxml.2.16.0.nupkg.sha512",
@@ -167,7 +167,10 @@
     "C:\\Users\\Xyy\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512"
+    "C:\\Users\\Xyy\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512"
   ],
   "logs": []
 }

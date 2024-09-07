@@ -84,3 +84,15 @@ D:\C#_Project\update\AestheticsLink\WebCommon\obj\Release\net6.0\WebCommon.dll
 D:\C#_Project\update\AestheticsLink\WebCommon\obj\Release\net6.0\refint\WebCommon.dll
 D:\C#_Project\update\AestheticsLink\WebCommon\obj\Release\net6.0\WebCommon.pdb
 D:\C#_Project\update\AestheticsLink\WebCommon\obj\Release\net6.0\ref\WebCommon.dll
+D:\C#_Project\database\AestheticsLink\WebCommon\bin\Release\net6.0\WebCommon.deps.json
+D:\C#_Project\database\AestheticsLink\WebCommon\bin\Release\net6.0\WebCommon.dll
+D:\C#_Project\database\AestheticsLink\WebCommon\bin\Release\net6.0\WebCommon.pdb
+D:\C#_Project\database\AestheticsLink\WebCommon\obj\Release\net6.0\WebCommon.csproj.AssemblyReference.cache
+D:\C#_Project\database\AestheticsLink\WebCommon\obj\Release\net6.0\WebCommon.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#_Project\database\AestheticsLink\WebCommon\obj\Release\net6.0\WebCommon.AssemblyInfoInputs.cache
+D:\C#_Project\database\AestheticsLink\WebCommon\obj\Release\net6.0\WebCommon.AssemblyInfo.cs
+D:\C#_Project\database\AestheticsLink\WebCommon\obj\Release\net6.0\WebCommon.csproj.CoreCompileInputs.cache
+D:\C#_Project\database\AestheticsLink\WebCommon\obj\Release\net6.0\WebCommon.dll
+D:\C#_Project\database\AestheticsLink\WebCommon\obj\Release\net6.0\refint\WebCommon.dll
+D:\C#_Project\database\AestheticsLink\WebCommon\obj\Release\net6.0\WebCommon.pdb
+D:\C#_Project\database\AestheticsLink\WebCommon\obj\Release\net6.0\ref\WebCommon.dll

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bx87y/nhLWXtxGJadwx6tGW6TVOvAeyfQaviqesTPeL4kgDkiDhKnKyMbzGSy6p8+XE92/XxVf2HGwtX7Xl5aQ==",
+  "dgSpecHash": "L1TTNyOXsrH2FV3iClh4zjRapi+PlnvZ73j3gcDFsBdMYbtIHXiNlhh0bd8whE1R/3L6L4k5YwDECiP/zdv6vg==",
   "success": true,
-  "projectFilePath": "D:\\C#_Project\\update\\AestheticsLink\\RebookOperateService\\RebookOperateService.csproj",
+  "projectFilePath": "D:\\C#_Project\\database\\AestheticsLink\\RebookOperateService\\RebookOperateService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Xyy\\.nuget\\packages\\closedxml\\0.102.2\\closedxml.0.102.2.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\documentformat.openxml\\2.16.0\\documentformat.openxml.2.16.0.nupkg.sha512",
@@ -166,7 +166,10 @@
     "C:\\Users\\Xyy\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512"
+    "C:\\Users\\Xyy\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512"
   ],
   "logs": []
 }

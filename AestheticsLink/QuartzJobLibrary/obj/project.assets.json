@@ -9884,11 +9884,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#_Project\\update\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj",
+      "projectUniqueName": "D:\\C#_Project\\database\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj",
       "projectName": "QuartzJobLibrary",
-      "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj",
+      "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj",
       "packagesPath": "C:\\Users\\Xyy\\.nuget\\packages\\",
-      "outputPath": "D:\\C#_Project\\update\\AestheticsLink\\QuartzJobLibrary\\obj\\",
+      "outputPath": "D:\\C#_Project\\database\\AestheticsLink\\QuartzJobLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Xyy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9905,17 +9905,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\C#_Project\\update\\AestheticsLink\\FinancialService\\FinancialService.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\FinancialService\\FinancialService.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\FinancialService\\FinancialService.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\FinancialService\\FinancialService.csproj"
             },
-            "D:\\C#_Project\\update\\AestheticsLink\\OperateService\\OperateService.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\OperateService\\OperateService.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\OperateService\\OperateService.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\OperateService\\OperateService.csproj"
             },
-            "D:\\C#_Project\\update\\AestheticsLink\\TimeService\\TimeService.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\TimeService\\TimeService.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\TimeService\\TimeService.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\TimeService\\TimeService.csproj"
             },
-            "D:\\C#_Project\\update\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj"
             }
           }
         }
@@ -9924,6 +9924,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -9950,12 +9955,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

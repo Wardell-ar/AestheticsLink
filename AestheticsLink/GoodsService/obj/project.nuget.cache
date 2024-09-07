@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vgsW7suKcOtdf5FQBXKp115ArRFoy9NiFwxRvCF443eIiQb7wWt+CWaxubrp+HqIqvfBgFHBfjnRMdgwmyRaOg==",
+  "dgSpecHash": "cyxZXYcGzgKHSzlu9GnSVf+TQgE+j+6Ur8dbyF4vhIT4KN7s1jfziH36WoKv2WlLio6vR9V0UVrTDlGXxLdVGA==",
   "success": true,
-  "projectFilePath": "D:\\C#_Project\\update\\AestheticsLink\\GoodsService\\MedcineService.csproj",
+  "projectFilePath": "D:\\C#_Project\\database\\AestheticsLink\\GoodsService\\MedcineService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Xyy\\.nuget\\packages\\closedxml\\0.102.2\\closedxml.0.102.2.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\documentformat.openxml\\2.16.0\\documentformat.openxml.2.16.0.nupkg.sha512",
@@ -165,7 +165,10 @@
     "C:\\Users\\Xyy\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512"
+    "C:\\Users\\Xyy\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512"
   ],
   "logs": []
 }

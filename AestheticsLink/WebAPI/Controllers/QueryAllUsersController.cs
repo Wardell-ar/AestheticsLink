@@ -256,7 +256,7 @@ namespace WebAPI.Controllers
                     else
                     {
                         DbContext.db.Ado.RollbackTran();
-                        return BadRequest("查无此医院!");
+                        return Ok("0");
                     }
                 }
                 if (!string.IsNullOrEmpty(updateServersDto.dep_name))
@@ -272,7 +272,7 @@ namespace WebAPI.Controllers
                     else
                     {
                         DbContext.db.Ado.RollbackTran();
-                        return BadRequest("查无此部门!");
+                        return Ok("0");
                     }
                 }
                 // 更新SERVER表中的记录

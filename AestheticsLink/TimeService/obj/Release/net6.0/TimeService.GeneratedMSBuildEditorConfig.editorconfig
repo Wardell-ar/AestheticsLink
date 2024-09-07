@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TimeService
-build_property.ProjectDir = D:\C#_Project\update\AestheticsLink\TimeService\
+build_property.ProjectDir = D:\C#_Project\database\AestheticsLink\TimeService\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

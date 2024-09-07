@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "akpt5vFV0b/OLUCtvCJGjIDdiN03AvC79PzSAwgyL2/Z4VHyl5kruluq3n2VJgkdrHgDZymcuj/xrSvLz1ulyA==",
+  "dgSpecHash": "WrVuEg1qXunFPyqiz2iHw/LKmOGREphgvRd7NdtjwwY/6jKi2iT8i2UU1pHiVIczgBMFYFW+ZMtEhNIa7OFXZQ==",
   "success": true,
-  "projectFilePath": "D:\\C#_Project\\update\\AestheticsLink\\TimeService\\TimeService.csproj",
+  "projectFilePath": "D:\\C#_Project\\database\\AestheticsLink\\TimeService\\TimeService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.7\\microsoft.data.sqlclient.2.1.7.nupkg.sha512",
@@ -68,7 +68,10 @@
     "C:\\Users\\Xyy\\.nuget\\packages\\system.text.encoding.codepages\\5.0.0\\system.text.encoding.codepages.5.0.0.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.text.regularexpressions\\4.3.1\\system.text.regularexpressions.4.3.1.nupkg.sha512",
     "C:\\Users\\Xyy\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
-    "C:\\Users\\Xyy\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+    "C:\\Users\\Xyy\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\Xyy\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512"
   ],
   "logs": []
 }

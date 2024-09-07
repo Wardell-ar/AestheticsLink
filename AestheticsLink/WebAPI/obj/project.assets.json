@@ -10564,11 +10564,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#_Project\\update\\AestheticsLink\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "D:\\C#_Project\\database\\AestheticsLink\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\WebAPI\\WebAPI.csproj",
+      "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\Xyy\\.nuget\\packages\\",
-      "outputPath": "D:\\C#_Project\\update\\AestheticsLink\\WebAPI\\obj\\",
+      "outputPath": "D:\\C#_Project\\database\\AestheticsLink\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Xyy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10585,56 +10585,56 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\C#_Project\\update\\AestheticsLink\\CustomerMessageService\\CustomerMessageService.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\CustomerMessageService\\CustomerMessageService.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\CustomerMessageService\\CustomerMessageService.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\CustomerMessageService\\CustomerMessageService.csproj"
             },
-            "D:\\C#_Project\\update\\AestheticsLink\\FinancialService\\FinancialService.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\FinancialService\\FinancialService.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\FinancialService\\FinancialService.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\FinancialService\\FinancialService.csproj"
             },
-            "D:\\C#_Project\\update\\AestheticsLink\\GoodsService\\MedcineService.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\GoodsService\\MedcineService.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\GoodsService\\MedcineService.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\GoodsService\\MedcineService.csproj"
             },
-            "D:\\C#_Project\\update\\AestheticsLink\\HosAndDepService\\HosAndDepService.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\HosAndDepService\\HosAndDepService.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\HosAndDepService\\HosAndDepService.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\HosAndDepService\\HosAndDepService.csproj"
             },
-            "D:\\C#_Project\\update\\AestheticsLink\\LogRegService\\LogRegService.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\LogRegService\\LogRegService.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\LogRegService\\LogRegService.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\LogRegService\\LogRegService.csproj"
             },
-            "D:\\C#_Project\\update\\AestheticsLink\\OperateMessageService\\SurgeryProjectService.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\OperateMessageService\\SurgeryProjectService.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\OperateMessageService\\SurgeryProjectService.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\OperateMessageService\\SurgeryProjectService.csproj"
             },
-            "D:\\C#_Project\\update\\AestheticsLink\\OperateService\\OperateService.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\OperateService\\OperateService.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\OperateService\\OperateService.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\OperateService\\OperateService.csproj"
             },
-            "D:\\C#_Project\\update\\AestheticsLink\\OrderService\\OrderService.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\OrderService\\OrderService.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\OrderService\\OrderService.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\OrderService\\OrderService.csproj"
             },
-            "D:\\C#_Project\\update\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\ORScheduleService\\ORScheduleService.csproj"
             },
-            "D:\\C#_Project\\update\\AestheticsLink\\ProjectChange\\ProjectChange.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\ProjectChange\\ProjectChange.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\ProjectChange\\ProjectChange.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\ProjectChange\\ProjectChange.csproj"
             },
-            "D:\\C#_Project\\update\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\QuartzJobLibrary\\QuartzJobLibrary.csproj"
             },
-            "D:\\C#_Project\\update\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\QueryAllUsersService\\QueryAllUsersService.csproj"
             },
-            "D:\\C#_Project\\update\\AestheticsLink\\RebookOperateService\\RebookOperateService.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\RebookOperateService\\RebookOperateService.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\RebookOperateService\\RebookOperateService.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\RebookOperateService\\RebookOperateService.csproj"
             },
-            "D:\\C#_Project\\update\\AestheticsLink\\RechargeService\\RechargeService.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\RechargeService\\RechargeService.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\RechargeService\\RechargeService.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\RechargeService\\RechargeService.csproj"
             },
-            "D:\\C#_Project\\update\\AestheticsLink\\ServerInformation\\ServerInformation.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\ServerInformation\\ServerInformation.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\ServerInformation\\ServerInformation.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\ServerInformation\\ServerInformation.csproj"
             },
-            "D:\\C#_Project\\update\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\ServerSigninService\\ServerSigninService.csproj"
             },
-            "D:\\C#_Project\\update\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj": {
-              "projectPath": "D:\\C#_Project\\update\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj"
+            "D:\\C#_Project\\database\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj": {
+              "projectPath": "D:\\C#_Project\\database\\AestheticsLink\\UpdateAt0amService\\UpdateAt0amService.csproj"
             }
           }
         }
@@ -10643,6 +10643,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -10685,6 +10690,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.28, 6.0.28]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -10693,7 +10716,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
