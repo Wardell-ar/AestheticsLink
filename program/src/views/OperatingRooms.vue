@@ -154,7 +154,7 @@ export default {
     justify-content: space-between;
     background-color: rgb(255, 250, 235);
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
-    margin-left: 120px;
+    margin-right:10px;
 }
 
 .title {
