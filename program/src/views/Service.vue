@@ -40,8 +40,8 @@
         <el-table-column prop="found_date" label="创建日期"></el-table-column>
       </el-table>
     </div>
-    <div class="bottom" @click="openModal">
-      <div tabindex="0" class="plusButton" style="margin-right: 2px;">
+    <div class="bottom">
+      <div tabindex="0" class="plusButton" @click="openModal" style="margin-right: 2px;">
         <svg class="plusIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
           <g mask="url(#mask0_21_345)">
             <path d="M13.75 23.75V16.25H6.25V13.75H13.75V6.25H16.25V13.75H23.75V16.25H16.25V23.75H13.75Z"></path>

@@ -60,7 +60,7 @@
                     </select>
                 </div>
                 <button type="submit" class="submit-button">提交</button>
-                <button type="submit" class="submit-button">取消</button>
+                <button type="button" class="submit-button" @click="cancel">取消</button>
             </form>
         </div>
     </div>
@@ -96,6 +96,27 @@ export default {
         submitForm() {
             this.$emit('submit', this.form);
             this.close();
+        },
+        cancel() {
+            this.show = false; // 关闭模态窗口
+            // 可以在这里添加其他取消操作，比如重置表单
+            this.resetForm();
+        },
+        // 如果需要重置表单，可以添加一个 resetForm 方法
+        resetForm() {
+            this.form = {
+                ser_id: '',
+                joined_date: '',
+                name: '',
+                position: '',
+                phone_num: '',
+                salary: '',
+                hos_name: '',
+                dep_name: '',
+                birthday: '',
+                work_time_id: '',
+                gender: ''
+            };
         }
     }
 };
@@ -112,6 +133,7 @@ export default {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    overflow-y: auto; /* 允许垂直滚动 */
 }
 
 .modal-content {
