@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "L75wtgDc57A=",
+  "dgSpecHash": "Quh1Uza7cD2LRW5xdfhMenjjsjLYILT9Nw5iRejmwLGXYVSGet7qgyFfCTf/jhZc5B2gQ+qpd9Eu4aI6geAEBA==",
   "success": true,
   "projectFilePath": "D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\RebookOperateService\\RebookOperateService.csproj",
   "expectedPackageFiles": [
@@ -165,17 +165,7 @@
     "C:\\Users\\彭之芯\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\彭之芯\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\彭之芯\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\彭之芯\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512",
-    "C:\\Users\\彭之芯\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.31\\microsoft.netcore.app.ref.6.0.31.nupkg.sha512",
-    "C:\\Users\\彭之芯\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.31\\microsoft.windowsdesktop.app.ref.6.0.31.nupkg.sha512",
-    "C:\\Users\\彭之芯\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.31\\microsoft.aspnetcore.app.ref.6.0.31.nupkg.sha512"
+    "C:\\Users\\彭之芯\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "读取缓存文件 D:\\database\\AestheticsLink-Git\\AestheticsLink-----\\AestheticsLink\\RebookOperateService\\obj\\project.nuget.cache 时遇到问题: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
